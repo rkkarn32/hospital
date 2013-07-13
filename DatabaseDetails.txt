@@ -1,0 +1,17 @@
+CREATE DATABASE  `hospital` ;
+
+
+CREATE TABLE  `hospital`.`userdetail` (
+`userid` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`username` VARCHAR( 20 ) NOT NULL ,
+`password` VARCHAR( 30 ) NOT NULL ,
+`accounttype` INT NOT NULL ,
+`accountgroup` INT NOT NULL ,
+`creationdate` DATE NOT NULL ,
+`name` VARCHAR( 40 ) NOT NULL ,
+`street` VARCHAR( 40 ) NOT NULL ,
+`city` VARCHAR( 40 ) NOT NULL ,
+`state` VARCHAR( 40 ) NOT NULL ,
+`phoneno` VARCHAR( 13 ) NOT NULL ,
+`birthdate` DATE NOT NULL
+) ENGINE = INNODB

@@ -109,8 +109,11 @@ include_once 'sql_connection.php';
                                  if(!$docList)
                                      echo"<option value='0' selected='selected'>No Doctor Found<option>";
                                  else{
-                                     for($i=0; $i<$docList.length; $i++){
+                                     echo"<option value='0' selected='selected'>Select Doctor<option>";
+                                     echo "<script>alert($docList)</script>";
+                                     for($i=0; $i<$docList.Length ; $i++){
                                          echo"<option value='".$docList[$i][0]."' selected='selected'>".$docList[$i][1]."<option>";
+                                         Logger::LogInformation("<option value='".$docList[$i][0]."' selected='selected'>".$docList[$i][1]."<option>");
                                      }
                                      Logger::LogInformation("Doctor List Loaded");
                                  }
