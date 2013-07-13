@@ -100,7 +100,6 @@ include_once 'sql_connection.php';
                     <tr>
                         <td width="142" valign="top"><div align="left">Doctor</div></td>
                       <td width="191" valign="top" style="text-align:right">
-<!--                          <input name="doctorName" type="text" size="30" maxlength="50" style="width: 100%"/>-->
                           <select id="doctorList" name="doctorList" class="listmenu" style="width: 100%">
                               <?php
                                 Logger::LogInformation("Loading Doctor List");
@@ -120,7 +119,21 @@ include_once 'sql_connection.php';
                     <tr>
                       <td align="center"><div align="left">Nurse</div></td>
                       <td colspan="2" style="text-align:center" align="center">
-                          <input name="doctorName" type="text" style="width: 100%" size="30" maxlength="50"/>
+                          <select id="nurseList" name="nurseList" class="listmenu" style="width: 100%">
+                              <?php
+                                Logger::LogInformation("Loading Nurse List");
+                                 $nurseList = $sql->GetNameByAccountType("Nurse");                                
+                                 if(!$nurseList)
+                                     echo"<option value='0' selected='selected'>No Doctor Found</option>";
+                                 else{
+                                     echo"<option value='0' selected='selected'>Select Nurse</option>";
+                                     
+                                     while($row = mysql_fetch_array($nurseList))
+                                         echo"<option value='".$row[0]."'>".$row[1]."</option>";
+                                     Logger::LogInformation("Nurse List Loaded");
+                                 }
+                              ?>
+                          </select>
                       </td>
                     </tr>
                     <tr>

@@ -156,7 +156,7 @@ class SqlConnection{
         $query = "SELECT userid,name FROM userdetail UD,accountgroup AG WHERE AG.groupname='$accountType' AND AG.groupid=UD.accountgroupid";
         $result = mysql_query($query);
         if(!$result){
-            Logger::LogInformation("GetNameByAccountType()## Query isn't executed, Error: ".mysql_error());
+            Logger::LogInformation("GetNameByAccountType()## Query isn't executed for column type '$accountType', Error: ".mysql_error());
             return $result;
         }
         $returnValue = array();
