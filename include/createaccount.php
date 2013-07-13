@@ -26,6 +26,7 @@ include_once 'sql_connection.php';
                         foreach ($roleList as $role) {
                             echo "<option value='".$role[0]."'>".$role[1]."</option>";
                         }
+                        Logger::LogInformation("Role List Loaded");
                     ?>
                     </select>
                 </div>            </td>
@@ -43,6 +44,7 @@ include_once 'sql_connection.php';
                         foreach ($accountList as $account) {
                             echo "<option value='".$account[0]."'>".$account[1]."</option>";
                         }
+                        Logger::LogInformation("AccountType List Loaded");
                     ?>
                 </select>
             </div>            </td>
@@ -102,6 +104,7 @@ include_once 'sql_connection.php';
                           <select id="doctorList" name="doctorList" class="listmenu">
                               <?php
                                 include_once 'sql_connection.php';
+                                Logger::LogInformation("Loading Doctor List");
                                  $docList = $sql->GetNameByAccountType("Doctor");
                                  if(!$docList)
                                      echo"<option value='0' selected='selected'>No Doctor Found<option>";
@@ -109,7 +112,7 @@ include_once 'sql_connection.php';
                                      for($i=0; $i<$docList.length; $i++){
                                          echo"<option value='".$docList[$i][0]."' selected='selected'>".$docList[$i][1]."<option>";
                                      }
-                                     Logger::LogInformation("Doctor List loaded");
+                                     Logger::LogInformation("Doctor List Loaded");
                                  }
                               ?>
                           </select>
