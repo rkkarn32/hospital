@@ -157,10 +157,11 @@ class SqlConnection{
         $result = mysql_query($query);
         if(!$result){
             Logger::LogInformation("GetNameByAccountType()## Query isn't executed, Error: ".mysql_error());
-            return false;
+            return $result;
         }
         $returnValue = array();
         $i=0;
+        return $result;
         while($row = mysql_fetch_array($result)){
             $returnValue[$i]= array();
             array_push($returnValue[$i], $row[0]);

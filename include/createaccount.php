@@ -101,20 +101,16 @@ include_once 'sql_connection.php';
                         <td width="142" valign="top"><div align="left">Doctor</div></td>
                       <td width="191" valign="top" style="text-align:right">
 <!--                          <input name="doctorName" type="text" size="30" maxlength="50" style="width: 100%"/>-->
-                          <select id="doctorList" name="doctorList" class="listmenu">
+                          <select id="doctorList" name="doctorList" class="listmenu" style="width: 100%">
                               <?php
-                                include_once 'sql_connection.php';
                                 Logger::LogInformation("Loading Doctor List");
-                                 $docList = $sql->GetNameByAccountType("Doctor");
-                                 if(!$docList)
-                                     echo"<option value='0' selected='selected'>No Doctor Found<option>";
+                                 $doctorList = $sql->GetNameByAccountType("Doctor");                                
+                                 if(!$doctorList)
+                                     echo"<option value='0' selected='selected'>No Doctor Found</option>";
                                  else{
-                                     echo"<option value='0' selected='selected'>Select Doctor<option>";
-                                     echo "<script>alert($docList)</script>";
-                                     for($i=0; $i<$docList.Length ; $i++){
-                                         echo"<option value='".$docList[$i][0]."' selected='selected'>".$docList[$i][1]."<option>";
-                                         Logger::LogInformation("<option value='".$docList[$i][0]."' selected='selected'>".$docList[$i][1]."<option>");
-                                     }
+                                     echo"<option value='0' selected='selected'>Select Doctor</option>";
+                                     while($row = mysql_fetch_array($doctorList))
+                                         echo"<option value='".$row[0]."'>".$row[1]."</option>";
                                      Logger::LogInformation("Doctor List Loaded");
                                  }
                               ?>
