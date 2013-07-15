@@ -103,7 +103,7 @@ include_once 'sql_connection.php';
                           <select id="doctorList" name="doctorList" class="listmenu" style="width: 100%">
                               <?php
                                 Logger::LogInformation("Loading Doctor List");
-                                 $doctorList = $sql->GetNameByAccountType("Doctor");                                
+                                 $doctorList = $sql->GetUserNameByAccountType("Doctor");                                
                                  if(!$doctorList)
                                      echo"<option value='0' selected='selected'>No Doctor Found</option>";
                                  else{
@@ -122,7 +122,7 @@ include_once 'sql_connection.php';
                           <select id="nurseList" name="nurseList" class="listmenu" style="width: 100%">
                               <?php
                                 Logger::LogInformation("Loading Nurse List");
-                                 $nurseList = $sql->GetNameByAccountType("Nurse");                                
+                                 $nurseList = $sql->GetUserNameByAccountType("Nurse");                                
                                  if(!$nurseList)
                                      echo"<option value='0' selected='selected'>No Doctor Found</option>";
                                  else{
@@ -139,33 +139,27 @@ include_once 'sql_connection.php';
                     <tr>
                       <td align="center"><div align="left">Last Visit </div></td>
                       <td colspan="2" style="text-align:center" align="center">
-                          <input name="doctorName" type="text" style="width: 100%" size="30" maxlength="50"/>
+                          <?php echo "<input name='lastVisit' type='date' style='width: 100%' value='".date("Y-m-d")."' />"; ?>
                       </td>
                     </tr>
                     <tr>
                       <td align="center"><div align="left">Purpose of Visit </div></td>
                       <td colspan="2" style="text-align:center" align="center">
-                          <input name="doctorName" type="text" style="width: 100%" size="30" maxlength="50"/>
+                          <input name="purposeOfVisit" type="text" style="width: 100%" size="30"/>
                       </td>
                     </tr>
                     <tr>
                       <td align="center"><div align="left">Diagnosis given </div></td>
                       <td colspan="2" style="text-align:center" align="center">
-                          <input name="doctorName" type="text" style="width: 100%" size="30" maxlength="50"/>
+                          <input name="diagnosis" type="text" style="width: 100%" size="30" />
                       </td>
                     </tr>
                     <tr>
                       <td align="center"><div align="left">Prescribed Medication </div></td>
                       <td colspan="2" style="text-align:center" align="center">
-                          <input name="doctorName" type="text" style="width: 100%" size="30" maxlength="50"/>
+                          <input name="prescribedMedication" type="text" style="width: 100%" size="30"/>
                       </td>
                     </tr>
-<!--                    <tr>
-                      <td align="center"><input type="reset" />                      </td>
-                      <td colspan="2" style="text-align:center" align="center">
-                          <button type="submit" >Submit</button>
-                      </td>
-                    </tr>-->
               </table>
             </div>
 

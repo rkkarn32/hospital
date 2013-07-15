@@ -69,17 +69,35 @@ class SqlConnection{
         return $allUser;
     }
 
-    public function RegisterUser($username,$password,$name,$street,$city,$state,$phoneno,$birthdate,$creationdate,$roleid,$accountgroupid){
-	$sql = "insert into userdetail set username='$username', password='$password', name='$name', street='$street', city='$city', phoneno='$phoneno', creationdate='$creationdate', roleid='$roleid', accountgroupid='$accountgroupid',birthdate='$birthdate',state='$state' ";
+    public function RegisterUser($username,$password,$name,$street,$city,$state,$phoneno,$birthdate,$creationdate,$roleid,$accountgroupid,$doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication){
+	$query = "insert into userdetail set username='$username', password='$password', name='$name', street='$street', city='$city', phoneno='$phoneno', creationdate='$creationdate', roleid='$roleid', accountgroupid='$accountgroupid',birthdate='$birthdate',state='$state' ";
         $result = array();
-	$result[0] = mysql_query($sql,$this->db_link);
+	$result[0] = mysql_query($query,$this->db_link);
         if(!$result[0]){
             Logger::LogInformation("RegisterUser()## Query isn't executed, Error: ".mysql_error());
             $result[0]= false;
-            $result[1]=  mysql_error();
         }
+        else if($roleid ==4)
+            $result[0] = $this->RegisterPatient( $doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication);
         else
             Logger::LogInformation("RegisterUser(), Registration for $name is Successfull");
+        return $result;
+    }
+    
+    private function RegisterPatient($doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication ){
+        $queryUserID = "SELECT max(userid) FROM userdetail";
+        $resultUserID = mysql_query($queryUserID);
+        $row = mysql_fetch_array($resultUserID);
+        $userid = $row[0];
+        $query = "INSERT INTO patient VALUES ('','$userid','$doctorID','$nurseID','$lastVisit','$purposeOfVisit','$diagnosis','$medication')";
+        $result = mysql_query($query);
+        if(!$result)
+        {
+            Logger::LogInformation ("RegisterPatient()## Query is ".  $query);
+            Logger::LogInformation ("RegisterPatient()## Data isn't inserted, Error: ".  mysql_error());
+        }
+        else
+            Logger::LogInformation ("RegisterPatient()## Patient data inserted");
         return $result;
     }
     
@@ -152,7 +170,7 @@ class SqlConnection{
         return true;
     }
     
-    public function GetNameByAccountType($accountType){
+    public function GetUserNameByAccountType($accountType){
         $query = "SELECT userid,name FROM userdetail UD,accountgroup AG WHERE AG.groupname='$accountType' AND AG.groupid=UD.accountgroupid";
         $result = mysql_query($query);
         if(!$result){
@@ -171,5 +189,34 @@ class SqlConnection{
         
         return $returnValue ;
     }
+    
+    public function GetUserByID($id){
+        $query = "SELECT userid,name,role,groupname FROM userdetail UD,roles R,accountgroup AG WHERE UD.roleid > "
+                .$_SESSION['roleid']." AND UD.roleid=R.roleid AND UD.accountgroupid=AG.groupid";
+    }
+
+
+    public function User($id){
+		$sql="select * from  userdetail where userid ='$id'";
+		$result = mysql_query($sql);
+		$user= mysql_fetch_array($result);
+		return $user;
+		
+	}
+	public function type($id){
+		$sql="select * from roles where roleid ='$id'";
+		$result = mysql_query($sql);
+		$user= mysql_fetch_array($result);
+		return $user;
+		
+	}
+	public function group($id){
+		$sql="select * from accountgroup where groupid ='$id'";
+		$result = mysql_query($sql);
+		$user= mysql_fetch_array($result);
+		return $user;
+		
+	}
+    
 }
 ?>

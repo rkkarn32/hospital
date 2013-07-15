@@ -9,7 +9,6 @@ include_once 'sql_connection.php';
         echo json_encode($returValue);
     }
     elseif($task == 'loadalluser'){
-        $sqlConnection = new SqlConnection();
         $allUser = $sql->LoadAllUser();
         echo json_encode($allUser);
     }
@@ -27,11 +26,18 @@ include_once 'sql_connection.php';
         $phoneno = mysql_escape_string($_POST[telephone]);
         $birthdate = mysql_escape_string($_POST[birthdate]);
         $creationdate = mysql_escape_string($_POST[creationdate]);
-        
         $username = $sql->CreateUser($name);
         $password = md5($username);
-        
-        $returnValue = $sql->RegisterUser($username,$password,$name,$street,$city,$state,$phoneno,$birthdate,$creationdate,$roleid,$accountgroupid);
+
+        $doctorID= mysql_escape_string($_POST['doctorList']);
+        $nurseID= mysql_escape_string($_POST['nurseList']);
+        $lastVisit = $_POST['lastVisit'];
+        $purposeOfVisit = $_POST['purposeOfVisit'];
+        $diagnosis = $_POST['diagnosis'];
+        $medication = $_POST['prescribedMedication'];
+
+        $returnValue = $sql->RegisterUser($username,$password,$name,$street,$city,$state,$phoneno,$birthdate,$creationdate,$roleid,$accountgroupid,$doctorID,$nurseID,$lastVisit,$purposeOfVisit,$diagnosis,$medication);
+        Logger::LogInformation("Registration Done");
     echo json_encode($returnValue);
     }
 ?>

@@ -36,7 +36,7 @@ Design by http://www.hotwebsitetemplates.net
   <div class="header">
     <div class="header_resize">
       <div class="logo">	
-          <h1><a href="/hospital/"><span>Hospital</span>Management<span>System</span></a></h1>
+          <h1><a href="/hospital/"><span>Hospital</span>Mgmt<span>System</span></a></h1>
       </div>
       <div class="menu_nav">
         <ul>

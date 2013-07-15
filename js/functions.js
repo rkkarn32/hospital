@@ -41,7 +41,7 @@ function RegisterUser(){
             if(output[0] == true)
                 {
                     alert("Data entered successfully");
-                    window.location='index.php?action=profile';
+                    window.location='index.php?action=memberdetail';
                 }
             else
                 alert("Problem occurs during Registration, Please try again! \nForm more detail see log file");

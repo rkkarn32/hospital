@@ -7,7 +7,7 @@
             <tr>
                 <th style="width: 50px">S.N.</th>
                 <th >Name</th>
-                <th style="width: 160px">Role ID</th>    
+                <th style="width: 160px">Role Type</th>    
                 <th style="width: 150px">Account Type</th>
                 <th style="width: 150px">View Details</th>
             </tr>
