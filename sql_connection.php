@@ -47,7 +47,7 @@ class SqlConnection{
         $allUser[0][0]=0;
         
         $sql = "SELECT userid,name,role,groupname FROM userdetail UD,roles R,accountgroup AG WHERE UD.roleid > "
-                .$_SESSION['roleid']." AND UD.roleid=R.roleid AND UD.accountgroupid=AG.groupid";
+                .$_SESSION['roleid']." AND UD.roleid=R.roleid AND UD.groupid=AG.groupid";
 //        $sql = "SELECT userid,name FROM userdetail";
         $result = mysql_query($sql,$this->db_link );
         if(!$result){
@@ -69,8 +69,8 @@ class SqlConnection{
         return $allUser;
     }
 
-    public function RegisterUser($username,$password,$name,$street,$city,$state,$phoneno,$birthdate,$creationdate,$roleid,$accountgroupid,$doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication){
-	$query = "insert into userdetail set username='$username', password='$password', name='$name', street='$street', city='$city', phoneno='$phoneno', creationdate='$creationdate', roleid='$roleid', accountgroupid='$accountgroupid',birthdate='$birthdate',state='$state' ";
+    public function RegisterUser($username,$password,$name,$street,$city,$state,$phoneno,$birthdate,$creationdate,$roleid,$groupid,$doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication){
+	$query = "insert into userdetail set username='$username', password='$password', name='$name', street='$street', city='$city', phoneno='$phoneno', creationdate='$creationdate', roleid='$roleid', groupid='$groupid',birthdate='$birthdate',state='$state' ";
         $result = array();
 	$result[0] = mysql_query($query,$this->db_link);
         if(!$result[0]){
@@ -157,6 +157,12 @@ class SqlConnection{
         }while($userExist);
         return $username;
     }
+    
+    /**
+     *Check wheter the User Exist or not
+     * @param $username Username of the user.
+     * @return boolean True if user exist and false in otherwise.
+     */
     private function IsUserExist($username){
         $query = "SELECT username FROM userdetail WHERE username='".$username."'";
         $result = mysql_query($query);
@@ -171,7 +177,7 @@ class SqlConnection{
     }
     
     public function GetUserNameByAccountType($accountType){
-        $query = "SELECT userid,name FROM userdetail UD,accountgroup AG WHERE AG.groupname='$accountType' AND AG.groupid=UD.accountgroupid";
+        $query = "SELECT userid,name FROM userdetail UD,accountgroup AG WHERE AG.groupname='$accountType' AND AG.groupid=UD.groupid";
         $result = mysql_query($query);
         if(!$result){
             Logger::LogInformation("GetNameByAccountType()## Query isn't executed for column type '$accountType', Error: ".mysql_error());
@@ -189,10 +195,16 @@ class SqlConnection{
         
         return $returnValue ;
     }
-    
-    public function GetUserByID($id){
-        $query = "SELECT userid,name,role,groupname FROM userdetail UD,roles R,accountgroup AG WHERE UD.roleid > "
-                .$_SESSION['roleid']." AND UD.roleid=R.roleid AND UD.accountgroupid=AG.groupid";
+    /**
+     *
+     * @param $id Id of User
+     * @return MySQL_Resource SQL Resource if query executes otherwise false
+     */
+    public function GetUserDetail($id){
+        $query = "SELECT * FROM userdetail UD,roles R,accountgroup AG WHERE UD.roleid > "
+                .$id." AND UD.roleid=R.roleid AND UD.groupid=AG.groupid";
+        $result = mysql_query($query);
+        return $result;
     }
 
 
