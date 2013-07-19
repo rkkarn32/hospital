@@ -248,7 +248,6 @@ class SqlConnection{
                     ."name LIKE '%$name%' AND state LIKE '%$state%' AND city LIKE '%$city%' AND phoneno LIKE '%$phoneno%' AND "
                     ."birthdate LIKE '%$birthDate%' AND userid>".$_SESSION['userid'];
             $result = mysql_query($query);
-            Logger::LogInformation("SearchRecord()## Query is :".$query);
             $returnValue = array();
             if(!$result){
                 Logger::LogInformation("SearchRecord()## Query isn't executed, Error".mysql_error());

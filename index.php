@@ -1,8 +1,6 @@
-<?php
-session_start();
+<?php session_start();
 if ($_GET['action'] == 'logout') {
-    $_SESSION['loggedin'] = 0;
-    $_SESSION['userid'] = 0;
+    session_destroy();
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

@@ -1,4 +1,4 @@
-<?php session_start();
+<?php 
 if($_SESSION['loggedin'])
 {
     $action = $_GET['action'];
