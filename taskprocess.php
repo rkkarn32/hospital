@@ -40,4 +40,9 @@ include_once 'sql_connection.php';
         Logger::LogInformation("Registration Done");
     echo json_encode($returnValue);
     }
+    else if($task == "showuserdetail"){
+        $id= $_POST['id'];
+        $result = $sql->GetUserDetail($id);
+        echo json_encode($result);
+    }
 ?>

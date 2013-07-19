@@ -1,16 +1,5 @@
-<?php 
-include_once 'sql_connection.php';
-				      
-   $sql = new SqlConnection();
-   $user = $sql->User(1);
-   $type = $sql->type($user['roleid']);
-   $group = $sql->group($user['accountgroupid']);
-   
-?>
-<html>
-<head>
 <script type="text/javascript">
-
+//    ShowUserDetails($('#userID').html());
     function PrintElem(elem)
     {
         Popup($(elem).html());
@@ -29,68 +18,63 @@ include_once 'sql_connection.php';
     }
 
 </script>
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-	<div id="mydiv">
-		<div class="member">
-            	<table width="100%" border="1px"> 
-   			  <tr>
-               	<td width="27%" ><strong>Name:-</strong></td>
-           	    <td width="32%"><div align="left"><?php echo $user['name']; ?></div></td>
+<div id="viewDetail" style="display: ">
+    <div class="generalDetail">
+        <table width="100%" border="1px"> 
+            <tr>
+                <td width="27%" ><strong>Name:-</strong></td>
+                <td width="32%"><div id="name" align="left"></div></td>
                 <td width="20%"><strong>Account Type:-</strong></td>
-    			<td width="21%"><div align="left"><?php echo $type['role']; ?></div></td>
-  			  </tr>    
-			  <tr>
-   			 	<td><strong>Account Group:-</strong></td>
-			    <td><div align="left"><?php echo $group['groupname'];?></div></td>
+                <td width="21%"><div id="accountType" align="left"></div></td>
+            </tr>    
+            <tr>
+                <td><strong>Account Group:-</strong></td>
+                <td><div align="left" id="accountGroup"></div></td>
                 <td><strong>Creation Date:-</strong></td>
-				<td><div align="left"><?php echo $user['creationdate']; ?></div></td>
-			  </tr>   
-			  <tr>
-				<td><strong>Street Address:-</strong></td>
-			    <td><div align="left"><?php echo $user['street']; ?></div></td>
+                <td><div align="left" id="creationDate"></div></td>
+            </tr>   
+            <tr>
+                <td><strong>Street Address:-</strong></td>
+                <td><div align="left" id="streetAddress"></div></td>
                 <td><strong>State:-</strong></td>
-				<td valign="top"><div align="left"><?php echo $user['state']; ?></div></td>
-			  </tr>
-			  <tr>
-				<td><strong>City:-</strong></td>
-			    <td><div align="left"><?php echo $user['city']; ?></div></label></td>
+                <td valign="top"><div align="left" id="state"></div></td>
+            </tr>
+            <tr>
+                <td><strong>City:-</strong></td>
+                <td><div align="left" id="city"></div></td>
                 <td><strong>Birth Date:-</strong></td>
-				<td><div align="left"><?php echo $user['birthdate']; ?></div></td>
-			  </tr>
-			  <tr>
-				<td><strong>Phone Number:-</strong></td>
-			    <td><div align="left"><?php echo $user['phoneno']; ?></div></td>
-			  </tr>
-              </table>
-              <div>
-            	<table width="100%" border="1px">
-   			  <tr>
-               	<td width="27%" ><strong>Doctor Name:-</strong></td>
-           	    <td width="32%"><div align="left"><?php echo $user['doctorname']; ?></div></td>
+                <td><div align="left" id="birthDate"></div></td>
+            </tr>
+            <tr>
+                <td><strong>Phone Number:-</strong></td>
+                <td><div align="left" id="phoneNumber"></div></td>
+            </tr>
+        </table>
+    </div>
+    <div id="patientDetail">
+        <table width="100%" border="1px">
+            <tr>
+                <td width="27%" ><strong>Doctor Name:-</strong></td>
+                <td width="32%"><div align="left" id="doctorName"></div></td>
                 <td width="20%"><strong>Nurse Name:-</strong></td>
-    			<td width="21%"><div align="left"><?php echo $type['nursename']; ?></div></td>
-  			  </tr>    
-			  <tr>
-   			 	<td><strong>Purpose Of Visit:-</strong></td>
-			    <td><div align="left"><?php echo $group['purposeofvisit'];?></div></td>
-                <td><strong>Dagnosis Given:-</strong></td>
-				<td><div align="left"><?php echo $user['diagnosis']; ?></div></td>
-			  </tr>   
-			  <tr>
-				<td><strong>Medication Prescribed:-</strong></td>
-			    <td><div align="left"><?php echo $user['medication']; ?></div></td>
+                <td width="21%"><div align="left" id="nurseName"></div></td>
+            </tr>    
+            <tr>
+                <td><strong>Purpose Of Visit:-</strong></td>
+                <td><div align="left" id="purposeOfVisit"></div></td>
+                <td><strong>Diagnosis Given:-</strong></td>
+                <td><div align="left" id="diagnosisGiven"></div></td>
+            </tr>   
+            <tr>
+                <td><strong>Medication Prescribed:-</strong></td>
+                <td><div align="left" id="medicationPrescribed"></div></td>
                 <td><strong>Last Office Visit:-</strong></td>
-				<td valign="top"><div align="left"><?php echo $user['lastvisit']; ?></div></td>
-			  </tr>
-		
-                </table>
-          </div>               
-        </div>
-	</div>
-	<div align="center" class="print">
-		<input type="button" value="Print" onClick="PrintElem('#mydiv')" />
-	</div>
-</body>
-</html>
+                <td valign="top"><div align="left" id="lastOfficeVisit"></div></td>
+            </tr>
+
+        </table>
+    </div>               
+    <div align="center" class="print">
+        <input type="button" value="Print" onClick="PrintElem('#viewDetail')" />
+    </div>
+</div>

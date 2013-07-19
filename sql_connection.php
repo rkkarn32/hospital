@@ -36,6 +36,7 @@ class SqlConnection{
             $_SESSION['loggedin'] = 1;  
             $_SESSION['userid']= $this->userid;
             $_SESSION['roleid']=$row['roleid'];
+            $_SESSION['username']=$row['username'];
             Logger::LogInformation("Successfully Logged In by User:".$row['name']);
             return 1;
         }
@@ -201,10 +202,44 @@ class SqlConnection{
      * @return MySQL_Resource SQL Resource if query executes otherwise false
      */
     public function GetUserDetail($id){
-        $query = "SELECT * FROM userdetail UD,roles R,accountgroup AG WHERE UD.roleid > "
-                .$id." AND UD.roleid=R.roleid AND UD.groupid=AG.groupid";
+        $returnValue = array();
+        //$query = "select * from (select * from userdetail NATURAL JOIN roles NATURAL JOIN accountgroup "."Where userdetail.userid=$id ) as S1 NATURAL LEFT OUTER JOIN patient P ";
+        $query = "SELECT * FROM (SELECT * FROM userdetail NATURAL JOIN ROLES NATURAL JOIN accountgroup AG Where userdetail.userid=$id)"
+                ."AS S1 NATURAL LEFT OUTER JOIN(SELECT p.userid,UDForDoctor.name AS doctorname,UDForNurse.name AS nursename FROM patient P"
+                ." LEFT JOIN userdetail UDForDoctor ON UDForDoctor.userid=P.doctorid LEFT JOIN userdetail UDForNurse ON UDForNurse.userid=P.nurseid) "
+                ."AS S2 Natural left outer join Patient";
         $result = mysql_query($query);
-        return $result;
+        if(!$result)
+        {
+            Logger::LogInformation("GetUserDetail()## Query isn't executed, Error".mysql_error());
+            $returnValue[0] = 0;
+        }
+        else
+        {
+            Logger::LogInformation("GetUserDetail()## User Detail Loaded".mysql_error());
+            while($row = mysql_fetch_array($result)){
+                array_push($returnValue, $row['name']);
+                array_push($returnValue, $row['role']);
+                array_push($returnValue, $row['groupname']);
+                array_push($returnValue, $row['creationdate']);
+                array_push($returnValue, $row['street']);
+                array_push($returnValue, $row['state']);
+                array_push($returnValue, $row['city']);
+                array_push($returnValue, $row['birthdate']);
+                array_push($returnValue, $row['phoneno']);
+                if($row['role']=='Patient'){
+                    array_push($returnValue, $row['doctorname']);
+                    array_push($returnValue, $row['nursename']);
+                    array_push($returnValue, $row['purposeofvisit']);
+                    array_push($returnValue, $row['diagnosis']);
+                    array_push($returnValue, $row['medication']);
+                    array_push($returnValue, $row['lastvisit']);
+                }
+                else
+                    array_push($returnValue, 0);
+            }
+        }
+        return $returnValue;
     }
 
 

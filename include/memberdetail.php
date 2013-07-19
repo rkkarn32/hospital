@@ -1,4 +1,5 @@
 <?php session_start();
+    include_once 'view.php';
 ?>
 <div id="container" class="container">
 <div id="demo" >
