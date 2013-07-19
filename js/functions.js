@@ -27,7 +27,61 @@ $(document).ready(function(){
     });
 });
 
+function validateForm()
+{
+    var nowdatetime = new Date();
+    var month = nowdatetime.getMonth() + 1;
+    var day = nowdatetime.getDate();
+    var year = nowdatetime.getFullYear();
+    var nowdate = year + "/" + month + "/" + day;
+    var todayToDate = Date.parse(nowdate);
+    
+    var x=$('#name').val();
+    if (x==null || x=="")
+    {
+        alert("Name must be filled out");
+        return false;
+    }
+    var x=$('#roleList').val();
+    if (x==0)
+    {
+        alert("Please select account Type");
+        return false;
+    }
+    var x=$('#accountList').val();
+    if (x==0)
+    {
+        alert("Please select account Group");
+        return false;
+    }
+    
+    var x= Date.parse($('#creationDate').val());
+    if (x==null || x > nowdatetime)
+    {
+        alert("Creation date should not exceed today");
+        return false;
+    }
+    
+    x=$('#birthDate').val();
+    
+    if(x==null || x=='')
+        alert ('please enter Date of Birth');
+    
+    var selectedBirthDate = Date.parse(x);
+    if (x=='yyyy-mm-dd' || selectedBirthDate > todayToDate)
+    {
+        alert("Invalid Birth Date");
+        return false;
+    }
+    
+    return false;
+    return true;
+  
+}
+
 function RegisterUser(){
+    if(!validateForm())
+        return false;
     var Data = $('#userDetailForm').serialize();
     Data = "task=registeruser&"+Data;
     $.ajax({
