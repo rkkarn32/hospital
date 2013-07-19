@@ -45,4 +45,17 @@ include_once 'sql_connection.php';
         $result = $sql->GetUserDetail($id);
         echo json_encode($result);
     }
+    else if($task =='searchRecord'){
+        $userName = mysql_escape_string($_POST['userName']);
+        $creationDate = mysql_escape_string($_POST['accountCreationDate']);
+        $roleID = mysql_escape_string($_POST['roleList']);
+        $accountGroupidID = mysql_escape_string($_POST['accountGroupList']);
+        $name = mysql_escape_string($_POST['txtFullName']);
+        $state = mysql_escape_string($_POST['txtState']);
+        $city = mysql_escape_string($_POST['txtCity']);
+        $phoneno =  mysql_escape_string($_POST['txPhoneNo']);
+        $birthDate = mysql_escape_string($_POST['txtBirthDate']);
+        $returValue = $sql->SearchRecord($userName,$creationDate,$roleID,$accountGroupidID,$name, $state,$city,$phoneno,$birthDate);
+        echo json_encode($returValue);
+    }
 ?>

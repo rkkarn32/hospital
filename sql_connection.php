@@ -241,29 +241,32 @@ class SqlConnection{
         }
         return $returnValue;
     }
-
-
-    public function User($id){
-		$sql="select * from  userdetail where userid ='$id'";
-		$result = mysql_query($sql);
-		$user= mysql_fetch_array($result);
-		return $user;
-		
-	}
-	public function type($id){
-		$sql="select * from roles where roleid ='$id'";
-		$result = mysql_query($sql);
-		$user= mysql_fetch_array($result);
-		return $user;
-		
-	}
-	public function group($id){
-		$sql="select * from accountgroup where groupid ='$id'";
-		$result = mysql_query($sql);
-		$user= mysql_fetch_array($result);
-		return $user;
-		
-	}
     
+        public function SearchRecord($userName,$creationDate,$roleID,$accountGroupID,$name,$state,$city,$phoneno,$birthDate){
+            $query = "SELECT userid,name,role,groupname FROM userdetail NATURAL JOIN roles NATURAL JOIN accountgroup WHERE username LIKE '%$userName%' AND "
+                    ."creationdate LIKE '%$creationDate%' AND roleid LIKE '%$roleID%' AND groupid LIKE '%$accountGroupID%' AND "
+                    ."name LIKE '%$name%' AND state LIKE '%$state%' AND city LIKE '%$city%' AND phoneno LIKE '%$phoneno%' AND "
+                    ."birthdate LIKE '%$birthDate%' AND userid>".$_SESSION['userid'];
+            $result = mysql_query($query);
+            Logger::LogInformation("SearchRecord()## Query is :".$query);
+            $returnValue = array();
+            if(!$result){
+                Logger::LogInformation("SearchRecord()## Query isn't executed, Error".mysql_error());
+                $returnValue[0] = 0;
+            }else{
+                $i = 0;
+                while($row = mysql_fetch_array($result)){
+                    $returnValue[$i] = array();
+                    array_push($returnValue[$i], $row['userid']);
+                    array_push($returnValue[$i], $row['name']);
+                    array_push($returnValue[$i], $row['role']);
+                    array_push($returnValue[$i], $row['groupname']);
+                    
+                    $i++;
+                }
+                Logger::LogInformation("SearchRecord()## Search Completed !!!");
+            }            
+            return $returnValue;
+        }
 }
 ?>

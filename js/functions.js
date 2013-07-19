@@ -177,3 +177,26 @@ function ShowHidePatient(){
     else
         $('#inputForPatient').hide();
 }
+
+function SearchRecord(){
+    var Data = $('#searchForm').serialize();
+    Data = 'task=searchRecord&'+Data;
+    $.ajax({
+        url:'taskprocess.php',
+        data:Data,
+        type:'POST',
+        dataType:'json',
+        cache: false,
+        success:function(output){
+            oTable.fnClearTable();
+            if(output[0] !=0){                        
+                    for(var i =0; i < output.length;i++){
+                        oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
+                            "<button type='button' onclick='ShowUserDetails("+output[i][0]+")'>Show Details</button>"
+                            ]);
+                    }
+                }
+        }
+    });
+    return false;
+}

@@ -18,7 +18,7 @@ include_once 'sql_connection.php';
                     <td>Account Type</td>
                     <td>
                         <div align="right">
-                            <select id="roleList" name="roleList" id="roleList" class="listmenu" style="width: 100%"  onchange="ShowHidePatient()">
+                            <select id="roleList" name="roleList" class="listmenu" style="width: 100%"  onchange="ShowHidePatient()">
                                 <option selected="selected" value="0" tabindex="12" >Select Role</option>
                                 <?php
                                 Logger::LogInformation("Loading Role List");
@@ -29,7 +29,8 @@ include_once 'sql_connection.php';
                                 Logger::LogInformation("Role List Loaded");
                                 ?>
                             </select>
-                        </div>            </td>
+                        </div>            
+                    </td>
                 </tr>
                 <tr>
                     <td>Account Group</td>
