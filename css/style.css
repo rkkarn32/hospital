@@ -110,6 +110,14 @@ label .loginLabel{
     border-top-width: 1px;
 }
 
+.searcgBox{
+    
+    height: auto;
+    padding: 10px;
+    overflow: auto;
+    border: 1px solid #8080FF;
+    background-color: #E5E5FF;
+}
 /* search */
 .searchform { float:left; padding:0;}
 #formsearch { margin:0; height:36px; padding:24px 0 32px 24px; width:232px;}

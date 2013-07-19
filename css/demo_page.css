@@ -25,6 +25,15 @@
 
 #dt_example #demo {
 	margin: 30px auto 0 auto;
+    border-right-style: dashed;
+    border-left-style: dashed;
+    border-bottom-style: dashed;
+    border-top-style: dashed;
+    border-right-color: #ff0099;
+    border-left-color: #ff0099;
+    border-bottom-color: #ff0099;
+    border-top-color: #ff0099;
+    background-color: #ff0033;
 }
 
 #dt_example .demo_jui {
