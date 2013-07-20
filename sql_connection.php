@@ -154,7 +154,7 @@ class SqlConnection{
         do{
             $username = substr($name, 0,$i). $userID;
             $i++;
-            $userExist = $this->IsUserExist($username);
+            $userExist = $this->IsUserNameExist($username);
         }while($userExist);
         return $username;
     }
@@ -164,7 +164,7 @@ class SqlConnection{
      * @param $username Username of the user.
      * @return boolean True if user exist and false in otherwise.
      */
-    private function IsUserExist($username){
+    private function IsUserNameExist($username){
         $query = "SELECT username FROM userdetail WHERE username='".$username."'";
         $result = mysql_query($query);
         if(!result)
@@ -219,6 +219,7 @@ class SqlConnection{
             Logger::LogInformation("GetUserDetail()## User Detail Loaded".mysql_error());
             while($row = mysql_fetch_array($result)){
                 array_push($returnValue, $row['name']);
+                array_push($returnValue, $row['username']);
                 array_push($returnValue, $row['role']);
                 array_push($returnValue, $row['groupname']);
                 array_push($returnValue, $row['creationdate']);
@@ -227,7 +228,7 @@ class SqlConnection{
                 array_push($returnValue, $row['city']);
                 array_push($returnValue, $row['birthdate']);
                 array_push($returnValue, $row['phoneno']);
-                if($row['role']=='Patient'){
+                if($row['role']=='Spectator'){
                     array_push($returnValue, $row['doctorname']);
                     array_push($returnValue, $row['nursename']);
                     array_push($returnValue, $row['purposeofvisit']);

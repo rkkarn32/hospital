@@ -24,14 +24,14 @@
                 <tr>
                     <td width="27%" ><strong>Name:-</strong></td>
                     <td width="32%"><div id="name" align="left"></div></td>
-                    <td width="20%"><strong>Account Type:-</strong></td>
-                    <td width="21%"><div id="accountType" align="left"></div></td>
+                    <td width="20%"><strong>User name:-</strong></td>
+                    <td width="21%"><div id="userName" align="left"></div></td>
                 </tr>    
                 <tr>
+                    <td width="20%"><strong>Account Type:-</strong></td>
+                    <td width="21%"><div id="accountType" align="left"></div></td>
                     <td><strong>Account Group:-</strong></td>
                     <td><div align="left" id="accountGroup"></div></td>
-                    <td><strong>Creation Date:-</strong></td>
-                    <td><div align="left" id="creationDate"></div></td>
                 </tr>   
                 <tr>
                     <td><strong>Street Address:-</strong></td>
@@ -48,6 +48,8 @@
                 <tr>
                     <td><strong>Phone Number:-</strong></td>
                     <td><div align="left" id="phoneNumber"></div></td>
+                    <td><strong>Creation Date:-</strong></td>
+                    <td><div align="left" id="creationDate"></div></td>
                 </tr>
             </table>
         </div>
