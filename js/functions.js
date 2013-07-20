@@ -134,7 +134,7 @@ function Login(){
             if(output[0] == 1){
                 window.location.href= "index.php";          //Reload the page
                 if(output[1]==0)
-                    alert('First Login, huh !!');
+                    alert('Welcome Mr'+output[2]+'\nIts your First Login, Please Update your username and password is recommeded');
             }else{
                 alert('login Failure');
             }

@@ -60,10 +60,8 @@ Design by http://www.hotwebsitetemplates.net
                         if ($_GET['action'] && $_SESSION['loggedin'])
                             if ($_GET['action'] == 'loginform') {
                                 echo "<h3><center>You are already Logged In</center></h3>";
-                            }
-                            else
-                            {
-                                if($_GET['action']=='view')
+                            } else {
+                                if ($_GET['action'] == 'view')
                                     echo "<script>ShowUserDetails($('#userID').html());</script>";
                                 include 'include/' . $_GET['action'] . '.php';
                             }

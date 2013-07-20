@@ -35,6 +35,7 @@ class SqlConnection{
         while($row = mysql_fetch_array($result) ){
             $returnValue[0]=1;
             $returnValue[1]=$row['verified'];
+            $returnValue[2]=$row['name'];
             $this->userid = $row['userid'];
             $_SESSION['loggedin'] = 1;  
             $_SESSION['userid']= $this->userid;
@@ -48,7 +49,7 @@ class SqlConnection{
         $returnValue[0]=0;
         return $returnValue;
     }
-    public function UpdateLoginVerified($id){
+    private function UpdateLoginVerified($id){
         $query = "UPDATE userdetail SET verified =1 WHERE userid='$id'";
         $result = mysql_query($query);
         if(!$result)
