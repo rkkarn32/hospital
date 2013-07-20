@@ -40,7 +40,8 @@ class SqlConnection{
             $_SESSION['userid']= $this->userid;
             $_SESSION['roleid']=$row['roleid'];
             $_SESSION['username']=$row['username'];
-            $this->UpdateLoginVerified($this->userid);
+            if(!$row['verified'])
+                $this->UpdateLoginVerified($this->userid);
             Logger::LogInformation("LoginVerification()## Successfully Logged In by User:".$row['name']);
             return $returnValue;
         }
