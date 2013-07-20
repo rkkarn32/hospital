@@ -1,32 +1,3 @@
-
-$(document).ready(function(){
-    $('#viewDetail').hide();
-    $(document).ready(function() {
-        oTable = $('#example').dataTable({
-            });
-            
-        var Data = "task=loadalluser";
-        $.ajax({
-            url:'taskprocess.php',
-            data:Data,
-            type:'POST',
-            dataType:'json',
-            cache:false,
-            success: function(output){
-                if(output[0][0] !=0){
-                    oTable.fnClearTable();
-                        
-                    for(var i =0; i < output.length;i++){
-                        oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
-                            "<button type='button' onclick='ShowUserDetails("+output[i][0]+")'>Show Details</button>"
-                            ]);
-                    }
-                }
-            }
-        });
-    });
-});
-
 function validateForm()
 {
     var nowdatetime = new Date();
