@@ -1,13 +1,28 @@
-<?php 
-if($_SESSION['loggedin'])
-{
-    $action = $_GET['action'];
-    $class= $action == "viewprofile"?"class='selected'":"class=''";
-    echo'<li><a href = "index.php?action=view" title ="View Your Profile">Profile</a></li>';
-    echo'<li><a href = "index.php?action=memberdetail" title = "Click to LogOut">Member List</a></li>';
-    echo'<li><a href = "index.php?action=createaccount" title = "Create New Accuont">Create Account</a></li>';
-    echo'<li><a href = "index.php?action=logout" title = "Click to LogOut">LOGOUT</a></li>';
+<?php
+
+$action = $_GET['action'];
+if($action=='')
+    $activeHome = "active";
+if($action=='view')
+    $activeProfile = "active";
+if($action=='memberdetail')
+    $activeViewMember = "active";
+if($action =='createaccount')
+    $activeCreateAccount= "active";
+if($action=='logout')
+    $activeLogOut = "active";
+if($action == 'loginform')
+    $activeLogin='active';
+
+echo "<li class='$activeHome'><a href='index.php'>Home</a></li>";
+if ($_SESSION['loggedin']) {
+
+    $class = $action == "viewprofile" ? "class='selected'" : "class=''";
+    echo"<li class='$activeProfile'><a href = 'index.php?action=view' title ='View Your Profile'>Profile</a></li>";
+    echo"<li class='$activeViewMember'><a href = 'index.php?action=memberdetail' title = 'Click to LogOut'>View Member</a></li>";
+    echo"<li class='$activeCreateAccount'><a href = 'index.php?action=createaccount' title = 'Create New Accuont'>Create Account</a></li>";
+    echo"<li class='$activeLogOut'><a href = 'index.php?action=logout' title = 'Click to LogOut'>LOGOUT</a></li>";
 }
 else
-	echo'<li><a href = "index.php?action=loginform" title = "Member bank login!">LOGIN</a></li>';
+    echo"<li class='$activeLogin'><a href = 'index.php?action=loginform' title = 'Member bank login!'>LOGIN</a></li>";
 ?>

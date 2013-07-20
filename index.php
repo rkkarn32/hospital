@@ -38,7 +38,6 @@ Design by http://www.hotwebsitetemplates.net
                     </div>
                     <div class="menu_nav">
                         <ul>
-                            <li class="active"><a href="index.php">Home</a></li>
                             <?php
                             include "menubar.php";
                             ?>
