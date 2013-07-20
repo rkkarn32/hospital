@@ -1,5 +1,6 @@
 <?php session_start();
 if ($_GET['action'] == 'logout') {
+    $_SESSION['loggedin']=0;
     session_destroy();
 }
 ?>

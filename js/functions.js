@@ -149,6 +149,7 @@ function ShowUserDetails(id){
     });
     return true;
 }
+
 function Login(){
     var Data = $('#loginForm').serialize();
     Data = "task=login&"+Data;
@@ -159,9 +160,10 @@ function Login(){
         cache:false,
         dataType:'json',
         success:function(output){
-            if(output == 1){
-                
+            if(output[0] == 1){
                 window.location.href= "index.php";          //Reload the page
+                if(output[1]==0)
+                    alert('First Login, huh !!');
             }else{
                 alert('login Failure');
             }
@@ -191,12 +193,12 @@ function SearchRecord(){
         success:function(output){
             oTable.fnClearTable();
             if(output[0] !=0){                        
-                    for(var i =0; i < output.length;i++){
-                        oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
-                            "<button type='button' onclick='ShowUserDetails("+output[i][0]+")'>Show Details</button>"
-                            ]);
-                    }
+                for(var i =0; i < output.length;i++){
+                    oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
+                        "<button type='button' onclick='ShowUserDetails("+output[i][0]+")'>Show Details</button>"
+                        ]);
                 }
+            }
         }
     });
     return false;

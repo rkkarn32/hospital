@@ -27,20 +27,33 @@ class SqlConnection{
     }
     
     public function LoginVerification($uname,$pword){
+        $returnValue = array();
         $sql = "SELECT * FROM userdetail WHERE username = '".  mysql_escape_string($uname)."' AND password ='".  mysql_escape_string($pword)."'";
         $result = mysql_query($sql, $this->db_link);
         if(!$result)
             Logger::LogInformation ("LoginVerification()## Query isn't executed, Error: ".mysql_error ());
         while($row = mysql_fetch_array($result) ){
+            $returnValue[0]=1;
+            $returnValue[1]=$row['verified'];
             $this->userid = $row['userid'];
             $_SESSION['loggedin'] = 1;  
             $_SESSION['userid']= $this->userid;
             $_SESSION['roleid']=$row['roleid'];
             $_SESSION['username']=$row['username'];
-            Logger::LogInformation("Successfully Logged In by User:".$row['name']);
-            return 1;
+            $this->UpdateLoginVerified($this->userid);
+            Logger::LogInformation("LoginVerification()## Successfully Logged In by User:".$row['name']);
+            return $returnValue;
         }
-        return 0;
+        $returnValue[0]=0;
+        return $returnValue;
+    }
+    public function UpdateLoginVerified($id){
+        $query = "UPDATE userdetail SET verified =1 WHERE userid='$id'";
+        $result = mysql_query($query);
+        if(!$result)
+            Logger::LogInformation("UpdateLoginVerified() ## Query isn't executed, Error: ".  mysql_error());
+        else
+            Logger::LogInformation("UpdateLoginVerified() ## Verified status updated for id='$id'");
     }
     
     function LoadAllUser(){

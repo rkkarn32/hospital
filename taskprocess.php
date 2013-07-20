@@ -2,7 +2,7 @@
 include_once 'sql_connection.php';
     $task = $_POST['task'];
     if($task == 'login'){
-        Logger::LogInformation("Login Done");
+        Logger::LogInformation("Login process started");
         $username = mysql_escape_string($_POST['username']);
         $password = md5(mysql_escape_string($_POST['password']));
         $returValue = $sql->LoginVerification($username,$password);
