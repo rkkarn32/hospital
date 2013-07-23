@@ -5,7 +5,7 @@ $sql = new SqlConnection();
 
 class SqlConnection {
 
-    private $startLocalIP = "122.168.1.1";          //Locality information on the basis of IP
+    private $startLocalIP = "126.168.1.1";          //Local IP Range
     private $endLocalIP = "192.0.0.1";
     
     private $db_name = "hospital";                  //Database Information
@@ -67,11 +67,15 @@ class SqlConnection {
      * @return Number The access privilege
      */
     private function IsVisitorLocal($IP) {
+//        $startValue = sprintf('%u',ip2long($this->startLocalIP));
+//        $endValue = sprintf('%u',ip2long($this->endLocalIP));
+//        $currentIP = sprintf('%u',ip2long($IP));
         $startValue = sprintf('%u',ip2long($this->startLocalIP));
         $endValue = sprintf('%u',ip2long($this->endLocalIP));
         $currentIP = sprintf('%u',ip2long($IP));
         Logger::LogInformation("Start IP" . $startValue . " , End IP" . $endValue . "=$this->endLocalIP , current IP" . $currentIP);
-        if ($startValue <= $IP AND $IP <= $endValue) {
+        
+        if ($startValue <= $currentIP AND $currentIP <= $endValue) {
             Logger::LogInformation("IsVistorLocal()## Visitor is local, IP=" . $IP);
             return true;
         } else {
