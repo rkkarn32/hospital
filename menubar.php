@@ -19,8 +19,8 @@ if ($_SESSION['loggedin']) {
 
     $class = $action == "viewprofile" ? "class='selected'" : "class=''";
     echo"<li class='$activeProfile'><a href = 'index.php?action=view' title ='View Your Profile'>Profile</a></li>";
-    echo"<li class='$activeViewMember'><a href = 'index.php?action=memberdetail' title = 'Click to LogOut'>View Member</a></li>";
-    echo"<li class='$activeCreateAccount'><a href = 'index.php?action=createaccount' title = 'Create New Accuont'>Create Account</a></li>";
+        echo"<li class='$activeViewMember'><a href = 'index.php?action=memberdetail' title = 'Click to LogOut'>View Member</a></li>";
+        echo"<li class='$activeCreateAccount'><a href = 'index.php?action=createaccount' title = 'Create New Accuont'>Create Account</a></li>";
     echo"<li class='$activeLogOut'><a href = 'index.php?action=logout' title = 'Click to LogOut'>LOGOUT</a></li>";
 }
 else

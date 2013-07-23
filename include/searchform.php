@@ -58,7 +58,7 @@
                 </tr>
                 <tr>
                     <td><strong>Birth Date:-</strong></td>
-                    <td><input type="text" name="txtBirthDate" tabindex="20" maxlength="50" style="width: 80%" /></td>
+                    <td><input type="date" name="txtBirthDate" tabindex="20"  style="width: 80%" /></td>
                 </tr>
             </table>
             <div class="button" id="buttons" align="center">

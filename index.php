@@ -1,6 +1,8 @@
-<?php session_start();
+<?php
+include_once 'sql_connection.php';
+session_start();
 if ($_GET['action'] == 'logout') {
-    $_SESSION['loggedin']=0;
+    $_SESSION['loggedin'] = 0;
     session_destroy();
 }
 ?>
@@ -48,7 +50,7 @@ Design by http://www.hotwebsitetemplates.net
                     <div class="clr"></div>
                 </div>
             </div>
-
+            
             <div class="content">
                 <div class="content_resize">
                     <!--      <div class="mainbar">-->

@@ -44,8 +44,6 @@ function validateForm()
         alert("Invalid Birth Date");
         return false;
     }
-    
-    return false;
     return true;
   
 }
