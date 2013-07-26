@@ -36,7 +36,10 @@ function validateForm()
     x=$('#birthDate').val();
     
     if(x==null || x=='')
-        alert ('please enter Date of Birth');
+        {
+            alert ('please enter Date of Birth');
+            return false;
+        }
     
     var selectedBirthDate = Date.parse(x);
     if (x=='yyyy-mm-dd' || selectedBirthDate > todayToDate)
@@ -116,6 +119,50 @@ function ShowUserDetails(id){
             alert(a+" "+" "+c);
         }
     });
+    return false;
+}
+
+function EditUserDetails(id){
+    alert('We are in EditUserDetails() with id='+id);
+    return false;
+    var Data= "task=showuserdetail&id="+id;
+    $.ajax({
+        url:"taskprocess.php" ,
+        data:Data,
+        cache:false,
+        dataType:'json',
+        type:'POST',
+        success: function(output){
+            if(output[0] !=0){
+                $('#viewDetail').show();
+                $('#name').html(output[0]);
+                $('#userName').html(output[1])
+                $('#accountType').html(output[2]);
+                $('#accountGroup').html(output[3]);
+                $('#creationDate').html(output[4]);
+                $('#streetAddress').html(output[5]);
+                $('#state').html(output[6]);
+                $('#city').html(output[7]);
+                $('#birthDate').html(output[8]);
+                $('#phoneNumber').html(output[9]);
+                if(output[10]==0){
+                    $('#patientDetail').hide();
+                }
+                else{
+                    $('#patientDetail').show();
+                    $('#doctorName').html(output[10]);
+                    $('#nurseName').html(output[11]);
+                    $('#purposeOfVisit').html(output[12]);
+                    $('#diagnosisGiven').html(output[13]);
+                    $('#medicationPrescribed').html(output[14]);
+                    $('#lastOfficeVisit').html(output[15]);
+                }
+            }
+        },
+        error:function (a, b , c){
+            alert(a+" "+" "+c);
+        }
+    });
     return true;
 }
 
@@ -144,7 +191,7 @@ function Login(){
 
 function ShowHidePatient(){
     var selectionID = $('#roleList').val();
-    if(selectionID ==4 || selectionID==0 )
+    if(selectionID ==4  )
         $('#inputForPatient').show();
     else
         $('#inputForPatient').hide();
