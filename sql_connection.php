@@ -291,7 +291,7 @@ class SqlConnection {
                 array_push($returnValue, $row['city']);
                 array_push($returnValue, $row['birthdate']);
                 array_push($returnValue, $row['phoneno']);
-                if ($row['role'] == 'Spectator') {
+                if ($row['role'] == 'Patient') {
                     array_push($returnValue, $row['doctorname']);
                     array_push($returnValue, $row['nursename']);
                     array_push($returnValue, $row['purposeofvisit']);
