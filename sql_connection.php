@@ -326,11 +326,11 @@ class SqlConnection {
         return $returnValue;
     }
 
-    public function SearchRecord($userName, $creationDate, $roleID, $accountGroupID, $name, $state, $city, $phoneno, $birthDate) {
+    public function SearchRecord($userID,$userName, $creationDate, $roleID, $accountGroupID, $name, $state, $city, $phoneno, $birthDate) {
         $query = "SELECT userid,name,role,groupname FROM userdetail NATURAL JOIN roles NATURAL JOIN accountgroup WHERE username LIKE '%$userName%' AND "
                 . "creationdate LIKE '%$creationDate%' AND roleid LIKE '%$roleID%' AND groupid LIKE '%$accountGroupID%' AND "
                 . "name LIKE '%$name%' AND state LIKE '%$state%' AND city LIKE '%$city%' AND phoneno LIKE '%$phoneno%' AND "
-                . "birthdate LIKE '%$birthDate%' AND roleid>" . $_SESSION['roleid'];
+                . "birthdate LIKE '%$birthDate%' AND userid LIKE '%$userID%' AND roleid>" . $_SESSION['roleid'];
         $result = mysql_query($query);
         $returnValue = array();
         if (!$result) {

@@ -22,32 +22,36 @@
         <div class="generalDetail">
             <table width="100%" border="1px"> 
                 <tr>
-                    <td width="27%" ><strong>Name:-</strong></td>
-                    <td width="32%"><div id="name" align="left"></div></td>
+                    <td width="27%" ><strong>User ID:-</strong></td>
+                    <td width="32%"><div id="userID_Retrieve" align="left"></div></td>
                     <td width="20%"><strong>User name:-</strong></td>
                     <td width="21%"><div id="userName" align="left"></div></td>
                 </tr>    
                 <tr>
-                    <td width="20%"><strong>Account Type:-</strong></td>
-                    <td width="21%"><div id="accountType" align="left"></div></td>
-                    <td><strong>Account Group:-</strong></td>
-                    <td><div align="left" id="accountGroup"></div></td>
+                    <td width="27%" ><strong>Name:-</strong></td>
+                    <td width="32%"><div id="name" align="left"></div></td>
+                    <td width="27%"><strong>Account Type:-</strong></td>
+                    <td width="32%"><div id="accountType" align="left"></div></td>
                 </tr>   
                 <tr>
+                    <td><strong>Account Group:-</strong></td>
+                    <td><div align="left" id="accountGroup"></div></td>
                     <td><strong>Street Address:-</strong></td>
                     <td><div align="left" id="streetAddress"></div></td>
+                </tr>
+                <tr>
                     <td><strong>State:-</strong></td>
                     <td valign="top"><div align="left" id="state"></div></td>
-                </tr>
-                <tr>
                     <td><strong>City:-</strong></td>
                     <td><div align="left" id="city"></div></td>
-                    <td><strong>Birth Date:-</strong></td>
-                    <td><div align="left" id="birthDate"></div></td>
                 </tr>
                 <tr>
+                    <td><strong>Birth Date:-</strong></td>
+                    <td><div align="left" id="birthDate"></div></td>
                     <td><strong>Phone Number:-</strong></td>
                     <td><div align="left" id="phoneNumber"></div></td>
+                </tr>
+                <tr>
                     <td><strong>Creation Date:-</strong></td>
                     <td><div align="left" id="creationDate"></div></td>
                 </tr>

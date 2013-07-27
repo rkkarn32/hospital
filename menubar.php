@@ -19,9 +19,9 @@ if ($_SESSION['loggedin']) {
 
     $class = $action == "viewprofile" ? "class='selected'" : "class=''";
     echo"<li class='$activeProfile'><a href = 'index.php?action=view' title ='View Your Profile'>Profile</a></li>";
-    if($_SESSION['roleid']==1 || $sql->HasPermission($_SESSION['userid'],  PermissionByID::$retrieveData))
+    if($sql->HasPermission($_SESSION['userid'],  PermissionByID::$retrieveData))
         echo"<li class='$activeViewMember'><a href = 'index.php?action=memberdetail' title = 'Click to LogOut'>Search User</a></li>";
-    if($_SESSION['roleid']==1 || $sql->HasPermission($_SESSION['userid'],  PermissionByID::$createUser))
+    if($sql->HasPermission($_SESSION['userid'],  PermissionByID::$createUser))
         echo"<li class='$activeCreateAccount'><a href = 'index.php?action=createaccount' title = 'Create New Accuont'>Create Account</a></li>";
     echo"<li class='$activeLogOut'><a href = 'index.php?action=logout' title = 'Click to LogOut'>LOGOUT</a></li>";
 }

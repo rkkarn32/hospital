@@ -58,6 +58,7 @@ else if ($task == "showuserdetail") {
     $result = $sql->GetUserDetail($id);
     echo json_encode($result);
 } else if ($task == 'searchRecord') {
+    $userID = mysql_escape_string($_POST['userID_Search']);
     $userName = mysql_escape_string($_POST['userName']);
     $creationDate = mysql_escape_string($_POST['accountCreationDate']);
     $roleID = mysql_escape_string($_POST['roleList']);
@@ -67,7 +68,7 @@ else if ($task == "showuserdetail") {
     $city = mysql_escape_string($_POST['txtCity']);
     $phoneno = mysql_escape_string($_POST['txPhoneNo']);
     $birthDate = mysql_escape_string($_POST['txtBirthDate']);
-    $returValue = $sql->SearchRecord($userName, $creationDate, $roleID, $accountGroupidID, $name, $state, $city, $phoneno, $birthDate);
+    $returValue = $sql->SearchRecord($userID,$userName, $creationDate, $roleID, $accountGroupidID, $name, $state, $city, $phoneno, $birthDate);
     echo json_encode($returValue);
 }
 ?>

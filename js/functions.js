@@ -111,6 +111,7 @@ function ShowUserDetails(id){
         success: function(output){
             if(output[0] !=0){
                 $('#viewDetail').show();
+                $('#userID_Retrieve').html(id);
                 $('#name').html(output[0]);
                 $('#userName').html(output[1])
                 $('#accountType').html(output[2]);
