@@ -18,8 +18,8 @@ include_once 'sql_connection.php';
                     <td>Account Type</td>
                     <td>
                         <div align="right">
-                            <select id="roleList" name="roleList" class="listmenu" style="width: 100%"  onchange="ShowHidePatient()">
-                                <option selected="selected" value="0" tabindex="12" >Select Role</option>
+                            <select id="roleList" name="roleList" class="listmenu" style="width: 100%"  onchange="loadPermissionList()">
+                                <option selected="selected" value="0" tabindex="12" onchange="" >Select Role</option>
                                 <?php
                                 Logger::LogInformation("Loading Role List");
                                 $roleList = $sql->GetRoles($_SESSION['userid']);
@@ -33,6 +33,20 @@ include_once 'sql_connection.php';
                     </td>
                 </tr>
                 <tr>
+                    <td>
+                        <div class="permissionList" style="display: none">
+                            <input type="checkbox" id="retrieveData" name="retrieveData" />
+                            <label>Retrieve Data</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="permissionList"  style="display: none">
+                            <input type="checkbox" name="reportData" id="reportData"/>
+                            <label>Report Data</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
                     <td>Account Group</td>
                     <td>
                         <div align="right">
@@ -40,13 +54,13 @@ include_once 'sql_connection.php';
                             <select id="accountList" name="accountList" class="listmenu" style="width:100%" tabindex="13">
                                 <option value="0" selected="selected">Select Account</option>
                                 <?php
-                                Logger::LogInformation("Loading AccountType List");
-                                $accountList = $sql->GetAccountList();
-                                foreach ($accountList as $account) {
-                                    echo "<option value='" . $account[0] . "'>" . $account[1] . "</option>";
-                                }
-                                Logger::LogInformation("AccountType List Loaded");
-                                ?>
+//                                Logger::LogInformation("Loading AccountType List");
+//                                $accountList = $sql->GetAccountList();
+//                                foreach ($accountList as $account) {
+//                                    echo "<option value='" . $account[0] . "'>" . $account[1] . "</option>";
+//                                }
+//                                Logger::LogInformation("AccountType List Loaded");
+//                                ?>
                             </select>
                         </div>            </td>
                 </tr>
@@ -96,7 +110,7 @@ include_once 'sql_connection.php';
                 </tr>
             </table>
         </div>
-        <div id="inputForPatient">
+        <div id="inputForPatient" style="display: none">
             <table>
                 <tr>
                     <td width="142" valign="top"><div align="left">Doctor</div></td>

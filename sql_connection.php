@@ -1,7 +1,7 @@
 <?php
 
 include_once 'logger.php';
-$sql = new SqlConnection();
+include_once 'globalvariable.php';
 
 class SqlConnection {
 
@@ -73,7 +73,7 @@ class SqlConnection {
         $startValue = sprintf('%u',ip2long($this->startLocalIP));
         $endValue = sprintf('%u',ip2long($this->endLocalIP));
         $currentIP = sprintf('%u',ip2long($IP));
-        Logger::LogInformation("Start IP" . $startValue . " , End IP" . $endValue . "=$this->endLocalIP , current IP" . $currentIP);
+//        Logger::LogInformation("Start IP" . $startValue . " , End IP" . $endValue . "=$this->endLocalIP , current IP" . $currentIP);
         
         if ($startValue <= $currentIP AND $currentIP <= $endValue) {
             Logger::LogInformation("IsVistorLocal()## Visitor is local, IP=" . $IP);
@@ -149,16 +149,36 @@ class SqlConnection {
             Logger::LogInformation("RegisterUser(), Registration for $name is Successfull");
         return $result;
     }
-
-    private function RegisterPatient($doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication) {
+    public function AllowedPermissions($permission){
+        foreach($permission as $perm){
+            $userID= $this->GetRecentUserID();
+            $query = "INSERT INTO userpermission VALUES('$userID','$perm')";
+            $result = mysql_query($query);
+            if(!$result)
+            {
+                Logger::LogInformation ("AllowedPermissions()## Query isn't executed, Error: ".mysql_error ());
+                return false;
+            }
+        }
+        Logger::LogInformation("AllowedPermission()##, Permissions Set for id=$userID");
+        return true;
+    }
+    private function GetRecentUserID(){
         $queryUserID = "SELECT max(userid) FROM userdetail";
         $resultUserID = mysql_query($queryUserID);
         $row = mysql_fetch_array($resultUserID);
-        $userid = $row[0];
+        return $row[0];
+    }
+    private function RegisterPatient($doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication) {
+//        $queryUserID = "SELECT max(userid) FROM userdetail";
+//        $resultUserID = mysql_query($queryUserID);
+//        $row = mysql_fetch_array($resultUserID);
+//        $userid = $row[0];
+        $userid= $this->GetRecentUserID();
         $query = "INSERT INTO patient VALUES ('','$userid','$doctorID','$nurseID','$lastVisit','$purposeOfVisit','$diagnosis','$medication')";
         $result = mysql_query($query);
         if (!$result) {
-            Logger::LogInformation("RegisterPatient()## Query is " . $query);
+//            Logger::LogInformation("RegisterPatient()## Query is " . $query);
             Logger::LogInformation("RegisterPatient()## Data isn't inserted, Error: " . mysql_error());
         }
         else
@@ -331,7 +351,22 @@ class SqlConnection {
         }
         return $returnValue;
     }
-
+    
+    public function HasPermission($userID,$permissionID){
+        $query = "SELECT * FROM permission NATURAL JOIN userpermission WHERE userid='$userID' AND permissionid='$permissionID'";
+        $result = mysql_query($query);
+        if(!$result){
+            Logger::LogInformation("HasPermission()## Query isn't executed, Error: ".mysql_error());
+            return false;
+        }
+        if(mysql_fetch_row($result)>0){
+            return true;
+        }
+        Logger::LogInformation("HasPermission()## User don't have permission for activityID =".$permissionID);
+        return false;
+    }
 }
+
+$sql = new SqlConnection();
 
 ?>

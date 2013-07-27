@@ -1,6 +1,6 @@
 <?php
-include_once 'sql_connection.php';
 session_start();
+include_once 'sql_connection.php';
 if ($_GET['action'] == 'logout') {
     $_SESSION['loggedin'] = 0;
     session_destroy();

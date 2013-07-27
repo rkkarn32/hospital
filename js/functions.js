@@ -1,3 +1,17 @@
+function ShowPermissions(){
+    $('.permissionList').show();
+}
+function HidePermissions(){
+    $('.permissionList').hide();
+}
+function ShowPatientDiv(){
+    $('#inputForPatient').show();
+}
+function HidePatientDiv(){
+    $('#inputForPatient').hide();
+}
+
+
 function validateForm()
 {
     var nowdatetime = new Date();
@@ -23,6 +37,12 @@ function validateForm()
     if (x==0)
     {
         alert("Please select account Group");
+        return false;
+    }
+
+    if($('#roleList').val()==3 && !($('#retrieveData').attr('checked') || $('#reportData').attr('checked')))
+    {
+        alert("Minimum one permission must be selected for LLA users");
         return false;
     }
     
@@ -63,7 +83,7 @@ function RegisterUser(){
         dataType:'json',
         cache:false,
         success: function(output){
-            //            alert(output);
+//                        alert(output);
             if(output[0] == true)
             {
                 alert("Data entered successfully");
@@ -179,7 +199,7 @@ function Login(){
             if(output[0] == 1){
                 window.location.href= "index.php";          //Reload the page
                 if(output[1]==0)
-                    alert('Welcome Mr'+output[2]+'\nIts your First Login, Please Update your username and password is recommeded');
+                    alert('Welcome '+output[2]+'\nIts your First Login, Please Update your username and password is recommeded');
             }else{
                 alert('login Failure');
             }
@@ -189,12 +209,23 @@ function Login(){
     
 }
 
-function ShowHidePatient(){
-    var selectionID = $('#roleList').val();
-    if(selectionID ==4  )
-        $('#inputForPatient').show();
-    else
-        $('#inputForPatient').hide();
+function loadPermissionList(){
+    var roleList = $('#roleList').val();
+    var accountList = "<option value='0' selected='selected'>Select Account</option>";
+    if(roleList == 4){
+        accountList += "<option value='3'>Patient</option>";
+        HidePermissions();
+        ShowPatientDiv();
+    }
+    else{
+        HidePatientDiv();
+        accountList += "<option value='1'>Doctor</option>"+"<option value='2'>Nurse</option>";
+        if(roleList == 3)
+            ShowPermissions();
+        else
+            HidePermissions();
+    }
+    $('#accountList').html(accountList);
 }
 
 function SearchRecord(){

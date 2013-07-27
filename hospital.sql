@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 20, 2013 at 05:26 AM
+-- Generation Time: Jul 23, 2013 at 03:06 PM
 -- Server version: 5.0.45
 -- PHP Version: 5.2.5
 
@@ -102,7 +102,7 @@ CREATE TABLE `userdetail` (
   `birthdate` date NOT NULL,
   `verified` tinyint(1) NOT NULL,
   PRIMARY KEY  (`userid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
 
 --
 -- Dumping data for table `userdetail`
@@ -111,9 +111,10 @@ CREATE TABLE `userdetail` (
 INSERT INTO `userdetail` (`userid`, `username`, `password`, `roleid`, `groupid`, `creationdate`, `name`, `street`, `city`, `state`, `phoneno`, `birthdate`, `verified`) VALUES
 (1, 'root', '6fc42c4388ed6f0c5a91257f096fef3c', 1, 1, '2013-07-07', 'Ramesh Kumar Karn', 'kupondole', 'Kathmandu', 'Nepal', '9779849757241', '2013-07-02', 1),
 (12, 'D2', 'c4d62b6dcca08e5caf06c01889282859', 2, 1, '1985-07-13', 'Deepesh Karn', 'Kathmandu,Nepal', 'Kathmandu', 'Nepal', '9779849757241', '2013-07-14', 1),
-(14, 'A14', '43ba9900ff2fc7d9d32072540b2cab12', 3, 2, '2013-07-14', 'Anju sah', 'Kathmandu,Nepal', 'Kathmandu', 'Nepal', '9779849757241', '1991-04-04', 0),
-(15, 'G15', '22f32fd975a694d340a6ad22b872b1ae', 3, 2, '2013-07-15', 'Geetiak', 'Janak chauka', 'Kathmandu', 'Nepal', '9779849757241', '0000-00-00', 0),
-(26, 'J26', 'a6a951f5b33744198df9a43c50d75d9f', 4, 3, '2013-07-15', 'Jag dish', 'Kathmandu,Nepal', 'janakpur', 'Nepal', '9779849757241', '1990-06-13', 0),
+(14, 'A14', '43ba9900ff2fc7d9d32072540b2cab12', 3, 2, '2013-07-14', 'Anju sah', 'Kathmandu,Nepal', 'Kathmandu', 'Nepal', '9779849757241', '1991-04-04', 1),
+(15, 'G15', '22f32fd975a694d340a6ad22b872b1ae', 3, 2, '2013-07-15', 'Geetiak', 'Janak chauka', 'Kathmandu', 'Nepal', '9779849757241', '0000-00-00', 1),
+(26, 'J26', 'a6a951f5b33744198df9a43c50d75d9f', 4, 3, '2013-07-15', 'Jag dish', 'Kathmandu,Nepal', 'janakpur', 'Nepal', '9779849757241', '1990-06-13', 1),
 (27, 'R27', '9506a7d828145adf450505d92dac1b4a', 2, 1, '2013-07-19', 'Ramesh Karn', 'Kupondole', 'Kathmandu', 'Nepal', '9779849757241', '2013-07-19', 1),
 (29, 'a28', '838ff8b78dfbe82b2bc6c681f0cb390f', 2, 1, '0000-00-00', 'adf', '', '', '', '', '0000-00-00', 0),
-(30, 's30', '0d6eccf00593e4f1c6e22ee059e41264', 2, 1, '0000-00-00', 'sadf', '', '', '', '', '0000-00-00', 1);
+(30, 's30', '0d6eccf00593e4f1c6e22ee059e41264', 2, 1, '0000-00-00', 'sadf', '', '', '', '', '0000-00-00', 1),
+(31, 'P31', '9408c59c6527e3a5608bf2af417cf9ad', 3, 3, '0000-00-00', 'Prem Singh', 'Kathmandu,Nepal', '', 'Nepal', '', '0000-00-00', 1);
