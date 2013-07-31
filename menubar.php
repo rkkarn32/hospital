@@ -17,7 +17,7 @@ if ($action == 'loginform')
 if($action == 'report')
     $activeReport = 'active';
 
-echo "<li class='$activeHome'><a href='index.php'>Home</a></li>";
+echo "<li class='$activeHome'><a href='index.php?action=home'>Home</a></li>";
 if ($_SESSION['loggedin']) {
 
     $class = $action == "viewprofile" ? "class='selected'" : "class=''";
@@ -31,5 +31,5 @@ if ($_SESSION['loggedin']) {
     echo"<li class='$activeLogOut'><a href = 'index.php?action=logout' title = 'Click to LogOut'>LOGOUT</a></li>";
 }
 else
-    echo"<li class='$activeLogin'><a href = 'index.php?action=loginform' title = 'Member bank login!'>LOGIN</a></li>";
+    echo"<li class='$activeLogin'><a href = 'login.php' title = 'Member bank login!'>LOGIN</a></li>";
 ?>

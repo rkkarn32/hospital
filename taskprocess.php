@@ -70,9 +70,10 @@ else if ($task == "showuserdetail") {
     $birthDate = mysql_escape_string($_POST['txtBirthDate']);
     $returValue = $sql->SearchRecord($userID, $userName, $creationDate, $roleID, $accountGroupidID, $name, $state, $city, $phoneno, $birthDate);
     echo json_encode($returValue);
-} elseif ($task = "updateRecord") {
+} elseif ($task == "updateRecord") {
     $returnValue = array();
-    $userID = $_POST['userID_E'];
+    $userID = $_POST['userId_E'];
+    Logger::LogInformation("User ID: ".$userID);
     $userName = mysql_escape_string($_POST['userName_E']);
 //    if ($sql->IsUserNameExist($userName)) {
 //        Logger::LogInformation("User Already Exist");
@@ -98,7 +99,7 @@ else if ($task == "showuserdetail") {
         $medication = mysql_escape_string($_POST['medicationPrescribed_E']);
         $lastVisit = mysql_escape_string($_POST['lastOfficeVisit_E']);
         $sql = new SqlConnection();
-        $returnValue[0]=$sql->UpdateUserDetail($userID, $username, $name, $street, $city, $state, $phoneno, $birthdate, $creationdate, $roleid, $groupid, $doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication);
+        $returnValue[0]=$sql->UpdateUserDetail($userID, $username, $name, $streetAddress, $city, $state, $phoneno, $birthDate, $creationDate, $roleID, $groupID, $doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication);
         echo json_encode($returnValue);
 //    }
 }

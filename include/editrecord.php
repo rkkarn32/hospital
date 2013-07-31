@@ -59,9 +59,43 @@
         <table width="100%" border="1px">
             <tr>
                 <td width="27%" ><strong>Doctor Name:-</strong></td>
-                <td width="32%"><input name="doctorName_E" id="doctorName_E" /></td>
+<!--                <td width="32%"><input name="doctorName_E" id="doctorName_E" /></td>-->
+                <td width="32%">
+                    <select id="doctorName_E" name="doctorName_E" style="width: 100%">
+                        <?php
+                        Logger::LogInformation("Loading Doctor List");
+                        $doctorList = $sql->GetUserNameByAccountType("Doctor");
+                        if (!$doctorList)
+                            echo"<option value='0' selected='selected'>No Doctor Found</option>";
+                        else {
+                            echo"<option value='0' selected='selected'>Select Doctor</option>";
+                            while ($row = mysql_fetch_array($doctorList))
+                                echo"<option value='" . $row[0] . "'>" . $row[1] . "</option>";
+                            Logger::LogInformation("Doctor List Loaded");
+                        }
+                        ?>
+                    </select>
+
+                </td>
                 <td width="20%"><strong>Nurse Name:-</strong></td>
-                <td width="21%"><input type="text" id="nurseName_E" name="nurseName_E" /></td>
+                <td width="21%">
+<!--                    <input type="text" id="nurseName_E" name="nurseName_E" />-->
+                    <select id="nurseName_E" name="nurseName_E" style="width: 100%">
+                        <?php
+                        Logger::LogInformation("Loading Nurse List");
+                        $nurseList = $sql->GetUserNameByAccountType("Nurse");
+                        if (!$nurseList)
+                            echo"<option value='0' selected='selected'>No Doctor Found</option>";
+                        else {
+                            echo"<option value='0' selected='selected'>Select Nurse</option>";
+
+                            while ($row = mysql_fetch_array($nurseList))
+                                echo"<option value='" . $row[0] . "'>" . $row[1] . "</option>";
+                            Logger::LogInformation("Nurse List Loaded");
+                        }
+                        ?>
+                    </select>
+                </td>
             </tr>    
             <tr>
                 <td><strong>Purpose Of Visit:-</strong></td>

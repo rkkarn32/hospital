@@ -4,6 +4,13 @@ $(document).ready(function(){
         });
 });
 
+function HideSearchDiv(){
+    $('#searchRecord').hide();
+}
+function ShowSearchDiv(){
+    $('#searchRecord').show();
+}
+
 function ShowViewDetail(){
     $('#viewDetail').show();
 }
@@ -133,7 +140,7 @@ function ShowUserDetails(id){
                 $('#name').html(output[0]);
                 $('#userName').html(output[1])
                 $('#accountType').html(output[2]);
-                $('#accountGroup').html(output[5]);
+                $('#accountGroup').html(output[4]);
                 $('#creationDate').html(output[6]);
                 $('#streetAddress').html(output[7]);
                 $('#state').html(output[8]);
@@ -146,11 +153,11 @@ function ShowUserDetails(id){
                 else{
                     $('#patientDetail').show();
                     $('#doctorName').html(output[12]);
-                    $('#nurseName').html(output[13]);
-                    $('#purposeOfVisit').html(output[14]);
-                    $('#diagnosisGiven').html(output[15]);
-                    $('#medicationPrescribed').html(output[16]);
-                    $('#lastOfficeVisit').html(output[17]);
+                    $('#nurseName').html(output[14]);
+                    $('#purposeOfVisit').html(output[16]);
+                    $('#diagnosisGiven').html(output[17]);
+                    $('#medicationPrescribed').html(output[18]);
+                    $('#lastOfficeVisit').html(output[19]);
                 }
                 $('#editButton').attr('onclick',"EditUserDetails("+id+")");
             }
@@ -163,6 +170,7 @@ function ShowUserDetails(id){
 }
 
 function EditUserDetails(id){
+    HideEditDetail();
     $('#viewDetail').hide();
     var Data= "task=showuserdetail&id="+id;
     $.ajax({
@@ -177,9 +185,9 @@ function EditUserDetails(id){
                 $('#userID_E').val(id);
                 $('#name_E').val(output[0]);
                 $('#userName_E').val(output[1])
-                $('#roleList').val(3);
-                loadPermissionList(3);
-                $('#accountList').val(output[4]);
+                $('#roleList').val(output[3]);
+                //loadPermissionList(3);
+                $('#accountList').val(output[5]);
                 $('#creationDate_E').val(output[6]);
                 $('#streetAddress_E').val(output[7]);
                 $('#state_E').val(output[8]);
@@ -191,12 +199,12 @@ function EditUserDetails(id){
                 }
                 else{
                     $('#patientDetail_E').show();
-                    $('#doctorName_E').val(output[12]);
-                    $('#nurseName_E').val(output[13]);
-                    $('#purposeOfVisit_E').val(output[14]);
-                    $('#diagnosisGiven_E').val(output[15]);
-                    $('#medicationPrescribed_E').val(output[16]);
-                    $('#lastOfficeVisit_E').val(output[17]);
+                    $('#doctorName_E').val(output[13]);
+                    $('#nurseName_E').val(output[15]);
+                    $('#purposeOfVisit_E').val(output[16]);
+                    $('#diagnosisGiven_E').val(output[17]);
+                    $('#medicationPrescribed_E').val(output[18]);
+                    $('#lastOfficeVisit_E').val(output[19]);
                 }
             }
         },
@@ -218,9 +226,12 @@ function Login(){
         dataType:'json',
         success:function(output){
             if(output[0] == 1){
-                window.location.href= "index.php";          //Reload the page
+                window.location.href= "index.php?action=home";          //Reload the page
                 if(output[1]==0)
+                {
+                    //$('#myModal').modal('show');
                     alert('Welcome '+output[2]+'\nIts your First Login, Please Update your username and password is recommeded');
+                }
             }else{
                 alert('login Failure');
             }
@@ -340,35 +351,37 @@ function PrintData(id){
             alert(a+" "+" "+c);
         }
     });
-//    alert($('#userName').html());
+    //    alert($('#userName').html());
     //PrintElem('#userDetail');
     return false;
 }
 
 function PrintElem(elem)
-    {
-        Popup($(elem).html());
-    }
+{
+    Popup($(elem).html());
+}
 
-    function Popup(data) 
-    {
-        var mywindow = window.open('', 'my div', 'height=400,width=600');
-        mywindow.document.write('<html><head><title>Your details</title>');        
-        mywindow.document.write('</head><body >');
-        mywindow.document.write(data);
-        mywindow.document.write('</body></html>');
-        mywindow.print();
-        mywindow.close();
-        return true;
-    }
-    function CancelUpdate(){
-        HideEditDetail();
-        ShowViewDetail();
-    }
+function Popup(data) 
+{
+    var mywindow = window.open('', 'my div', 'height=400,width=600');
+    mywindow.document.write('<html><head><title>Your details</title>');        
+    mywindow.document.write('</head><body >');
+    mywindow.document.write(data);
+    mywindow.document.write('</body></html>');
+    mywindow.print();
+    mywindow.close();
+    return true;
+}
+function CancelUpdate(){
+    HideEditDetail();
+    ShowViewDetail();
+}
 function UpdateRecord(){
     var data = $('#editForm_E').serialize();
-//    alert(data);
-    data = "task=updateRecord&"+data;
+    //    alert(data);
+    var userID = $('#userID_E').val();
+//    alert(userID);
+    data = "task=updateRecord&userId_E="+userID+"&"+data;
     $.ajax({
         url:'taskprocess.php',
         data:data,

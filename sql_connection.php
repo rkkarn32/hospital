@@ -314,7 +314,9 @@ class SqlConnection {
                 array_push($returnValue, $row['phoneno']);
                 if ($row['role'] == 'Patient') {
                     array_push($returnValue, $row['doctorname']);
+                    array_push($returnValue, $row['doctorid']);
                     array_push($returnValue, $row['nursename']);
+                    array_push($returnValue, $row['nurseid']);
                     array_push($returnValue, $row['purposeofvisit']);
                     array_push($returnValue, $row['diagnosis']);
                     array_push($returnValue, $row['medication']);
@@ -368,7 +370,7 @@ class SqlConnection {
     }
 
     public function UpdateUserDetail($userID, $username, $name, $street, $city, $state, $phoneno, $birthdate, $creationdate, $roleid, $groupid, $doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication) {
-        $query = "UPDATE userdetail set name='$name', street='$street', city='$city', phoneno='$phoneno', creationdate='$creationdate', roleid='$roleid', groupid='$groupid',birthdate='$birthdate',state='$state' WHERE userid='$userID'";
+        $query = "UPDATE userdetail set name='$name', street=\"$street\", city=\"$city\", phoneno='$phoneno', creationdate='$creationdate', roleid='$roleid', groupid='$groupid',birthdate='$birthdate',state='$state' WHERE userid='$userID'";
         $result = array();
         $result[0] = mysql_query($query, $this->db_link);
         Logger::LogInformation("UpdateUserDetail()## Row effected: ".  mysql_affected_rows());
@@ -384,10 +386,10 @@ class SqlConnection {
     }
 
     private function UpdatePatientDetail($userID,$doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication) {
-        $query = "UPDATE patient set doctorid='$doctorID', nurseid='$nurseID',lastvisit='$lastVisit', purposeofvisit='$purposeOfVisit',diagnosis='$diagnosis', medication='$medication') WHERE userid='$userID'";
+        $query = "UPDATE patient set doctorid='$doctorID', nurseid='$nurseID',lastvisit='$lastVisit', purposeofvisit='$purposeOfVisit',diagnosis='$diagnosis', medication='$medication' WHERE userid='$userID'";
         $result = mysql_query($query);
         if (!$result) {
-            Logger::LogInformation("UpdatePatient()## Data isn't inserted, Error: " . mysql_error());
+            Logger::LogInformation("UpdatePatient()## Patient Data isn't inserted, Error: " . mysql_error());
         }
         else
             Logger::LogInformation("UpdatePatient()## Patient data Updated");

@@ -1,9 +1,12 @@
 <?php
 session_start();
+if (!$_SESSION['loggedin'])
+    header("location:login.php");
 include_once 'sql_connection.php';
 if ($_GET['action'] == 'logout') {
     $_SESSION['loggedin'] = 0;
     session_destroy();
+    header("location:login.php");
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -27,6 +30,11 @@ Design by http://www.hotwebsitetemplates.net
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/functions.js"></script>
         <script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
+        <script type="text/javascript">
+            //            $(window).load(function(){
+            //                $('#myModal').modal('show');
+            //            });
+        </script>
 
         <!-- CuFon ends -->
     </head>
@@ -59,18 +67,15 @@ Design by http://www.hotwebsitetemplates.net
                     </div>
                     <div id="mainbody" class="article">
                         <?php
-                        if ($_GET['action'] && $_SESSION['loggedin'])
-                            if ($_GET['action'] == 'loginform') {
-                                echo "<h3><center>You are already Logged In</center></h3>";
-                            } else {
-                                if ($_GET['action'] == 'view')
-                                    echo "<script>ShowUserDetails($('#userID').html());</script>";
-                                include 'include/' . $_GET['action'] . '.php';
-                            }
-                        elseif ($_GET['action'] == 'loginform')
-                            include 'include/loginform.php';
-                        else
+                        if ($_GET['action'] == '')
                             include 'include/home.php';
+                        else if ($_GET['action'] == 'loginform') {
+                            echo "<h3><center>You are already Logged In</center></h3>";
+                        } else {
+                            if ($_GET['action'] == 'view')
+                                echo "<script>ShowUserDetails($('#userID').html());</script>";
+                            include 'include/' . $_GET['action'] . '.php';
+                        }
                         ?>
                     </div>
                     <!--      </div>-->
