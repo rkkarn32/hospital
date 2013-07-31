@@ -7,13 +7,10 @@ class SqlConnection {
 
     private $startLocalIP = "126.168.1.1";          //Local IP Range
     private $endLocalIP = "192.0.0.1";
-    
     private $db_name = "hospital";                  //Database Information
     private $db_link;
-    
     private $sql_username = "root";                 //SQL setting
     private $sql_password = "";
-    
     private $userid;                                //User settings
     private $username;
     private $roleid;
@@ -70,11 +67,11 @@ class SqlConnection {
 //        $startValue = sprintf('%u',ip2long($this->startLocalIP));
 //        $endValue = sprintf('%u',ip2long($this->endLocalIP));
 //        $currentIP = sprintf('%u',ip2long($IP));
-        $startValue = sprintf('%u',ip2long($this->startLocalIP));
-        $endValue = sprintf('%u',ip2long($this->endLocalIP));
-        $currentIP = sprintf('%u',ip2long($IP));
+        $startValue = sprintf('%u', ip2long($this->startLocalIP));
+        $endValue = sprintf('%u', ip2long($this->endLocalIP));
+        $currentIP = sprintf('%u', ip2long($IP));
 //        Logger::LogInformation("Start IP" . $startValue . " , End IP" . $endValue . "=$this->endLocalIP , current IP" . $currentIP);
-        
+
         if ($startValue <= $currentIP AND $currentIP <= $endValue) {
             Logger::LogInformation("IsVistorLocal()## Visitor is local, IP=" . $IP);
             return true;
@@ -149,32 +146,34 @@ class SqlConnection {
             Logger::LogInformation("RegisterUser(), Registration for $name is Successfull");
         return $result;
     }
-    public function AllowedPermissions($permission){
-        foreach($permission as $perm){
-            $userID= $this->GetRecentUserID();
+
+    public function AllowedPermissions($permission) {
+        foreach ($permission as $perm) {
+            $userID = $this->GetRecentUserID();
             $query = "INSERT INTO userpermission VALUES('$userID','$perm')";
             $result = mysql_query($query);
-            if(!$result)
-            {
-                Logger::LogInformation ("AllowedPermissions()## Query isn't executed, Error: ".mysql_error ());
+            if (!$result) {
+                Logger::LogInformation("AllowedPermissions()## Query isn't executed, Error: " . mysql_error());
                 return false;
             }
         }
         Logger::LogInformation("AllowedPermission()##, Permissions Set for id=$userID");
         return true;
     }
-    private function GetRecentUserID(){
+
+    private function GetRecentUserID() {
         $queryUserID = "SELECT max(userid) FROM userdetail";
         $resultUserID = mysql_query($queryUserID);
         $row = mysql_fetch_array($resultUserID);
         return $row[0];
     }
+
     private function RegisterPatient($doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication) {
 //        $queryUserID = "SELECT max(userid) FROM userdetail";
 //        $resultUserID = mysql_query($queryUserID);
 //        $row = mysql_fetch_array($resultUserID);
 //        $userid = $row[0];
-        $userid= $this->GetRecentUserID();
+        $userid = $this->GetRecentUserID();
         $query = "INSERT INTO patient VALUES ('','$userid','$doctorID','$nurseID','$lastVisit','$purposeOfVisit','$diagnosis','$medication')";
         $result = mysql_query($query);
         if (!$result) {
@@ -250,7 +249,7 @@ class SqlConnection {
      * @param $username Username of the user.
      * @return boolean True if user exist and false in otherwise.
      */
-    private function IsUserNameExist($username) {
+    public function IsUserNameExist($username) {
         $query = "SELECT username FROM userdetail WHERE username='" . $username . "'";
         $result = mysql_query($query);
         if (!result) {
@@ -304,7 +303,9 @@ class SqlConnection {
                 array_push($returnValue, $row['name']);
                 array_push($returnValue, $row['username']);
                 array_push($returnValue, $row['role']);
+                array_push($returnValue, $row['roleid']);
                 array_push($returnValue, $row['groupname']);
+                array_push($returnValue, $row['groupid']);
                 array_push($returnValue, $row['creationdate']);
                 array_push($returnValue, $row['street']);
                 array_push($returnValue, $row['state']);
@@ -326,7 +327,7 @@ class SqlConnection {
         return $returnValue;
     }
 
-    public function SearchRecord($userID,$userName, $creationDate, $roleID, $accountGroupID, $name, $state, $city, $phoneno, $birthDate) {
+    public function SearchRecord($userID, $userName, $creationDate, $roleID, $accountGroupID, $name, $state, $city, $phoneno, $birthDate) {
         $query = "SELECT userid,name,role,groupname FROM userdetail NATURAL JOIN roles NATURAL JOIN accountgroup WHERE username LIKE '%$userName%' AND "
                 . "creationdate LIKE '%$creationDate%' AND roleid LIKE '%$roleID%' AND groupid LIKE '%$accountGroupID%' AND "
                 . "name LIKE '%$name%' AND state LIKE '%$state%' AND city LIKE '%$city%' AND phoneno LIKE '%$phoneno%' AND "
@@ -351,22 +352,49 @@ class SqlConnection {
         }
         return $returnValue;
     }
-    
-    public function HasPermission($userID,$permissionID){
+
+    public function HasPermission($userID, $permissionID) {
         $query = "SELECT * FROM permission NATURAL JOIN userpermission WHERE userid='$userID' AND permissionid='$permissionID'";
         $result = mysql_query($query);
-        if(!$result){
-            Logger::LogInformation("HasPermission()## Query isn't executed, Error: ".mysql_error());
+        if (!$result) {
+            Logger::LogInformation("HasPermission()## Query isn't executed, Error: " . mysql_error());
             return false;
         }
-        if(mysql_fetch_row($result)>0){
+        if (mysql_fetch_row($result) > 0) {
             return true;
         }
-        Logger::LogInformation("HasPermission()## User don't have permission for activityID =".$permissionID);
+        Logger::LogInformation("HasPermission()## User don't have permission for activityID =" . $permissionID);
         return false;
     }
+
+    public function UpdateUserDetail($userID, $username, $name, $street, $city, $state, $phoneno, $birthdate, $creationdate, $roleid, $groupid, $doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication) {
+        $query = "UPDATE userdetail set name='$name', street='$street', city='$city', phoneno='$phoneno', creationdate='$creationdate', roleid='$roleid', groupid='$groupid',birthdate='$birthdate',state='$state' WHERE userid='$userID'";
+        $result = array();
+        $result[0] = mysql_query($query, $this->db_link);
+        Logger::LogInformation("UpdateUserDetail()## Row effected: ".  mysql_affected_rows());
+        Logger::LogInformation("UpdateUserDetail()## Query is: ".  $query);
+        if (!$result[0]) {
+            Logger::LogInformation("UpdateUserDetail()## Query isn't executed, Error: " . mysql_error());
+            $result[0] = false;
+            $result[1]= mysql_error();
+        } else if ($roleid == 4)
+            $result[0] = $this->UpdatePatientDetail($userID, $doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication);
+            Logger::LogInformation("UpdateUserDetail()## $name's detail is Successfull Updated !!!");
+        return $result;
+    }
+
+    private function UpdatePatientDetail($userID,$doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication) {
+        $query = "UPDATE patient set doctorid='$doctorID', nurseid='$nurseID',lastvisit='$lastVisit', purposeofvisit='$purposeOfVisit',diagnosis='$diagnosis', medication='$medication') WHERE userid='$userID'";
+        $result = mysql_query($query);
+        if (!$result) {
+            Logger::LogInformation("UpdatePatient()## Data isn't inserted, Error: " . mysql_error());
+        }
+        else
+            Logger::LogInformation("UpdatePatient()## Patient data Updated");
+        return $result;
+    }
+
 }
 
 $sql = new SqlConnection();
-
 ?>

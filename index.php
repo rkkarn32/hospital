@@ -46,11 +46,11 @@ Design by http://www.hotwebsitetemplates.net
                         </ul>
                     </div>
                     <div class="clr"></div>
-                    <img src="images/hbg_img.jpg" width="967" height="199" alt="image" class="hbg_img" />
+<!--                    <img src="images/hbg_img.jpg" width="967" height="199" alt="image" class="hbg_img" />-->
                     <div class="clr"></div>
                 </div>
             </div>
-            
+
             <div class="content">
                 <div class="content_resize">
                     <!--      <div class="mainbar">-->

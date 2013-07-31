@@ -2,13 +2,23 @@
 session_start();
 include_once 'sql_connection.php';
 ?>
-<div class="container">
+<script>
+    //    if($('#userName').html())
+    //        $(document).ready(function(){
+    //            PrintElem('#userDetail');
+    //        });
+</script>
+<div id="container" class="container">
+    <div id="viewDetail" style="display: none">
+        <?php include_once 'view.php'; ?>
+        <center><input type="button" value="Print Details" onClick="PrintElem('#userDetail')" /></center>
+    </div>
     <div id="searchRecord" class="searcgBox">
-        <form id="reportForm" method="POST" onsubmit="return ReportData()" action="test.php">
+        <form id="reportForm" method="POST" onsubmit="return ReportData()">
             <div class="searchDetail" style="margin-left: 2%">
                 <?php include_once 'searchform.php'; ?>
                 <div class="button" id="buttons" align="center">
-                    <button type="submit">Search Result</button>
+                    <button type="submit" >Search Result</button>
                 </div>
             </div>
         </form> 
@@ -21,7 +31,7 @@ include_once 'sql_connection.php';
                     <th >Name</th>
                     <th style="width: 160px">Role Type</th>    
                     <th style="width: 150px">Account Type</th>
-                    <th style="width: 150px">View Details</th>
+                    <th style="width: 150px">Report Details</th>
                 </tr>
             </thead>
             <tbody >

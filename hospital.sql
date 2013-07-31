@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 23, 2013 at 03:06 PM
+-- Generation Time: Jul 29, 2013 at 02:29 PM
 -- Server version: 5.0.45
 -- PHP Version: 5.2.5
 
@@ -50,14 +50,37 @@ CREATE TABLE `patient` (
   `diagnosis` text NOT NULL,
   `medication` text NOT NULL,
   PRIMARY KEY  (`patientid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `patient`
 --
 
 INSERT INTO `patient` (`patientid`, `userid`, `doctorid`, `nurseid`, `lastvisit`, `purposeofvisit`, `diagnosis`, `medication`) VALUES
-(3, 26, '1', '14', '2013-07-15', 'just check up', 'none ', 'none');
+(3, 26, '1', '14', '2013-07-15', 'just check up', 'none ', 'none'),
+(4, 34, '12', '14', '2013-07-27', '', '', ''),
+(5, 4, '1', '3', '1998-02-02', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `permission`
+--
+
+CREATE TABLE `permission` (
+  `permissionid` int(11) NOT NULL auto_increment,
+  `permissionname` varchar(20) NOT NULL,
+  PRIMARY KEY  (`permissionid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `permission`
+--
+
+INSERT INTO `permission` (`permissionid`, `permissionname`) VALUES
+(1, 'reportdata'),
+(2, 'retrievedata'),
+(3, 'createuser');
 
 -- --------------------------------------------------------
 
@@ -79,7 +102,7 @@ INSERT INTO `roles` (`roleid`, `role`) VALUES
 (1, 'Root'),
 (2, 'ALA'),
 (3, 'LLA'),
-(4, 'Spectator');
+(4, 'Patient');
 
 -- --------------------------------------------------------
 
@@ -102,7 +125,7 @@ CREATE TABLE `userdetail` (
   `birthdate` date NOT NULL,
   `verified` tinyint(1) NOT NULL,
   PRIMARY KEY  (`userid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `userdetail`
@@ -110,11 +133,34 @@ CREATE TABLE `userdetail` (
 
 INSERT INTO `userdetail` (`userid`, `username`, `password`, `roleid`, `groupid`, `creationdate`, `name`, `street`, `city`, `state`, `phoneno`, `birthdate`, `verified`) VALUES
 (1, 'root', '6fc42c4388ed6f0c5a91257f096fef3c', 1, 1, '2013-07-07', 'Ramesh Kumar Karn', 'kupondole', 'Kathmandu', 'Nepal', '9779849757241', '2013-07-02', 1),
-(12, 'D2', 'c4d62b6dcca08e5caf06c01889282859', 2, 1, '1985-07-13', 'Deepesh Karn', 'Kathmandu,Nepal', 'Kathmandu', 'Nepal', '9779849757241', '2013-07-14', 1),
-(14, 'A14', '43ba9900ff2fc7d9d32072540b2cab12', 3, 2, '2013-07-14', 'Anju sah', 'Kathmandu,Nepal', 'Kathmandu', 'Nepal', '9779849757241', '1991-04-04', 1),
-(15, 'G15', '22f32fd975a694d340a6ad22b872b1ae', 3, 2, '2013-07-15', 'Geetiak', 'Janak chauka', 'Kathmandu', 'Nepal', '9779849757241', '0000-00-00', 1),
-(26, 'J26', 'a6a951f5b33744198df9a43c50d75d9f', 4, 3, '2013-07-15', 'Jag dish', 'Kathmandu,Nepal', 'janakpur', 'Nepal', '9779849757241', '1990-06-13', 1),
-(27, 'R27', '9506a7d828145adf450505d92dac1b4a', 2, 1, '2013-07-19', 'Ramesh Karn', 'Kupondole', 'Kathmandu', 'Nepal', '9779849757241', '2013-07-19', 1),
-(29, 'a28', '838ff8b78dfbe82b2bc6c681f0cb390f', 2, 1, '0000-00-00', 'adf', '', '', '', '', '0000-00-00', 0),
-(30, 's30', '0d6eccf00593e4f1c6e22ee059e41264', 2, 1, '0000-00-00', 'sadf', '', '', '', '', '0000-00-00', 1),
-(31, 'P31', '9408c59c6527e3a5608bf2af417cf9ad', 3, 3, '0000-00-00', 'Prem Singh', 'Kathmandu,Nepal', '', 'Nepal', '', '0000-00-00', 1);
+(2, 'D2', 'c4d62b6dcca08e5caf06c01889282859', 2, 1, '0000-00-00', 'Deepesh Karn', 'Matihani', '', 'Central Zone', '', '0000-00-00', 1),
+(3, 'D3', 'a3deb6e481689f1d3303caecb8a6c401', 3, 2, '2013-07-27', 'Durga', '', '', '', '', '2013-07-07', 1),
+(4, 'N4', 'b1c49f839832f51f6d687a04db101d4c', 4, 3, '2013-07-27', 'Nandan', 'Kathmandu,Nepal', '', 'Nepal', '', '2013-07-01', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `userpermission`
+--
+
+CREATE TABLE `userpermission` (
+  `userid` int(11) NOT NULL,
+  `permissionid` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `userpermission`
+--
+
+INSERT INTO `userpermission` (`userid`, `permissionid`) VALUES
+(2, '1'),
+(2, '2'),
+(2, '3'),
+(2, '4'),
+(3, '3'),
+(3, '4'),
+(3, '1'),
+(1, '1'),
+(1, '2'),
+(1, '3'),
+(1, '4');

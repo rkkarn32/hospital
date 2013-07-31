@@ -3,8 +3,8 @@
 <script>
     $(document).ready(function() {
         $('#viewDetail').hide();
-        oTable = $('#example').dataTable({
-            });
+        //        oTable = $('#example').dataTable({
+        //        });
             
         var Data = "task=loadalluser";
         $.ajax({
@@ -20,7 +20,7 @@
                     for(var i =0; i < output.length;i++){
                         oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
                             "<button type='button' onclick='ShowUserDetails("+output[i][0]+")'>Show Details</button>"
-                            ]);
+                        ]);
                     }
                 }
             }
@@ -28,10 +28,32 @@
     });
 </script>
 <div id="container" class="container">
-    <?php include_once 'view.php'; ?>
+    <div id="viewDetail" style="display: none">
+        <?php include_once 'view.php'; ?>
+        <center><button id="editButton" name="editButton">Edit Data</button></center>
+    </div>
+    <div id="editDetail" style="display: nones">
+        <form id="editForm_E" method="POST" onsubmit="return UpdateRecord()">
+            <?php include 'editrecord.php'; ?>
+            <div class="button" id="editButton" align="center">
+                <button id="submit_E" type="submit" > Update </button>
+                <button type="reset" id="cancel_E" onclick="CancelUpdate()"> Cancel </button>
+            </div>
+        </form>
+    </div>
     <div><span></span></div>
-    <?php include_once 'searchform.php'; ?>
-    
+
+    <div id="searchRecord" class="searcgBox">
+        <form id="searchForm" method="POST" onsubmit="return SearchRecord()" action="test.php">
+            <div class="searchDetail" style="margin-left: 2%">
+                <?php include_once 'searchform.php'; ?>
+                <div class="button" id="searchButton" align="center">
+                    <button type="submit">Search Result</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
     <div id="demo" >
         <table id="example" class="display" cellpadding="0" cellspacing="0" border="0">
             <thead>
