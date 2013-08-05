@@ -36,8 +36,8 @@ if ($task == 'login') {
     $city = mysql_escape_string($_POST[City]);
     $state = mysql_escape_string($_POST[State]);
     $phoneno = mysql_escape_string($_POST[telephone]);
-    $birthdate = mysql_escape_string($_POST[birthdate]);
-    $creationdate = mysql_escape_string($_POST[creationdate]);
+    $birthdate = mysql_escape_string($_POST[birthDate]);
+    $creationdate = mysql_escape_string($_POST[creationDate]);
     $username = $sql->CreateUser($name);
     $password = md5($username);
 
@@ -73,34 +73,47 @@ else if ($task == "showuserdetail") {
 } elseif ($task == "updateRecord") {
     $returnValue = array();
     $userID = $_POST['userId_E'];
-    Logger::LogInformation("User ID: ".$userID);
+    Logger::LogInformation("User ID: " . $userID);
     $userName = mysql_escape_string($_POST['userName_E']);
-//    if ($sql->IsUserNameExist($userName)) {
-//        Logger::LogInformation("User Already Exist");
-//        $returnValue[0] = 0;
-//        $returnValue[1] = "User Name already exist, Select a unique username";
-//        echo json_encode($returValue);
-//        Logger::LogInformation("after json Encode");
-//    } else {
-        $name = mysql_escape_string($_POST['name_E']);
-        $roleID = mysql_escape_string($_POST['roleList']);
-        $groupID = mysql_escape_string($_POST['accountList']);
-        $streetAddress = mysql_escape_string($_POST['streetAddress_E']);
-        $state = mysql_escape_string($_POST['state_E']);
-        $city = mysql_escape_string($_POST['city_E']);
-        $birthDate = mysql_escape_string($_POST['birthDate_E']);
-        $phoneno = mysql_escape_string($_POST['phoneNumber_E']);
-        $creationDate = mysql_escape_string($_POST['creationDate_E']);
-        
-        $doctorID = mysql_escape_string($_POST['doctorName_E']);
-        $nurseID = mysql_escape_string($_POST['nurseName_E']);
-        $purposeOfVisit = mysql_escape_string($_POST['purposeOfVisit_E']);
-        $diagnosis = mysql_escape_string($_POST['diagnosisGiven_E']);
-        $medication = mysql_escape_string($_POST['medicationPrescribed_E']);
-        $lastVisit = mysql_escape_string($_POST['lastOfficeVisit_E']);
-        $sql = new SqlConnection();
-        $returnValue[0]=$sql->UpdateUserDetail($userID, $username, $name, $streetAddress, $city, $state, $phoneno, $birthDate, $creationDate, $roleID, $groupID, $doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication);
-        echo json_encode($returnValue);
+    $name = mysql_escape_string($_POST['name_E']);
+    $roleID = mysql_escape_string($_POST['roleList']);
+    
+    $permission = array();
+    if ($roleID == Roles::$ALA) {
+        $permission = PermissionByID::$ALA;
+    } else if ($roleID == Roles::$LLA) {
+        $permission = PermissionByID::$LLA;
+        if ($_POST['reportData_E'])
+            array_push($permission, PermissionByID::$reportData);
+        if ($_POST['retrieveData_E'])
+            array_push($permission, PermissionByID::$retrieveData);
+    }
+    
+    $groupID = mysql_escape_string($_POST['accountList']);
+    $streetAddress = mysql_escape_string($_POST['streetAddress_E']);
+    $state = mysql_escape_string($_POST['state_E']);
+    $city = mysql_escape_string($_POST['city_E']);
+    $birthDate = mysql_escape_string($_POST['birthDate_E']);
+    $phoneno = mysql_escape_string($_POST['phoneNumber_E']);
+    $creationDate = mysql_escape_string($_POST['creationDate_E']);
+
+    $doctorID = mysql_escape_string($_POST['doctorName_E']);
+    $nurseID = mysql_escape_string($_POST['nurseName_E']);
+    $purposeOfVisit = mysql_escape_string($_POST['purposeOfVisit_E']);
+    $diagnosis = mysql_escape_string($_POST['diagnosisGiven_E']);
+    $medication = mysql_escape_string($_POST['medicationPrescribed_E']);
+    $lastVisit = mysql_escape_string($_POST['lastOfficeVisit_E']);
+    $sql = new SqlConnection();
+    $returnValue[0] = $sql->UpdateUserDetail($userID, $username, $name, $streetAddress, $city, $state, $phoneno, $birthDate, $creationDate, $roleID, $groupID, $doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication);
+    if($returnValue[0])
+        $returnValue[0] = $sql->UpdatePermissionList($permission,$userID);
+    else
+        Logger::LogInformation ("User Update failed");
+    echo json_encode($returnValue);
 //    }
+} elseif ($task = 'showpermissionlist') {
+    $userID = $_POST['userid'];
+    $permissions = $sql->PermissionList($userID);
+    echo json_encode($permissions);
 }
 ?>

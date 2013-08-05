@@ -135,6 +135,7 @@ class SqlConnection {
 
     public function RegisterUser($username, $password, $name, $street, $city, $state, $phoneno, $birthdate, $creationdate, $roleid, $groupid, $doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication) {
         $query = "insert into userdetail set username='$username', password='$password', name='$name', street='$street', city='$city', phoneno='$phoneno', creationdate='$creationdate', roleid='$roleid', groupid='$groupid',birthdate='$birthdate',state='$state' ";
+        Logger::LogInformation("RegisterUser()## your Query is : " . $query);
         $result = array();
         $result[0] = mysql_query($query, $this->db_link);
         if (!$result[0]) {
@@ -158,6 +159,27 @@ class SqlConnection {
             }
         }
         Logger::LogInformation("AllowedPermission()##, Permissions Set for id=$userID");
+        return true;
+    }
+    public function UpdatePermissionList($permissionList, $userID){
+        $query = "DELETE FROM userpermission WHERE userid = ".$userID;
+        $result = mysql_query($query);
+        Logger::LogInformation("UpdatePermissionList()## Query is :".$query);
+        if(!$result)
+        {
+            Logger::LogInformation("UpdatePermissionList()## Error in deleting the pre-existing permissions, Error : ".mysql_error());
+            return false;
+        }
+        foreach ($permissionList as $perm) {
+            $query = "INSERT INTO userpermission VALUES('$userID','$perm')";
+            $result = mysql_query($query);
+            Logger::LogInformation("UpdatePermissionList()## Query is : ".$query);
+            if (!$result) {
+                Logger::LogInformation("UpdatePermissionList()## Error Occured during updating the permissions: " . mysql_error());
+                return false;
+            }
+        }
+        Logger::LogInformation("UpdatePermissionList()##, Permissions updated for userID=$userID");
         return true;
     }
 
@@ -373,19 +395,20 @@ class SqlConnection {
         $query = "UPDATE userdetail set name='$name', street=\"$street\", city=\"$city\", phoneno='$phoneno', creationdate='$creationdate', roleid='$roleid', groupid='$groupid',birthdate='$birthdate',state='$state' WHERE userid='$userID'";
         $result = array();
         $result[0] = mysql_query($query, $this->db_link);
-        Logger::LogInformation("UpdateUserDetail()## Row effected: ".  mysql_affected_rows());
-        Logger::LogInformation("UpdateUserDetail()## Query is: ".  $query);
+//        Logger::LogInformation("UpdateUserDetail()## Row effected: " . mysql_affected_rows());
+//        Logger::LogInformation("UpdateUserDetail()## Query is: " . $query);
         if (!$result[0]) {
             Logger::LogInformation("UpdateUserDetail()## Query isn't executed, Error: " . mysql_error());
             $result[0] = false;
-            $result[1]= mysql_error();
+            $result[1] = mysql_error();
         } else if ($roleid == 4)
             $result[0] = $this->UpdatePatientDetail($userID, $doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication);
-            Logger::LogInformation("UpdateUserDetail()## $name's detail is Successfull Updated !!!");
+        Logger::LogInformation("UpdateUserDetail()## $name's detail is Successfull Updated !!!");
+        $result[0]=true;
         return $result;
     }
 
-    private function UpdatePatientDetail($userID,$doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication) {
+    private function UpdatePatientDetail($userID, $doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication) {
         $query = "UPDATE patient set doctorid='$doctorID', nurseid='$nurseID',lastvisit='$lastVisit', purposeofvisit='$purposeOfVisit',diagnosis='$diagnosis', medication='$medication' WHERE userid='$userID'";
         $result = mysql_query($query);
         if (!$result) {
@@ -394,6 +417,34 @@ class SqlConnection {
         else
             Logger::LogInformation("UpdatePatient()## Patient data Updated");
         return $result;
+    }
+
+    public function PermissionList($userID) {
+        $query = "SELECT permissionname, permissionid FROM userpermission NATURAL JOIN permission WHERE userid = $userID AND (permissionid=1 OR permissionid=2) ORDER BY permissionid";
+        $returnValue = array();
+        $result = mysql_query($query, $this->db_link);
+
+        if (!$result) {
+            Logger::LogInformation("PermissionList()## Query doesn't executed, Error: " . mysql_error());
+            $returnValue[0] = 0;
+            return $returnValue;
+        }
+        if(mysql_num_rows($result)==0)
+        {
+            Logger::LogInformation("PermissionList()## User doesn't have any special permission: " );
+            $returnValue[0] = 0;
+            return $returnValue;
+        }
+        $i=0;
+        while ($row = mysql_fetch_array($result))
+        {
+            $returnValue[$i]=array();
+            array_push($returnValue[$i], $row['permissionname']);
+            array_push($returnValue[$i], $row['permissionid']);
+            $i++;
+        }
+        Logger::LogInformation("PermissionList()## PermissionList Loaded Successfully");
+        return $returnValue;
     }
 
 }

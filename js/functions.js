@@ -140,6 +140,10 @@ function ShowUserDetails(id){
                 $('#name').html(output[0]);
                 $('#userName').html(output[1])
                 $('#accountType').html(output[2]);
+                if(output[3]==3)
+                    $('#permissionDetail').show();
+                else
+                    $('#permissionDetail').hide();
                 $('#accountGroup').html(output[4]);
                 $('#creationDate').html(output[6]);
                 $('#streetAddress').html(output[7]);
@@ -159,7 +163,7 @@ function ShowUserDetails(id){
                     $('#medicationPrescribed').html(output[18]);
                     $('#lastOfficeVisit').html(output[19]);
                 }
-                $('#editButton').attr('onclick',"EditUserDetails("+id+")");
+                $('#editButton').attr('onclick',"EditUserDetails("+id+"); UpdatePermissionList("+id+")");
             }
         },
         error:function (a, b , c){
@@ -186,6 +190,8 @@ function EditUserDetails(id){
                 $('#name_E').val(output[0]);
                 $('#userName_E').val(output[1])
                 $('#roleList').val(output[3]);
+                if(output[3]==3)
+                    $('#permissionDetail_E').show();
                 //loadPermissionList(3);
                 $('#accountList').val(output[5]);
                 $('#creationDate_E').val(output[6]);
@@ -274,7 +280,7 @@ function SearchRecord(){
             if(output[0] !=0){                        
                 for(var i =0; i < output.length;i++){
                     oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
-                        "<button type='button' onclick='ShowUserDetails("+output[i][0]+")'>Show Details</button>"
+                        "<button type='button' onclick='ShowUserDetails("+output[i][0]+");ShowPermissionList("+output[i][0]+")'>Show Details</button>"
                         ]);
                 }
             }
@@ -300,7 +306,7 @@ function ReportData(){
             if(output[0] !=0){
                 for(var i =0; i < output.length;i++){
                     oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
-                        "<button type='button' onclick=\"PrintData("+output[i][0]+");\">Report Data</button>"
+                        "<button type='button' onclick=\"PrintData("+output[i][0]+"); ShowPermissionList("+output[i][0]+")\">Report Data</button>"
                         ]);
                 }
             }
@@ -326,24 +332,28 @@ function PrintData(id){
                 $('#name').html(output[0]);
                 $('#userName').html(output[1])
                 $('#accountType').html(output[2]);
-                $('#accountGroup').html(output[3]);
-                $('#creationDate').html(output[4]);
-                $('#streetAddress').html(output[5]);
-                $('#state').html(output[6]);
-                $('#city').html(output[7]);
-                $('#birthDate').html(output[8]);
-                $('#phoneNumber').html(output[9]);
-                if(output[10]==0){
+                if(output[3] == 3)
+                    $('#permissionDetail').show();
+                else
+                    $('#permissionDetail').hide();
+                $('#accountGroup').html(output[4]);
+                $('#creationDate').html(output[6]);
+                $('#streetAddress').html(output[7]);
+                $('#state').html(output[8]);
+                $('#city').html(output[9]);
+                $('#birthDate').html(output[10]);
+                $('#phoneNumber').html(output[11]);
+                if(output[12]==0){
                     $('#patientDetail').hide();
                 }
                 else{
                     $('#patientDetail').show();
-                    $('#doctorName').html(output[10]);
-                    $('#nurseName').html(output[11]);
-                    $('#purposeOfVisit').html(output[12]);
-                    $('#diagnosisGiven').html(output[13]);
-                    $('#medicationPrescribed').html(output[14]);
-                    $('#lastOfficeVisit').html(output[15]);
+                    $('#doctorName').html(output[12]);
+                    $('#nurseName').html(output[14]);
+                    $('#purposeOfVisit').html(output[16]);
+                    $('#diagnosisGiven').html(output[17]);
+                    $('#medicationPrescribed').html(output[18]);
+                    $('#lastOfficeVisit').html(output[19]);
                 }
             }
         },
@@ -380,7 +390,7 @@ function UpdateRecord(){
     var data = $('#editForm_E').serialize();
     //    alert(data);
     var userID = $('#userID_E').val();
-//    alert(userID);
+    //    alert(userID);
     data = "task=updateRecord&userId_E="+userID+"&"+data;
     $.ajax({
         url:'taskprocess.php',
@@ -389,12 +399,66 @@ function UpdateRecord(){
         dataType:'json',
         type:'POST',
         success:function(output){
-            alert(output);
             if(output[0] ==0){
                 alert('Error Occure during Data update, Error: '+output[1]);
             }
             else{
                 alert('User information Successfully Updated');
+                window.location = "http://localhost/Hospital/ind    ex.php?action=memberdetail";
+            }
+        }
+    });
+    return false;
+}
+function ShowPermissionList(userID){
+    var data = "task=showpermissionlist&userid="+userID;
+    $.ajax({
+        url:'taskprocess.php' ,
+        cache:false,
+        dataType:'json',
+        data:data,
+        type:'POST',
+        success:function(output){
+            //            alert(output)
+            var permissionList="<table id='permissionTable' width='100%' border='1px'>";
+            if(output[0] !=0)
+            {
+                for(var i = 0; i <output.length; i++){
+                    if(i%2==0)
+                        permissionList+="<tr>";
+                    permissionList+= "<td>"+output[i][0]+"</td>";
+                    if(i%2==1)
+                        permissionList+="</tr>";
+                }
+            }else
+                permissionList+= "<td align='center'>User doesn't have any special permissions";
+            
+            permissionList+="</table>";
+//            alert(permissionList);
+            $('#permissionDetail').html(permissionList);
+        }
+    });
+    return false;
+}
+function UpdatePermissionList(userID){
+    var data = "task=showpermissionlist&userid="+userID;
+    $.ajax({
+        url:'taskprocess.php' ,
+        cache:false,
+        dataType:'json',
+        data:data,
+        type:'POST',
+        success:function(output){
+            //            alert(output)
+            var permissionList="<table id='permissionTable' width='100%' border='1px'>";
+            if(output[0] !=0)
+            {
+                for(var i = 0; i <output.length; i++){
+                    if(output[i][1]==1)
+                        $('#reportData_E').attr("checked","checked");
+                    if(output[i][1]==2)
+                        $('#retrieveData_E').attr("checked","checked");
+                }
             }
         }
     });

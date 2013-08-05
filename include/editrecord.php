@@ -55,6 +55,14 @@
             </tr>
         </table>
     </div>
+    <div id="permissionDetail_E" style="display: none" class="permissionList">
+        <table width="100%" border="1px">
+            <tr>
+                <td><label>Report Data</label><input type="checkbox" name="reportData_E" id="reportData_E" /></td>
+                <td><label>Retrieve Data</label> <input type="checkbox" name="retrieveData_E" id="retrieveData_E" /></td>
+            </tr>
+        </table>
+    </div>
     <div id="patientDetail_E">
         <table width="100%" border="1px">
             <tr>

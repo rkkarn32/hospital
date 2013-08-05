@@ -19,7 +19,7 @@
                         
                     for(var i =0; i < output.length;i++){
                         oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
-                            "<button type='button' onclick='ShowUserDetails("+output[i][0]+")'>Show Details</button>"
+                            "<button type='button' onclick='ShowUserDetails("+output[i][0]+"); ShowPermissionList("+output[i][0]+")'>Show Details</button>"
                         ]);
                     }
                 }
@@ -29,12 +29,16 @@
 </script>
 <div id="container" class="container">
     <div id="viewDetail" style="display: none">
-        <?php include_once 'view.php'; ?>
-        <center><button id="editButton" name="editButton">Edit Data</button></center>
+        <?php
+        include_once 'view.php';
+        if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$editInfo)) {
+            echo '<center><button id="editButton" name="editButton">Edit Data</button></center>';
+        }
+        ?>
     </div>
     <div id="editDetail" style="display: nones">
         <form id="editForm_E" method="POST" onsubmit="return UpdateRecord()">
-            <?php include 'editrecord.php'; ?>
+<?php include 'editrecord.php'; ?>
             <div class="button" id="editButton" align="center">
                 <button id="submit_E" type="submit" > Update </button>
                 <button type="reset" id="cancel_E" onclick="CancelUpdate()"> Cancel </button>
@@ -46,7 +50,7 @@
     <div id="searchRecord" class="searcgBox">
         <form id="searchForm" method="POST" onsubmit="return SearchRecord()" action="test.php">
             <div class="searchDetail" style="margin-left: 2%">
-                <?php include_once 'searchform.php'; ?>
+<?php include_once 'searchform.php'; ?>
                 <div class="button" id="searchButton" align="center">
                     <button type="submit">Search Result</button>
                 </div>

@@ -7,9 +7,10 @@ class PermissionByID {
     static public $reportData=1;
     static public $retrieveData=2;
     static public $createUser=3;
+    static public $editInfo=4;
     
     static function Initialization() {
-        PermissionByID::$ALA = array(1,2,3);
+        PermissionByID::$ALA = array(1,2,3,4);
         PermissionByID::$LLA = array(3);
     }
 }

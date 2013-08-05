@@ -1,7 +1,7 @@
 
 <div id="userDetail">
     <div class="generalDetail">
-        <table width="100%" border="1px"> 
+        <table width="100%" border="1px">
             <tr>
                 <td width="27%" ><strong>User ID:-</strong></td>
                 <td width="32%"><div id="userID_Retrieve" align="left"></div></td>
@@ -37,6 +37,8 @@
                 <td><div align="left" id="creationDate"></div></td>
             </tr>
         </table>
+    </div>
+    <div id="permissionDetail">
     </div>
     <div id="patientDetail">
         <table width="100%" border="1px">
