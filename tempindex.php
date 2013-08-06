@@ -1,5 +1,5 @@
 <?php
-if(!$_SESSION)
+if (!$_SESSION)
     session_start();
 if (!$_SESSION['loggedin'])
     header("location:login.php");
@@ -22,55 +22,7 @@ include_once 'taskprocess.php';
         <script src="js/jquery/ui.core.js" type="text/javascript"></script>
         <script src="js/jquery/ui.checkbox.js" type="text/javascript"></script>
         <script src="js/jquery/jquery.bind.js" type="text/javascript"></script>
-        <!--<script type="text/javascript">
-        $(function(){
-                $('input').checkBox();
-                $('#toggle-all').click(function(){
-                $('#toggle-all').toggleClass('toggle-checked');
-                $('#mainform input[type=checkbox]').checkBox('toggle');
-                return false;
-                });
-        });
-        </script>  -->
-        <style type="text/css" title="currentStyle" >
-            @import "css/demo_page.css";
-            @import "css/demo_table.css";
-            @import "css/style.css";
-        </style>
-        <script type="text/javascript" src="js/cufon-yui.js"></script>
-        <script type="text/javascript" src="js/droid_sans_400-droid_sans_700.font.js"></script>
-        <script type="text/javascript" src="js/cuf_run.js"></script>
-        <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/functions.js"></script>
-        <script type="text/javascript"  src="js/jquery.dataTables.js"></script>
-        <script>
-            $(document).ready(function() {
-                //$('#viewDetail').hide();
-                var Data = "task=loadalluser";
-                $.ajax({
-                    url:'taskprocess.php',
-                    data:Data,
-                    type:'POST',
-                    dataType:'json',
-                    cache:false,
-                    success: function(output){
-                        if(output[0][0] !=0){
-                            oTable.fnClearTable();
-                        
-                            for(var i =0; i < output.length;i++){
-                                oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
-                                    "<button type='button' onclick='ShowUserDetails("+output[i][0]+"); ShowPermissionList("+output[i][0]+")'>Show Details</button>"
-                                ]);
-                            }
-                        }
-                    },
-                    error:function(a,b,c){
-                        alert("Error is "+a+b+c);
-                    }
-                });
-            });
-        </script>
+         
 
         <![if !IE 7]>
 
@@ -248,7 +200,7 @@ include_once 'taskprocess.php';
             <div class="nav">
                 <div class="table">
 
-                    <ul class="select">
+                    <ul class="current">
                         <li><a href="tempindex.php"><b>Home</b><!--[if IE 7]><!--></a><!--<![endif]-->
                         </li>
                     </ul>
@@ -262,7 +214,7 @@ include_once 'taskprocess.php';
 
                     <div class="nav-divider">&nbsp;</div>
 
-                    <ul class="current">
+                    <ul class="select">
                         <li><a href="userdetail.php"><b>Search</b><!--[if IE 7]><!--></a><!--<![endif]-->		
                         </li>
                     </ul>
@@ -323,67 +275,15 @@ include_once 'taskprocess.php';
 
                                 <!--  start table-content  -->
                                 <div id="table-content">
-
-
-                                    <!--  end message-green -->
-
-
-                                    <!--  start product-table ..................................................................................... -->
-
-                                    <div id="container" class="container">
-                                        <div id="viewDetail" style="display: none">
-                                            <?php
-                                            include_once 'include/view.php';
-                                            if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$editInfo)) {
-                                                echo '<center><button id="editButton" name="editButton">Edit Data</button></center>';
-                                            }
-                                            ?>
-                                        </div>
-                                        <div id="editDetail" style="display: nones">
-                                            <form id="editForm_E" method="POST" onsubmit="return UpdateRecord()">
-                                                <?php include 'include/editrecord.php'; ?>
-                                                <div class="button" id="editButton" align="center">
-                                                    <button id="submit_E" type="submit" > Update </button>
-                                                    <button type="reset" id="cancel_E" onclick="CancelUpdate()"> Cancel </button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div><span></span></div>
-
-                                        <div id="searchRecord" class="searcgBox">
-                                            <form id="searchForm" method="POST" onsubmit="return SearchRecord()" action="test.php">
-                                                <div class="searchDetail" style="margin-left: 2%">
-                                                    <?php include_once 'include/searchform.php'; ?>
-                                                    <div class="button" id="searchButton" align="center">
-                                                        <button type="submit">Search Result</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                        <div id="demo">
-                                            <table border="0" width="100%" cellpadding="0" cellspacing="0" id="example" class="display">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="table-header-repeat"><a id="" >SN</a> </th>
-                                                        <th class="table-header-repeat line-left minwidth-1"><a href="">Name</a></th>
-                                                        <th class="table-header-repeat line-left"><a href="">Role Type </a></th>
-                                                        <th class="table-header-repeat line-left"><a href="">Account Type </a></th>
-                                                        <th class="table-header-repeat line-left"><a href="">View Detail </a></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody></tbody>
-                                            </table>
-                                            <!--  end product-table................................... --> 
-                                        </div> 
-                                    </div>
-                                    <!--  end content-table  -->
-
-
-                                    <div class="clear"></div>
-
+                                    <?php include_once 'include/home.php'; ?>
                                 </div>
-                                <!--  end content-table-inner ............................................END  -->
+                                <!--  end content-table  -->
+
+
+                                <div class="clear"></div>
+
+                            </div>
+                            <!--  end content-table-inner ............................................END  -->
                         </td>
                         <td id="tbl-border-right"></td>
                     </tr>
@@ -408,7 +308,7 @@ include_once 'taskprocess.php';
             <!--  start footer-left -->
             <div id="footer-left">
 
-                Admin: Hospital Management <span id="spanYear"></span> <a href="">www.testing.com</a>. All rights reserved.</div>
+                Admin: Hospital Management <span id="spanYear"></span> <a href="">www.testing.com.np</a>. All rights reserved.</div>
             <!--  end footer-left -->
             <div class="clear">&nbsp;</div>
         </div>
