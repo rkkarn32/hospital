@@ -1,5 +1,6 @@
 <?php
-session_start();
+if(!$_SESSION)
+    session_start();
 if (!$_SESSION['loggedin'])
     header("location:login.php");
 include_once 'sql_connection.php';

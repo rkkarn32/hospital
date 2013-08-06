@@ -199,10 +199,6 @@ $(document).pngFix( );
 			<!--  end account-content -->
 		
 		</div>
-		<!-- end nav-right -->
-
-
-		<!--  start nav -->
 		<div class="nav">
 		<div class="table">
 		
@@ -215,18 +211,13 @@ $(document).pngFix( );
 		                    
 		<ul class="select">
 		  <li><a href="#nogo"><b>Profile</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 </li>
 		</ul>
 		
 		<div class="nav-divider">&nbsp;</div>
 		
 		<ul class="current">
-		  <li><a href="userdetail.php"><b>Search</b><!--[if IE 7]><!--></a><!--<![endif]-->
-		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		
-		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		  <li><a href="userdetail.php"><b>Search</b><!--[if IE 7]><!--></a><!--<![endif]-->		
 		</li>
 		</ul>
 		
@@ -254,9 +245,6 @@ $(document).pngFix( );
 		</div>
 		<!--  start nav -->
 
-</div>
-<div class="clear"></div>
-<!--  start nav-outer -->
 </div>
 <!--  start nav-outer-repeat................................................... END -->
 
