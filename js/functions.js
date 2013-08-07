@@ -464,3 +464,61 @@ function UpdatePermissionList(userID){
     });
     return false;
 }
+
+function ChangeUsername(){
+    
+    var data = $('#changeUsernameForm').serialize();
+    data = "task=changeusername&"+data;
+    $.ajax({
+        url:'taskprocess.php' ,
+        cache:false,
+        dataType:'json',
+        data:data,
+        type:'POST',
+        success:function(output){
+            if(output[0] !=0)
+                {
+                    alert('your UserName updated Successfully');
+                    window.location="profile.php";
+                }
+            else
+                alert('Update Fail, Error: '+output[1]);
+        },
+        error:function(a,b,c){
+            alert(a+b+c);
+        }
+    });
+    return false;
+}
+
+function ChangePassword(){
+    var newPassword= $('#newPassword').val();
+    var confirmPassword= $('#confirmPassword').val();
+    
+    if(newPassword != confirmPassword ){
+        alert('Password And Confirm Password Should be same'+newPassword+confirmPassword);
+        return false;
+    }
+    
+    var data = "task=changepassword&newPassword="+newPassword;
+    $.ajax({
+        url:'taskprocess.php' ,
+        cache:false,
+        dataType:'json',
+        data:data,
+        type:'POST',
+        success:function(output){
+            if(output[0] !=0)
+                {
+                    alert('your Password Successfully updated');
+                    window.location="profile.php";
+                }
+            else
+                alert('Update Fail, Error: '+output[1]);
+        },
+        error:function(a,b,c){
+            alert(a+b+c);
+        }
+    });
+    return false;
+}
