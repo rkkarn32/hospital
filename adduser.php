@@ -4,6 +4,8 @@ if (!$_SESSION)
 if (!$_SESSION['loggedin'])
     header("location:login.php");
 include_once 'taskprocess.php';
+if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$createUser))
+    header("location:login.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,7 +24,7 @@ include_once 'taskprocess.php';
         <script src="js/jquery/ui.core.js" type="text/javascript"></script>
         <script src="js/jquery/ui.checkbox.js" type="text/javascript"></script>
         <script src="js/jquery/jquery.bind.js" type="text/javascript"></script>
-                <style type="text/css" title="currentStyle" >
+        <style type="text/css" title="currentStyle" >
             @import "css/demo_page.css";
             @import "css/demo_table.css";
             @import "css/style.css";
@@ -34,7 +36,7 @@ include_once 'taskprocess.php';
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/functions.js"></script>
         <script type="text/javascript"  src="js/jquery.dataTables.js"></script>
-        
+
 
         <![if !IE 7]>
 
@@ -201,7 +203,7 @@ include_once 'taskprocess.php';
                     <div class="nav-divider">&nbsp;</div>
                     <div class="showhide-account"><img src="images/shared/nav/nav_myaccount.gif" width="93" height="14" alt="" /></div>
                     <div class="nav-divider">&nbsp;</div>
-                    <a href="" id="logout"><img src="images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
+                    <a href="logout.php" id="logout"><img src="images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
                     <div class="clear">&nbsp;</div>
 
                     <!--  start account-content -->	
@@ -214,7 +216,7 @@ include_once 'taskprocess.php';
 
                     <?php
                     echo '<ul class="select">
-                        <li><a href="tempindex.php"><b>Home</b></a>
+                        <li><a href="index.php"><b>Home</b></a>
                         </li>
                     </ul>
                     <div class="nav-divider">&nbsp;</div>';
@@ -243,7 +245,7 @@ include_once 'taskprocess.php';
                         <li><a href="adduser.php"><b>Add_Staff </b></a>
                         </li>
                         </ul>';
-                        ?>
+                    ?>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -434,7 +436,7 @@ include_once 'taskprocess.php';
                                                     <tr>
                                                         <td align="center"><div align="left">Last Visit </div></td>
                                                         <td colspan="2" style="text-align:center" align="center">
-<?php echo "<input name='lastVisit' id='lastVisit' type='date' style='width: 100%' value='" . date("Y-m-d") . "' tabindex='22'/>"; ?>
+                                                            <?php echo "<input name='lastVisit' id='lastVisit' type='date' style='width: 100%' value='" . date("Y-m-d") . "' tabindex='22'/>"; ?>
                                                         </td>
                                                     </tr>
                                                     <tr>

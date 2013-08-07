@@ -4,6 +4,8 @@ if (!$_SESSION)
 if (!$_SESSION['loggedin'])
     header("location:login.php");
 include_once 'taskprocess.php';
+if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
+    header("location:login.php");
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -28,7 +30,7 @@ include_once 'taskprocess.php';
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/functions.js"></script>
         <script type="text/javascript"  src="js/jquery.dataTables.js"></script>
-         
+
 
         <![if !IE 7]>
 
@@ -195,7 +197,7 @@ include_once 'taskprocess.php';
                     <div class="nav-divider">&nbsp;</div>
                     <div class="showhide-account"><img src="images/shared/nav/nav_myaccount.gif" width="93" height="14" alt="" /></div>
                     <div class="nav-divider">&nbsp;</div>
-                    <a href="" id="logout"><img src="images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
+                    <a href="logout.php" id="logout"><img src="images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
                     <div class="clear">&nbsp;</div>
 
                     <!--  start account-content -->	
@@ -208,7 +210,7 @@ include_once 'taskprocess.php';
 
                     <?php
                     echo '<ul class="select">
-                        <li><a href="tempindex.php"><b>Home</b></a>
+                        <li><a href="index.php"><b>Home</b></a>
                         </li>
                     </ul>
                     <div class="nav-divider">&nbsp;</div>';
@@ -237,7 +239,7 @@ include_once 'taskprocess.php';
                         <li><a href="adduser.php"><b>Add_Staff </b></a>
                         </li>
                         </ul>';
-                        ?>
+                    ?>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -273,7 +275,7 @@ include_once 'taskprocess.php';
                             <!--  start content-table-inner ...................................................................... START -->
                             <div id="content-table-inner">
 
-                                
+
                                 <!--  start table-content  -->
                                 <div id="table-content">
                                     <div id="viewDetail" style="display: none">

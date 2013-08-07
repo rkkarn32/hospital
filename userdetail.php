@@ -1,9 +1,11 @@
 <?php
-if(!$_SESSION)
+if (!$_SESSION)
     session_start();
 if (!$_SESSION['loggedin'])
     header("location:login.php");
 include_once 'taskprocess.php';
+if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
+    header("location:login.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -237,7 +239,7 @@ include_once 'taskprocess.php';
                     <div class="nav-divider">&nbsp;</div>
                     <div class="showhide-account"><img src="images/shared/nav/nav_myaccount.gif" width="93" height="14" alt="" /></div>
                     <div class="nav-divider">&nbsp;</div>
-                    <a href="" id="logout"><img src="images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
+                    <a href="logout.php" id="logout"><img src="images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
                     <div class="clear">&nbsp;</div>
 
                     <!--  start account-content -->	
@@ -250,7 +252,7 @@ include_once 'taskprocess.php';
 
                     <?php
                     echo '<ul class="select">
-                        <li><a href="tempindex.php"><b>Home</b></a>
+                        <li><a href="index.php"><b>Home</b></a>
                         </li>
                     </ul>
                     <div class="nav-divider">&nbsp;</div>';
@@ -279,132 +281,132 @@ include_once 'taskprocess.php';
                         <li><a href="adduser.php"><b>Add_Staff </b></a>
                         </li>
                         </ul>';
-                        ?>
-            </div>
-            <!--  start nav -->
-
-        </div>
-        <!--  start nav-outer-repeat................................................... END -->
-
-        <div class="clear"></div>
-
-        <!-- start content-outer ........................................................................................................................START -->
-        <div id="content-outer">
-            <!-- start content -->
-            <div id="content">
-
-                <!--  start page-heading -->
-                <div id="page-heading">
-                    <h1>User List </h1>
+                    ?>
                 </div>
-                <!-- end page-heading -->
-
-                <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
-                    <tr>
-                        <th rowspan="3" class="sized"><img src="images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
-                        <th class="topleft"></th>
-                        <td id="tbl-border-top">&nbsp;</td>
-                        <th class="topright"></th>
-                        <th rowspan="3" class="sized"><img src="images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
-                    </tr>
-                    <tr>
-                        <td id="tbl-border-left"></td>
-                        <td>
-                            <!--  start content-table-inner ...................................................................... START -->
-                            <div id="content-table-inner">
-
-                                <!--  start table-content  -->
-                                <div id="table-content">
-
-
-                                    <!--  end message-green -->
-
-
-                                    <!--  start product-table ..................................................................................... -->
-
-                                    <div id="container" class="container">
-                                        <div id="viewDetail" style="display: none">
-                                            <?php
-                                            include_once 'include/view.php';
-                                            if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$editInfo)) {
-                                                echo '<center><button id="editButton" name="editButton">Edit Data</button></center>';
-                                            }
-                                            ?>
-                                        </div>
-                                        <div id="editDetail" style="display: nones">
-                                            <form id="editForm_E" method="POST" onsubmit="return UpdateRecord()">
-                                                <?php include 'include/editrecord.php'; ?>
-                                                <div class="button" id="editButton" align="center">
-                                                    <button id="submit_E" type="submit" > Update </button>
-                                                    <button type="reset" id="cancel_E" onclick="CancelUpdate()"> Cancel </button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div><span></span></div>
-
-                                        <div id="searchRecord" class="searcgBox">
-                                            <form id="searchForm" method="POST" onsubmit="return SearchRecord()" action="test.php">
-                                                <div class="searchDetail" style="margin-left: 2%">
-                                                    <?php include_once 'include/searchform.php'; ?>
-                                                    <div class="button" id="searchButton" align="center">
-                                                        <button type="submit">Search Result</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                        <div id="demo">
-                                            <table border="0" width="100%" cellpadding="0" cellspacing="0" id="example" class="display">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="table-header-repeat"><a id="" >SN</a> </th>
-                                                        <th class="table-header-repeat line-left minwidth-1"><a href="">Name</a></th>
-                                                        <th class="table-header-repeat line-left"><a href="">Role Type </a></th>
-                                                        <th class="table-header-repeat line-left"><a href="">Account Type </a></th>
-                                                        <th class="table-header-repeat line-left"><a href="">View Detail </a></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody></tbody>
-                                            </table>
-                                            <!--  end product-table................................... --> 
-                                        </div> 
-                                    </div>
-                                    <!--  end content-table  -->
-
-
-                                    <div class="clear"></div>
-
-                                </div>
-                                <!--  end content-table-inner ............................................END  -->
-                        </td>
-                        <td id="tbl-border-right"></td>
-                    </tr>
-                    <tr>
-                        <th class="sized bottomleft"></th>
-                        <td id="tbl-border-bottom">&nbsp;</td>
-                        <th class="sized bottomright"></th>
-                    </tr>
-                </table>
-                <div class="clear">&nbsp;</div>
+                <!--  start nav -->
 
             </div>
-            <!--  end content -->
+            <!--  start nav-outer-repeat................................................... END -->
+
+            <div class="clear"></div>
+
+            <!-- start content-outer ........................................................................................................................START -->
+            <div id="content-outer">
+                <!-- start content -->
+                <div id="content">
+
+                    <!--  start page-heading -->
+                    <div id="page-heading">
+                        <h1>User List </h1>
+                    </div>
+                    <!-- end page-heading -->
+
+                    <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
+                        <tr>
+                            <th rowspan="3" class="sized"><img src="images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
+                            <th class="topleft"></th>
+                            <td id="tbl-border-top">&nbsp;</td>
+                            <th class="topright"></th>
+                            <th rowspan="3" class="sized"><img src="images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
+                        </tr>
+                        <tr>
+                            <td id="tbl-border-left"></td>
+                            <td>
+                                <!--  start content-table-inner ...................................................................... START -->
+                                <div id="content-table-inner">
+
+                                    <!--  start table-content  -->
+                                    <div id="table-content">
+
+
+                                        <!--  end message-green -->
+
+
+                                        <!--  start product-table ..................................................................................... -->
+
+                                        <div id="container" class="container">
+                                            <div id="viewDetail" style="display: none">
+                                                <?php
+                                                include_once 'include/view.php';
+                                                if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$editInfo)) {
+                                                    echo '<center><button id="editButton" name="editButton">Edit Data</button></center>';
+                                                }
+                                                ?>
+                                            </div>
+                                            <div id="editDetail" style="display: nones">
+                                                <form id="editForm_E" method="POST" onsubmit="return UpdateRecord()">
+                                                    <?php include 'include/editrecord.php'; ?>
+                                                    <div class="button" id="editButton" align="center">
+                                                        <button id="submit_E" type="submit" > Update </button>
+                                                        <button type="reset" id="cancel_E" onclick="CancelUpdate()"> Cancel </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div><span></span></div>
+
+                                            <div id="searchRecord" class="searcgBox">
+                                                <form id="searchForm" method="POST" onsubmit="return SearchRecord()" action="test.php">
+                                                    <div class="searchDetail" style="margin-left: 2%">
+                                                        <?php include_once 'include/searchform.php'; ?>
+                                                        <div class="button" id="searchButton" align="center">
+                                                            <button type="submit">Search Result</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <div id="demo">
+                                                <table border="0" width="100%" cellpadding="0" cellspacing="0" id="example" class="display">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="table-header-repeat"><a id="" >SN</a> </th>
+                                                            <th class="table-header-repeat line-left minwidth-1"><a href="">Name</a></th>
+                                                            <th class="table-header-repeat line-left"><a href="">Role Type </a></th>
+                                                            <th class="table-header-repeat line-left"><a href="">Account Type </a></th>
+                                                            <th class="table-header-repeat line-left"><a href="">View Detail </a></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                                <!--  end product-table................................... --> 
+                                            </div> 
+                                        </div>
+                                        <!--  end content-table  -->
+
+
+                                        <div class="clear"></div>
+
+                                    </div>
+                                    <!--  end content-table-inner ............................................END  -->
+                            </td>
+                            <td id="tbl-border-right"></td>
+                        </tr>
+                        <tr>
+                            <th class="sized bottomleft"></th>
+                            <td id="tbl-border-bottom">&nbsp;</td>
+                            <th class="sized bottomright"></th>
+                        </tr>
+                    </table>
+                    <div class="clear">&nbsp;</div>
+
+                </div>
+                <!--  end content -->
+                <div class="clear">&nbsp;</div>
+            </div>
+            <!--  end content-outer........................................................END -->
+
             <div class="clear">&nbsp;</div>
-        </div>
-        <!--  end content-outer........................................................END -->
 
-        <div class="clear">&nbsp;</div>
+            <!-- start footer -->         
+            <div id="footer">
+                <!--  start footer-left -->
+                <div id="footer-left">
 
-        <!-- start footer -->         
-        <div id="footer">
-            <!--  start footer-left -->
-            <div id="footer-left">
-
-                Admin: Hospital Management <span id="spanYear"></span> <a href="">www.testing.com</a>. All rights reserved.</div>
-            <!--  end footer-left -->
-            <div class="clear">&nbsp;</div>
-        </div>
-        <!-- end footer -->
+                    Admin: Hospital Management <span id="spanYear"></span> <a href="">www.testing.com</a>. All rights reserved.</div>
+                <!--  end footer-left -->
+                <div class="clear">&nbsp;</div>
+            </div>
+            <!-- end footer -->
 
     </body>
 </html>
