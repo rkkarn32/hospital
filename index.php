@@ -22,7 +22,7 @@ include_once 'taskprocess.php';
         <script src="js/jquery/ui.core.js" type="text/javascript"></script>
         <script src="js/jquery/ui.checkbox.js" type="text/javascript"></script>
         <script src="js/jquery/jquery.bind.js" type="text/javascript"></script>
-         
+
 
         <![if !IE 7]>
 
@@ -169,7 +169,9 @@ include_once 'taskprocess.php';
         </script>
     </head>
     <body> 
-
+        <div class="legend">
+            Working time is this
+        </div>
 
         <!-- End: page-top -->
 
@@ -231,7 +233,7 @@ include_once 'taskprocess.php';
                         <li><a href="adduser.php"><b>Add_Staff </b></a>
                         </li>
                         </ul>';
-                        ?>
+                    ?>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -271,6 +273,7 @@ include_once 'taskprocess.php';
                                 <div id="table-content">
                                     <?php include_once 'include/home.php'; ?>
                                 </div>
+
                                 <!--  end content-table  -->
 
 

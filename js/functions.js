@@ -236,7 +236,8 @@ function Login(){
                 if(output[1]==0)
                 {
                     //$('#myModal').modal('show');
-                    alert('Welcome '+output[2]+'\nIts your First Login, Please Update your username and password is recommeded');
+                    //alert('Welcome '+output[2]+'\nIts your First Login, Please Update your username and password is recommeded');
+                    window.location="modalmessage.php?name="+output[2];
                 }
             }else{
                 alert('login Failure');

@@ -90,7 +90,7 @@ label .loginLabel{
     text-align: center;
     width: 200px;
 }
-    
+
 .login { 
     width: 350px;
     border-right-style: solid;
@@ -111,12 +111,21 @@ label .loginLabel{
 }
 
 .searcgBox{
-    
+
     height: auto;
     padding: 10px;
     overflow: auto;
     border: 1px solid #8080FF;
     background-color: #E5E5FF;
+}
+
+.legend{
+    color: white;
+    background-color: #666;
+    font-size: 15px;
+    padding: 5px 0px 5px 50px;
+    font-weight: normal;
+    display: block;
 }
 /* search */
 .searchform { float:left; padding:0;}

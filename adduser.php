@@ -334,15 +334,6 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$createUser))
                                                                     <!-- <input name="training" type="text" size="60"/>-->
                                                                 <select id="accountList" name="accountList" class="listmenu" style="width:100%" tabindex="13">
                                                                     <option value="0" selected="selected">Select Account</option>
-                                                                    <?php
-//                                Logger::LogInformation("Loading AccountType List");
-//                                $accountList = $sql->GetAccountList();
-//                                foreach ($accountList as $account) {
-//                                    echo "<option value='" . $account[0] . "'>" . $account[1] . "</option>";
-//                                }
-//                                Logger::LogInformation("AccountType List Loaded");
-//                                
-                                                                    ?>
                                                                 </select>
                                                             </div>            </td>
                                                     </tr>
