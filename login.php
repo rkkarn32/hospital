@@ -7,7 +7,7 @@ if($_SESSION['loggedin']){
 ?>
 <html>
     <head><title>Hospital Management</title>
-<link rel="stylesheet" href="template/css/screen.css" type="text/css" media="screen" title="default" />
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="default" />
 <script src="template/js/jquery/jquery-1.4.1.min.js" type="text/javascript"></script>
 <script src="template/js/jquery/custom_jquery.js" type="text/javascript"></script>
 <script src="template/js/jquery/jquery.pngFix.pack.js" type="text/javascript"></script>

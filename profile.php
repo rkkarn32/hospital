@@ -9,7 +9,7 @@ include_once 'taskprocess.php';
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Internet Dreams</title>
+        <title>Hospital Management</title>
         <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="default" />
         <!--[if IE]>
         <link rel="stylesheet" media="all" type="text/css" href="css/pro_dropline_ie.css" />
@@ -22,9 +22,20 @@ include_once 'taskprocess.php';
         <script src="js/jquery/ui.core.js" type="text/javascript"></script>
         <script src="js/jquery/ui.checkbox.js" type="text/javascript"></script>
         <script src="js/jquery/jquery.bind.js" type="text/javascript"></script>
-         
+        <style type="text/css" title="currentStyle" >
+            @import "css/demo_page.css";
+            @import "css/demo_table.css";
+            @import "css/style.css";
+        </style>
+        <script type="text/javascript" src="js/cufon-yui.js"></script>
+        <script type="text/javascript" src="js/droid_sans_400-droid_sans_700.font.js"></script>
+        <script type="text/javascript" src="js/cuf_run.js"></script>
+        <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+        <script type="text/javascript"  src="js/jquery.dataTables.js"></script>
 
-        <![if !IE 7]>
+
 
         <!--  styled select box script version 1 -->
         <script src="js/jquery/jquery.selectbox-0.5.js" type="text/javascript"></script>
@@ -34,25 +45,12 @@ include_once 'taskprocess.php';
             });
         </script>
 
-
-        <![endif]>
-
         <!--  styled select box script version 2 --> 
         <script src="js/jquery/jquery.selectbox-0.5_style_2.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('.styledselect_form_1').selectbox({ inputClass: "styledselect_form_1" });
-                $('.styledselect_form_2').selectbox({ inputClass: "styledselect_form_2" });
-            });
-        </script>
+
 
         <!--  styled select box script version 3 --> 
         <script src="js/jquery/jquery.selectbox-0.5_style_2.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('.styledselect_pages').selectbox({ inputClass: "styledselect_pages" });
-            });
-        </script>
 
         <!--  styled file upload script --> 
         <script src="js/jquery/jquery.filestyle.js" type="text/javascript"></script>
@@ -162,18 +160,17 @@ include_once 'taskprocess.php';
 
         <!-- MUST BE THE LAST SCRIPT IN <HEAD></HEAD></HEAD> png fix -->
         <script src="js/jquery/jquery.pngFix.pack.js" type="text/javascript"></script>
-        <script type="text/javascript">
+<!--        <script type="text/javascript">
             $(document).ready(function(){
                 $(document).pngFix( );
             });
-        </script>
+        </script>-->
     </head>
     <body> 
 
+        <div style="display: none" id="userID"><?php echo $_SESSION['userid'] ?></div>
 
         <!-- End: page-top -->
-
-        </div>
         <!-- End: page-top-outer -->
 
         <div class="clear">&nbsp;</div>
@@ -200,42 +197,38 @@ include_once 'taskprocess.php';
             <div class="nav">
                 <div class="table">
 
-                    <ul class="select">
-                        <li><a href="tempindex.php"><b>Home</b><!--[if IE 7]><!--></a><!--<![endif]-->
+                    <?php
+                    echo '<ul class="select">
+                        <li><a href="tempindex.php"><b>Home</b></a>
                         </li>
                     </ul>
+                    <div class="nav-divider">&nbsp;</div>';
 
+                    echo'<ul class="current">
+                        <li><a href="profile.php"><b>Profile</b></a>
+                        </li>
+                    </ul>
                     <div class="nav-divider">&nbsp;</div>
+                    ';
 
-                    <ul class="current">
-                        <li><a href="profile.php"><b>Profile</b><!--[if IE 7]><!--></a><!--<![endif]-->
+                    if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
+                        echo'<ul class="select">
+                            <li><a href="userdetail.php"><b>Search</b></a>
+                            </li></ul>
+                            <div class="nav-divider">&nbsp;</div>';
+                    if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
+                        echo'<ul class="select">
+                        <li><a href="report.php"><b>Report</b></a>
                         </li>
-                    </ul>
+                        </ul>
 
-                    <div class="nav-divider">&nbsp;</div>
-
-                    <ul class="select">
-                        <li><a href="userdetail.php"><b>Search</b><!--[if IE 7]><!--></a><!--<![endif]-->		
+                        <div class="nav-divider">&nbsp;</div>';
+                    if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$createUser))
+                        echo'<ul class="select">
+                        <li><a href="adduser.php"><b>Add_Staff </b></a>
                         </li>
-                    </ul>
-
-                    <div class="nav-divider">&nbsp;</div>
-
-                    <ul class="select">
-                        <li><a href="report.php"><b>Report</b><!--[if IE 7]><!--></a><!--<![endif]-->
-                      <!--[if lte IE 6]><table><tr><td><![endif]-->
-                            <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-                        </li>
-                    </ul>
-
-                    <div class="nav-divider">&nbsp;</div>
-
-                    <ul class="select">
-                        <li><a href="adduser.php`"><b>Add_Staff </b><!--[if IE 7]><!--></a><!--<![endif]-->
-                      <!--[if lte IE 6]><table><tr><td><![endif]-->
-                            <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-                        </li>
-                    </ul>
+                        </ul>';
+                        ?>
 
                     <div class="clear"></div>
                 </div>
@@ -274,9 +267,72 @@ include_once 'taskprocess.php';
                             <div id="content-table-inner">
 
                                 <!--  start table-content  -->
+                                <script>
+                                    
+                                    function ShowProfileView(){
+                                        $('#profileView').show();
+                                        $('#changeUsername').hide();
+                                        $('#changePassword').hide();
+                                    }
+                                    function ShowChangeUserName(){
+                                        $('#profileView').hide();
+                                        $('#changeUsername').show();
+                                        $('#changePassword').hide();
+                                    }
+                                    function ShowChangePassword(){
+                                        $('#profileView').hide();
+                                        $('#changeUsername').hide();
+                                        $('#changePassword').show();
+                                    }
+                                </script>
                                 <script>ShowUserDetails($('#userID').html());</script>
                                 <div id="table-content">
-                                    <?php include_once 'include/view.php'; ?>
+                                    <div id="profileView">
+                                        <?php include_once 'include/view.php'; ?>
+                                        <center>
+                                            <table>
+                                                <tr>
+                                                    <td><button type="button" onclick="ShowChangeUserName();" >Change Username</button></td>
+                                                    <td><button type="button" onclick="ShowChangePassword();" >Change Password</button></td>
+                                                </tr>
+                                            </table>
+                                        </center>
+                                    </div>
+                                    <center>
+                                        <div id="changeUsername" style="display: none" >
+                                            <form id="changeUsernameForm" method="POST" onsubmit="return ChangeUsername();">
+                                                <table align="center">
+                                                    <tr>
+                                                        <td><label for="">New Username: </label></td>
+                                                        <td><input type="text" id="newUsername" name="newUsername" maxlength="50" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><button type="submit">Change Username</button></td>
+                                                        <td><button type="button" onclick="ShowProfileView();">Cancel</button></td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+
+                                        </div>
+                                        <div id="changePassword" style="display: none">
+                                            <form id="changePassword" method="POST" onsubmit="return ChangePassword();">
+                                                <table>
+                                                    <tr>
+                                                        <td>New Password</td>
+                                                        <td><input type="password" name="newPassword" id="newPassword" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Confirm Password </td>
+                                                        <td><input type="password" name="confirmPassword" id="confirmPassword" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><button type="submit">Update Password</button></td>
+                                                        <td><button type="button" onclick="ShowProfileView();">Cancel</button></td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+                                        </div>
+                                    </center>
                                 </div>
                                 <!--  end content-table  -->
 

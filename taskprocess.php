@@ -111,9 +111,19 @@ else if ($task == "showuserdetail") {
         Logger::LogInformation ("User Update failed");
     echo json_encode($returnValue);
 //    }
-} elseif ($task = 'showpermissionlist') {
+} elseif ($task == 'showpermissionlist') {
     $userID = $_POST['userid'];
     $permissions = $sql->PermissionList($userID);
     echo json_encode($permissions);
+}
+elseif($task == 'changeusername'){
+    $newUsername = $_POST['newUsername'];
+    $returnValue = $sql->ChangeUsername($newUsername);
+    echo json_encode($returnValue);
+}
+elseif($task == 'changepassword'){
+    $newPassword= mysql_escape_string($_POST['newPassword']);
+    $returnValue = $sql->ChangePassword($newPassword);
+    echo json_encode($returnValue);
 }
 ?>

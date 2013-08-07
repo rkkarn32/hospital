@@ -200,44 +200,38 @@ include_once 'taskprocess.php';
             <div class="nav">
                 <div class="table">
 
-                    <ul class="current">
-                        <li><a href="tempindex.php"><b>Home</b><!--[if IE 7]><!--></a><!--<![endif]-->
+                    <?php
+                    echo '<ul class="current">
+                        <li><a href="tempindex.php"><b>Home</b></a>
                         </li>
                     </ul>
+                    <div class="nav-divider">&nbsp;</div>';
 
+                    echo'<ul class="select">
+                        <li><a href="profile.php"><b>Profile</b></a>
+                        </li>
+                    </ul>
                     <div class="nav-divider">&nbsp;</div>
+                    ';
 
-                    <ul class="select">
-                        <li><a href="profile.php"><b>Profile</b><!--[if IE 7]><!--></a><!--<![endif]-->
+                    if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
+                        echo'<ul class="select">
+                            <li><a href="userdetail.php"><b>Search</b></a>
+                            </li></ul>
+                            <div class="nav-divider">&nbsp;</div>';
+                    if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
+                        echo'<ul class="select">
+                        <li><a href="report.php"><b>Report</b></a>
                         </li>
-                    </ul>
+                        </ul>
 
-                    <div class="nav-divider">&nbsp;</div>
-
-                    <ul class="select">
-                        <li><a href="userdetail.php"><b>Search</b><!--[if IE 7]><!--></a><!--<![endif]-->		
+                        <div class="nav-divider">&nbsp;</div>';
+                    if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$createUser))
+                        echo'<ul class="select">
+                        <li><a href="adduser.php"><b>Add_Staff </b></a>
                         </li>
-                    </ul>
-
-                    <div class="nav-divider">&nbsp;</div>
-
-                    <ul class="select">
-                        <li><a href="report.php"><b>Report</b><!--[if IE 7]><!--></a><!--<![endif]-->
-                      <!--[if lte IE 6]><table><tr><td><![endif]-->
-                            <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-                        </li>
-                    </ul>
-
-                    <div class="nav-divider">&nbsp;</div>
-
-                    <ul class="select">
-                        <li><a href="adduser.php"><b>Add_Staff </b><!--[if IE 7]><!--></a><!--<![endif]-->
-                      <!--[if lte IE 6]><table><tr><td><![endif]-->
-                            <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-                        </li>
-                    </ul>
-
-                    <div class="clear"></div>
+                        </ul>';
+                        ?>
                 </div>
                 <div class="clear"></div>
             </div>

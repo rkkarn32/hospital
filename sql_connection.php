@@ -446,6 +446,45 @@ class SqlConnection {
         Logger::LogInformation("PermissionList()## PermissionList Loaded Successfully");
         return $returnValue;
     }
+    public function ChangeUsername($newUsername){
+        $returnValue= array();
+        if($this->IsUserNameExist($newUsername))
+        {
+            Logger::LogInformation("ChangeUsername()## Username Update Failed, Error: User Already Exist");
+            $returnValue[0]=0;
+            $returnValue[1]="User Already Exist";
+            return $returnValue;
+        }
+        $query = "UPDATE userdetail SET username = '$newUsername' WHERE userid='".$_SESSION['userid']."'";
+        $result = mysql_query($query);
+        if(!$result)
+        {
+            Logger::LogInformation("ChangeUsername()## Username Update Failed, Error: ".mysql_error());
+            $returnValue[0]=0;
+            $returnValue[1]=  mysql_error();
+            return $returnValue;
+        }
+        Logger::LogInformation("ChangeUsername()## Username Updated successfully");
+        $returnValue[0]=1;
+        return $returnValue;
+    }
+    
+    public function ChangePassword($newPassword){
+        $returnValue= array();
+        $password = md5($newPassword);
+        $query = "UPDATE userdetail SET password= '$password' WHERE userid='".$_SESSION['userid']."'";
+        $result = mysql_query($query);
+        if(!$result)
+        {
+            Logger::LogInformation("ChangePassword()## Password Update Failed, Error: ".mysql_error());
+            $returnValue[0]=0;
+            $returnValue[1]=  mysql_error();
+            return $returnValue;
+        }
+        Logger::LogInformation("ChangePassword()## Password Updated successfully");
+        $returnValue[0]=1;
+        return $returnValue;
+    }
 
 }
 
