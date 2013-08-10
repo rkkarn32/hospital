@@ -37,6 +37,7 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
             @import "css/demo_page.css";
             @import "css/demo_table.css";
             @import "css/style.css";
+            @import "css/screen.css";
         </style>
         <script type="text/javascript" src="js/cufon-yui.js"></script>
         <script type="text/javascript" src="js/droid_sans_400-droid_sans_700.font.js"></script>
@@ -61,7 +62,7 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
                         
                             for(var i =0; i < output.length;i++){
                                 oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
-                                    "<button type='button' onclick='ShowUserDetails("+output[i][0]+"); ShowPermissionList("+output[i][0]+")'>Show Details</button>"
+                                    "<button type='button' class='green-button' onclick='ShowUserDetails("+output[i][0]+"); ShowPermissionList("+output[i][0]+")'>Show Details</button>"
                                 ]);
                             }
                         }
@@ -77,11 +78,11 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
 
         <!--  styled select box script version 1 -->
         <script src="js/jquery/jquery.selectbox-0.5.js" type="text/javascript"></script>
-        <script type="text/javascript">
+<!--        <script type="text/javascript">
             $(document).ready(function() {
                 $('.styledselect').selectbox({ inputClass: "selectbox_styled" });
             });
-        </script>
+        </script>-->
 
 
         <![endif]>
@@ -324,36 +325,47 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
                                         <!--  start product-table ..................................................................................... -->
 
                                         <div id="container" class="container">
-                                            <div id="viewDetail" style="display: none">
-                                                <?php
-                                                include_once 'include/view.php';
-                                                if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$editInfo)) {
-                                                    echo '<center><button id="editButton" name="editButton">Edit Data</button></center>';
-                                                }
-                                                ?>
+                                            <div class="displayBox" id="viewDetail" style="display: none">
+                                                <div class="header_black" >User Detail</div>
+                                                <div class="detailDispaly">
+                                                    <?php
+                                                    include_once 'include/view.php';
+                                                    if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$editInfo)) {
+                                                        echo '<div class="displaySection"> <center><button class="red-button" id="editButton" name="editButton">Edit Data</button></center></div>';
+                                                    }
+                                                    ?>
+                                                </div>
                                             </div>
-                                            <div id="editDetail" style="display: nones">
-                                                <form id="editForm_E" method="POST" onsubmit="return UpdateRecord()">
-                                                    <?php include 'include/editrecord.php'; ?>
-                                                    <div class="button" id="editButton" align="center">
-                                                        <button id="submit_E" type="submit" > Update </button>
-                                                        <button type="reset" id="cancel_E" onclick="CancelUpdate()"> Cancel </button>
-                                                    </div>
-                                                </form>
+                                            <div id="editDetail" style="display: nones" class="displayBox">
+                                                <div class="header_black" >Edit Record</div>
+                                                <div class="detailDispaly">
+                                                    <form id="editForm_E" method="POST" onsubmit="return UpdateRecord()">
+                                                        <?php include 'include/editrecord.php'; ?>
+                                                        <div class="displaySection" id="editButton" align="center" class="displaySection">
+                                                            <button class="blue-button" id="submit_E" type="submit" > Update </button>
+                                                            <button class="blue-button" type="reset" id="cancel_E" onclick="CancelUpdate()"> Cancel </button>
+                                                        </div>
+                                                    </form>
+                                                </div>
                                             </div>
                                             <div><span></span></div>
 
-                                            <div id="searchRecord" class="searcgBox">
-                                                <form id="searchForm" method="POST" onsubmit="return SearchRecord()" action="test.php">
-                                                    <div class="searchDetail" style="margin-left: 2%">
-                                                        <?php include_once 'include/searchform.php'; ?>
-                                                        <div class="button" id="searchButton" align="center">
-                                                            <button type="submit">Search Result</button>
+                                            <div id="searchRecord" class="displayBox">
+                                                <div class="header_black" >Search Record</div>
+                                                <div class="detailDispaly">
+                                                    <form id="searchForm" method="POST" onsubmit="return SearchRecord()" action="test.php">
+                                                        <div class="displaySection">
+                                                            <?php include_once 'include/searchform.php'; ?>
                                                         </div>
-                                                    </div>
-                                                </form>
+                                                        <div id="searchButton" align="center" class="displaySection">
+                                                            <button class="blue-button" type="submit">Search Result</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
                                             </div>
 
+                                            <div class="displayBox">
+                                                <div class="header_black" >List Of Users</div>
                                             <div id="demo">
                                                 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="example" class="display">
                                                     <thead>
@@ -368,7 +380,8 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
                                                     <tbody></tbody>
                                                 </table>
                                                 <!--  end product-table................................... --> 
-                                            </div> 
+                                            </div>
+                                                </div>
                                         </div>
                                         <!--  end content-table  -->
 

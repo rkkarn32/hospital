@@ -25,6 +25,7 @@ include_once 'taskprocess.php';
             @import "css/demo_page.css";
             @import "css/demo_table.css";
             @import "css/style.css";
+            @import "css/screen.css";
         </style>
         <script type="text/javascript" src="js/cufon-yui.js"></script>
         <script type="text/javascript" src="js/droid_sans_400-droid_sans_700.font.js"></script>
@@ -227,7 +228,7 @@ include_once 'taskprocess.php';
                         <li><a href="adduser.php"><b>Add_Staff </b></a>
                         </li>
                         </ul>';
-                        ?>
+                    ?>
 
                     <div class="clear"></div>
                 </div>
@@ -286,49 +287,70 @@ include_once 'taskprocess.php';
                                 </script>
                                 <script>ShowUserDetails($('#userID').html());</script>
                                 <div id="table-content">
-                                    <div id="profileView">
-                                        <?php include_once 'include/view.php'; ?>
-                                        <center>
-                                            <table>
-                                                <tr>
-                                                    <td><button type="button" onclick="ShowChangeUserName();" >Change Username</button></td>
-                                                    <td><button type="button" onclick="ShowChangePassword();" >Change Password</button></td>
-                                                </tr>
-                                            </table>
-                                        </center>
+                                    <div id="profileView" class="displayBox">
+                                        <div class="header_black" >User Detail</div>
+                                        <div class="detailDispaly">
+                                            <?php include_once 'include/view.php'; ?>
+                                            <div class="displaySection">
+                                                <center>
+                                                    <table>
+                                                        <tr>
+                                                            <td><button class="blue-button" type="button" onClick="ShowChangeUserName();" >Change Username</button></td>
+                                                            <td><button class="blue-button" type="button" onClick="ShowChangePassword();" >Change Password</button></td>
+                                                        </tr>
+                                                    </table>
+                                                </center>
+                                            </div>
+                                        </div>
                                     </div>
                                     <center>
-                                        <div id="changeUsername" style="display: none" >
-                                            <form id="changeUsernameForm" method="POST" onsubmit="return ChangeUsername();">
-                                                <table align="center">
-                                                    <tr>
-                                                        <td><label for="">New Username: </label></td>
-                                                        <td><input type="text" id="newUsername" name="newUsername" maxlength="50" /></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><button type="submit">Change Username</button></td>
-                                                        <td><button type="button" onclick="ShowProfileView();">Cancel</button></td>
-                                                    </tr>
-                                                </table>
-                                            </form>
+                                        <div id="changeUsername" style="display: none" class="displayBox" >
+                                            <div class="header_black">Change Username</div>
+                                            <div class="detailDispaly">
+                                                <form id="changeUsernameForm" method="POST" onSubmit="return ChangeUsername();">
+                                                    <div class="displaySection">
+                                                        <table align="center">
+                                                            <tr>
+                                                                <td><label for="">New Username: </label></td>
+                                                                <td><input type="text" id="newUsername" name="newUsername" maxlength="50" /></td>
 
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div class="displaySection">
+                                                        <table align="center">
+                                                            <tr>
+                                                                <td><button class="blue-button" type="submit">Change Username</button></td>
+                                                                <td><button class="blue-button" type="button" onClick="ShowProfileView();">Cancel</button></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
-                                        <div id="changePassword" style="display: none">
-                                            <form id="changePassword" method="POST" onsubmit="return ChangePassword();">
-                                                <table>
-                                                    <tr>
-                                                        <td>New Password</td>
-                                                        <td><input type="password" name="newPassword" id="newPassword" /></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Confirm Password </td>
-                                                        <td><input type="password" name="confirmPassword" id="confirmPassword" /></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><button type="submit">Update Password</button></td>
-                                                        <td><button type="button" onclick="ShowProfileView();">Cancel</button></td>
-                                                    </tr>
-                                                </table>
+                                        <div id="changePassword" style="display: none" class="displayBox">
+                                            <div class="header_black">Change Password</div>
+                                            <form id="changePassword" method="POST" onSubmit="return ChangePassword();">
+                                                <div class="displaySection">
+                                                    <table>
+                                                        <tr>
+                                                            <td>New Password</td>
+                                                            <td><input type="password" name="newPassword" id="newPassword" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Confirm Password </td>
+                                                            <td><input type="password" name="confirmPassword" id="confirmPassword" /></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="displaySection">
+                                                    <table>
+                                                        <tr>
+                                                            <td><button class="blue-button" type="submit">Update Password</button></td>
+                                                            <td><button class="blue-button" type="button" onClick="ShowProfileView();">Cancel</button></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
                                             </form>
                                         </div>
                                     </center>

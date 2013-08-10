@@ -1,7 +1,3 @@
-<?php
-session_start();
-include_once 'sql_connection.php';
-?>
 <div align="center">
     <form id="userDetailForm" method="POST" onsubmit="return RegisterUser()">
         <div id="inputForAll">

@@ -281,7 +281,7 @@ function SearchRecord(){
             if(output[0] !=0){                        
                 for(var i =0; i < output.length;i++){
                     oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
-                        "<button type='button' onclick='ShowUserDetails("+output[i][0]+");ShowPermissionList("+output[i][0]+")'>Show Details</button>"
+                        "<button type='button' class='green-button' onclick='ShowUserDetails("+output[i][0]+");ShowPermissionList("+output[i][0]+")'>Show Details</button>"
                         ]);
                 }
             }
@@ -307,7 +307,7 @@ function ReportData(){
             if(output[0] !=0){
                 for(var i =0; i < output.length;i++){
                     oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
-                        "<button type='button' onclick=\"PrintData("+output[i][0]+"); ShowPermissionList("+output[i][0]+")\">Report Data</button>"
+                        "<button type='button' class='green-button' onclick=\"PrintData("+output[i][0]+"); ShowPermissionList("+output[i][0]+")\">Report Data</button>"
                         ]);
                 }
             }
@@ -356,6 +356,7 @@ function PrintData(id){
                     $('#medicationPrescribed').html(output[18]);
                     $('#lastOfficeVisit').html(output[19]);
                 }
+                $('#isPrintable').html(1);
             }
         },
         error:function (a, b , c){

@@ -172,16 +172,16 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
         <script src="js/jquery/jquery.pngFix.pack.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(document).ready(function(){
-                $(document).pngFix( );
+                if($('#isPrint').val()==1)
+                {
+                    $('#isPrint').val(0);
+                    PrintElem('#userDetail');
+                }
             });
         </script>
     </head>
     <body> 
-
-
         <!-- End: page-top -->
-
-        </div>
         <!-- End: page-top-outer -->
 
         <div class="clear">&nbsp;</div>
@@ -278,33 +278,42 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
 
                                 <!--  start table-content  -->
                                 <div id="table-content">
-                                    <div id="viewDetail" style="display: none">
-                                        <?php include_once 'include/view.php'; ?>
-                                        <center><input type="button" value="Print Details" onClick="PrintElem('#userDetail')" /></center>
+                                    <div id="viewDetail" style="display: none" class="displayBox">
+                                        <div class="header_black">Search User</div>
+                                        <div class="detailDispaly">
+                                            <?php include_once 'include/view.php'; ?>
+                                        </div>
+                                        <div class="displaySection">
+                                            <center><input class="blue-button" type="button" value="Print Details" onClick="PrintElem('#userDetail')" /></center>
+                                        </div>
                                     </div>
-                                    <div id="searchRecord" class="searcgBox">
+                                    <div id="searchRecord" class="searcgBox displayBox">
+                                        <div class="header_black">Search User</div>
                                         <form id="reportForm" method="POST" onsubmit="return ReportData();">
-                                            <div class="searchDetail" style="margin-left: 2%">
+                                            <div id="searchDetail" class="detailDispaly" >
                                                 <?php include_once 'include/searchform.php'; ?>
-                                                <div class="button" id="buttons" align="center">
-                                                    <button type="submit" >Search Result</button>
+                                                <div class="displaySection" id="buttons" align="center">
+                                                    <button class="blue-button" type="submit" >Search Result</button>
                                                 </div>
                                             </div>
                                         </form> 
                                     </div>
-                                    <div id="demo" >
-                                        <table border="0" width="100%" cellpadding="0" cellspacing="0" id="example" class="display">
-                                            <thead>
-                                                <tr>
-                                                    <th class="table-header-repeat"><a id="" >SN</a> </th>
-                                                    <th class="table-header-repeat line-left minwidth-1"><a href="">Name</a></th>
-                                                    <th class="table-header-repeat line-left"><a href="">Role Type </a></th>
-                                                    <th class="table-header-repeat line-left"><a href="">Account Type </a></th>
-                                                    <th class="table-header-repeat line-left"><a href="">View Detail </a></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody></tbody>
-                                        </table>
+                                    <div id="demo" class="displayBox">
+                                        <div class="header_black">User List</div>
+                                        <div class="displaySection">
+                                            <table border="0" width="100%" cellpadding="0" cellspacing="0" id="example" class="display">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="table-header-repeat"><a id="" >SN</a> </th>
+                                                        <th class="table-header-repeat line-left minwidth-1"><a href="">Name</a></th>
+                                                        <th class="table-header-repeat line-left"><a href="">Role Type </a></th>
+                                                        <th class="table-header-repeat line-left"><a href="">Account Type </a></th>
+                                                        <th class="table-header-repeat line-left"><a href="">View Detail </a></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                                 <!--  end content-table  -->
