@@ -250,14 +250,8 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
                 <div class="table">
 
                     <?php
-                    echo '<ul class="select">
-                        <li><a href="index.php"><b>Home</b></a>
-                        </li>
-                    </ul>
-                    <div class="nav-divider">&nbsp;</div>';
-
                     echo'<ul class="select">
-                        <li><a href="profile.php"><b>Profile</b></a>
+                        <li><a href="profile.php"><b>Home</b></a>
                         </li>
                     </ul>
                     <div class="nav-divider">&nbsp;</div>

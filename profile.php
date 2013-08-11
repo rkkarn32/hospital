@@ -196,14 +196,8 @@ include_once 'taskprocess.php';
                 <div class="table">
 
                     <?php
-                    echo '<ul class="select">
-                        <li><a href="index.php"><b>Home</b></a>
-                        </li>
-                    </ul>
-                    <div class="nav-divider">&nbsp;</div>';
-
                     echo'<ul class="current">
-                        <li><a href="profile.php"><b>Profile</b></a>
+                        <li><a href="profile.php"><b>Home</b></a>
                         </li>
                     </ul>
                     <div class="nav-divider">&nbsp;</div>
