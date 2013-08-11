@@ -30,7 +30,7 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/functions.js"></script>
         <script type="text/javascript"  src="js/jquery.dataTables.js"></script>
-
+        
 
         <![if !IE 7]>
 

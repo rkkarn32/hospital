@@ -125,5 +125,9 @@ elseif($task == 'changepassword'){
     $newPassword= mysql_escape_string($_POST['newPassword']);
     $returnValue = $sql->ChangePassword($newPassword);
     echo json_encode($returnValue);
+}elseif($task == 'deleteuser'){
+    $returnValue= $sql->DeleteUser($_POST['id']);
+    echo json_encode($returnValue);
 }
+
 ?>

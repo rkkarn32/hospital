@@ -62,7 +62,8 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
                         
                             for(var i =0; i < output.length;i++){
                                 oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
-                                    "<button type='button' class='green-button' onclick='ShowUserDetails("+output[i][0]+"); ShowPermissionList("+output[i][0]+")'>Show Details</button>"
+                                    "<button type='button' class='green-button' onclick='ShowUserDetails("+output[i][0]+"); ShowPermissionList("+output[i][0]+")'>Show Details</button>",
+                                    "<button type='button' class='red-button' onclick='DeleteUser("+output[i][0]+");'>Delete User</button>"
                                 ]);
                             }
                         }
@@ -371,6 +372,7 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
                                                                 <th class="table-header-repeat line-left"><a href="">Role Type </a></th>
                                                                 <th class="table-header-repeat line-left"><a href="">Account Type </a></th>
                                                                 <th class="table-header-repeat line-left"><a href="">View Detail </a></th>
+                                                                <th class="table-header-repeat line-left"><a href="">Delete User </a></th>
                                                             </tr>
                                                         </thead>
                                                         <tbody></tbody>

@@ -5,8 +5,8 @@ include_once 'globalvariable.php';
 
 class SqlConnection {
 
-    private $startLocalIP = "126.168.1.1";          //Local IP Range
-    private $endLocalIP = "192.0.0.1";
+    private $startLocalIP = "126.168.1.2";          //Local IP Range
+    private $endLocalIP = "192.0.1.150";
     private $db_name = "hospital";                  //Database Information
     private $db_link;
     private $sql_username = "root";                 //SQL setting
@@ -482,6 +482,19 @@ class SqlConnection {
             return $returnValue;
         }
         Logger::LogInformation("ChangePassword()## Password Updated successfully");
+        $returnValue[0]=1;
+        return $returnValue;
+    }
+    
+    public function DeleteUser($userID){
+        $query = "DELETE FROM userdetail WHERE userid=".$userID;
+        $returnValue = array();
+        $returnValue[0]=  mysql_query($query);
+        if(!$returnValue[0]){
+            Logger::LogInformation("DeleteUser()## Query isn't executed successfully, Error: ".mysql_error());
+            $returnValue[1]=  mysql_error();
+            return $returnValue;
+        }
         $returnValue[0]=1;
         return $returnValue;
     }

@@ -363,7 +363,6 @@ function PrintData(id){
             alert(a+" "+" "+c);
         }
     });
-    //    alert($('#userName').html());
     //PrintElem('#userDetail');
     return false;
 }
@@ -533,4 +532,33 @@ function ChangePassword(){
         }
     });
     return false;
+}
+
+function DeleteUser(id){
+    
+    if (confirm('Are you sure you want to Remove the User')) {
+        var data = "task=deleteuser&id="+id;
+        $.ajax({
+            url:'taskprocess.php' ,
+            cache:false,
+            dataType:'json',
+            data:data,
+            type:'POST',
+            success:function(output){
+                if(output[0] !=0)
+                {
+                    alert('User Deleted successfully');
+                    window.location="userdetail.php";
+                }
+                else
+                    alert('Fail to remove user, Error: '+output[1]);
+            },
+            error:function(a,b,c){
+                alert(a+b+c);
+            }
+        });
+    }
+    
+    return false;
+    
 }
