@@ -184,8 +184,6 @@ include_once 'taskprocess.php';
                 <div id="nav-right">
 
                     <div class="nav-divider">&nbsp;</div>
-                    <div class="showhide-account"><img src="images/shared/nav/nav_myaccount.gif" width="93" height="14" alt="" /></div>
-                    <div class="nav-divider">&nbsp;</div>
                     <a href="logout.php" id="logout"><img src="images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
                     <div class="clear">&nbsp;</div>
 
@@ -247,9 +245,6 @@ include_once 'taskprocess.php';
             <div id="content">
 
                 <!--  start page-heading -->
-                <div id="page-heading">
-                    <h1>User List </h1>
-                </div>
                 <!-- end page-heading -->
 
                 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
@@ -320,7 +315,7 @@ include_once 'taskprocess.php';
                                                     <div class="displaySection">
                                                         <table align="center">
                                                             <tr>
-                                                                <td><button class="blue-button" type="submit">Change Username</button></td>
+                                                                <td><button class="blue-button" type="submit">Submit</button></td>
                                                                 <td><button class="blue-button" type="button" onClick="ShowProfileView();">Cancel</button></td>
                                                             </tr>
                                                         </table>
@@ -346,7 +341,7 @@ include_once 'taskprocess.php';
                                                 <div class="displaySection">
                                                     <table>
                                                         <tr>
-                                                            <td><button class="blue-button" type="submit">Update Password</button></td>
+                                                            <td><button class="blue-button" type="submit">Submit</button></td>
                                                             <td><button class="blue-button" type="button" onClick="ShowProfileView();">Cancel</button></td>
                                                         </tr>
                                                     </table>
