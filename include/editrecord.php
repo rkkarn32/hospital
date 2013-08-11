@@ -12,8 +12,8 @@
                 <td width="30%"><input type="text" id="name_E" name="name_E" /></td>
                 <td width="20%"><strong>Account Type:-</strong></td>
                 <td width="30%">
-                    <div align="right">
-                        <select id="roleList" name="roleList" class="listmenu" style="width: 100%"  onchange="loadPermissionList()" >
+                    <div >
+                        <select id="roleList" name="roleList" class="listmenu" onchange="loadPermissionList()" >
                             <option selected="selected" value="0" tabindex="12" onchange="" >Select Role</option>
                             <?php
                             Logger::LogInformation("Loading Role List");
@@ -30,7 +30,7 @@
             <tr>
                 <td><strong>Account Group:</strong></td>
                 <td>
-                    <select id="accountList" name="accountList" class="listmenu" style="width:100%" tabindex="13">
+                    <select id="accountList" name="accountList" class="listmenu" tabindex="13">
                         <option value="0" selected="selected">Select Account</option>
                     </select>
                 </td>
@@ -68,7 +68,7 @@
             <tr>
                 <td width="20%" ><strong>Doctor Name:</strong></td>
                 <td width="30%">
-                    <select id="doctorName_E" name="doctorName_E" style="width: 100%">
+                    <select id="doctorName_E" name="doctorName_E">
                         <?php
                         Logger::LogInformation("Loading Doctor List");
                         $doctorList = $sql->GetUserNameByAccountType("Doctor");
@@ -87,7 +87,7 @@
                 <td width="20%"><strong>Nurse Name:</strong></td>
                 <td width="30%">
 <!--                    <input type="text" id="nurseName_E" name="nurseName_E" />-->
-                    <select id="nurseName_E" name="nurseName_E" style="width: 100%">
+                    <select id="nurseName_E" name="nurseName_E">
                         <?php
                         Logger::LogInformation("Loading Nurse List");
                         $nurseList = $sql->GetUserNameByAccountType("Nurse");

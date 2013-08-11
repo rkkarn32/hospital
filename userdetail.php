@@ -366,22 +366,22 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
 
                                             <div class="displayBox">
                                                 <div class="header_black" >List Of Users</div>
-                                            <div id="demo">
-                                                <table border="0" width="100%" cellpadding="0" cellspacing="0" id="example" class="display">
-                                                    <thead>
-                                                        <tr>
-                                                            <th class="table-header-repeat"><a id="" >SN</a> </th>
-                                                            <th class="table-header-repeat line-left minwidth-1"><a href="">Name</a></th>
-                                                            <th class="table-header-repeat line-left"><a href="">Role Type </a></th>
-                                                            <th class="table-header-repeat line-left"><a href="">Account Type </a></th>
-                                                            <th class="table-header-repeat line-left"><a href="">View Detail </a></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody></tbody>
-                                                </table>
-                                                <!--  end product-table................................... --> 
-                                            </div>
+                                                <div id="demo">
+                                                    <table border="0" width="100%" cellpadding="0" cellspacing="0" id="example" class="display">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="table-header-repeat"><a id="" >SN</a> </th>
+                                                                <th class="table-header-repeat line-left minwidth-1"><a href="">Name</a></th>
+                                                                <th class="table-header-repeat line-left"><a href="">Role Type </a></th>
+                                                                <th class="table-header-repeat line-left"><a href="">Account Type </a></th>
+                                                                <th class="table-header-repeat line-left"><a href="">View Detail </a></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody></tbody>
+                                                    </table>
+                                                    <!--  end product-table................................... --> 
                                                 </div>
+                                            </div>
                                         </div>
                                         <!--  end content-table  -->
 

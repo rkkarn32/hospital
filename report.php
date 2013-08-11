@@ -279,12 +279,12 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
                                 <!--  start table-content  -->
                                 <div id="table-content">
                                     <div id="viewDetail" style="display: none" class="displayBox">
-                                        <div class="header_black">Search User</div>
+                                        <div class="header_black">User Detail</div>
                                         <div class="detailDispaly">
                                             <?php include_once 'include/view.php'; ?>
                                         </div>
                                         <div class="displaySection">
-                                            <center><input class="blue-button" type="button" value="Print Details" onClick="PrintElem('#userDetail')" /></center>
+                                            <center><button class="blue-button" type="button" onClick="PrintElem('#userDetail')" >Print Details</button></center>
                                         </div>
                                     </div>
                                     <div id="searchRecord" class="searcgBox displayBox">
@@ -300,20 +300,18 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
                                     </div>
                                     <div id="demo" class="displayBox">
                                         <div class="header_black">User List</div>
-                                        <div class="displaySection">
-                                            <table border="0" width="100%" cellpadding="0" cellspacing="0" id="example" class="display">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="table-header-repeat"><a id="" >SN</a> </th>
-                                                        <th class="table-header-repeat line-left minwidth-1"><a href="">Name</a></th>
-                                                        <th class="table-header-repeat line-left"><a href="">Role Type </a></th>
-                                                        <th class="table-header-repeat line-left"><a href="">Account Type </a></th>
-                                                        <th class="table-header-repeat line-left"><a href="">View Detail </a></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody></tbody>
-                                            </table>
-                                        </div>
+                                        <table border="0" width="100%" cellpadding="0" cellspacing="0" id="example" class="display">
+                                            <thead>
+                                                <tr>
+                                                    <th class="table-header-repeat"><a id="" >SN</a> </th>
+                                                    <th class="table-header-repeat line-left minwidth-1"><a href="">Name</a></th>
+                                                    <th class="table-header-repeat line-left"><a href="">Role Type </a></th>
+                                                    <th class="table-header-repeat line-left"><a href="">Account Type </a></th>
+                                                    <th class="table-header-repeat line-left"><a href="">View Detail </a></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
                                     </div>
                                 </div>
                                 <!--  end content-table  -->

@@ -436,7 +436,7 @@ function ShowPermissionList(userID){
                 permissionList+= "<td align='center'>User doesn't have any special permissions";
             
             permissionList+="</table>";
-            //            alert(permissionList);
+//            alert(permissionList);
             $('#permissionDetail').html(permissionList);
         }
     });
@@ -468,11 +468,7 @@ function UpdatePermissionList(userID){
 }
 
 function ChangeUsername(){
-    if( $('#newUsername').val() == "")
-    {
-        alert("Username can't be Null");
-        return false;
-    }
+    
     var data = $('#changeUsernameForm').serialize();
     data = "task=changeusername&"+data;
     $.ajax({
@@ -483,10 +479,10 @@ function ChangeUsername(){
         type:'POST',
         success:function(output){
             if(output[0] !=0)
-            {
-                alert('your UserName updated Successfully');
-                window.location="profile.php";
-            }
+                {
+                    alert('your UserName updated Successfully');
+                    window.location="profile.php";
+                }
             else
                 alert('Update Fail, Error: '+output[1]);
         },
@@ -502,15 +498,9 @@ function ChangePassword(){
     var confirmPassword= $('#confirmPassword').val();
     
     if(newPassword != confirmPassword ){
-        alert('Password And Confirm Password Should be same');
+        alert('Password And Confirm Password Should be same'+newPassword+confirmPassword);
         return false;
     }
-    if(newPassword == "")
-    {
-        alert("Password Can't be null");
-        return false;
-    }
-        
     
     var data = "task=changepassword&newPassword="+newPassword;
     $.ajax({
@@ -521,10 +511,10 @@ function ChangePassword(){
         type:'POST',
         success:function(output){
             if(output[0] !=0)
-            {
-                alert('your Password Successfully updated');
-                window.location="profile.php";
-            }
+                {
+                    alert('your Password Successfully updated');
+                    window.location="profile.php";
+                }
             else
                 alert('Update Fail, Error: '+output[1]);
         },

@@ -28,6 +28,7 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$createUser))
             @import "css/demo_page.css";
             @import "css/demo_table.css";
             @import "css/style.css";
+            @import "css/screen.css";
         </style>
         <script type="text/javascript" src="js/cufon-yui.js"></script>
         <script type="text/javascript" src="js/droid_sans_400-droid_sans_700.font.js"></script>
@@ -283,9 +284,11 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$createUser))
 
                                 <!--  start table-content  -->
                                 <div id="table-content">
-                                    <?php
-                                    include_once 'include/createaccount.php';
-                                    ?>
+                                    <div class="displayBox">
+                                        <?php
+                                        include_once 'include/createaccount.php';
+                                        ?>
+                                    </div>
                                 </div>
                                 <!--  end content-table  -->
 
