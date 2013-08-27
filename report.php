@@ -1,5 +1,5 @@
 <?php
-if (!$_SESSION)
+if(!isset($_SESSION))
     session_start();
 if (!$_SESSION['loggedin'])
     header("location:login.php");
@@ -32,8 +32,6 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
         <script type="text/javascript"  src="js/jquery.dataTables.js"></script>
         
 
-        <![if !IE 7]>
-
         <!--  styled select box script version 1 -->
         <script src="js/jquery/jquery.selectbox-0.5.js" type="text/javascript"></script>
         <script type="text/javascript">
@@ -41,9 +39,6 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
                 $('.styledselect').selectbox({ inputClass: "selectbox_styled" });
             });
         </script>
-
-
-        <![endif]>
 
         <!--  styled select box script version 2 --> 
         <script src="js/jquery/jquery.selectbox-0.5_style_2.js" type="text/javascript"></script>
@@ -240,6 +235,9 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
         </div>
         <!--  start nav-outer-repeat................................................... END -->
 
+        <div class="clear"></div>
+        <div id="isPrintable" style="display: none" onchange="alert('value is changed')"></div>
+        <input type="text" id="valueChange" style="display: none" onchange="alert('Text Value is changed');" onload="alert('check Balue')" />
         <div class="clear"></div>
 
         <!-- start content-outer ........................................................................................................................START -->

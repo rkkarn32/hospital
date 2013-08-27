@@ -1,9 +1,11 @@
 <?php
-if(!$_SESSION)
+if(!isset($_SESSION))
     session_start();
-if($_SESSION['loggedin']){
+if(isset($_SESSION['loggedin']))
     header("location:index.php");
-}
+//if($_SESSION['loggedin']){
+//    header("location:index.php");
+//}
 ?>
 <html>
     <head><title>Hospital Management</title>
@@ -11,10 +13,8 @@ if($_SESSION['loggedin']){
 <script src="template/js/jquery/jquery-1.4.1.min.js" type="text/javascript"></script>
 <script src="template/js/jquery/custom_jquery.js" type="text/javascript"></script>
 <script src="template/js/jquery/jquery.pngFix.pack.js" type="text/javascript"></script>
+<script type="text/javascript"  src="js/jquery.dataTables.js"></script>
 <script src="js/functions.js" type="text/javascript"></script>
-<!--<link href="css1/bootstrap.css" rel="stylesheet"/>    
-<script src="css1/jquery.js"></script>
-<script src="css1/bootstrap-modal.js"></script>    -->
 <script type="text/javascript">
     $(document).ready(function(){
         $(document).pngFix();

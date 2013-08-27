@@ -1,6 +1,4 @@
 <?php
-session_start();
-include_once 'sql_connection.php';
 ?>
 
 

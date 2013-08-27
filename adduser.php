@@ -1,5 +1,5 @@
 <?php
-if (!$_SESSION)
+if(!isset($_SESSION))
     session_start();
 if (!$_SESSION['loggedin'])
     header("location:login.php");

@@ -1,13 +1,14 @@
 <?php
-
-session_start();
+if(!isset($_SESSION))
+    session_start();
 include_once 'sql_connection.php';
 include_once 'globalvariable.php';
-$task = $_POST['task'];
+$task = null;
+if(isset($_POST['task']))
+    $task = $_POST['task'];
 if ($task == 'login') {
-    Logger::LogInformation("Login process started");
-    $username = mysql_escape_string($_POST['username']);
-    $password = md5(mysql_escape_string($_POST['password']));
+    $username = mysql_real_escape_string($_POST['username']);
+    $password = md5(mysql_real_escape_string($_POST['password']));
     $returValue = $sql->LoginVerification($username, $password);
     echo json_encode($returValue);
 } elseif ($task == 'loadalluser') {

@@ -1,11 +1,11 @@
 <?php
-if (!$_SESSION)
+if(!isset($_SESSION))
     session_start();
 if (!$_SESSION['loggedin'])
     header("location:login.php");
 include_once 'taskprocess.php';
 if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
-    header("location:login.php");
+    header("location:profile.php");
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -344,7 +344,7 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
                                             <div id="searchRecord" class="displayBox">
                                                 <div class="header_black" >Search Record</div>
                                                 <div class="detailDispaly">
-                                                    <form id="searchForm" method="POST" onsubmit="return SearchRecord()" action="test.php">
+                                                    <form id="searchForm" method="POST" onsubmit="return SearchRecord();" action="test.php">
                                                         <div class="displaySection">
                                                             <?php include_once 'include/searchform.php'; ?>
                                                         </div>

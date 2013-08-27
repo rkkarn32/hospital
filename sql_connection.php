@@ -29,16 +29,24 @@ class SqlConnection {
     }
 
     public function LoginVerification($uname, $pword) {
+        Logger::LogInformation("LoginVerification()## Login process started");
         $returnValue = array();
-        $sql = "SELECT * FROM userdetail WHERE username = '" . mysql_escape_string($uname) . "' AND password ='" . mysql_escape_string($pword) . "'";
+        $returnValue[0]=0;
+        $sql = "SELECT * FROM userdetail WHERE username = '" . $uname . "' AND password ='" . $pword . "'";
         $result = mysql_query($sql, $this->db_link);
         if (!$result)
-            Logger::LogInformation("LoginVerification()## Query isn't executed, Error: " . mysql_error());
+        {
+            Logger::LogInformation("LoginVerification()## Login failed, Error: " . mysql_error());
+            $returnValue[1] = mysql_error();
+            return $returnValue;
+        }
         while ($row = mysql_fetch_array($result)) {
 
             if (!$this->IsVisitorLocal($this->GetVisitorIP()) AND $row['roleid'] != 4) {
                 Logger::LogInformation("LoginVerification()## Login from unauthorized location");
                 $returnValue[0] = 0;
+                $returnValue[1]="Remot login is not authenticated for Staff account";
+                Logger::LogInformation("LoginVerification()## Login failed, Error: Staff cannot login from remote");
                 return $returnValue;
             }
             $returnValue[0] = 1;
@@ -55,6 +63,7 @@ class SqlConnection {
             return $returnValue;
         }
         $returnValue[0] = 0;
+        Logger::LogInformation("LoginVerification()## Login Failed, Error: Unauthorized access");
         return $returnValue;
     }
 
