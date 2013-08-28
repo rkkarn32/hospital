@@ -112,7 +112,7 @@ function RegisterUser(){
             if(output[0] == true)
             {
                 alert("Data entered successfully");
-                window.location='index.php?action=memberdetail';
+                window.location='index.php';
             }
             else
                 alert("Problem occurs during Registration, Please try again! \nForm more detail see log file");
@@ -235,9 +235,9 @@ function Login(){
                 if(output[1]==0)
                     window.location="modalmessage.php?name="+output[2];
                 else
-                    {
-                        window.location= "profile.php";
-                    }
+                {
+                    window.location= "profile.php";
+                }
             }else{
                 alert('login Failure');
             }
@@ -277,7 +277,7 @@ function SearchRecord(){
         data:Data,
         type:'POST',
         dataType:'json',
-        cache: false,
+        cache:false,
         success:function(output){
             oTable.fnClearTable();
             if(output[0] !=0){                        
@@ -288,6 +288,9 @@ function SearchRecord(){
                         ]);
                 }
             }
+        },
+        error:function(a,b,c){
+            alert(a+b+c);
         }
     });
     return false;
@@ -377,8 +380,8 @@ function PrintData(id){
                 }
                 $('#isPrintable').html(1);
                 $('#valueChange').val(2);
-                window.location="include/printdata.php?"+argument;
-//                PrintElem('#userDetail');
+                //window.location="include/printdata.php?"+argument;
+                //PrintElem('#userDetail');
             }
         },
         error:function (a, b , c){
@@ -427,8 +430,11 @@ function UpdateRecord(){
             }
             else{
                 alert('User information Successfully Updated');
-                window.location = "http://localhost/Hospital/ind    ex.php?action=memberdetail";
+                window.location = "http://localhost/Hospital/userdetail.php";
             }
+        },
+        error:function(a,b,c){
+            alert("Error, Data: "+a+", "+b+", "+c);
         }
     });
     return false;

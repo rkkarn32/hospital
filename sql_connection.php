@@ -158,8 +158,8 @@ class SqlConnection {
     }
 
     public function AllowedPermissions($permission) {
+        $userID = $this->GetRecentUserID();
         foreach ($permission as $perm) {
-            $userID = $this->GetRecentUserID();
             $query = "INSERT INTO userpermission VALUES('$userID','$perm')";
             $result = mysql_query($query);
             if (!$result) {
@@ -283,7 +283,7 @@ class SqlConnection {
     public function IsUserNameExist($username) {
         $query = "SELECT username FROM userdetail WHERE username='" . $username . "'";
         $result = mysql_query($query);
-        if (!result) {
+        if (!$result) {
             Logger::LogInformation("IsUserExist()## Query isn't executed, Error: " . mysql_error());
             return false;
         }
@@ -361,28 +361,29 @@ class SqlConnection {
     }
 
     public function SearchRecord($userID, $userName, $creationDate, $roleID, $accountGroupID, $name, $state, $city, $phoneno, $birthDate) {
+        Logger::LogInformation("SearchRecord()## Search Started !!!");
         $query = "SELECT userid,name,role,groupname FROM userdetail NATURAL JOIN roles NATURAL JOIN accountgroup WHERE username LIKE '%$userName%' AND "
                 . "creationdate LIKE '%$creationDate%' AND roleid LIKE '%$roleID%' AND groupid LIKE '%$accountGroupID%' AND "
                 . "name LIKE '%$name%' AND state LIKE '%$state%' AND city LIKE '%$city%' AND phoneno LIKE '%$phoneno%' AND "
                 . "birthdate LIKE '%$birthDate%' AND userid LIKE '%$userID%' AND roleid>" . $_SESSION['roleid'];
         $result = mysql_query($query);
         $returnValue = array();
+        $returnValue[0] = 0;
         if (!$result) {
-            Logger::LogInformation("SearchRecord()## Query isn't executed, Error" . mysql_error());
-            $returnValue[0] = 0;
-        } else {
-            $i = 0;
-            while ($row = mysql_fetch_array($result)) {
-                $returnValue[$i] = array();
-                array_push($returnValue[$i], $row['userid']);
-                array_push($returnValue[$i], $row['name']);
-                array_push($returnValue[$i], $row['role']);
-                array_push($returnValue[$i], $row['groupname']);
-
-                $i++;
-            }
-            Logger::LogInformation("SearchRecord()## Search Completed !!!");
+            Logger::LogInformation("SearchRecord()## Search failed, Error" . mysql_error());
+            return $returnValue;
         }
+        $i = 0;
+        while ($row = mysql_fetch_array($result)) {
+            $returnValue[$i] = array();
+            array_push($returnValue[$i], $row['userid']);
+            array_push($returnValue[$i], $row['name']);
+            array_push($returnValue[$i], $row['role']);
+            array_push($returnValue[$i], $row['groupname']);
+            $i++;
+        }
+        Logger::LogInformation("SearchRecord()## Search Completed !!!");
+        
         return $returnValue;
     }
 

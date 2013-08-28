@@ -32,18 +32,18 @@ if ($task == 'login') {
     //echo json_encode($permission);
 
     $accountgroupid = $_POST['accountList'];
-    $name = mysql_escape_string($_POST[name]);
-    $street = mysql_escape_string($_POST[street]);
-    $city = mysql_escape_string($_POST[City]);
-    $state = mysql_escape_string($_POST[State]);
-    $phoneno = mysql_escape_string($_POST[telephone]);
-    $birthdate = mysql_escape_string($_POST[birthDate]);
-    $creationdate = mysql_escape_string($_POST[creationDate]);
+    $name = mysql_real_escape_string($_POST['name']);
+    $street = mysql_real_escape_string($_POST['street']);
+    $city = mysql_real_escape_string($_POST['city']);
+    $state = mysql_real_escape_string($_POST['state']);
+    $phoneno = mysql_real_escape_string($_POST['phoneNumber']);
+    $birthdate = mysql_real_escape_string($_POST['birthDate']);
+    $creationdate = mysql_real_escape_string($_POST['creationDate']);
     $username = $sql->CreateUser($name);
     $password = md5($username);
 
-    $doctorID = mysql_escape_string($_POST['doctorList']);
-    $nurseID = mysql_escape_string($_POST['nurseList']);
+    $doctorID = mysql_real_escape_string($_POST['doctorList']);
+    $nurseID = mysql_real_escape_string($_POST['nurseList']);
     $lastVisit = $_POST['lastVisit'];
     $purposeOfVisit = $_POST['purposeOfVisit'];
     $diagnosis = $_POST['diagnosis'];
@@ -59,25 +59,25 @@ else if ($task == "showuserdetail") {
     $result = $sql->GetUserDetail($id);
     echo json_encode($result);
 } else if ($task == 'searchRecord') {
-    $userID = mysql_escape_string($_POST['userID_Search']);
-    $userName = mysql_escape_string($_POST['userName']);
-    $creationDate = mysql_escape_string($_POST['accountCreationDate']);
-    $roleID = mysql_escape_string($_POST['roleList']);
-    $accountGroupidID = mysql_escape_string($_POST['accountGroupList']);
-    $name = mysql_escape_string($_POST['txtFullName']);
-    $state = mysql_escape_string($_POST['txtState']);
-    $city = mysql_escape_string($_POST['txtCity']);
-    $phoneno = mysql_escape_string($_POST['txPhoneNo']);
-    $birthDate = mysql_escape_string($_POST['txtBirthDate']);
-    $returValue = $sql->SearchRecord($userID, $userName, $creationDate, $roleID, $accountGroupidID, $name, $state, $city, $phoneno, $birthDate);
-    echo json_encode($returValue);
+    $userID = mysql_real_escape_string($_POST['userID_Search']);
+    $userName = mysql_real_escape_string($_POST['userName']);
+    $creationDate = mysql_real_escape_string($_POST['accountCreationDate']);
+    $roleID = mysql_real_escape_string($_POST['roleList']);
+    $accountGroupidID = mysql_real_escape_string($_POST['accountGroupList']);
+    $name = mysql_real_escape_string($_POST['txtFullName']);
+    $state = mysql_real_escape_string($_POST['txtState']);
+    $city = mysql_real_escape_string($_POST['txtCity']);
+    $phoneno = mysql_real_escape_string($_POST['txtPhoneNo']);
+    $birthDate = mysql_real_escape_string($_POST['txtBirthDate']);
+    $returnValue = $sql->SearchRecord($userID, $userName, $creationDate, $roleID, $accountGroupidID, $name, $state, $city, $phoneno, $birthDate);
+    echo json_encode($returnValue);
 } elseif ($task == "updateRecord") {
     $returnValue = array();
     $userID = $_POST['userId_E'];
     Logger::LogInformation("User ID: " . $userID);
-    $userName = mysql_escape_string($_POST['userName_E']);
-    $name = mysql_escape_string($_POST['name_E']);
-    $roleID = mysql_escape_string($_POST['roleList']);
+    $userName ="";// mysql_real_escape_string($_POST['userName_E']);
+    $name = mysql_real_escape_string($_POST['name_E']);
+    $roleID = mysql_real_escape_string($_POST['roleList']);
     
     $permission = array();
     if ($roleID == Roles::$ALA) {
@@ -90,22 +90,22 @@ else if ($task == "showuserdetail") {
             array_push($permission, PermissionByID::$retrieveData);
     }
     
-    $groupID = mysql_escape_string($_POST['accountList']);
-    $streetAddress = mysql_escape_string($_POST['streetAddress_E']);
-    $state = mysql_escape_string($_POST['state_E']);
-    $city = mysql_escape_string($_POST['city_E']);
-    $birthDate = mysql_escape_string($_POST['birthDate_E']);
-    $phoneno = mysql_escape_string($_POST['phoneNumber_E']);
-    $creationDate = mysql_escape_string($_POST['creationDate_E']);
+    $groupID = mysql_real_escape_string($_POST['accountList']);
+    $streetAddress = mysql_real_escape_string($_POST['streetAddress_E']);
+    $state = mysql_real_escape_string($_POST['state_E']);
+    $city = mysql_real_escape_string($_POST['city_E']);
+    $birthDate = mysql_real_escape_string($_POST['birthDate_E']);
+    $phoneno = mysql_real_escape_string($_POST['phoneNumber_E']);
+    $creationDate = mysql_real_escape_string($_POST['creationDate_E']);
 
-    $doctorID = mysql_escape_string($_POST['doctorName_E']);
-    $nurseID = mysql_escape_string($_POST['nurseName_E']);
-    $purposeOfVisit = mysql_escape_string($_POST['purposeOfVisit_E']);
-    $diagnosis = mysql_escape_string($_POST['diagnosisGiven_E']);
-    $medication = mysql_escape_string($_POST['medicationPrescribed_E']);
-    $lastVisit = mysql_escape_string($_POST['lastOfficeVisit_E']);
+    $doctorID = mysql_real_escape_string($_POST['doctorName_E']);
+    $nurseID = mysql_real_escape_string($_POST['nurseName_E']);
+    $purposeOfVisit = mysql_real_escape_string($_POST['purposeOfVisit_E']);
+    $diagnosis = mysql_real_escape_string($_POST['diagnosisGiven_E']);
+    $medication = mysql_real_escape_string($_POST['medicationPrescribed_E']);
+    $lastVisit = mysql_real_escape_string($_POST['lastOfficeVisit_E']);
     $sql = new SqlConnection();
-    $returnValue[0] = $sql->UpdateUserDetail($userID, $username, $name, $streetAddress, $city, $state, $phoneno, $birthDate, $creationDate, $roleID, $groupID, $doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication);
+    $returnValue[0] = $sql->UpdateUserDetail($userID, $userName, $name, $streetAddress, $city, $state, $phoneno, $birthDate, $creationDate, $roleID, $groupID, $doctorID, $nurseID, $lastVisit, $purposeOfVisit, $diagnosis, $medication);
     if($returnValue[0])
         $returnValue[0] = $sql->UpdatePermissionList($permission,$userID);
     else
@@ -123,7 +123,7 @@ elseif($task == 'changeusername'){
     echo json_encode($returnValue);
 }
 elseif($task == 'changepassword'){
-    $newPassword= mysql_escape_string($_POST['newPassword']);
+    $newPassword= mysql_real_escape_string($_POST['newPassword']);
     $returnValue = $sql->ChangePassword($newPassword);
     echo json_encode($returnValue);
 }elseif($task == 'deleteuser'){
