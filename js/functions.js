@@ -335,6 +335,7 @@ function PrintData(id){
         success: function(output){
             if(output[0] !=0){                
                 $('#viewDetail').show();
+                $('#userID_Retrieve').html(id);
                 var argument = "name="+output[0];
                 $('#name').html(output[0]);
                 argument += "&username="+output[1];
