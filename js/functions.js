@@ -45,24 +45,24 @@ function validateForm()
     var year = nowdatetime.getFullYear();
     var nowdate = year + "/" + month + "/" + day;
     var todayToDate = Date.parse(nowdate);
-    
+    var success=true;
     var x=$('#name').val();
     if (x==null || x=="")
     {
-        alert("Name must be filled out");
-        return false;
+        $('#name').attr("class", "error");
+        success = false;
     }
     var x=$('#roleList').val();
     if (x==0)
     {
-        alert("Please select account Type");
-        return false;
+        $('#roleList').attr("class", "error");
+        success = false;
     }
     var x=$('#accountList').val();
     if (x==0)
     {
-        alert("Please select account Group");
-        return false;
+        $('#accountList').attr("class", "error");
+        success = false;
     }
 
     if($('#roleList').val()==3 && !($('#retrieveData').attr('checked') || $('#reportData').attr('checked')))
@@ -74,25 +74,28 @@ function validateForm()
     var x= Date.parse($('#creationDate').val());
     if (x==null || x > nowdatetime)
     {
-        alert("Creation date should not exceed today");
-        return false;
+        $('#creationDate').attr("class", "error");
+        success = false;
     }
     
     x=$('#birthDate').val();
     
     if(x==null || x=='')
     {
-        alert ('please enter Date of Birth');
-        return false;
+        $('#birthDate').attr("class", "error");
+        success = false;
     }
     
     var selectedBirthDate = Date.parse(x);
     if (x=='yyyy-mm-dd' || selectedBirthDate > todayToDate)
     {
-        alert("Invalid Birth Date");
-        return false;
+        $('#birthDate').attr("class", "error");
+        success = false;
     }
-    return true;
+    if(!success){
+        $('#errorDisplay').html('*** Plese !!! fill the highlighted areas correctly ***').show();
+    }
+    return success;
   
 }
 

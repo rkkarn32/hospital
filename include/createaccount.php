@@ -1,4 +1,5 @@
 <div class="header_black">Add User</div>
+<div id="errorDisplay" class="errorMessage" style="display: none"></div>
 <div align="center" class="detailDispaly">
     <form id="userDetailForm" method="POST" onsubmit="return RegisterUser()">
         <div class="displaySection">
@@ -9,7 +10,7 @@
                             <label for="name">Name:</label>            </td>
                         <td width="30%" valign="top">
                             <div align="left">
-                                <input class="" type="text" name="name" id="name" maxlength="50" size="30" value="" tabindex="11"/>
+                                <input type="text" name="name" id="name" maxlength="50" size="30" value="" tabindex="11"/>
                             </div></td>
                     </tr>
                     <tr>
