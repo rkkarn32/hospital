@@ -40,6 +40,12 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
             });
         </script>
 
+        <script>
+            $(document).ready(function() {
+                //$('#viewDetail').hide();
+                LoadAllUser();
+            });
+        </script>
         <!--  styled select box script version 2 --> 
         <script src="js/jquery/jquery.selectbox-0.5_style_2.js" type="text/javascript"></script>
         <script type="text/javascript">

@@ -24,9 +24,9 @@ if ($task == 'login') {
         $permission = PermissionByID::$ALA;
     } else if ($roleid == Roles::$LLA) {
         $permission = PermissionByID::$LLA;
-        if ($_POST['reportData'])
+        if (isset($_POST['reportData']))
             array_push($permission, PermissionByID::$reportData);
-        if ($_POST['retrieveData'])
+        if (isset($_POST['retrieveData']))
             array_push($permission, PermissionByID::$retrieveData);
     }
     //echo json_encode($permission);

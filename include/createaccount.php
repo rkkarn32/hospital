@@ -97,7 +97,7 @@
                             <label for="last_name">State: </label>        </td>
                         <td valign="top" width="30%">
                             <div align="left">
-                                <input  type="text" id="state" name="State" maxlength="50" size="30" tabindex="17">
+                                <input  type="text" id="state" name="state" maxlength="50" size="30" tabindex="17">
                             </div></td>
                     </tr>
                     <tr>

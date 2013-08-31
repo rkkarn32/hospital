@@ -52,23 +52,29 @@ function validateForm()
         $('#name').attr("class", "error");
         success = false;
     }
+    else
+        $('#name').attr("class", "");
     var x=$('#roleList').val();
     if (x==0)
     {
         $('#roleList').attr("class", "error");
         success = false;
     }
+    else
+        $('#roleList').attr("class", "");
     var x=$('#accountList').val();
     if (x==0)
     {
         $('#accountList').attr("class", "error");
         success = false;
     }
+    else
+        $('#accountList').attr("class", "");
 
     if($('#roleList').val()==3 && !($('#retrieveData').attr('checked') || $('#reportData').attr('checked')))
     {
         alert("Minimum one permission must be selected for LLA users");
-        return false;
+        success = false;
     }
     
     var x= Date.parse($('#creationDate').val());
@@ -77,6 +83,8 @@ function validateForm()
         $('#creationDate').attr("class", "error");
         success = false;
     }
+    else
+        $('#creationDate').attr("class", "");
     
     x=$('#birthDate').val();
     
@@ -85,15 +93,20 @@ function validateForm()
         $('#birthDate').attr("class", "error");
         success = false;
     }
-    
-    var selectedBirthDate = Date.parse(x);
-    if (x=='yyyy-mm-dd' || selectedBirthDate > todayToDate)
+    else
     {
-        $('#birthDate').attr("class", "error");
-        success = false;
+        $('#birthDate').attr("class", "");
+        var selectedBirthDate = Date.parse(x);
+        if (x=='yyyy-mm-dd' || selectedBirthDate > todayToDate)
+        {
+            $('#birthDate').attr("class", "error");
+            success = false;
+        }
+        else
+            $('#birthDate').attr("class", "");
     }
     if(!success){
-        $('#errorDisplay').html('*** Plese !!! fill the highlighted areas correctly ***').show();
+        $('#errorDisplay').html('*** Please !!! fill the highlighted areas correctly ***').show();
     }
     return success;
   
@@ -254,7 +267,7 @@ function Login(){
                     window.location= "profile.php";
                 }
             }else{
-                alert('login Failure');
+                alert('login Failure, Error: '+output[1]);
             }
         },
         error:function(a,b,c){
@@ -397,8 +410,8 @@ function PrintData(id){
                 }
                 $('#isPrintable').html(1);
                 $('#valueChange').val(2);
-                //window.location="include/printdata.php?"+argument;
-                //PrintElem('#userDetail');
+            //window.location="include/printdata.php?"+argument;
+            //PrintElem('#userDetail');
             }
         },
         error:function (a, b , c){
@@ -579,6 +592,33 @@ function ChangePassword(){
     return false;
 }
 
+function LoadAllUser(){
+    var Data = "task=loadalluser";
+                $.ajax({
+                    url:'taskprocess.php',
+                    data:Data,
+                    type:'POST',
+                    dataType:'json',
+                    cache:false,
+                    success: function(output){
+                        if(output[0][0] !=0){
+                            oTable.fnClearTable();
+                        
+                            for(var i =0; i < output.length;i++){
+                                oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
+                                    "<button type='button' class='green-button' onclick='ShowUserDetails("+output[i][0]+"); ShowPermissionList("+output[i][0]+")'>Show Details</button>",
+                                    "<button type='button' class='red-button' onclick='DeleteUser("+output[i][0]+");'>Delete User</button>"
+                                ]);
+                            }
+                        }
+                    },
+                    error:function(a,b,c){
+                        alert("Error is "+a+b+c);
+                    }
+                });
+}
+
+
 function DeleteUser(id){
     
     if (confirm('Are you sure you want to Remove the User')) {
@@ -593,7 +633,8 @@ function DeleteUser(id){
                 if(output[0] !=0)
                 {
                     alert('User Deleted successfully');
-                    window.location="userdetail.php";
+                    LoadAllUser();
+                    //window.location="userdetail.php";
                 }
                 else
                     alert('Fail to remove user, Error: '+output[1]);

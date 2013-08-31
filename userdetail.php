@@ -45,29 +45,7 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
         <script>
             $(document).ready(function() {
                 //$('#viewDetail').hide();
-                var Data = "task=loadalluser";
-                $.ajax({
-                    url:'taskprocess.php',
-                    data:Data,
-                    type:'POST',
-                    dataType:'json',
-                    cache:false,
-                    success: function(output){
-                        if(output[0][0] !=0){
-                            oTable.fnClearTable();
-                        
-                            for(var i =0; i < output.length;i++){
-                                oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
-                                    "<button type='button' class='green-button' onclick='ShowUserDetails("+output[i][0]+"); ShowPermissionList("+output[i][0]+")'>Show Details</button>",
-                                    "<button type='button' class='red-button' onclick='DeleteUser("+output[i][0]+");'>Delete User</button>"
-                                ]);
-                            }
-                        }
-                    },
-                    error:function(a,b,c){
-                        alert("Error is "+a+b+c);
-                    }
-                });
+                LoadAllUser();
             });
         </script>
 
