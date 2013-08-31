@@ -12,8 +12,8 @@
 
 
 #container {
-	width: 800px;
-	margin: 30px auto;
+	width: 100%;
+	margin: 5px auto;
 	padding: 0;
 }
 
@@ -24,7 +24,7 @@
 }
 
 #dt_example #demo {
-	margin: 30px auto 0 auto;
+    margin: 30px auto 0 auto;
     border-right-style: dashed;
     border-left-style: dashed;
     border-bottom-style: dashed;

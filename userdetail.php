@@ -11,10 +11,6 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Hospital Management</title>
-        <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="default" />
-        <!--[if IE]>
-        <link rel="stylesheet" media="all" type="text/css" href="css/pro_dropline_ie.css" />
-        <![endif]-->
 
         <!--  jquery core -->
         <script src="js/jquery/jquery-1.4.1.min.js" type="text/javascript"></script>

@@ -11,7 +11,6 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Internet Dreams</title>
-        <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="default" />
         <script src="js/jquery/jquery-1.4.1.min.js" type="text/javascript"></script>
 
         <!--  checkbox styling script -->
@@ -22,6 +21,7 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
             @import "css/demo_page.css";
             @import "css/demo_table.css";
             @import "css/style.css";
+            @import "css/screen.css";
         </style>
         <script type="text/javascript" src="js/cufon-yui.js"></script>
         <script type="text/javascript" src="js/droid_sans_400-droid_sans_700.font.js"></script>
