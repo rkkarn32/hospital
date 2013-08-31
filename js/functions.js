@@ -221,9 +221,20 @@ function EditUserDetails(id){
     return true;
 }
 
+function ShowLoading(message){
+    var imagePath = + 'images/ajax-loader.gif';
+    //var loaderImageTag = '<img src="'+imagePath+'" alt="" /><span>'+message+'</span>';
+    var loaderImageTag = '<img src="images/ajax-loader.gif" alt="" /><span>'+message+'</span>';
+    $('#loading').html(loaderImageTag);
+    $('#loading').show();
+}
+function EndLoading(){
+    $('#loading').hide();
+}
 function Login(){
     var Data = $('#loginForm').serialize();
     Data = "task=login&"+Data;
+    ShowLoading("Login is in process");
     $.ajax({
         url:'taskprocess.php',
         data:Data,
@@ -231,6 +242,7 @@ function Login(){
         cache:false,
         dataType:'json',
         success:function(output){
+            EndLoading();
             if(output[0] == 1){
                 if(output[1]==0)
                     window.location="modalmessage.php?name="+output[2];
@@ -243,6 +255,7 @@ function Login(){
             }
         },
         error:function(a,b,c){
+            EndLoading();
             alert(a,b,c);
         }
     });

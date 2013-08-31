@@ -59,6 +59,7 @@ if(isset($_SESSION['loggedin']))
                         </tr>
                     </table>
                 </form>
+                <div id="loading" style="display: none;" >  </div>
             </div>
             <!--  end login-inner -->
             <div class="clear"></div>
