@@ -336,11 +336,11 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
                                                         <thead>
                                                             <tr>
                                                                 <th class="table-header-repeat"><a id="" >SN</a> </th>
-                                                                <th class="table-header-repeat line-left minwidth-1"><a href="">Name</a></th>
-                                                                <th class="table-header-repeat line-left"><a href="">Role Type </a></th>
-                                                                <th class="table-header-repeat line-left"><a href="">Account Type </a></th>
-                                                                <th class="table-header-repeat line-left"><a href="">View Detail </a></th>
-                                                                <th class="table-header-repeat line-left"><a href="">Delete User </a></th>
+                                                                <th class="table-header-repeat line-left minwidth-1"><a>Name</a></th>
+                                                                <th class="table-header-repeat line-left"><a >Role Type </a></th>
+                                                                <th class="table-header-repeat line-left"><a>Account Type </a></th>
+                                                                <th class="table-header-repeat line-left"><a>View Detail </a></th>
+                                                                <th class="table-header-repeat line-left"><a">Delete User </a></th>
                                                             </tr>
                                                         </thead>
                                                         <tbody></tbody>
