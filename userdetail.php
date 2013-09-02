@@ -11,24 +11,8 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Hospital Management</title>
-
-        <!--  jquery core -->
-        <script src="js/jquery/jquery-1.4.1.min.js" type="text/javascript"></script>
-
-        <!--  checkbox styling script -->
-        <script src="js/jquery/ui.core.js" type="text/javascript"></script>
-        <script src="js/jquery/ui.checkbox.js" type="text/javascript"></script>
+        <script src="js/jquery/ui.core.js" type="text/javascript"></script>        
         <script src="js/jquery/jquery.bind.js" type="text/javascript"></script>
-        <!--<script type="text/javascript">
-        $(function(){
-                $('input').checkBox();
-                $('#toggle-all').click(function(){
-                $('#toggle-all').toggleClass('toggle-checked');
-                $('#mainform input[type=checkbox]').checkBox('toggle');
-                return false;
-                });
-        });
-        </script>  -->
         <style type="text/css" title="currentStyle" >
             @import "css/demo_page.css";
             @import "css/demo_table.css";
@@ -38,7 +22,6 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
         <script type="text/javascript" src="js/cufon-yui.js"></script>
         <script type="text/javascript" src="js/droid_sans_400-droid_sans_700.font.js"></script>
         <script type="text/javascript" src="js/cuf_run.js"></script>
-        <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/functions.js"></script>
         <script type="text/javascript"  src="js/jquery.dataTables.js"></script>
@@ -53,12 +36,6 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
 
         <!--  styled select box script version 1 -->
         <script src="js/jquery/jquery.selectbox-0.5.js" type="text/javascript"></script>
-<!--        <script type="text/javascript">
-            $(document).ready(function() {
-                $('.styledselect').selectbox({ inputClass: "selectbox_styled" });
-            });
-        </script>-->
-
 
         <![endif]>
 

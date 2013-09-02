@@ -10,9 +10,7 @@ if(isset($_SESSION['loggedin']))
 <html>
     <head><title>Hospital Management</title>
 <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="default" />
-<script src="template/js/jquery/jquery-1.4.1.min.js" type="text/javascript"></script>
-<script src="template/js/jquery/custom_jquery.js" type="text/javascript"></script>
-<script src="template/js/jquery/jquery.pngFix.pack.js" type="text/javascript"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
 <script type="text/javascript"  src="js/jquery.dataTables.js"></script>
 <script src="js/functions.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -28,7 +26,6 @@ if(isset($_SESSION['loggedin']))
 
         <!-- start logo -->
         <div id="logo-login">
-<!--		<a href="index.html"><img src="../template/images/shared/logo.png" width="156" height="40" alt="" /></a>-->
         </div>
         <!-- end logo -->
 

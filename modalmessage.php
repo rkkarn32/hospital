@@ -7,9 +7,9 @@ include_once 'taskprocess.php';
 ?>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
         <title>Welcome Message</title>
-        <link href="css1/bootstrap.css" rel="stylesheet">    
-        <script src="css1/jquery.js"></script>
-        <script src="css1/bootstrap-modal.js"></script>    
+        <link href="css/bootstrap.css" rel="stylesheet">    
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap-modal.js"></script>    
         <script type="text/javascript">
             $(window).load(function(){
                 $('#myModal').modal('show');
