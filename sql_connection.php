@@ -63,7 +63,8 @@ class SqlConnection {
             return $returnValue;
         }
         $returnValue[0] = 0;
-        Logger::LogInformation("LoginVerification()## Login Failed, Error: Unauthorized access");
+        $returnValue[1]= "Username and password didn't matched";
+        Logger::LogInformation("LoginVerification()## Login Failed, Error: Username and password didn't matched");
         return $returnValue;
     }
 
