@@ -496,16 +496,30 @@ class SqlConnection {
         $returnValue[0]=1;
         return $returnValue;
     }
-    
+    /**
+     *
+     * @param type $userID ID of user which is going to be deleted
+     * @return Array contains the success/failure status
+     */
     public function DeleteUser($userID){
         $query = "DELETE FROM userdetail WHERE userid=".$userID;
+        Logger::LogInformation("DeleteUser()## Remove User process started...");
         $returnValue = array();
         $returnValue[0]=  mysql_query($query);
         if(!$returnValue[0]){
-            Logger::LogInformation("DeleteUser()## Query isn't executed successfully, Error: ".mysql_error());
+            Logger::LogInformation("DeleteUser()## User didn't deleted, Error: ".mysql_error());
             $returnValue[1]=  mysql_error();
             return $returnValue;
         }
+        $query = "DELETE FROM userpermission WHERE userid=".$userID;
+        $returnValue = array();
+        $returnValue[0]=  mysql_query($query);
+        if(!$returnValue[0]){
+            Logger::LogInformation("DeleteUser()## Permissions didn't deleted, Error: ".mysql_error());
+            $returnValue[1]=  mysql_error();
+            return $returnValue;
+        }
+        Logger::LogInformation("DeleteUser()## User and their permissions are successfully removed ");
         $returnValue[0]=1;
         return $returnValue;
     }
