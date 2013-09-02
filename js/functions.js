@@ -70,8 +70,8 @@ function validateForm()
     }
     else
         $('#accountList').attr("class", "");
-
-    if($('#roleList').val()==3 && !($('#retrieveData').attr('checked') || $('#reportData').attr('checked')))
+    
+    if($('#roleList').val()==3 && !($('#retrieveData').is(':checked') || $('#reportData').is(':checked')))
     {
         alert("Minimum one permission must be selected for LLA users");
         success = false;
