@@ -3,21 +3,12 @@ if(!isset($_SESSION))
     session_start();
 if(isset($_SESSION['loggedin']))
     header("location:index.php");
-//if($_SESSION['loggedin']){
-//    header("location:index.php");
-//}
 ?>
 <html>
     <head><title>Hospital Management</title>
 <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="default" />
-<script src="js/jquery.js" type="text/javascript"></script>
-<script type="text/javascript"  src="js/jquery.dataTables.js"></script>
-<script src="js/functions.js" type="text/javascript"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(document).pngFix();
-    });
-</script>
+<script src="js/jquery-1.10.2.js" type="text/javascript"></script> 
+<script src="js/functions.js" type="text/javascript"></script> 
 </head>
 <body id="login-bg"> 
 
@@ -36,7 +27,7 @@ if(isset($_SESSION['loggedin']))
 
             <!--  start login-inner -->
             <div id="login-inner">
-                <form id="loginForm" method="POST" onsubmit="return Login();">
+                <form id="loginForm" method="POST" onSubmit="return Login();">
                     <table border="0" cellpadding="0" cellspacing="0">
                         <tr>
                             <th>Username</th>
@@ -44,7 +35,7 @@ if(isset($_SESSION['loggedin']))
                         </tr>
                         <tr>
                             <th>Password</th>
-                            <td><input type="password" name="password" value="" onfocus="this.value=''" class="login-inp" /></td>
+                            <td><input type="password" name="password" value="" onFocus="this.value=''" class="login-inp" /></td>
                         </tr>
                         <tr>
                             <th></th>
@@ -60,31 +51,9 @@ if(isset($_SESSION['loggedin']))
             </div>
             <!--  end login-inner -->
             <div class="clear"></div>
-            <a href="" class="forgot-pwd">Forgot Password?</a>
+            
         </div>
-        <!--  end loginbox -->
-
-        <!--  start forgotbox ................................................................................... -->
-        <div id="forgotbox">
-            <div id="forgotbox-text">Please send us your email and we'll reset your password.</div>
-            <!--  start forgot-inner -->
-            <div id="forgot-inner">
-                <table border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <th>Email address:</th>
-                        <td><input type="text" value=""   class="login-inp" /></td>
-                    </tr>
-                    <tr>
-                        <th> </th>
-                        <td><input type="button" class="submit-login"  /></td>
-                    </tr>
-                </table>
-            </div>
-            <!--  end forgot-inner -->
-            <div class="clear"></div>
-            <a href="" class="back-login">Back to login</a>
-        </div>
-        <!--  end forgotbox -->
+        
 
     </div>
     <!-- End: login-holder -->

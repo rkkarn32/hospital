@@ -1,7 +1,5 @@
 $(document).ready(function(){
-    HideEditDetail();
-    oTable = $('#example').dataTable({
-        });
+    
 });
 
 function HideSearchDiv(){

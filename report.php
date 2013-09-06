@@ -10,174 +10,24 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Internet Dreams</title>
-
-        <!--  checkbox styling script -->
-        <script src="js/jquery/ui.core.js" type="text/javascript"></script>
-        <script src="js/jquery/ui.checkbox.js" type="text/javascript"></script>
-        <script src="js/jquery/jquery.bind.js" type="text/javascript"></script>
-        <style type="text/css" title="currentStyle" >
-            @import "css/demo_page.css";
+        <title>Hospital Management</title>
+        <style type="text/css" title="currentStyle" >            
             @import "css/demo_table.css";
             @import "css/style.css";
             @import "css/screen.css";
         </style>
-        <script type="text/javascript" src="js/cufon-yui.js"></script>
-        <script type="text/javascript" src="js/droid_sans_400-droid_sans_700.font.js"></script>
-        <script type="text/javascript" src="js/cuf_run.js"></script>
-        <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/functions.js"></script>
-        <script type="text/javascript"  src="js/jquery.dataTables.js"></script>
-        
-
-        <!--  styled select box script version 1 -->
-        <script src="js/jquery/jquery.selectbox-0.5.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('.styledselect').selectbox({ inputClass: "selectbox_styled" });
-            });
-        </script>
-
         <script>
-            $(document).ready(function() {
-                //$('#viewDetail').hide();
+            $(document).ready(function(){
+                oTable = $('#example').dataTable({
+                });
                 LoadAllUser();
             });
         </script>
-        <!--  styled select box script version 2 --> 
-        <script src="js/jquery/jquery.selectbox-0.5_style_2.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('.styledselect_form_1').selectbox({ inputClass: "styledselect_form_1" });
-                $('.styledselect_form_2').selectbox({ inputClass: "styledselect_form_2" });
-            });
-        </script>
+        <script type="text/javascript"  src="js/jquery.dataTables.js"></script>
 
-        <!--  styled select box script version 3 --> 
-        <script src="js/jquery/jquery.selectbox-0.5_style_2.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('.styledselect_pages').selectbox({ inputClass: "styledselect_pages" });
-            });
-        </script>
-
-        <!--  styled file upload script --> 
-        <script src="js/jquery/jquery.filestyle.js" type="text/javascript"></script>
-        <script type="text/javascript" charset="utf-8">
-            $(function() {
-                $("input.file_1").filestyle({ 
-                    image: "images/forms/choose-file.gif",
-                    imageheight : 21,
-                    imagewidth : 78,
-                    width : 310
-                });
-            });
-        </script>
-
-        <!-- Custom jquery scripts -->
-        <script src="js/jquery/custom_jquery.js" type="text/javascript"></script>
-
-        <!-- Tooltips -->
-        <script src="js/jquery/jquery.tooltip.js" type="text/javascript"></script>
-        <script src="js/jquery/jquery.dimensions.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(function() {
-                $('a.info-tooltip ').tooltip({
-                    track: true,
-                    delay: 0,
-                    fixPNG: true, 
-                    showURL: false,
-                    showBody: " - ",
-                    top: -35,
-                    left: 5
-                });
-            });
-        </script> 
-
-
-        <!--  date picker script -->
-        <link rel="stylesheet" href="css/datePicker.css" type="text/css" />
-        <script src="js/jquery/date.js" type="text/javascript"></script>
-        <script src="js/jquery/jquery.datePicker.js" type="text/javascript"></script>
-        <script type="text/javascript" charset="utf-8">
-            $(function()
-            {
-
-                // initialise the "Select date" link
-                $('#date-pick')
-                .datePicker(
-                // associate the link with a date picker
-                {
-                    createButton:false,
-                    startDate:'01/01/2005',
-                    endDate:'31/12/2020'
-                }
-            ).bind(
-                // when the link is clicked display the date picker
-                'click',
-                function()
-                {
-                    updateSelects($(this).dpGetSelected()[0]);
-                    $(this).dpDisplay();
-                    return false;
-                }
-            ).bind(
-                // when a date is selected update the SELECTs
-                'dateSelected',
-                function(e, selectedDate, $td, state)
-                {
-                    updateSelects(selectedDate);
-                }
-            ).bind(
-                'dpClosed',
-                function(e, selected)
-                {
-                    updateSelects(selected[0]);
-                }
-            );
-	
-                var updateSelects = function (selectedDate)
-                {
-                    var selectedDate = new Date(selectedDate);
-                    $('#d option[value=' + selectedDate.getDate() + ']').attr('selected', 'selected');
-                    $('#m option[value=' + (selectedDate.getMonth()+1) + ']').attr('selected', 'selected');
-                    $('#y option[value=' + (selectedDate.getFullYear()) + ']').attr('selected', 'selected');
-                }
-                // listen for when the selects are changed and update the picker
-                $('#d, #m, #y')
-                .bind(
-                'change',
-                function()
-                {
-                    var d = new Date(
-                    $('#y').val(),
-                    $('#m').val()-1,
-                    $('#d').val()
-                );
-                    $('#date-pick').dpSetSelected(d.asString());
-                }
-            );
-
-                // default the position of the selects to today
-                var today = new Date();
-                updateSelects(today.getTime());
-
-                // and update the datePicker to reflect it...
-                $('#d').trigger('change');
-            });
-        </script>
-
-        <!-- MUST BE THE LAST SCRIPT IN <HEAD></HEAD></HEAD> png fix -->
-        <script src="js/jquery/jquery.pngFix.pack.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                if($('#isPrint').val()==1)
-                {
-                    $('#isPrint').val(0);
-                    PrintElem('#userDetail');
-                }
-            });
-        </script>
+        
     </head>
     <body> 
         <!-- End: page-top -->
@@ -241,7 +91,7 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
 
         <div class="clear"></div>
         <div id="isPrintable" style="display: none" onchange="alert('value is changed')"></div>
-        <input type="text" id="valueChange" style="display: none" onchange="alert('Text Value is changed');" onload="alert('check Balue')" />
+        <input type="text" id="valueChange" style="display: none" onChange="alert('Text Value is changed');" onload="alert('check Balue')" />
         <div class="clear"></div>
 
         <!-- start content-outer ........................................................................................................................START -->
@@ -278,9 +128,9 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
                                             <center><button class="blue-button" type="button" onClick="PrintElem('#userDetail')" >Print Details</button></center>
                                         </div>
                                     </div>
-                                    <div id="searchRecord" class="searcgBox displayBox">
+                                    <div id="searchRecord" class="displayBox">
                                         <div class="header_black">Search User</div>
-                                        <form id="reportForm" method="POST" onsubmit="return ReportData();">
+                                        <form id="reportForm" method="POST" onSubmit="return ReportData();">
                                             <div id="searchDetail" class="detailDispaly" >
                                                 <?php include_once 'include/searchform.php'; ?>
                                                 <div class="displaySection" id="buttons" align="center">
@@ -295,7 +145,7 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$reportData))
                                             <thead>
                                                 <tr>
                                                     <th class="table-header-repeat"><a id="" >SN</a> </th>
-                                                    <th class="table-header-repeat line-left minwidth-1"><a>Name</a></th>
+                                                    <th class="table-header-repeat line-left minwidth-1"><a >Name</a></th>
                                                     <th class="table-header-repeat line-left"><a>Role Type </a></th>
                                                     <th class="table-header-repeat line-left"><a>Account Type </a></th>
                                                     <th class="table-header-repeat line-left"><a>View Detail </a></th>
