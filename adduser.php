@@ -20,13 +20,6 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$createUser))
         <script type="text/javascript" src="js/functions.js"></script>
     </head>
     <body> 
-
-
-        <!-- End: page-top -->
-
-        </div>
-        <!-- End: page-top-outer -->
-
         <div class="clear">&nbsp;</div>
 
         <!--  start nav-outer-repeat................................................................................................. START -->
