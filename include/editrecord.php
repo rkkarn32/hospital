@@ -1,3 +1,4 @@
+<div id="errorDisplay" class="errorMessage" style="display: none"></div>
 <div id="userDetail" class="displaySection">
     <div class="generalDetail_E">
         <table width="100%"> 

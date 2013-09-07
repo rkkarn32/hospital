@@ -5702,3 +5702,524 @@
 2013-Sep-06  12:50:39 ==> LoadAllUser(), User List loaded Successfully
 2013-Sep-06  12:50:41 ==> GetUserDetail()## User Detail Loaded
 2013-Sep-06  12:50:41 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-06  13:23:35 ==> HasPermission()## User don't have permission for activityID =2
+2013-Sep-06  13:23:35 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  13:23:35 ==> HasPermission()## User don't have permission for activityID =3
+2013-Sep-06  13:23:35 ==> HasPermission()## User don't have permission for activityID =2
+2013-Sep-06  13:23:35 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  13:23:35 ==> HasPermission()## User don't have permission for activityID =3
+2013-Sep-06  13:23:44 ==> LoginVerification()## Login process started
+2013-Sep-06  13:23:44 ==> GetVisistorIP()## Your IP address is : 127.0.0.1
+2013-Sep-06  13:23:44 ==> IsVistorLocal()## Visitor is local, IP=127.0.0.1
+2013-Sep-06  13:23:44 ==> LoginVerification()## Successfully Logged In by User:Ramesh Kumar Karn
+2013-Sep-06  13:23:44 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-06  13:23:51 ==> ChangePassword()## Password Updated successfully
+2013-Sep-06  13:23:52 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-06  13:24:00 ==> ChangeUsername()## Username Updated successfully
+2013-Sep-06  13:24:00 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-06  13:24:06 ==> ChangeUsername()## Username Updated successfully
+2013-Sep-06  13:24:08 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-06  15:34:32 ==> HasPermission()## User don't have permission for activityID =2
+2013-Sep-06  15:34:32 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  15:34:32 ==> HasPermission()## User don't have permission for activityID =3
+2013-Sep-06  15:34:32 ==> HasPermission()## User don't have permission for activityID =2
+2013-Sep-06  15:34:32 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  15:34:32 ==> HasPermission()## User don't have permission for activityID =3
+2013-Sep-06  15:34:43 ==> LoginVerification()## Login process started
+2013-Sep-06  15:34:43 ==> GetVisistorIP()## Your IP address is : 127.0.0.1
+2013-Sep-06  15:34:43 ==> IsVistorLocal()## Visitor is local, IP=127.0.0.1
+2013-Sep-06  15:34:43 ==> LoginVerification()## Successfully Logged In by User:ding dong
+2013-Sep-06  15:34:43 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  15:34:43 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-06  15:34:49 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  15:34:49 ==> HasPermission()## User don't have permission for activityID =4
+2013-Sep-06  15:34:49 ==> Loading Role List
+2013-Sep-06  15:34:49 ==> Role List Loaded
+2013-Sep-06  15:34:49 ==> Loading Doctor List
+2013-Sep-06  15:34:49 ==> Doctor List Loaded
+2013-Sep-06  15:34:50 ==> Loading Nurse List
+2013-Sep-06  15:34:50 ==> Nurse List Loaded
+2013-Sep-06  15:34:50 ==> Loading Role List
+2013-Sep-06  15:34:50 ==> Role List Loaded
+2013-Sep-06  15:34:50 ==> Loading AccountType List
+2013-Sep-06  15:34:50 ==> AccountType List Loaded
+2013-Sep-06  15:34:50 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-06  15:34:54 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  15:34:54 ==> Loading Role List
+2013-Sep-06  15:34:54 ==> Role List Loaded
+2013-Sep-06  15:34:54 ==> Loading Doctor List
+2013-Sep-06  15:34:54 ==> Doctor List Loaded
+2013-Sep-06  15:34:54 ==> Loading Nurse List
+2013-Sep-06  15:34:54 ==> Nurse List Loaded
+2013-Sep-06  15:34:56 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  15:34:56 ==> HasPermission()## User don't have permission for activityID =4
+2013-Sep-06  15:34:56 ==> Loading Role List
+2013-Sep-06  15:34:56 ==> Role List Loaded
+2013-Sep-06  15:34:56 ==> Loading Doctor List
+2013-Sep-06  15:34:56 ==> Doctor List Loaded
+2013-Sep-06  15:34:56 ==> Loading Nurse List
+2013-Sep-06  15:34:56 ==> Nurse List Loaded
+2013-Sep-06  15:34:56 ==> Loading Role List
+2013-Sep-06  15:34:56 ==> Role List Loaded
+2013-Sep-06  15:34:56 ==> Loading AccountType List
+2013-Sep-06  15:34:56 ==> AccountType List Loaded
+2013-Sep-06  15:34:56 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-06  15:34:57 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  15:34:57 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-06  15:35:01 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  15:35:01 ==> Loading Role List
+2013-Sep-06  15:35:01 ==> Role List Loaded
+2013-Sep-06  15:35:01 ==> Loading Doctor List
+2013-Sep-06  15:35:01 ==> Doctor List Loaded
+2013-Sep-06  15:35:01 ==> Loading Nurse List
+2013-Sep-06  15:35:01 ==> Nurse List Loaded
+2013-Sep-06  15:35:03 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  15:35:03 ==> HasPermission()## User don't have permission for activityID =4
+2013-Sep-06  15:35:03 ==> Loading Role List
+2013-Sep-06  15:35:03 ==> Role List Loaded
+2013-Sep-06  15:35:03 ==> Loading Doctor List
+2013-Sep-06  15:35:03 ==> Doctor List Loaded
+2013-Sep-06  15:35:03 ==> Loading Nurse List
+2013-Sep-06  15:35:03 ==> Nurse List Loaded
+2013-Sep-06  15:35:03 ==> Loading Role List
+2013-Sep-06  15:35:03 ==> Role List Loaded
+2013-Sep-06  15:35:03 ==> Loading AccountType List
+2013-Sep-06  15:35:03 ==> AccountType List Loaded
+2013-Sep-06  15:35:03 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-06  15:35:11 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-06  15:35:11 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-06  15:35:22 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-06  15:35:22 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-06  15:35:23 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-06  15:35:23 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-06  15:35:24 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-06  15:35:24 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-06  15:35:26 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-06  15:35:26 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-06  15:42:44 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  15:42:44 ==> HasPermission()## User don't have permission for activityID =4
+2013-Sep-06  15:42:44 ==> Loading Role List
+2013-Sep-06  15:42:44 ==> Role List Loaded
+2013-Sep-06  15:42:44 ==> Loading Doctor List
+2013-Sep-06  15:42:44 ==> Doctor List Loaded
+2013-Sep-06  15:42:44 ==> Loading Nurse List
+2013-Sep-06  15:42:44 ==> Nurse List Loaded
+2013-Sep-06  15:42:44 ==> Loading Role List
+2013-Sep-06  15:42:44 ==> Role List Loaded
+2013-Sep-06  15:42:44 ==> Loading AccountType List
+2013-Sep-06  15:42:44 ==> AccountType List Loaded
+2013-Sep-06  15:42:44 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-06  15:42:49 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-06  15:42:49 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-06  15:47:11 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  15:47:11 ==> HasPermission()## User don't have permission for activityID =4
+2013-Sep-06  15:47:11 ==> Loading Role List
+2013-Sep-06  15:47:11 ==> Role List Loaded
+2013-Sep-06  15:47:11 ==> Loading Doctor List
+2013-Sep-06  15:47:11 ==> Doctor List Loaded
+2013-Sep-06  15:47:11 ==> Loading Nurse List
+2013-Sep-06  15:47:11 ==> Nurse List Loaded
+2013-Sep-06  15:47:11 ==> Loading Role List
+2013-Sep-06  15:47:11 ==> Role List Loaded
+2013-Sep-06  15:47:11 ==> Loading AccountType List
+2013-Sep-06  15:47:11 ==> AccountType List Loaded
+2013-Sep-06  15:47:11 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-06  16:01:36 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  16:01:36 ==> HasPermission()## User don't have permission for activityID =4
+2013-Sep-06  16:01:36 ==> Loading Role List
+2013-Sep-06  16:01:36 ==> Role List Loaded
+2013-Sep-06  16:01:36 ==> Loading Doctor List
+2013-Sep-06  16:01:36 ==> Doctor List Loaded
+2013-Sep-06  16:01:36 ==> Loading Nurse List
+2013-Sep-06  16:01:36 ==> Nurse List Loaded
+2013-Sep-06  16:01:36 ==> Loading Role List
+2013-Sep-06  16:01:36 ==> Role List Loaded
+2013-Sep-06  16:01:36 ==> Loading AccountType List
+2013-Sep-06  16:01:36 ==> AccountType List Loaded
+2013-Sep-06  16:01:39 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-06  16:01:43 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  16:01:43 ==> Loading Role List
+2013-Sep-06  16:01:43 ==> Role List Loaded
+2013-Sep-06  16:01:43 ==> Loading Doctor List
+2013-Sep-06  16:01:43 ==> Doctor List Loaded
+2013-Sep-06  16:01:43 ==> Loading Nurse List
+2013-Sep-06  16:01:43 ==> Nurse List Loaded
+2013-Sep-06  16:02:00 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  16:02:00 ==> Loading Role List
+2013-Sep-06  16:02:00 ==> Role List Loaded
+2013-Sep-06  16:02:00 ==> Loading Doctor List
+2013-Sep-06  16:02:00 ==> Doctor List Loaded
+2013-Sep-06  16:02:00 ==> Loading Nurse List
+2013-Sep-06  16:02:00 ==> Nurse List Loaded
+2013-Sep-06  16:07:02 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  16:07:02 ==> Loading Role List
+2013-Sep-06  16:07:02 ==> Role List Loaded
+2013-Sep-06  16:07:02 ==> Loading Doctor List
+2013-Sep-06  16:07:02 ==> Doctor List Loaded
+2013-Sep-06  16:07:02 ==> Loading Nurse List
+2013-Sep-06  16:07:02 ==> Nurse List Loaded
+2013-Sep-06  16:09:08 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  16:09:08 ==> Loading Role List
+2013-Sep-06  16:09:08 ==> Role List Loaded
+2013-Sep-06  16:09:08 ==> Loading Doctor List
+2013-Sep-06  16:09:08 ==> Doctor List Loaded
+2013-Sep-06  16:09:08 ==> Loading Nurse List
+2013-Sep-06  16:09:08 ==> Nurse List Loaded
+2013-Sep-06  21:47:24 ==> MySQL connection problem, Error: No connection could be made because the target machine actively refused it.
+
+2013-Sep-06  21:47:25 ==> HasPermission()## User don't have permission for activityID =2
+2013-Sep-06  21:47:25 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-06  21:47:25 ==> HasPermission()## User don't have permission for activityID =3
+2013-Sep-06  21:47:30 ==> LoginVerification()## Login process started
+2013-Sep-06  21:47:30 ==> GetVisistorIP()## Your IP address is : 127.0.0.1
+2013-Sep-06  21:47:30 ==> IsVistorLocal()## Visitor is local, IP=127.0.0.1
+2013-Sep-06  21:47:30 ==> LoginVerification()## Successfully Logged In by User:Ramesh Kumar Karn
+2013-Sep-06  21:47:30 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  10:56:18 ==> HasPermission()## User don't have permission for activityID =2
+2013-Sep-07  10:56:18 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-07  10:56:18 ==> HasPermission()## User don't have permission for activityID =3
+2013-Sep-07  10:56:19 ==> HasPermission()## User don't have permission for activityID =2
+2013-Sep-07  10:56:19 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-07  10:56:19 ==> HasPermission()## User don't have permission for activityID =3
+2013-Sep-07  10:56:22 ==> LoginVerification()## Login process started
+2013-Sep-07  10:56:22 ==> GetVisistorIP()## Your IP address is : 127.0.0.1
+2013-Sep-07  10:56:22 ==> IsVistorLocal()## Visitor is local, IP=127.0.0.1
+2013-Sep-07  10:56:22 ==> LoginVerification()## Successfully Logged In by User:Ramesh Kumar Karn
+2013-Sep-07  10:56:22 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  10:56:24 ==> Loading Role List
+2013-Sep-07  10:56:24 ==> Role List Loaded
+2013-Sep-07  10:56:24 ==> Loading Doctor List
+2013-Sep-07  10:56:24 ==> Doctor List Loaded
+2013-Sep-07  10:56:24 ==> Loading Nurse List
+2013-Sep-07  10:56:24 ==> Nurse List Loaded
+2013-Sep-07  10:56:24 ==> Loading Role List
+2013-Sep-07  10:56:24 ==> Role List Loaded
+2013-Sep-07  10:56:24 ==> Loading AccountType List
+2013-Sep-07  10:56:24 ==> AccountType List Loaded
+2013-Sep-07  10:56:24 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  10:56:26 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  10:56:26 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  10:56:27 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  10:56:27 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  10:56:45 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  10:56:45 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  10:56:47 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  10:56:47 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  10:58:44 ==> SearchRecord()## Search Started !!!
+2013-Sep-07  10:58:44 ==> SearchRecord()## Search Completed !!!
+2013-Sep-07  10:58:46 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  10:58:46 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  10:58:50 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  10:58:50 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  10:59:05 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  10:59:05 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  11:00:12 ==> Loading Role List
+2013-Sep-07  11:00:12 ==> Role List Loaded
+2013-Sep-07  11:00:12 ==> Loading Doctor List
+2013-Sep-07  11:00:12 ==> Doctor List Loaded
+2013-Sep-07  11:00:12 ==> Loading Nurse List
+2013-Sep-07  11:00:12 ==> Nurse List Loaded
+2013-Sep-07  11:00:12 ==> Loading Role List
+2013-Sep-07  11:00:12 ==> Role List Loaded
+2013-Sep-07  11:00:12 ==> Loading AccountType List
+2013-Sep-07  11:00:12 ==> AccountType List Loaded
+2013-Sep-07  11:00:12 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  11:00:15 ==> Loading Role List
+2013-Sep-07  11:00:15 ==> Role List Loaded
+2013-Sep-07  11:00:15 ==> Loading Doctor List
+2013-Sep-07  11:00:15 ==> Doctor List Loaded
+2013-Sep-07  11:00:15 ==> Loading Nurse List
+2013-Sep-07  11:00:15 ==> Nurse List Loaded
+2013-Sep-07  11:03:37 ==> Loading Role List
+2013-Sep-07  11:03:37 ==> Role List Loaded
+2013-Sep-07  11:03:37 ==> Loading Doctor List
+2013-Sep-07  11:03:37 ==> Doctor List Loaded
+2013-Sep-07  11:03:37 ==> Loading Nurse List
+2013-Sep-07  11:03:37 ==> Nurse List Loaded
+2013-Sep-07  11:03:37 ==> Loading Role List
+2013-Sep-07  11:03:37 ==> Role List Loaded
+2013-Sep-07  11:03:37 ==> Loading AccountType List
+2013-Sep-07  11:03:37 ==> AccountType List Loaded
+2013-Sep-07  11:03:37 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  11:03:39 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:03:39 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:03:40 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:03:40 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:05:32 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:05:33 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:12:23 ==> Loading Role List
+2013-Sep-07  11:12:23 ==> Role List Loaded
+2013-Sep-07  11:12:23 ==> Loading Doctor List
+2013-Sep-07  11:12:23 ==> Doctor List Loaded
+2013-Sep-07  11:12:23 ==> Loading Nurse List
+2013-Sep-07  11:12:23 ==> Nurse List Loaded
+2013-Sep-07  11:12:23 ==> Loading Role List
+2013-Sep-07  11:12:23 ==> Role List Loaded
+2013-Sep-07  11:12:23 ==> Loading AccountType List
+2013-Sep-07  11:12:23 ==> AccountType List Loaded
+2013-Sep-07  11:12:24 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  11:12:26 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:12:26 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:12:27 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:12:27 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:12:37 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:12:37 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:12:41 ==> Loading Role List
+2013-Sep-07  11:12:41 ==> Role List Loaded
+2013-Sep-07  11:12:41 ==> Loading Doctor List
+2013-Sep-07  11:12:41 ==> Doctor List Loaded
+2013-Sep-07  11:12:41 ==> Loading Nurse List
+2013-Sep-07  11:12:41 ==> Nurse List Loaded
+2013-Sep-07  11:12:41 ==> Loading Role List
+2013-Sep-07  11:12:41 ==> Role List Loaded
+2013-Sep-07  11:12:41 ==> Loading AccountType List
+2013-Sep-07  11:12:41 ==> AccountType List Loaded
+2013-Sep-07  11:12:41 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  11:12:42 ==> SearchRecord()## Search Started !!!
+2013-Sep-07  11:12:42 ==> SearchRecord()## Search Completed !!!
+2013-Sep-07  11:12:43 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:12:43 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:12:45 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:12:45 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:12:51 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:12:51 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  11:12:53 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:12:53 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  11:13:03 ==> Loading Role List
+2013-Sep-07  11:13:03 ==> Role List Loaded
+2013-Sep-07  11:13:03 ==> Loading Doctor List
+2013-Sep-07  11:13:03 ==> Doctor List Loaded
+2013-Sep-07  11:13:03 ==> Loading Nurse List
+2013-Sep-07  11:13:03 ==> Nurse List Loaded
+2013-Sep-07  11:13:03 ==> Loading Role List
+2013-Sep-07  11:13:03 ==> Role List Loaded
+2013-Sep-07  11:13:03 ==> Loading AccountType List
+2013-Sep-07  11:13:03 ==> AccountType List Loaded
+2013-Sep-07  11:13:03 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  11:13:07 ==> SearchRecord()## Search Started !!!
+2013-Sep-07  11:13:07 ==> SearchRecord()## Search Completed !!!
+2013-Sep-07  11:13:08 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:13:08 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:13:10 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:13:10 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:13:17 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:13:17 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:13:19 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:13:19 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:13:24 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:13:24 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:13:55 ==> SearchRecord()## Search Started !!!
+2013-Sep-07  11:13:55 ==> SearchRecord()## Search Completed !!!
+2013-Sep-07  11:13:56 ==> Loading Role List
+2013-Sep-07  11:13:56 ==> Role List Loaded
+2013-Sep-07  11:13:56 ==> Loading Doctor List
+2013-Sep-07  11:13:56 ==> Doctor List Loaded
+2013-Sep-07  11:13:56 ==> Loading Nurse List
+2013-Sep-07  11:13:56 ==> Nurse List Loaded
+2013-Sep-07  11:13:56 ==> Loading Role List
+2013-Sep-07  11:13:56 ==> Role List Loaded
+2013-Sep-07  11:13:56 ==> Loading AccountType List
+2013-Sep-07  11:13:56 ==> AccountType List Loaded
+2013-Sep-07  11:13:57 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  11:14:00 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:14:00 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  11:14:02 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:14:02 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  11:14:22 ==> Loading Role List
+2013-Sep-07  11:14:22 ==> Role List Loaded
+2013-Sep-07  11:14:22 ==> Loading Doctor List
+2013-Sep-07  11:14:22 ==> Doctor List Loaded
+2013-Sep-07  11:14:22 ==> Loading Nurse List
+2013-Sep-07  11:14:22 ==> Nurse List Loaded
+2013-Sep-07  11:14:22 ==> Loading Role List
+2013-Sep-07  11:14:22 ==> Role List Loaded
+2013-Sep-07  11:14:22 ==> Loading AccountType List
+2013-Sep-07  11:14:22 ==> AccountType List Loaded
+2013-Sep-07  11:14:22 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  11:14:24 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:14:24 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:14:27 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:14:27 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  11:14:28 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  11:14:28 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:14:44 ==> Loading Role List
+2013-Sep-07  11:14:44 ==> Role List Loaded
+2013-Sep-07  11:14:44 ==> Loading Doctor List
+2013-Sep-07  11:14:44 ==> Doctor List Loaded
+2013-Sep-07  11:14:44 ==> Loading Nurse List
+2013-Sep-07  11:14:44 ==> Nurse List Loaded
+2013-Sep-07  11:14:44 ==> Loading Role List
+2013-Sep-07  11:14:44 ==> Role List Loaded
+2013-Sep-07  11:14:44 ==> Loading AccountType List
+2013-Sep-07  11:14:44 ==> AccountType List Loaded
+2013-Sep-07  11:14:44 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  11:14:48 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:14:48 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  11:14:50 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:14:50 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  11:14:52 ==> User ID: 4
+2013-Sep-07  11:14:52 ==> UpdatePatient()## Patient data Updated
+2013-Sep-07  11:14:52 ==> UpdateUserDetail()## Niku karn's detail is Successfull Updated !!!
+2013-Sep-07  11:14:52 ==> UpdatePermissionList()## Query is :DELETE FROM userpermission WHERE userid = 4
+2013-Sep-07  11:14:52 ==> UpdatePermissionList()##, Permissions updated for userID=4
+2013-Sep-07  11:15:07 ==> Loading Role List
+2013-Sep-07  11:15:07 ==> Role List Loaded
+2013-Sep-07  11:15:07 ==> Loading Doctor List
+2013-Sep-07  11:15:07 ==> Doctor List Loaded
+2013-Sep-07  11:15:07 ==> Loading Nurse List
+2013-Sep-07  11:15:07 ==> Nurse List Loaded
+2013-Sep-07  11:15:07 ==> Loading Role List
+2013-Sep-07  11:15:07 ==> Role List Loaded
+2013-Sep-07  11:15:07 ==> Loading AccountType List
+2013-Sep-07  11:15:07 ==> AccountType List Loaded
+2013-Sep-07  11:15:07 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  11:15:40 ==> Loading Role List
+2013-Sep-07  11:15:40 ==> Role List Loaded
+2013-Sep-07  11:15:40 ==> Loading Doctor List
+2013-Sep-07  11:15:40 ==> Doctor List Loaded
+2013-Sep-07  11:15:40 ==> Loading Nurse List
+2013-Sep-07  11:15:40 ==> Nurse List Loaded
+2013-Sep-07  11:15:40 ==> Loading Role List
+2013-Sep-07  11:15:40 ==> Role List Loaded
+2013-Sep-07  11:15:40 ==> Loading AccountType List
+2013-Sep-07  11:15:40 ==> AccountType List Loaded
+2013-Sep-07  11:15:40 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  11:15:42 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:15:42 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  11:15:48 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  11:15:48 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:17:24 ==> Loading Role List
+2013-Sep-07  11:17:24 ==> Role List Loaded
+2013-Sep-07  11:17:24 ==> Loading Doctor List
+2013-Sep-07  11:17:24 ==> Doctor List Loaded
+2013-Sep-07  11:17:24 ==> Loading Nurse List
+2013-Sep-07  11:17:24 ==> Nurse List Loaded
+2013-Sep-07  11:17:25 ==> Loading Role List
+2013-Sep-07  11:17:25 ==> Role List Loaded
+2013-Sep-07  11:17:25 ==> Loading AccountType List
+2013-Sep-07  11:17:25 ==> AccountType List Loaded
+2013-Sep-07  11:17:25 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  11:17:26 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:17:26 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:17:28 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:17:28 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:18:19 ==> Loading Role List
+2013-Sep-07  11:18:19 ==> Role List Loaded
+2013-Sep-07  11:18:19 ==> Loading Doctor List
+2013-Sep-07  11:18:19 ==> Doctor List Loaded
+2013-Sep-07  11:18:19 ==> Loading Nurse List
+2013-Sep-07  11:18:19 ==> Nurse List Loaded
+2013-Sep-07  11:18:19 ==> Loading Role List
+2013-Sep-07  11:18:19 ==> Role List Loaded
+2013-Sep-07  11:18:19 ==> Loading AccountType List
+2013-Sep-07  11:18:19 ==> AccountType List Loaded
+2013-Sep-07  11:18:19 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  11:18:20 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:18:20 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:18:22 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:18:22 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:19:23 ==> Loading Role List
+2013-Sep-07  11:19:23 ==> Role List Loaded
+2013-Sep-07  11:19:23 ==> Loading Doctor List
+2013-Sep-07  11:19:23 ==> Doctor List Loaded
+2013-Sep-07  11:19:23 ==> Loading Nurse List
+2013-Sep-07  11:19:23 ==> Nurse List Loaded
+2013-Sep-07  11:19:23 ==> Loading Role List
+2013-Sep-07  11:19:23 ==> Role List Loaded
+2013-Sep-07  11:19:23 ==> Loading AccountType List
+2013-Sep-07  11:19:23 ==> AccountType List Loaded
+2013-Sep-07  11:19:23 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  11:19:26 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:19:26 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:19:27 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:19:27 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:19:48 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:19:48 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  11:19:50 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:19:50 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  11:20:09 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:20:09 ==> PermissionList()## User doesn't have any special permission: 
+2013-Sep-07  11:20:18 ==> Loading Role List
+2013-Sep-07  11:20:18 ==> Role List Loaded
+2013-Sep-07  11:20:18 ==> Loading Doctor List
+2013-Sep-07  11:20:18 ==> Doctor List Loaded
+2013-Sep-07  11:20:18 ==> Loading Nurse List
+2013-Sep-07  11:20:18 ==> Nurse List Loaded
+2013-Sep-07  11:20:18 ==> Loading Role List
+2013-Sep-07  11:20:18 ==> Role List Loaded
+2013-Sep-07  11:20:18 ==> Loading AccountType List
+2013-Sep-07  11:20:19 ==> AccountType List Loaded
+2013-Sep-07  11:20:19 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  11:20:20 ==> SearchRecord()## Search Started !!!
+2013-Sep-07  11:20:20 ==> SearchRecord()## Search Completed !!!
+2013-Sep-07  11:20:21 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:20:21 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:20:22 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  11:20:22 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  11:20:33 ==> Loading Role List
+2013-Sep-07  11:20:33 ==> Role List Loaded
+2013-Sep-07  11:20:33 ==> Loading Doctor List
+2013-Sep-07  11:20:33 ==> Doctor List Loaded
+2013-Sep-07  11:20:33 ==> Loading Nurse List
+2013-Sep-07  11:20:33 ==> Nurse List Loaded
+2013-Sep-07  11:20:33 ==> Loading Role List
+2013-Sep-07  11:20:33 ==> Role List Loaded
+2013-Sep-07  11:20:33 ==> Loading AccountType List
+2013-Sep-07  11:20:33 ==> AccountType List Loaded
+2013-Sep-07  11:20:34 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  17:07:41 ==> HasPermission()## User don't have permission for activityID =2
+2013-Sep-07  17:07:41 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-07  17:07:41 ==> HasPermission()## User don't have permission for activityID =3
+2013-Sep-07  17:07:41 ==> HasPermission()## User don't have permission for activityID =2
+2013-Sep-07  17:07:41 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-07  17:07:41 ==> HasPermission()## User don't have permission for activityID =3
+2013-Sep-07  17:07:47 ==> LoginVerification()## Login process started
+2013-Sep-07  17:07:48 ==> GetVisistorIP()## Your IP address is : 127.0.0.1
+2013-Sep-07  17:07:48 ==> IsVistorLocal()## Visitor is local, IP=127.0.0.1
+2013-Sep-07  17:07:48 ==> LoginVerification()## Successfully Logged In by User:Ramesh Kumar Karn
+2013-Sep-07  17:07:48 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  17:07:50 ==> Loading Role List
+2013-Sep-07  17:07:50 ==> Role List Loaded
+2013-Sep-07  17:07:50 ==> Loading AccountType List
+2013-Sep-07  17:07:50 ==> AccountType List Loaded
+2013-Sep-07  17:07:51 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  17:07:53 ==> SearchRecord()## Search Started !!!
+2013-Sep-07  17:07:53 ==> SearchRecord()## Search Completed !!!
+2013-Sep-07  17:07:54 ==> SearchRecord()## Search Started !!!
+2013-Sep-07  17:07:54 ==> SearchRecord()## Search Completed !!!
+2013-Sep-07  17:07:56 ==> SearchRecord()## Search Started !!!
+2013-Sep-07  17:07:56 ==> SearchRecord()## Search Completed !!!
+2013-Sep-07  17:07:58 ==> Loading Role List
+2013-Sep-07  17:07:58 ==> Role List Loaded
+2013-Sep-07  17:07:58 ==> Loading Doctor List
+2013-Sep-07  17:07:58 ==> Doctor List Loaded
+2013-Sep-07  17:07:58 ==> Loading Nurse List
+2013-Sep-07  17:07:58 ==> Nurse List Loaded
+2013-Sep-07  17:07:58 ==> Loading Role List
+2013-Sep-07  17:07:58 ==> Role List Loaded
+2013-Sep-07  17:07:58 ==> Loading AccountType List
+2013-Sep-07  17:07:58 ==> AccountType List Loaded
+2013-Sep-07  17:07:58 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  17:07:59 ==> SearchRecord()## Search Started !!!
+2013-Sep-07  17:07:59 ==> SearchRecord()## Search Completed !!!
+2013-Sep-07  17:08:01 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  17:08:01 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  17:08:02 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  17:08:02 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  17:08:11 ==> Loading Role List
+2013-Sep-07  17:08:11 ==> Role List Loaded
+2013-Sep-07  17:08:11 ==> Loading Doctor List
+2013-Sep-07  17:08:11 ==> Doctor List Loaded
+2013-Sep-07  17:08:11 ==> Loading Nurse List
+2013-Sep-07  17:08:11 ==> Nurse List Loaded
+2013-Sep-07  17:08:11 ==> Loading Role List
+2013-Sep-07  17:08:11 ==> Role List Loaded
+2013-Sep-07  17:08:11 ==> Loading AccountType List
+2013-Sep-07  17:08:11 ==> AccountType List Loaded
+2013-Sep-07  17:08:11 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-07  17:08:12 ==> SearchRecord()## Search Started !!!
+2013-Sep-07  17:08:12 ==> SearchRecord()## Search Completed !!!
+2013-Sep-07  17:08:13 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  17:08:13 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-07  17:08:15 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-07  17:08:15 ==> PermissionList()## PermissionList Loaded Successfully

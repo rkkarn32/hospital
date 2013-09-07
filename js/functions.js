@@ -35,7 +35,7 @@ function HidePatientDiv(){
 }
 
 
-function validateForm()
+function validateInputForm()
 {
     var nowdatetime = new Date();
     var month = nowdatetime.getMonth() + 1;
@@ -110,8 +110,83 @@ function validateForm()
   
 }
 
+function validateEditForm()
+{
+    var nowdatetime = new Date();
+    var month = nowdatetime.getMonth() + 1;
+    var day = nowdatetime.getDate();
+    var year = nowdatetime.getFullYear();
+    var nowdate = year + "/" + month + "/" + day;
+    var todayToDate = Date.parse(nowdate);
+    var success=true;
+    var x=$('#name_E').val();
+    if (x==null || x=="")
+    {
+        $('#name_E').attr("class", "error");
+        success = false;
+    }
+    else
+        $('#name_E').attr("class", "");
+    var x=$('#roleList').val();
+    if (x==0)
+    {
+        $('#roleList').attr("class", "error");
+        success = false;
+    }
+    else
+        $('#roleList').attr("class", "");
+    var x=$('#accountList').val();
+    if (x==0)
+    {
+        $('#accountList').attr("class", "error");
+        success = false;
+    }
+    else
+        $('#accountList').attr("class", "");
+    
+    if($('#roleList').val()==3 && !($('#retrieveData').is(':checked') || $('#reportData').is(':checked')))
+    {
+        alert("Minimum one permission must be selected for LLA users");
+        success = false;
+    }
+    
+    var x= Date.parse($('#creationDate_E').val());
+    if (x==null || x > nowdatetime)
+    {
+        $('#creationDate_E').attr("class", "error");
+        success = false;
+    }
+    else
+        $('#creationDate_E').attr("class", "");
+    
+    x=$('#birthDate_E').val();
+    
+    if(x==null || x=='')
+    {
+        $('#birthDate_E').attr("class", "error");
+        success = false;
+    }
+    else
+    {
+        $('#birthDate_E').attr("class", "");
+        var selectedBirthDate = Date.parse(x);
+        if (x=='yyyy-mm-dd' || selectedBirthDate > todayToDate)
+        {
+            $('#birthDate_E').attr("class", "error");
+            success = false;
+        }
+        else
+            $('#birthDate_E').attr("class", "");
+    }
+    if(!success){
+        $('#errorDisplay').html('*** Please !!! fill the highlighted areas correctly ***').show();
+    }
+    return success;
+  
+}
+
 function RegisterUser(){
-    if(!validateForm())
+    if(!validateInputForm())
         return false;
     var Data = $('#userDetailForm').serialize();
     Data = "task=registeruser&"+Data;
@@ -207,7 +282,7 @@ function EditUserDetails(id){
                 if(output[3]==3)
                     $('#permissionDetail_E').show();
                 //loadPermissionList(3);
-                $('#accountList').val(output[5]);
+                //$('#accountList').val(output[5]);
                 $('#creationDate_E').val(output[6]);
                 $('#streetAddress_E').val(output[7]);
                 $('#state_E').val(output[8]);
@@ -441,6 +516,8 @@ function CancelUpdate(){
     ShowViewDetail();
 }
 function UpdateRecord(){
+    if( !validateEditForm())
+        return false;
     var data = $('#editForm_E').serialize();
     //    alert(data);
     var userID = $('#userID_E').val();
