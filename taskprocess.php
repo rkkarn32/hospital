@@ -84,9 +84,9 @@ else if ($task == "showuserdetail") {
         $permission = PermissionByID::$ALA;
     } else if ($roleID == Roles::$LLA) {
         $permission = PermissionByID::$LLA;
-        if ($_POST['reportData_E'])
+        if (isset($_POST['reportData_E']))
             array_push($permission, PermissionByID::$reportData);
-        if ($_POST['retrieveData_E'])
+        if (isset($_POST['retrieveData_E']))
             array_push($permission, PermissionByID::$retrieveData);
     }
     
