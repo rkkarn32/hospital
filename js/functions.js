@@ -197,7 +197,6 @@ function RegisterUser(){
         dataType:'json',
         cache:false,
         success: function(output){
-            //                        alert(output);
             if(output[0] == true)
             {
                 alert("Data entered successfully");
@@ -312,7 +311,6 @@ function EditUserDetails(id){
 
 function ShowLoading(message){
     var imagePath = + 'images/ajax-loader.gif';
-    //var loaderImageTag = '<img src="'+imagePath+'" alt="" /><span>'+message+'</span>';
     var loaderImageTag = '<img src="images/ajax-loader.gif" alt="" /><span>'+message+'</span>';
     $('#loading').html(loaderImageTag);
     $('#loading').show();
@@ -408,10 +406,7 @@ function ReportData(){
         type:'POST',
         dataType:'json',
         success:function(output){
-            //alert (output);
-            
             oTable.fnClearTable();
-            //            alert (output);
             if(output[0] !=0){
                 for(var i =0; i < output.length;i++){
                     oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
@@ -483,15 +478,12 @@ function PrintData(id){
                 }
                 $('#isPrintable').html(1);
                 $('#valueChange').val(2);
-            //window.location="include/printdata.php?"+argument;
-            //PrintElem('#userDetail');
             }
         },
         error:function (a, b , c){
             alert(a+" "+" "+c);
         }
     });
-    //PrintElem('#userDetail');
     return false;
 }
 
@@ -519,9 +511,7 @@ function UpdateRecord(){
     if( !validateEditForm())
         return false;
     var data = $('#editForm_E').serialize();
-    //    alert(data);
     var userID = $('#userID_E').val();
-    //    alert(userID);
     data = "task=updateRecord&userId_E="+userID+"&"+data;
     $.ajax({
         url:'taskprocess.php',
@@ -553,7 +543,6 @@ function ShowPermissionList(userID){
         data:data,
         type:'POST',
         success:function(output){
-            //            alert(output)
             var permissionList="<table id='permissionTable' width='100%' border='1px'>";
             if(output[0] !=0)
             {
@@ -568,7 +557,6 @@ function ShowPermissionList(userID){
                 permissionList+= "<td align='center'>User doesn't have any special permissions";
             
             permissionList+="</table>";
-            //            alert(permissionList);
             $('#permissionDetail').html(permissionList);
         }
     });
@@ -583,7 +571,6 @@ function UpdatePermissionList(userID){
         data:data,
         type:'POST',
         success:function(output){
-            //            alert(output)
             var permissionList="<table id='permissionTable' width='100%' border='1px'>";
             if(output[0] !=0)
             {
@@ -709,7 +696,6 @@ function DeleteUser(id){
                 {
                     alert('User Deleted successfully');
                     LoadAllUser();
-                    //window.location="userdetail.php";
                 }
                 else
                     alert('Fail to remove user, Error: '+output[1]);
