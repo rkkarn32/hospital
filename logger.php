@@ -1,6 +1,6 @@
 <?php
     class Logger{
-        static private $filename="log.txt";
+        static private $filename="log.php";
         
         static public function LogInformation($message){
             $file = fopen(Logger::$filename ,"a+");
