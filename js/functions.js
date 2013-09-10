@@ -440,47 +440,30 @@ function PrintData(id){
             if(output[0] !=0){                
                 $('#viewDetail').show();
                 $('#userID_Retrieve').html(id);
-                var argument = "name="+output[0];
                 $('#name').html(output[0]);
-                argument += "&username="+output[1];
                 $('#userName').html(output[1])
-                argument += "&accounttype="+output[2];
                 $('#accountType').html(output[2]);
-                argument += "&permissiondetail="+output[3];
                 if(output[3] == 3)
                     $('#permissionDetail').show();
                 else
                     $('#permissionDetail').hide();
-                argument += "&accountgroup="+output[4];
                 $('#accountGroup').html(output[4]);
-                argument += "&creationdate="+output[6];
                 $('#creationDate').html(output[6]);
-                argument += "&streetaddress="+output[7];
                 $('#streetAddress').html(output[7]);
-                argument += "&state="+output[8];
                 $('#state').html(output[8]);
-                argument += "&city="+output[9];
                 $('#city').html(output[9]);
-                argument += "&birthdate="+output[10];
                 $('#birthDate').html(output[10]);
-                argument += "&phonenumber="+output[11];
                 $('#phoneNumber').html(output[11]);
-                argument += "&patientdetail="+output[12];
                 if(output[12]==0){
                     $('#patientDetail').hide();
                 }
                 else{
                     $('#patientDetail').show();
                     $('#doctorName').html(output[12]);
-                    argument += "&nursename="+output[14];
                     $('#nurseName').html(output[14]);
-                    argument += "&purposeofvisit="+output[16];
                     $('#purposeOfVisit').html(output[16]);
-                    argument += "&diagnosisgiven="+output[17];
                     $('#diagnosisGiven').html(output[17]);
-                    argument += "&medicationprescribed="+output[18];
                     $('#medicationPrescribed').html(output[18]);
-                    argument += "&lastofficevisit="+output[19];
                     $('#lastOfficeVisit').html(output[19]);
                 }
                 $('#isPrintable').html(1);
