@@ -1,7 +1,7 @@
 <div class="header_black">Add User</div>
 <div id="errorDisplay" class="errorMessage" style="display: none"></div>
 <div align="center" class="detailDispaly">
-    <form id="userDetailForm" method="POST" onsubmit="return valid.validateForm(this)?RegisterUser():false;">
+    <form id="userDetailForm" method="POST" onsubmit="return ( valid.validateForm(this) && validateInputForm())?RegisterUser():false;">
         <div class="displaySection">
             <div id="inputForAll" >
                 <table style="width: 50%">
@@ -32,7 +32,7 @@
                                     ?>
                                 </select>
                             </div>       
-                            <div id="roleListError" class="validationError" ></div>
+                            <div id="roleListError" class="validationError" style="display: none"></div>
                         </td>
                     </tr>
                     <tr>

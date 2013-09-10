@@ -48,111 +48,72 @@ function validateInputForm()
     
     var illegalChars = "!@#$%^&*()+=-[]\\\';,./{}|\":<>?0123456789";
 
-//    if (x==null || x=="")
-//    {
-//        $('#name').attr("class", "error");
-//        success = false;
-//    }	
-//    else
-        for (var i = 0; i < x.length; i++) 
-        {
-            if (illegalChars.indexOf(x.charAt(i)) != -1) 
-            {	
-                //$('#name').attr("class", "error");
-                $('#nameError').html("Name Should not contain number").show();
-                success = false;
-                break;
-            }
-//            else
-//                $('#name').attr("class", "");
+    for (var i = 0; i < x.length; i++) 
+    {
+        if (illegalChars.indexOf(x.charAt(i)) != -1) 
+        {	
+            $('#nameError').html("Name Should not contain number").show();
+            success = false;
+            break;
         }
+    }
 
     var x=$('#roleList').val();
     if (x==0)
     {
-        $('#roleList').attr("class", "error");
+        $('#roleListError').html("User must have a Account Type").show();
         success = false;
     }
-    else
-        $('#roleList').attr("class", "");
     var x=$('#accountList').val();
     if (x==0)
     {
-        $('#accountList').attr("class", "error");
+        $('#accountListError').html("User must have a Account Group").show();
         success = false;
     }
-    else
-        $('#accountList').attr("class", "");
     
     if($('#roleList').val()==3 && !($('#retrieveData').is(':checked') || $('#reportData').is(':checked')))
     {
-        alert("Minimum one permission must be selected for LLA users");
+        //alert("Minimum one permission must be selected for LLA users");
+        $('#permissionDetailError').html("Atleast one permission must be selected for LLA user").show();
         success = false;
     }
     
     var x= Date.parse($('#creationDate').val());	
-    if($('#creationDate').val() == "")
+//    if(x==null || $('#creationDate').val() == "")
+//    {
+//        $('#creationDateError').html("Creation Date required").show();
+//        success = false;
+//    }
+//    else if(!$('#creationDate').val().match(/^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/))
+//    {
+//        $('#creationDateError').html("Invalid Date formate").show();
+//        success = false;
+//    }
+    if (x > nowdatetime)
     {
-        alert("Please enter the Creation Date..!!")
+        $('#creationDateError').html("Creation date must be lower or equal with today's date").show();
         success = false;
     }
-    if($('#creationDate').val().match(/^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/))
-    {
-		  
-    }
-    else
-    {
-        alert("Creation Date format is wrong")
-    }
-		
-	
-    if (x==null || x > nowdatetime)
-    {
-        $('#creationDate').attr("class", "error");
-        success = false;
-    }
-    else
-        $('#creationDate').attr("class", "");
     
     x=$('#birthDate').val();
-	
-	
-    if($('#birthDate').val() == "")
+    var selectedBirthDate = Date.parse(x);
+//    if(x == "" || x==null)
+//    {
+//        $('#birthDateError').html("DOB required").show();
+//        success = false;
+//    }
+//    else if(!($('#birthDate').val().match(/^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/)))
+//    {
+//        $('#birthDateError').html("Invalid date format").show();
+//        success = false;
+//    }
+//    else 
+    if ( selectedBirthDate > todayToDate)
     {
-        alert("Please enter the  Birth Date..!!")
+        $('#birthDateError').html("DOB must be before of Today").show();
         success = false;
     }
-    else{
-        if($('#birthDate').val().match(/^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/))
-        {
-		  
-        }
-        else
-        {
-            alert("Birth Date format is wrong")
-            success = false;
-        }
-    }
-		
 	
-    
-    if(x==null || x=='')
-    {
-        $('#birthDate').attr("class", "error");
-        success = false;
-    }
-    else
-    {
-        $('#birthDate').attr("class", "");
-        var selectedBirthDate = Date.parse(x);
-        if (x=='yyyy-mm-dd' || selectedBirthDate > todayToDate)
-        {
-            $('#birthDate').attr("class", "error");
-            success = false;
-        }
-        else
-            $('#birthDate').attr("class", "");
-    }
     if(!success){
         $('#errorDisplay').html('*** Please !!! fill the highlighted areas correctly ***').show();
     }
@@ -289,8 +250,6 @@ function validateEditForm()
 }
 
 function RegisterUser(){
-    if(!validateInputForm())
-        return false;
     var Data = $('#userDetailForm').serialize();
     Data = "task=registeruser&"+Data;
     $.ajax({
