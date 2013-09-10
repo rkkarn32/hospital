@@ -39,7 +39,7 @@
     </div>
     <div id="permissionDetail">
     </div>
-    <div id="patientDetail">
+    <div id="patientDetailView">
         <table width="100%" >
             <tr>
                 <td width="20%" ><strong>Doctor Name: </strong></td>

@@ -28,10 +28,10 @@ function HidePermissions(){
     $('.permissionList').hide();
 }
 function ShowPatientDiv(){
-    $('#inputForPatient').show();
+    $('#patientDetail').show();
 }
 function HidePatientDiv(){
-    $('#inputForPatient').hide();
+    $('#patientDetail').hide();
 }
 
 
@@ -247,10 +247,10 @@ function ShowUserDetails(id){
                 $('#birthDate').html(output[10]);
                 $('#phoneNumber').html(output[11]);
                 if(output[12]==0){
-                    $('#patientDetail').hide();
+                    $('#patientDetailView').hide();
                 }
                 else{
-                    $('#patientDetail').show();
+                    $('#patientDetailView').show();
                     $('#doctorName').html(output[12]);
                     $('#nurseName').html(output[14]);
                     $('#purposeOfVisit').html(output[16]);
@@ -296,10 +296,10 @@ function EditUserDetails(id){
                 $('#birthDate_E').val(output[10]);
                 $('#phoneNumber_E').val(output[11]);
                 if(output[12]==0){
-                    $('#patientDetail_E').hide();
+                    $('#patientDetail').hide();
                 }
                 else{
-                    $('#patientDetail_E').show();
+                    $('#patientDetail').show();
                     $('#doctorName_E').val(output[13]);
                     $('#nurseName_E').val(output[15]);
                     $('#purposeOfVisit_E').val(output[16]);

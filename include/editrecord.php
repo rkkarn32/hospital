@@ -90,7 +90,7 @@
             </tr>
         </table>
     </div>
-    <div id="patientDetail_E">
+    <div id="patientDetail">
         <table width="100%" >
             <tr>
                 <td width="20%" ><strong>Doctor Name:</strong></td>
