@@ -73,22 +73,11 @@ function validateInputForm()
     
     if($('#roleList').val()==3 && !($('#retrieveData').is(':checked') || $('#reportData').is(':checked')))
     {
-        //alert("Minimum one permission must be selected for LLA users");
         $('#permissionDetailError').html("Atleast one permission must be selected for LLA user").show();
         success = false;
     }
     
     var x= Date.parse($('#creationDate').val());	
-//    if(x==null || $('#creationDate').val() == "")
-//    {
-//        $('#creationDateError').html("Creation Date required").show();
-//        success = false;
-//    }
-//    else if(!$('#creationDate').val().match(/^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/))
-//    {
-//        $('#creationDateError').html("Invalid Date formate").show();
-//        success = false;
-//    }
     if (x > nowdatetime)
     {
         $('#creationDateError').html("Creation date must be lower or equal with today's date").show();
@@ -97,17 +86,6 @@ function validateInputForm()
     
     x=$('#birthDate').val();
     var selectedBirthDate = Date.parse(x);
-//    if(x == "" || x==null)
-//    {
-//        $('#birthDateError').html("DOB required").show();
-//        success = false;
-//    }
-//    else if(!($('#birthDate').val().match(/^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/)))
-//    {
-//        $('#birthDateError').html("Invalid date format").show();
-//        success = false;
-//    }
-//    else 
     if ( selectedBirthDate > todayToDate)
     {
         $('#birthDateError').html("DOB must be before of Today").show();
