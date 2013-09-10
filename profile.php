@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SESSION))
+if (!isset($_SESSION))
     session_start();
 if (!$_SESSION['loggedin'])
     header("location:login.php");
@@ -10,11 +10,11 @@ include_once 'taskprocess.php';
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Hospital Management</title>
         <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
-        <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="default" />        
+        <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="default" />
         <script type="text/javascript" src="js/functions.js"></script>
-              
+
     </head>
-    <body> 
+    <body style="margin: 0px"> 
 
         <div style="display: none" id="userID"><?php echo $_SESSION['userid'] ?></div>
 
@@ -43,14 +43,12 @@ include_once 'taskprocess.php';
             <div class="nav">
                 <div class="table">
 
-                    <?php
-                    echo'<ul class="current">
+                    <ul class="current">
                         <li><a href="profile.php"><b>Home</b></a>
                         </li>
                     </ul>
                     <div class="nav-divider">&nbsp;</div>
-                    ';
-
+                    <?php
                     if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
                         echo'<ul class="select">
                             <li><a href="userdetail.php"><b>Search</b></a>

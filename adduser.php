@@ -33,27 +33,21 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$createUser))
 
                 <!-- start nav-right -->
                 <div id="nav-right">
-
                     <div class="nav-divider">&nbsp;</div>
                     <a href="logout.php" id="logout"><img src="images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
                     <div class="clear">&nbsp;</div>
 
-                    <!--  start account-content -->	
                 </div>
-                <!--  end account-content -->
 
             </div>
             <div class="nav">
                 <div class="table">
 
-                    <?php
-                    echo'<ul class="select">
+                    <ul class="select">
                         <li><a href="profile.php"><b>Home</b></a>
                         </li>
                     </ul>
-                    <div class="nav-divider">&nbsp;</div>
-                    ';
-
+                    <?php
                     if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
                         echo'<ul class="select">
                             <li><a href="userdetail.php"><b>Search</b></a>

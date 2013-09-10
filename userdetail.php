@@ -49,22 +49,17 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
                     <div class="nav-divider">&nbsp;</div>
                     <a href="logout.php" id="logout"><img src="images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
                     <div class="clear">&nbsp;</div>
-
-                    <!--  start account-content -->	
                 </div>
-                <!--  end account-content -->
-
             </div>
             <div class="nav">
                 <div class="table">
 
-                    <?php
-                    echo'<ul class="select">
+                    <ul class="select">
                         <li><a href="profile.php"><b>Home</b></a>
                         </li>
                     </ul>
                     <div class="nav-divider">&nbsp;</div>
-                    ';
+                    <?php
 
                     if ($sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
                         echo'<ul class="current">
@@ -96,10 +91,6 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
             <div id="content-outer">
                 <!-- start content -->
                 <div id="content">
-
-                    <!--  start page-heading -->
-
-                    <!-- end page-heading -->
 
                     <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
                         <tr>
