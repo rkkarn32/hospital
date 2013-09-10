@@ -123,7 +123,7 @@
                     </tr>
                 </table>
             </div>
-            <div id="inputForPatient" style="display: none">
+            <div id="patientDetail" style="display: none">
                 <table width="50%">
                     <tr>
                         <td width="20%" valign="top"><label>Doctor</label></td>
