@@ -10,7 +10,10 @@
             </tr>    
             <tr>
                 <td width="20%" ><strong>Name:</strong></td>
-                <td width="30%"><input type="text" id="name_E" name="name_E" /></td>
+                <td width="30%">
+                    <input type="text" class="required" id="name_E" name="name_E" />
+                    <div id="name_EError" class="validationError" style="display: none"></div>
+                </td>
                 <td width="20%"><strong>Account Type:-</strong></td>
                 <td width="30%">
                     <div >
@@ -26,6 +29,7 @@
                             ?>
                         </select>
                     </div>
+                    <div id="roleListError" class="validationError" style="display: none"></div>
                 </td>
             </tr>   
             <tr>
@@ -34,25 +38,44 @@
                     <select id="accountList" name="accountList" class="listmenu" tabindex="13">
                         <option value="0" selected="selected">Select Account</option>
                     </select>
+                    <div id="accountListError" class="validationError" style="display: none"></div>
                 </td>
                 <td><strong>Street Address:</strong></td>
-                <td><input type="text" id="streetAddress_E" name="streetAddress_E" /></td>
+                <td>
+                    <input type="text" id="streetAddress_E" name="streetAddress_E" />
+                    <div id="streetAddress_EError" class="validationError" style="display: none"></div>
+                </td>
             </tr>
             <tr>
                 <td><strong>State:</strong></td>
-                <td valign="top"><input type="text" name="state_E" id="state_E" /></td>
+                <td valign="top">
+                    <input type="text" name="state_E" id="state_E" />
+                    <div id="state_EError" class="validationError" style="display: none"></div>
+                </td>
                 <td><strong>City:</strong></td>
-                <td><input type="text" name="city_E" id="city_E" /></td>
+                <td>
+                    <input type="text" name="city_E" id="city_E" />
+                    <div id="city_EError" class="validationError" style="display: none"></div>
+                </td>
             </tr>
             <tr>
                 <td><strong>Birth Date:</strong></td>
-                <td><input type="date" id="birthDate_E" name="birthDate_E" /></td>
+                <td>
+                    <input type="date" class="date" id="birthDate_E" name="birthDate_E" />
+                    <div id="birthDate_EError" class="validationError" style="display: none"></div>
+                </td>
                 <td><strong>Phone Number:</strong></td>
-                <td><input type="text" id="phoneNumber_E" name="phoneNumber_E" /></td>
+                <td>
+                    <input type="text" class="phone" id="phoneNumber_E" name="phoneNumber_E" />
+                    <div id="phoneNumber_EError" class="validationError" style="display: none"></div>
+                </td>
             </tr>
             <tr>
                 <td><strong>Creation Date:</strong></td>
-                <td><input type="date" id="creationDate_E" name="creationDate_E" /></td>
+                <td>
+                    <input type="date" class="date" id="creationDate_E" name="creationDate_E" />
+                    <div id="creationDate_EError" class="validationError" style="display: none"></div>
+                </td>
             </tr>
         </table>
     </div>
@@ -60,7 +83,10 @@
         <table width="100%" >
             <tr>
                 <td><label>Report Data</label><input type="checkbox" name="reportData_E" id="reportData_E" /></td>
-                <td><label>Retrieve Data</label> <input type="checkbox" name="retrieveData_E" id="retrieveData_E" /></td>
+                <td>
+                    <label>Retrieve Data</label> <input type="checkbox" name="retrieveData_E" id="retrieveData_E" />
+                    <div id="permissionDetail_EError" class="validationError" style="display: none"></div>
+                </td>
             </tr>
         </table>
     </div>
@@ -83,7 +109,7 @@
                         }
                         ?>
                     </select>
-
+                    <div id="patientDetail_EError" class="validationError" style="display: none"></div>
                 </td>
                 <td width="20%"><strong>Nurse Name:</strong></td>
                 <td width="30%">
@@ -103,19 +129,32 @@
                         }
                         ?>
                     </select>
+                    <div id="nurseName_EError" class="validationError" style="display: none"></div>
                 </td>
             </tr>    
             <tr>
                 <td><strong>Purpose Of Visit:</strong></td>
-                <td><input type="text" id="purposeOfVisit_E" name="purposeOfVisit_E" /></td>
+                <td>
+                    <input type="text" id="purposeOfVisit_E" name="purposeOfVisit_E" />
+                    <div id="purposeOfVisit_EError" class="validationError" style="display: none"></div>
+                </td>
                 <td><strong>Diagnosis Given:</strong></td>
-                <td><input type="text" id="diagnosisGiven_E" name="diagnosisGiven_E" /></td>
+                <td>
+                    <input type="text" id="diagnosisGiven_E" name="diagnosisGiven_E" />
+                    <div id="diagnosisGiven_EError" class="validationError" style="display: none"></div>
+                </td>
             </tr>   
             <tr>
                 <td><strong>Medication Prescribed:</strong></td>
-                <td><input type="text" id="medicationPrescribed_E" name="medicationPrescribed_E" /></td>
+                <td>
+                    <input type="text" id="medicationPrescribed_E" name="medicationPrescribed_E" />
+                    <div id="medicationPrescribed_EError" class="validationError" style="display: none"></div>
+                </td>
                 <td><strong>Last Office Visit:</strong></td>
-                <td valign="top"><input type="date" id="lastOfficeVisit_E" name="lastOfficeVisit_E" /></td>
+                <td valign="top">
+                    <input type="date" id="lastOfficeVisit_E" name="lastOfficeVisit_E"/>
+                    <div id="lastOfficeVisit_EError" class="validationError" style="display: none"></div>
+                </td>
             </tr>
 
         </table>

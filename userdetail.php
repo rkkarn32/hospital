@@ -17,8 +17,10 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
             @import "css/screen.css";
         </style>
         <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+        <script src="js/jquery.validation.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/functions.js"></script>
         <script>
+            var valid = new validate();
             $(document).ready(function(){
                 oTable = $('#example').dataTable({
                 });
@@ -130,7 +132,7 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$retrieveData))
                                             <div id="editDetail" style="display: nones" class="displayBox">
                                                 <div class="header_black" >Edit Record</div>
                                                 <div class="detailDispaly">
-                                                    <form id="editForm_E" method="POST" onSubmit="return UpdateRecord()">
+                                                    <form id="editForm_E" method="POST" onSubmit="return (valid.validateForm(this) && validateEditForm())?UpdateRecord():false;">
                                                         <?php include 'include/editrecord.php'; ?>
                                                         <div class="displaySection" id="editButton" align="center" class="displaySection">
                                                             <button class="blue-button" id="submit_E" type="submit" > Update </button>

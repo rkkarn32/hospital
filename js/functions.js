@@ -113,118 +113,85 @@ function validateEditForm()
 	
 	
     var illegalChars = "!@#$%^&*()+=-[]\\\';,./{}|\":<>?0123456789";
- 
-    var illegalChars = "!@#$%^&*()+=-[]\\\';,./{}|\":<>?0123456789";
 
-    if (x==null || x=="")
+    for (var i = 0; i < x.length; i++) 
     {
-        $('#name_E').attr("class", "error");
-        $('#name_EError').html("Name can not be empty").show() ;
-        success = false;
-    }	
-    else
-        for (var i = 0; i < x.length; i++) 
-        {
-            if (illegalChars.indexOf(x.charAt(i)) != -1) 
-            {	
-                $('#name_E').attr("class", "error");
-                success = false;
-                break;
-            }
-            else
-                $('#name_E').attr("class", "");
+        if (illegalChars.indexOf(x.charAt(i)) != -1) 
+        {	
+            $('#name_EError').html("Name should not conatain number").show();
+            success = false;
+            break;
         }
+    }
         
     var x=$('#roleList').val();
     if (x==0)
     {
-        $('#roleList').attr("class", "error");
+        $('#roleListError').html("User must have a Acount Type").show();
         success = false;
     }
-    else
-        $('#roleList').attr("class", "");
+    
     var x=$('#accountList').val();
     if (x==0)
     {
-        $('#accountList').attr("class", "error");
+        $('#accountListError').html("User must have a Group Type").show();
         success = false;
     }
-    else
-        $('#accountList').attr("class", "");
     
     if($('#roleList').val()==3 && !($('#retrieveData_E').is(':checked') || $('#reportData_E').is(':checked')))
     {
-        alert("Minimum one permission must be selected for LLA users");
+        $('#permissionDetail_EError').html("Minimum one permission must be selected for LLA users").show();
         success = false;
     }   
     
-    var x= Date.parse($('#creationDate_E').val());
-
-
-    var x= Date.parse($('#creationDate').val());	
-    if($('#creationDate_E').val() == "")
+    var x= Date.parse($('#creationDate_E').val());	
+    if (x > nowdatetime)
     {
-        alert("Please enter the Date..!!")
-    }
-    if($('#creationDate_E').val().match(/^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/))
-    {
-		 
-    }
-    else
-    {
-        alert("date format is wrong")
-    }
-
-    if (x==null || x > nowdatetime)
-    {
-        $('#creationDate_E').attr("class", "error");
+        $('#creationDate_EError').html("Creation date must me lower than current date").show();
         success = false;
     }
-    else
-        $('#creationDate_E').attr("class", "");
     
     x=$('#birthDate_E').val();
 	
 	
-    if($('#birthDate_E').val() == "")
-    {
-        alert("Please enter the  Birth Date..!!")
-        success = false;
-    }
-    else{
-        if($('#birthDate_E').val().match(/^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/))
-        {
-		  
-        }
-        else
-        {
-            alert("Birth Date format is wrong")
-            success = false;
-        }
-    }
+//    if($('#birthDate_E').val() == "")
+//    {
+//        alert("Please enter the  Birth Date..!!")
+//        success = false;
+//    }
+//    else{
+//        if($('#birthDate_E').val().match(/^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/))
+//        {
+//		  
+//        }
+//        else
+//        {
+//            alert("Birth Date format is wrong")
+//            success = false;
+//        }
+//    }
     
-    if(x==null || x=='')
-    {
-        $('#birthDate_E').attr("class", "error");
-        success = false;
-    }
-    else
-    {
-        $('#birthDate_E').attr("class", "");
+//    if(x==null || x=='')
+//    {
+//        $('#birthDate_E').attr("class", "error");
+//        success = false;
+//    }
+//    else
+//    {
+//        $('#birthDate_E').attr("class", "");
         var selectedBirthDate = Date.parse(x);
-        if (x=='yyyy-mm-dd' || selectedBirthDate > todayToDate)
+        if (selectedBirthDate > todayToDate)
         {
-            $('#birthDate_E').attr("class", "error");
+            $('#birthDate_EError').html('DOB must be lower than current date').show();
             success = false;
         }
-        else
-            $('#birthDate_E').attr("class", "");
-    }
+//        else
+//            $('#birthDate_E').attr("class", "");
+//    }
     if(!success){
         $('#errorDisplay').html('*** Please !!! fill the highlighted areas correctly ***').show();
     }
     return success;
-  
 }
 
 function RegisterUser(){
@@ -548,8 +515,6 @@ function CancelUpdate(){
     ShowViewDetail();
 }
 function UpdateRecord(){
-    if( !validateEditForm())
-        return false;
     var data = $('#editForm_E').serialize();
     var userID = $('#userID_E').val();
     data = "task=updateRecord&userId_E="+userID+"&"+data;
