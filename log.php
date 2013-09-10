@@ -6908,3 +6908,1583 @@
 2013-Sep-09  19:35:39 ==> HasPermission()## User don't have permission for activityID =3
 2013-Sep-09  19:51:06 ==> GetUserDetail()## User Detail Loaded
 2013-Sep-09  19:52:05 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  19:57:44 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  19:57:45 ==> Loading Role List
+2013-Sep-09  19:57:45 ==> Role List Loaded
+2013-Sep-09  19:57:45 ==> Loading Doctor List
+2013-Sep-09  19:57:45 ==> Doctor List Loaded
+2013-Sep-09  19:57:45 ==> Loading Nurse List
+2013-Sep-09  19:57:45 ==> Nurse List Loaded
+2013-Sep-09  19:59:23 ==> Loading Role List
+2013-Sep-09  19:59:23 ==> Role List Loaded
+2013-Sep-09  19:59:23 ==> Loading Doctor List
+2013-Sep-09  19:59:23 ==> Doctor List Loaded
+2013-Sep-09  19:59:23 ==> Loading Nurse List
+2013-Sep-09  19:59:23 ==> Nurse List Loaded
+2013-Sep-09  19:59:41 ==> Loading Role List
+2013-Sep-09  19:59:41 ==> Role List Loaded
+2013-Sep-09  19:59:41 ==> Loading Doctor List
+2013-Sep-09  19:59:42 ==> Doctor List Loaded
+2013-Sep-09  19:59:42 ==> Loading Nurse List
+2013-Sep-09  19:59:42 ==> Nurse List Loaded
+2013-Sep-09  20:02:26 ==> Loading Role List
+2013-Sep-09  20:02:26 ==> Role List Loaded
+2013-Sep-09  20:02:26 ==> Loading Doctor List
+2013-Sep-09  20:02:26 ==> Doctor List Loaded
+2013-Sep-09  20:02:26 ==> Loading Nurse List
+2013-Sep-09  20:02:26 ==> Nurse List Loaded
+2013-Sep-09  20:05:18 ==> Loading Role List
+2013-Sep-09  20:05:18 ==> Role List Loaded
+2013-Sep-09  20:05:18 ==> Loading Doctor List
+2013-Sep-09  20:05:18 ==> Doctor List Loaded
+2013-Sep-09  20:05:18 ==> Loading Nurse List
+2013-Sep-09  20:05:18 ==> Nurse List Loaded
+2013-Sep-09  20:05:52 ==> Loading Role List
+2013-Sep-09  20:05:52 ==> Role List Loaded
+2013-Sep-09  20:05:52 ==> Loading Doctor List
+2013-Sep-09  20:05:52 ==> Doctor List Loaded
+2013-Sep-09  20:05:52 ==> Loading Nurse List
+2013-Sep-09  20:05:52 ==> Nurse List Loaded
+2013-Sep-09  20:06:03 ==> Loading Role List
+2013-Sep-09  20:06:03 ==> Role List Loaded
+2013-Sep-09  20:06:03 ==> Loading Doctor List
+2013-Sep-09  20:06:03 ==> Doctor List Loaded
+2013-Sep-09  20:06:03 ==> Loading Nurse List
+2013-Sep-09  20:06:03 ==> Nurse List Loaded
+2013-Sep-09  20:06:19 ==> Loading Role List
+2013-Sep-09  20:06:19 ==> Role List Loaded
+2013-Sep-09  20:06:20 ==> Loading Doctor List
+2013-Sep-09  20:06:20 ==> Doctor List Loaded
+2013-Sep-09  20:06:20 ==> Loading Nurse List
+2013-Sep-09  20:06:20 ==> Nurse List Loaded
+2013-Sep-09  20:06:39 ==> Loading Role List
+2013-Sep-09  20:06:39 ==> Role List Loaded
+2013-Sep-09  20:06:39 ==> Loading Doctor List
+2013-Sep-09  20:06:39 ==> Doctor List Loaded
+2013-Sep-09  20:06:39 ==> Loading Nurse List
+2013-Sep-09  20:06:39 ==> Nurse List Loaded
+2013-Sep-09  20:07:05 ==> Loading Role List
+2013-Sep-09  20:07:05 ==> Role List Loaded
+2013-Sep-09  20:07:05 ==> Loading Doctor List
+2013-Sep-09  20:07:05 ==> Doctor List Loaded
+2013-Sep-09  20:07:05 ==> Loading Nurse List
+2013-Sep-09  20:07:05 ==> Nurse List Loaded
+2013-Sep-09  20:07:10 ==> Loading Role List
+2013-Sep-09  20:07:10 ==> Role List Loaded
+2013-Sep-09  20:07:10 ==> Loading Doctor List
+2013-Sep-09  20:07:10 ==> Doctor List Loaded
+2013-Sep-09  20:07:10 ==> Loading Nurse List
+2013-Sep-09  20:07:10 ==> Nurse List Loaded
+2013-Sep-09  20:37:47 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  20:37:49 ==> Loading Role List
+2013-Sep-09  20:37:49 ==> Role List Loaded
+2013-Sep-09  20:37:49 ==> Loading Doctor List
+2013-Sep-09  20:37:49 ==> Doctor List Loaded
+2013-Sep-09  20:37:50 ==> Loading Nurse List
+2013-Sep-09  20:37:50 ==> Nurse List Loaded
+2013-Sep-09  20:42:29 ==> Loading Role List
+2013-Sep-09  20:42:29 ==> Role List Loaded
+2013-Sep-09  20:42:29 ==> Loading Doctor List
+2013-Sep-09  20:42:29 ==> Doctor List Loaded
+2013-Sep-09  20:42:29 ==> Loading Nurse List
+2013-Sep-09  20:42:29 ==> Nurse List Loaded
+2013-Sep-09  20:42:29 ==> Loading Role List
+2013-Sep-09  20:42:29 ==> Role List Loaded
+2013-Sep-09  20:42:29 ==> Loading AccountType List
+2013-Sep-09  20:42:29 ==> AccountType List Loaded
+2013-Sep-09  20:42:29 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  20:42:32 ==> SearchRecord()## Search Started !!!
+2013-Sep-09  20:42:32 ==> SearchRecord()## Search Completed !!!
+2013-Sep-09  20:42:33 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  20:42:33 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  20:42:34 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  20:42:34 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  20:44:40 ==> Loading Role List
+2013-Sep-09  20:44:40 ==> Role List Loaded
+2013-Sep-09  20:44:40 ==> Loading Doctor List
+2013-Sep-09  20:44:40 ==> Doctor List Loaded
+2013-Sep-09  20:44:40 ==> Loading Nurse List
+2013-Sep-09  20:44:40 ==> Nurse List Loaded
+2013-Sep-09  20:45:34 ==> Loading Role List
+2013-Sep-09  20:45:34 ==> Role List Loaded
+2013-Sep-09  20:45:34 ==> Loading Doctor List
+2013-Sep-09  20:45:34 ==> Doctor List Loaded
+2013-Sep-09  20:45:34 ==> Loading Nurse List
+2013-Sep-09  20:45:34 ==> Nurse List Loaded
+2013-Sep-09  20:46:22 ==> Loading Role List
+2013-Sep-09  20:46:22 ==> Role List Loaded
+2013-Sep-09  20:46:22 ==> Loading Doctor List
+2013-Sep-09  20:46:22 ==> Doctor List Loaded
+2013-Sep-09  20:46:22 ==> Loading Nurse List
+2013-Sep-09  20:46:22 ==> Nurse List Loaded
+2013-Sep-09  20:46:47 ==> Loading Role List
+2013-Sep-09  20:46:47 ==> Role List Loaded
+2013-Sep-09  20:46:47 ==> Loading Doctor List
+2013-Sep-09  20:46:47 ==> Doctor List Loaded
+2013-Sep-09  20:46:47 ==> Loading Nurse List
+2013-Sep-09  20:46:47 ==> Nurse List Loaded
+2013-Sep-09  20:50:13 ==> Loading Role List
+2013-Sep-09  20:50:13 ==> Role List Loaded
+2013-Sep-09  20:50:13 ==> Loading Doctor List
+2013-Sep-09  20:50:13 ==> Doctor List Loaded
+2013-Sep-09  20:50:13 ==> Loading Nurse List
+2013-Sep-09  20:50:13 ==> Nurse List Loaded
+2013-Sep-09  20:55:09 ==> Loading Role List
+2013-Sep-09  20:55:09 ==> Role List Loaded
+2013-Sep-09  20:55:09 ==> Loading Doctor List
+2013-Sep-09  20:55:09 ==> Doctor List Loaded
+2013-Sep-09  20:55:09 ==> Loading Nurse List
+2013-Sep-09  20:55:09 ==> Nurse List Loaded
+2013-Sep-09  20:56:24 ==> Loading Role List
+2013-Sep-09  20:56:24 ==> Role List Loaded
+2013-Sep-09  20:56:24 ==> Loading Doctor List
+2013-Sep-09  20:56:24 ==> Doctor List Loaded
+2013-Sep-09  20:56:24 ==> Loading Nurse List
+2013-Sep-09  20:56:24 ==> Nurse List Loaded
+2013-Sep-09  20:56:46 ==> Loading Role List
+2013-Sep-09  20:56:46 ==> Role List Loaded
+2013-Sep-09  20:56:46 ==> Loading Doctor List
+2013-Sep-09  20:56:46 ==> Doctor List Loaded
+2013-Sep-09  20:56:46 ==> Loading Nurse List
+2013-Sep-09  20:56:46 ==> Nurse List Loaded
+2013-Sep-09  21:06:31 ==> Loading Role List
+2013-Sep-09  21:06:31 ==> Role List Loaded
+2013-Sep-09  21:06:31 ==> Loading Doctor List
+2013-Sep-09  21:06:31 ==> Doctor List Loaded
+2013-Sep-09  21:06:31 ==> Loading Nurse List
+2013-Sep-09  21:06:31 ==> Nurse List Loaded
+2013-Sep-09  21:33:14 ==> Loading Role List
+2013-Sep-09  21:33:14 ==> Role List Loaded
+2013-Sep-09  21:33:14 ==> Loading Doctor List
+2013-Sep-09  21:33:14 ==> Doctor List Loaded
+2013-Sep-09  21:33:14 ==> Loading Nurse List
+2013-Sep-09  21:33:14 ==> Nurse List Loaded
+2013-Sep-09  21:34:37 ==> Loading Role List
+2013-Sep-09  21:34:37 ==> Role List Loaded
+2013-Sep-09  21:34:37 ==> Loading Doctor List
+2013-Sep-09  21:34:37 ==> Doctor List Loaded
+2013-Sep-09  21:34:37 ==> Loading Nurse List
+2013-Sep-09  21:34:37 ==> Nurse List Loaded
+2013-Sep-09  21:34:37 ==> Loading Role List
+2013-Sep-09  21:34:37 ==> Role List Loaded
+2013-Sep-09  21:34:37 ==> Loading AccountType List
+2013-Sep-09  21:34:37 ==> AccountType List Loaded
+2013-Sep-09  21:34:37 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  21:34:40 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  21:34:40 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  21:34:41 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  21:34:41 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  21:34:45 ==> Loading Role List
+2013-Sep-09  21:34:45 ==> Role List Loaded
+2013-Sep-09  21:34:45 ==> Loading Doctor List
+2013-Sep-09  21:34:45 ==> Doctor List Loaded
+2013-Sep-09  21:34:45 ==> Loading Nurse List
+2013-Sep-09  21:34:45 ==> Nurse List Loaded
+2013-Sep-09  21:34:45 ==> Loading Role List
+2013-Sep-09  21:34:45 ==> Role List Loaded
+2013-Sep-09  21:34:45 ==> Loading AccountType List
+2013-Sep-09  21:34:45 ==> AccountType List Loaded
+2013-Sep-09  21:34:45 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  21:34:52 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  21:34:52 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  21:34:53 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  21:34:53 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  21:34:55 ==> Loading Role List
+2013-Sep-09  21:34:55 ==> Role List Loaded
+2013-Sep-09  21:34:55 ==> Loading Doctor List
+2013-Sep-09  21:34:55 ==> Doctor List Loaded
+2013-Sep-09  21:34:55 ==> Loading Nurse List
+2013-Sep-09  21:34:55 ==> Nurse List Loaded
+2013-Sep-09  21:34:55 ==> Loading Role List
+2013-Sep-09  21:34:55 ==> Role List Loaded
+2013-Sep-09  21:34:55 ==> Loading AccountType List
+2013-Sep-09  21:34:55 ==> AccountType List Loaded
+2013-Sep-09  21:34:55 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  21:34:59 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  21:34:59 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  21:35:01 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  21:35:01 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  21:35:42 ==> Loading Role List
+2013-Sep-09  21:35:42 ==> Role List Loaded
+2013-Sep-09  21:35:42 ==> Loading Doctor List
+2013-Sep-09  21:35:42 ==> Doctor List Loaded
+2013-Sep-09  21:35:42 ==> Loading Nurse List
+2013-Sep-09  21:35:42 ==> Nurse List Loaded
+2013-Sep-09  21:35:42 ==> Loading Role List
+2013-Sep-09  21:35:42 ==> Role List Loaded
+2013-Sep-09  21:35:42 ==> Loading AccountType List
+2013-Sep-09  21:35:42 ==> AccountType List Loaded
+2013-Sep-09  21:38:47 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  21:42:17 ==> Loading Role List
+2013-Sep-09  21:42:17 ==> Role List Loaded
+2013-Sep-09  21:42:17 ==> Loading Doctor List
+2013-Sep-09  21:42:17 ==> Doctor List Loaded
+2013-Sep-09  21:42:17 ==> Loading Nurse List
+2013-Sep-09  21:42:17 ==> Nurse List Loaded
+2013-Sep-09  21:42:17 ==> Loading Role List
+2013-Sep-09  21:42:17 ==> Role List Loaded
+2013-Sep-09  21:42:17 ==> Loading AccountType List
+2013-Sep-09  21:42:17 ==> AccountType List Loaded
+2013-Sep-09  21:42:18 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  21:42:21 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  21:42:21 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  21:42:22 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  21:42:22 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  21:42:25 ==> Loading Role List
+2013-Sep-09  21:42:25 ==> Role List Loaded
+2013-Sep-09  21:42:25 ==> Loading Doctor List
+2013-Sep-09  21:42:25 ==> Doctor List Loaded
+2013-Sep-09  21:42:25 ==> Loading Nurse List
+2013-Sep-09  21:42:25 ==> Nurse List Loaded
+2013-Sep-09  21:42:25 ==> Loading Role List
+2013-Sep-09  21:42:25 ==> Role List Loaded
+2013-Sep-09  21:42:25 ==> Loading AccountType List
+2013-Sep-09  21:42:25 ==> AccountType List Loaded
+2013-Sep-09  21:42:25 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  21:42:48 ==> Loading Role List
+2013-Sep-09  21:42:48 ==> Role List Loaded
+2013-Sep-09  21:42:48 ==> Loading Doctor List
+2013-Sep-09  21:42:48 ==> Doctor List Loaded
+2013-Sep-09  21:42:48 ==> Loading Nurse List
+2013-Sep-09  21:42:48 ==> Nurse List Loaded
+2013-Sep-09  21:42:48 ==> Loading Role List
+2013-Sep-09  21:42:48 ==> Role List Loaded
+2013-Sep-09  21:42:48 ==> Loading AccountType List
+2013-Sep-09  21:42:48 ==> AccountType List Loaded
+2013-Sep-09  21:42:48 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  21:44:08 ==> Loading Role List
+2013-Sep-09  21:44:08 ==> Role List Loaded
+2013-Sep-09  21:44:08 ==> Loading Doctor List
+2013-Sep-09  21:44:08 ==> Doctor List Loaded
+2013-Sep-09  21:44:08 ==> Loading Nurse List
+2013-Sep-09  21:44:08 ==> Nurse List Loaded
+2013-Sep-09  21:44:29 ==> Loading Role List
+2013-Sep-09  21:44:29 ==> Role List Loaded
+2013-Sep-09  21:44:29 ==> Loading Doctor List
+2013-Sep-09  21:44:29 ==> Doctor List Loaded
+2013-Sep-09  21:44:29 ==> Loading Nurse List
+2013-Sep-09  21:44:29 ==> Nurse List Loaded
+2013-Sep-09  21:49:59 ==> Loading Role List
+2013-Sep-09  21:49:59 ==> Role List Loaded
+2013-Sep-09  21:49:59 ==> Loading Doctor List
+2013-Sep-09  21:49:59 ==> Doctor List Loaded
+2013-Sep-09  21:49:59 ==> Loading Nurse List
+2013-Sep-09  21:49:59 ==> Nurse List Loaded
+2013-Sep-09  21:50:03 ==> Loading Role List
+2013-Sep-09  21:50:03 ==> Role List Loaded
+2013-Sep-09  21:50:03 ==> Loading Doctor List
+2013-Sep-09  21:50:03 ==> Doctor List Loaded
+2013-Sep-09  21:50:03 ==> Loading Nurse List
+2013-Sep-09  21:50:03 ==> Nurse List Loaded
+2013-Sep-09  21:50:03 ==> Loading Role List
+2013-Sep-09  21:50:03 ==> Role List Loaded
+2013-Sep-09  21:50:03 ==> Loading AccountType List
+2013-Sep-09  21:50:03 ==> AccountType List Loaded
+2013-Sep-09  21:50:04 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  21:50:05 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  21:50:05 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  21:50:06 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  21:50:06 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  22:10:35 ==> Loading Role List
+2013-Sep-09  22:10:35 ==> Role List Loaded
+2013-Sep-09  22:10:35 ==> Loading Doctor List
+2013-Sep-09  22:10:35 ==> Doctor List Loaded
+2013-Sep-09  22:10:35 ==> Loading Nurse List
+2013-Sep-09  22:10:35 ==> Nurse List Loaded
+2013-Sep-09  22:10:35 ==> Loading Role List
+2013-Sep-09  22:10:35 ==> Role List Loaded
+2013-Sep-09  22:10:35 ==> Loading AccountType List
+2013-Sep-09  22:10:35 ==> AccountType List Loaded
+2013-Sep-09  22:10:35 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  22:10:39 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  22:10:39 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  22:10:41 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  22:10:41 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  22:11:07 ==> User ID: 3
+2013-Sep-09  22:11:07 ==> UpdateUserDetail()## Durga's detail is Successfull Updated !!!
+2013-Sep-09  22:11:07 ==> UpdatePermissionList()## Query is :DELETE FROM userpermission WHERE userid = 3
+2013-Sep-09  22:11:07 ==> UpdatePermissionList()## Query is : INSERT INTO userpermission VALUES('3','3')
+2013-Sep-09  22:11:07 ==> UpdatePermissionList()## Query is : INSERT INTO userpermission VALUES('3','1')
+2013-Sep-09  22:11:07 ==> UpdatePermissionList()##, Permissions updated for userID=3
+2013-Sep-09  22:11:09 ==> Loading Role List
+2013-Sep-09  22:11:09 ==> Role List Loaded
+2013-Sep-09  22:11:09 ==> Loading Doctor List
+2013-Sep-09  22:11:09 ==> Doctor List Loaded
+2013-Sep-09  22:11:09 ==> Loading Nurse List
+2013-Sep-09  22:11:09 ==> Nurse List Loaded
+2013-Sep-09  22:11:09 ==> Loading Role List
+2013-Sep-09  22:11:09 ==> Role List Loaded
+2013-Sep-09  22:11:09 ==> Loading AccountType List
+2013-Sep-09  22:11:09 ==> AccountType List Loaded
+2013-Sep-09  22:11:10 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  22:11:13 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  22:11:13 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  22:11:16 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  22:11:17 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  22:17:43 ==> Loading Role List
+2013-Sep-09  22:17:43 ==> Role List Loaded
+2013-Sep-09  22:17:43 ==> Loading Doctor List
+2013-Sep-09  22:17:43 ==> Doctor List Loaded
+2013-Sep-09  22:17:43 ==> Loading Nurse List
+2013-Sep-09  22:17:43 ==> Nurse List Loaded
+2013-Sep-09  22:17:43 ==> Loading Role List
+2013-Sep-09  22:17:43 ==> Role List Loaded
+2013-Sep-09  22:17:43 ==> Loading AccountType List
+2013-Sep-09  22:17:43 ==> AccountType List Loaded
+2013-Sep-09  22:17:43 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  22:17:46 ==> Loading Role List
+2013-Sep-09  22:17:46 ==> Role List Loaded
+2013-Sep-09  22:17:46 ==> Loading Doctor List
+2013-Sep-09  22:17:46 ==> Doctor List Loaded
+2013-Sep-09  22:17:46 ==> Loading Nurse List
+2013-Sep-09  22:17:46 ==> Nurse List Loaded
+2013-Sep-09  22:18:21 ==> Loading Role List
+2013-Sep-09  22:18:21 ==> Role List Loaded
+2013-Sep-09  22:18:21 ==> Loading Doctor List
+2013-Sep-09  22:18:21 ==> Doctor List Loaded
+2013-Sep-09  22:18:21 ==> Loading Nurse List
+2013-Sep-09  22:18:21 ==> Nurse List Loaded
+2013-Sep-09  22:19:46 ==> Loading Role List
+2013-Sep-09  22:19:46 ==> Role List Loaded
+2013-Sep-09  22:19:46 ==> Loading Doctor List
+2013-Sep-09  22:19:46 ==> Doctor List Loaded
+2013-Sep-09  22:19:46 ==> Loading Nurse List
+2013-Sep-09  22:19:46 ==> Nurse List Loaded
+2013-Sep-09  22:19:49 ==> Loading Role List
+2013-Sep-09  22:19:49 ==> Role List Loaded
+2013-Sep-09  22:19:49 ==> Loading Doctor List
+2013-Sep-09  22:19:49 ==> Doctor List Loaded
+2013-Sep-09  22:19:49 ==> Loading Nurse List
+2013-Sep-09  22:19:49 ==> Nurse List Loaded
+2013-Sep-09  22:19:56 ==> Loading Role List
+2013-Sep-09  22:19:56 ==> Role List Loaded
+2013-Sep-09  22:19:56 ==> Loading Doctor List
+2013-Sep-09  22:19:56 ==> Doctor List Loaded
+2013-Sep-09  22:19:56 ==> Loading Nurse List
+2013-Sep-09  22:19:56 ==> Nurse List Loaded
+2013-Sep-09  22:22:16 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  22:22:18 ==> Loading Role List
+2013-Sep-09  22:22:18 ==> Role List Loaded
+2013-Sep-09  22:22:18 ==> Loading Doctor List
+2013-Sep-09  22:22:18 ==> Doctor List Loaded
+2013-Sep-09  22:22:18 ==> Loading Nurse List
+2013-Sep-09  22:22:18 ==> Nurse List Loaded
+2013-Sep-09  22:22:18 ==> Loading Role List
+2013-Sep-09  22:22:18 ==> Role List Loaded
+2013-Sep-09  22:22:18 ==> Loading AccountType List
+2013-Sep-09  22:22:18 ==> AccountType List Loaded
+2013-Sep-09  22:22:18 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  22:23:04 ==> Loading Role List
+2013-Sep-09  22:23:04 ==> Role List Loaded
+2013-Sep-09  22:23:04 ==> Loading Doctor List
+2013-Sep-09  22:23:04 ==> Doctor List Loaded
+2013-Sep-09  22:23:04 ==> Loading Nurse List
+2013-Sep-09  22:23:04 ==> Nurse List Loaded
+2013-Sep-09  22:25:57 ==> Loading Role List
+2013-Sep-09  22:25:57 ==> Role List Loaded
+2013-Sep-09  22:25:57 ==> Loading Doctor List
+2013-Sep-09  22:25:57 ==> Doctor List Loaded
+2013-Sep-09  22:25:57 ==> Loading Nurse List
+2013-Sep-09  22:25:57 ==> Nurse List Loaded
+2013-Sep-09  22:52:04 ==> Loading Role List
+2013-Sep-09  22:52:04 ==> Role List Loaded
+2013-Sep-09  22:52:04 ==> Loading Doctor List
+2013-Sep-09  22:52:04 ==> Doctor List Loaded
+2013-Sep-09  22:52:04 ==> Loading Nurse List
+2013-Sep-09  22:52:04 ==> Nurse List Loaded
+2013-Sep-09  22:54:55 ==> Loading Role List
+2013-Sep-09  22:54:55 ==> Role List Loaded
+2013-Sep-09  22:54:55 ==> Loading Doctor List
+2013-Sep-09  22:54:55 ==> Doctor List Loaded
+2013-Sep-09  22:54:55 ==> Loading Nurse List
+2013-Sep-09  22:54:55 ==> Nurse List Loaded
+2013-Sep-09  23:09:50 ==> Loading Role List
+2013-Sep-09  23:09:50 ==> Role List Loaded
+2013-Sep-09  23:09:50 ==> Loading Doctor List
+2013-Sep-09  23:09:50 ==> Doctor List Loaded
+2013-Sep-09  23:09:50 ==> Loading Nurse List
+2013-Sep-09  23:09:50 ==> Nurse List Loaded
+2013-Sep-09  23:10:09 ==> Loading Role List
+2013-Sep-09  23:10:09 ==> Role List Loaded
+2013-Sep-09  23:10:09 ==> Loading Doctor List
+2013-Sep-09  23:10:09 ==> Doctor List Loaded
+2013-Sep-09  23:10:09 ==> Loading Nurse List
+2013-Sep-09  23:10:09 ==> Nurse List Loaded
+2013-Sep-09  23:11:47 ==> Loading Role List
+2013-Sep-09  23:11:47 ==> Role List Loaded
+2013-Sep-09  23:11:47 ==> Loading Doctor List
+2013-Sep-09  23:11:47 ==> Doctor List Loaded
+2013-Sep-09  23:11:47 ==> Loading Nurse List
+2013-Sep-09  23:11:48 ==> Nurse List Loaded
+2013-Sep-09  23:19:12 ==> Loading Role List
+2013-Sep-09  23:19:12 ==> Role List Loaded
+2013-Sep-09  23:19:12 ==> Loading Doctor List
+2013-Sep-09  23:19:12 ==> Doctor List Loaded
+2013-Sep-09  23:19:12 ==> Loading Nurse List
+2013-Sep-09  23:19:12 ==> Nurse List Loaded
+2013-Sep-09  23:21:09 ==> Loading Role List
+2013-Sep-09  23:21:09 ==> Role List Loaded
+2013-Sep-09  23:21:09 ==> Loading Doctor List
+2013-Sep-09  23:21:09 ==> Doctor List Loaded
+2013-Sep-09  23:21:09 ==> Loading Nurse List
+2013-Sep-09  23:21:09 ==> Nurse List Loaded
+2013-Sep-09  23:21:09 ==> Loading Role List
+2013-Sep-09  23:21:09 ==> Role List Loaded
+2013-Sep-09  23:21:09 ==> Loading AccountType List
+2013-Sep-09  23:21:09 ==> AccountType List Loaded
+2013-Sep-09  23:21:10 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  23:21:16 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  23:21:16 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  23:21:17 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  23:21:17 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  23:21:42 ==> Loading Role List
+2013-Sep-09  23:21:42 ==> Role List Loaded
+2013-Sep-09  23:21:42 ==> Loading Doctor List
+2013-Sep-09  23:21:42 ==> Doctor List Loaded
+2013-Sep-09  23:21:43 ==> Loading Nurse List
+2013-Sep-09  23:21:43 ==> Nurse List Loaded
+2013-Sep-09  23:21:43 ==> Loading Role List
+2013-Sep-09  23:21:43 ==> Role List Loaded
+2013-Sep-09  23:21:43 ==> Loading AccountType List
+2013-Sep-09  23:21:43 ==> AccountType List Loaded
+2013-Sep-09  23:21:43 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-09  23:21:44 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  23:21:44 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  23:21:45 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-09  23:21:45 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-09  23:25:04 ==> Loading Role List
+2013-Sep-09  23:25:04 ==> Role List Loaded
+2013-Sep-09  23:25:04 ==> Loading Doctor List
+2013-Sep-09  23:25:04 ==> Doctor List Loaded
+2013-Sep-09  23:25:04 ==> Loading Nurse List
+2013-Sep-09  23:25:04 ==> Nurse List Loaded
+2013-Sep-09  23:25:04 ==> Loading Role List
+2013-Sep-09  23:25:04 ==> Role List Loaded
+2013-Sep-09  23:25:04 ==> Loading AccountType List
+2013-Sep-09  23:25:04 ==> AccountType List Loaded
+2013-Sep-09  23:27:38 ==> Loading Role List
+2013-Sep-09  23:27:38 ==> Role List Loaded
+2013-Sep-09  23:27:38 ==> Loading Doctor List
+2013-Sep-09  23:27:38 ==> Doctor List Loaded
+2013-Sep-09  23:27:38 ==> Loading Nurse List
+2013-Sep-09  23:27:38 ==> Nurse List Loaded
+2013-Sep-09  23:27:40 ==> Loading Role List
+2013-Sep-09  23:27:40 ==> Role List Loaded
+2013-Sep-09  23:27:40 ==> Loading Doctor List
+2013-Sep-09  23:27:40 ==> Doctor List Loaded
+2013-Sep-09  23:27:40 ==> Loading Nurse List
+2013-Sep-09  23:27:40 ==> Nurse List Loaded
+2013-Sep-09  23:28:15 ==> Loading Role List
+2013-Sep-09  23:28:15 ==> Role List Loaded
+2013-Sep-09  23:28:15 ==> Loading Doctor List
+2013-Sep-09  23:28:15 ==> Doctor List Loaded
+2013-Sep-09  23:28:15 ==> Loading Nurse List
+2013-Sep-09  23:28:15 ==> Nurse List Loaded
+2013-Sep-09  23:28:56 ==> Loading Role List
+2013-Sep-09  23:28:56 ==> Role List Loaded
+2013-Sep-09  23:28:56 ==> Loading Doctor List
+2013-Sep-09  23:28:56 ==> Doctor List Loaded
+2013-Sep-09  23:28:56 ==> Loading Nurse List
+2013-Sep-09  23:28:56 ==> Nurse List Loaded
+2013-Sep-09  23:28:56 ==> Loading Role List
+2013-Sep-09  23:28:56 ==> Role List Loaded
+2013-Sep-09  23:28:56 ==> Loading AccountType List
+2013-Sep-09  23:28:56 ==> AccountType List Loaded
+2013-Sep-09  23:29:26 ==> Loading Role List
+2013-Sep-09  23:29:26 ==> Role List Loaded
+2013-Sep-09  23:29:26 ==> Loading Doctor List
+2013-Sep-09  23:29:26 ==> Doctor List Loaded
+2013-Sep-09  23:29:26 ==> Loading Nurse List
+2013-Sep-09  23:29:26 ==> Nurse List Loaded
+2013-Sep-09  23:29:34 ==> Loading Role List
+2013-Sep-09  23:29:34 ==> Role List Loaded
+2013-Sep-09  23:29:34 ==> Loading Doctor List
+2013-Sep-09  23:29:34 ==> Doctor List Loaded
+2013-Sep-09  23:29:34 ==> Loading Nurse List
+2013-Sep-09  23:29:34 ==> Nurse List Loaded
+2013-Sep-09  23:29:34 ==> Loading Role List
+2013-Sep-09  23:29:34 ==> Role List Loaded
+2013-Sep-09  23:29:34 ==> Loading AccountType List
+2013-Sep-09  23:29:34 ==> AccountType List Loaded
+2013-Sep-09  23:29:46 ==> Loading Role List
+2013-Sep-09  23:29:46 ==> Role List Loaded
+2013-Sep-09  23:29:46 ==> Loading Doctor List
+2013-Sep-09  23:29:46 ==> Doctor List Loaded
+2013-Sep-09  23:29:46 ==> Loading Nurse List
+2013-Sep-09  23:29:46 ==> Nurse List Loaded
+2013-Sep-09  23:29:46 ==> Loading Role List
+2013-Sep-09  23:29:46 ==> Role List Loaded
+2013-Sep-09  23:29:46 ==> Loading AccountType List
+2013-Sep-09  23:29:46 ==> AccountType List Loaded
+2013-Sep-10  18:48:58 ==> Loading Role List
+2013-Sep-10  18:48:58 ==> Role List Loaded
+2013-Sep-10  18:48:58 ==> Loading Doctor List
+2013-Sep-10  18:48:58 ==> Doctor List Loaded
+2013-Sep-10  18:48:58 ==> Loading Nurse List
+2013-Sep-10  18:48:58 ==> Nurse List Loaded
+2013-Sep-10  18:48:58 ==> Loading Role List
+2013-Sep-10  18:48:59 ==> Role List Loaded
+2013-Sep-10  18:48:59 ==> Loading AccountType List
+2013-Sep-10  18:48:59 ==> AccountType List Loaded
+2013-Sep-10  18:49:05 ==> Loading Role List
+2013-Sep-10  18:49:05 ==> Role List Loaded
+2013-Sep-10  18:49:05 ==> Loading Doctor List
+2013-Sep-10  18:49:05 ==> Doctor List Loaded
+2013-Sep-10  18:49:05 ==> Loading Nurse List
+2013-Sep-10  18:49:05 ==> Nurse List Loaded
+2013-Sep-10  18:53:33 ==> HasPermission()## User don't have permission for activityID =2
+2013-Sep-10  18:53:33 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-10  18:53:33 ==> HasPermission()## User don't have permission for activityID =3
+2013-Sep-10  18:53:33 ==> HasPermission()## User don't have permission for activityID =2
+2013-Sep-10  18:53:33 ==> HasPermission()## User don't have permission for activityID =1
+2013-Sep-10  18:53:33 ==> HasPermission()## User don't have permission for activityID =3
+2013-Sep-10  18:53:37 ==> LoginVerification()## Login process started
+2013-Sep-10  18:53:37 ==> GetVisistorIP()## Your IP address is : 192.168.173.52
+2013-Sep-10  18:53:37 ==> IsVistorLocal()## Visitor isn't local, IP=192.168.173.52
+2013-Sep-10  18:53:37 ==> LoginVerification()## Login from unauthorized location
+2013-Sep-10  18:53:38 ==> LoginVerification()## Login failed, Error: Staff cannot login from remote
+2013-Sep-10  18:54:00 ==> LoginVerification()## Login process started
+2013-Sep-10  18:54:00 ==> GetVisistorIP()## Your IP address is : 192.168.173.52
+2013-Sep-10  18:54:00 ==> IsVistorLocal()## Visitor isn't local, IP=192.168.173.52
+2013-Sep-10  18:54:00 ==> LoginVerification()## Login from unauthorized location
+2013-Sep-10  18:54:00 ==> LoginVerification()## Login failed, Error: Staff cannot login from remote
+2013-Sep-10  18:55:03 ==> LoginVerification()## Login process started
+2013-Sep-10  18:55:03 ==> GetVisistorIP()## Your IP address is : 192.168.173.52
+2013-Sep-10  18:55:03 ==> IsVistorLocal()## Visitor isn't local, IP=192.168.173.52
+2013-Sep-10  18:55:03 ==> LoginVerification()## Login from unauthorized location
+2013-Sep-10  18:55:03 ==> LoginVerification()## Login failed, Error: Staff cannot login from remote
+2013-Sep-10  18:56:06 ==> LoginVerification()## Login process started
+2013-Sep-10  18:56:06 ==> GetVisistorIP()## Your IP address is : 192.168.173.52
+2013-Sep-10  18:56:06 ==> IsVistorLocal()## Visitor is local, IP=192.168.173.52
+2013-Sep-10  18:56:06 ==> LoginVerification()## Successfully Logged In by User:Ramesh Kumar Karn
+2013-Sep-10  18:56:06 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  18:56:11 ==> Loading Role List
+2013-Sep-10  18:56:11 ==> Role List Loaded
+2013-Sep-10  18:56:11 ==> Loading Doctor List
+2013-Sep-10  18:56:11 ==> Doctor List Loaded
+2013-Sep-10  18:56:11 ==> Loading Nurse List
+2013-Sep-10  18:56:11 ==> Nurse List Loaded
+2013-Sep-10  18:57:41 ==> Loading Role List
+2013-Sep-10  18:57:41 ==> Role List Loaded
+2013-Sep-10  18:57:41 ==> Loading Doctor List
+2013-Sep-10  18:57:41 ==> Doctor List Loaded
+2013-Sep-10  18:57:41 ==> Loading Nurse List
+2013-Sep-10  18:57:41 ==> Nurse List Loaded
+2013-Sep-10  18:57:57 ==> Loading Role List
+2013-Sep-10  18:57:57 ==> Role List Loaded
+2013-Sep-10  18:57:57 ==> Loading Doctor List
+2013-Sep-10  18:57:57 ==> Doctor List Loaded
+2013-Sep-10  18:57:57 ==> Loading Nurse List
+2013-Sep-10  18:57:57 ==> Nurse List Loaded
+2013-Sep-10  18:59:33 ==> Loading Role List
+2013-Sep-10  18:59:33 ==> Role List Loaded
+2013-Sep-10  18:59:33 ==> Loading Doctor List
+2013-Sep-10  18:59:33 ==> Doctor List Loaded
+2013-Sep-10  18:59:33 ==> Loading Nurse List
+2013-Sep-10  18:59:33 ==> Nurse List Loaded
+2013-Sep-10  18:59:33 ==> Loading Role List
+2013-Sep-10  18:59:33 ==> Role List Loaded
+2013-Sep-10  18:59:33 ==> Loading AccountType List
+2013-Sep-10  18:59:33 ==> AccountType List Loaded
+2013-Sep-10  19:00:00 ==> Loading Role List
+2013-Sep-10  19:00:00 ==> Role List Loaded
+2013-Sep-10  19:00:00 ==> Loading Doctor List
+2013-Sep-10  19:00:00 ==> Doctor List Loaded
+2013-Sep-10  19:00:00 ==> Loading Nurse List
+2013-Sep-10  19:00:00 ==> Nurse List Loaded
+2013-Sep-10  19:00:00 ==> Loading Role List
+2013-Sep-10  19:00:00 ==> Role List Loaded
+2013-Sep-10  19:00:00 ==> Loading AccountType List
+2013-Sep-10  19:00:00 ==> AccountType List Loaded
+2013-Sep-10  19:01:26 ==> Loading Role List
+2013-Sep-10  19:01:26 ==> Role List Loaded
+2013-Sep-10  19:01:26 ==> Loading Doctor List
+2013-Sep-10  19:01:26 ==> Doctor List Loaded
+2013-Sep-10  19:01:26 ==> Loading Nurse List
+2013-Sep-10  19:01:26 ==> Nurse List Loaded
+2013-Sep-10  19:01:26 ==> Loading Role List
+2013-Sep-10  19:01:26 ==> Role List Loaded
+2013-Sep-10  19:01:26 ==> Loading AccountType List
+2013-Sep-10  19:01:26 ==> AccountType List Loaded
+2013-Sep-10  19:01:27 ==> Loading Role List
+2013-Sep-10  19:01:27 ==> Role List Loaded
+2013-Sep-10  19:01:27 ==> Loading Doctor List
+2013-Sep-10  19:01:27 ==> Doctor List Loaded
+2013-Sep-10  19:01:27 ==> Loading Nurse List
+2013-Sep-10  19:01:27 ==> Nurse List Loaded
+2013-Sep-10  19:01:27 ==> Loading Role List
+2013-Sep-10  19:01:27 ==> Role List Loaded
+2013-Sep-10  19:01:28 ==> Loading AccountType List
+2013-Sep-10  19:01:28 ==> AccountType List Loaded
+2013-Sep-10  19:02:40 ==> Loading Role List
+2013-Sep-10  19:02:40 ==> Role List Loaded
+2013-Sep-10  19:02:40 ==> Loading Doctor List
+2013-Sep-10  19:02:40 ==> Doctor List Loaded
+2013-Sep-10  19:02:40 ==> Loading Nurse List
+2013-Sep-10  19:02:40 ==> Nurse List Loaded
+2013-Sep-10  19:02:40 ==> Loading Role List
+2013-Sep-10  19:02:40 ==> Role List Loaded
+2013-Sep-10  19:02:40 ==> Loading AccountType List
+2013-Sep-10  19:02:40 ==> AccountType List Loaded
+2013-Sep-10  19:04:49 ==> Loading Role List
+2013-Sep-10  19:04:49 ==> Role List Loaded
+2013-Sep-10  19:04:49 ==> Loading Doctor List
+2013-Sep-10  19:04:49 ==> Doctor List Loaded
+2013-Sep-10  19:04:49 ==> Loading Nurse List
+2013-Sep-10  19:04:49 ==> Nurse List Loaded
+2013-Sep-10  19:04:49 ==> Loading Role List
+2013-Sep-10  19:04:49 ==> Role List Loaded
+2013-Sep-10  19:04:49 ==> Loading AccountType List
+2013-Sep-10  19:04:49 ==> AccountType List Loaded
+2013-Sep-10  19:04:52 ==> Loading Role List
+2013-Sep-10  19:04:52 ==> Role List Loaded
+2013-Sep-10  19:04:52 ==> Loading Doctor List
+2013-Sep-10  19:04:52 ==> Doctor List Loaded
+2013-Sep-10  19:04:52 ==> Loading Nurse List
+2013-Sep-10  19:04:52 ==> Nurse List Loaded
+2013-Sep-10  19:04:52 ==> Loading Role List
+2013-Sep-10  19:04:52 ==> Role List Loaded
+2013-Sep-10  19:04:52 ==> Loading AccountType List
+2013-Sep-10  19:04:52 ==> AccountType List Loaded
+2013-Sep-10  19:05:01 ==> Loading Role List
+2013-Sep-10  19:05:02 ==> Role List Loaded
+2013-Sep-10  19:05:02 ==> Loading Doctor List
+2013-Sep-10  19:05:02 ==> Doctor List Loaded
+2013-Sep-10  19:05:02 ==> Loading Nurse List
+2013-Sep-10  19:05:02 ==> Nurse List Loaded
+2013-Sep-10  19:05:02 ==> Loading Role List
+2013-Sep-10  19:05:02 ==> Role List Loaded
+2013-Sep-10  19:05:02 ==> Loading AccountType List
+2013-Sep-10  19:05:02 ==> AccountType List Loaded
+2013-Sep-10  19:05:04 ==> Loading Role List
+2013-Sep-10  19:05:04 ==> Role List Loaded
+2013-Sep-10  19:05:04 ==> Loading Doctor List
+2013-Sep-10  19:05:04 ==> Doctor List Loaded
+2013-Sep-10  19:05:04 ==> Loading Nurse List
+2013-Sep-10  19:05:04 ==> Nurse List Loaded
+2013-Sep-10  19:05:04 ==> Loading Role List
+2013-Sep-10  19:05:04 ==> Role List Loaded
+2013-Sep-10  19:05:04 ==> Loading AccountType List
+2013-Sep-10  19:05:04 ==> AccountType List Loaded
+2013-Sep-10  19:05:06 ==> Loading Role List
+2013-Sep-10  19:05:06 ==> Role List Loaded
+2013-Sep-10  19:05:06 ==> Loading Doctor List
+2013-Sep-10  19:05:06 ==> Doctor List Loaded
+2013-Sep-10  19:05:06 ==> Loading Nurse List
+2013-Sep-10  19:05:06 ==> Nurse List Loaded
+2013-Sep-10  19:05:06 ==> Loading Role List
+2013-Sep-10  19:05:06 ==> Role List Loaded
+2013-Sep-10  19:05:06 ==> Loading AccountType List
+2013-Sep-10  19:05:06 ==> AccountType List Loaded
+2013-Sep-10  19:05:07 ==> Loading Role List
+2013-Sep-10  19:05:07 ==> Role List Loaded
+2013-Sep-10  19:05:07 ==> Loading Doctor List
+2013-Sep-10  19:05:07 ==> Doctor List Loaded
+2013-Sep-10  19:05:07 ==> Loading Nurse List
+2013-Sep-10  19:05:07 ==> Nurse List Loaded
+2013-Sep-10  19:05:07 ==> Loading Role List
+2013-Sep-10  19:05:07 ==> Role List Loaded
+2013-Sep-10  19:05:07 ==> Loading AccountType List
+2013-Sep-10  19:05:07 ==> AccountType List Loaded
+2013-Sep-10  19:05:11 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  19:05:13 ==> Loading Role List
+2013-Sep-10  19:05:13 ==> Role List Loaded
+2013-Sep-10  19:05:13 ==> Loading Doctor List
+2013-Sep-10  19:05:13 ==> Doctor List Loaded
+2013-Sep-10  19:05:13 ==> Loading Nurse List
+2013-Sep-10  19:05:13 ==> Nurse List Loaded
+2013-Sep-10  19:05:13 ==> Loading Role List
+2013-Sep-10  19:05:13 ==> Role List Loaded
+2013-Sep-10  19:05:13 ==> Loading AccountType List
+2013-Sep-10  19:05:13 ==> AccountType List Loaded
+2013-Sep-10  19:05:59 ==> Loading Role List
+2013-Sep-10  19:05:59 ==> Role List Loaded
+2013-Sep-10  19:05:59 ==> Loading Doctor List
+2013-Sep-10  19:05:59 ==> Doctor List Loaded
+2013-Sep-10  19:05:59 ==> Loading Nurse List
+2013-Sep-10  19:05:59 ==> Nurse List Loaded
+2013-Sep-10  19:05:59 ==> Loading Role List
+2013-Sep-10  19:05:59 ==> Role List Loaded
+2013-Sep-10  19:05:59 ==> Loading AccountType List
+2013-Sep-10  19:05:59 ==> AccountType List Loaded
+2013-Sep-10  19:06:03 ==> Loading Role List
+2013-Sep-10  19:06:03 ==> Role List Loaded
+2013-Sep-10  19:06:03 ==> Loading Doctor List
+2013-Sep-10  19:06:03 ==> Doctor List Loaded
+2013-Sep-10  19:06:03 ==> Loading Nurse List
+2013-Sep-10  19:06:03 ==> Nurse List Loaded
+2013-Sep-10  19:06:03 ==> Loading Role List
+2013-Sep-10  19:06:03 ==> Role List Loaded
+2013-Sep-10  19:06:03 ==> Loading AccountType List
+2013-Sep-10  19:06:03 ==> AccountType List Loaded
+2013-Sep-10  19:06:07 ==> Loading Role List
+2013-Sep-10  19:06:07 ==> Role List Loaded
+2013-Sep-10  19:06:07 ==> Loading Doctor List
+2013-Sep-10  19:06:07 ==> Doctor List Loaded
+2013-Sep-10  19:06:07 ==> Loading Nurse List
+2013-Sep-10  19:06:07 ==> Nurse List Loaded
+2013-Sep-10  19:06:07 ==> Loading Role List
+2013-Sep-10  19:06:07 ==> Role List Loaded
+2013-Sep-10  19:06:07 ==> Loading AccountType List
+2013-Sep-10  19:06:07 ==> AccountType List Loaded
+2013-Sep-10  19:06:32 ==> Loading Role List
+2013-Sep-10  19:06:32 ==> Role List Loaded
+2013-Sep-10  19:06:32 ==> Loading AccountType List
+2013-Sep-10  19:06:32 ==> AccountType List Loaded
+2013-Sep-10  19:06:33 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  19:06:35 ==> Loading Role List
+2013-Sep-10  19:06:35 ==> Role List Loaded
+2013-Sep-10  19:06:36 ==> Loading Doctor List
+2013-Sep-10  19:06:36 ==> Doctor List Loaded
+2013-Sep-10  19:06:36 ==> Loading Nurse List
+2013-Sep-10  19:06:36 ==> Nurse List Loaded
+2013-Sep-10  19:06:36 ==> Loading Role List
+2013-Sep-10  19:06:36 ==> Role List Loaded
+2013-Sep-10  19:06:36 ==> Loading AccountType List
+2013-Sep-10  19:06:36 ==> AccountType List Loaded
+2013-Sep-10  19:06:37 ==> Loading Role List
+2013-Sep-10  19:06:37 ==> Role List Loaded
+2013-Sep-10  19:06:37 ==> Loading AccountType List
+2013-Sep-10  19:06:37 ==> AccountType List Loaded
+2013-Sep-10  19:06:37 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  19:06:38 ==> Loading Role List
+2013-Sep-10  19:06:38 ==> Role List Loaded
+2013-Sep-10  19:06:38 ==> Loading Doctor List
+2013-Sep-10  19:06:38 ==> Doctor List Loaded
+2013-Sep-10  19:06:38 ==> Loading Nurse List
+2013-Sep-10  19:06:38 ==> Nurse List Loaded
+2013-Sep-10  19:08:28 ==> Loading Role List
+2013-Sep-10  19:08:28 ==> Role List Loaded
+2013-Sep-10  19:08:28 ==> Loading Doctor List
+2013-Sep-10  19:08:28 ==> Doctor List Loaded
+2013-Sep-10  19:08:28 ==> Loading Nurse List
+2013-Sep-10  19:08:28 ==> Nurse List Loaded
+2013-Sep-10  19:08:28 ==> Loading Role List
+2013-Sep-10  19:08:29 ==> Role List Loaded
+2013-Sep-10  19:08:29 ==> Loading AccountType List
+2013-Sep-10  19:08:29 ==> AccountType List Loaded
+2013-Sep-10  19:08:51 ==> Loading Role List
+2013-Sep-10  19:08:51 ==> Role List Loaded
+2013-Sep-10  19:08:51 ==> Loading AccountType List
+2013-Sep-10  19:08:51 ==> AccountType List Loaded
+2013-Sep-10  19:08:52 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  19:09:00 ==> Loading Role List
+2013-Sep-10  19:09:00 ==> Role List Loaded
+2013-Sep-10  19:09:00 ==> Loading Doctor List
+2013-Sep-10  19:09:00 ==> Doctor List Loaded
+2013-Sep-10  19:09:00 ==> Loading Nurse List
+2013-Sep-10  19:09:00 ==> Nurse List Loaded
+2013-Sep-10  19:09:00 ==> Loading Role List
+2013-Sep-10  19:09:00 ==> Role List Loaded
+2013-Sep-10  19:09:00 ==> Loading AccountType List
+2013-Sep-10  19:09:00 ==> AccountType List Loaded
+2013-Sep-10  19:09:01 ==> Loading Role List
+2013-Sep-10  19:09:01 ==> Role List Loaded
+2013-Sep-10  19:09:01 ==> Loading AccountType List
+2013-Sep-10  19:09:01 ==> AccountType List Loaded
+2013-Sep-10  19:09:01 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  19:09:02 ==> SearchRecord()## Search Started !!!
+2013-Sep-10  19:09:03 ==> SearchRecord()## Search Completed !!!
+2013-Sep-10  19:09:06 ==> SearchRecord()## Search Started !!!
+2013-Sep-10  19:09:06 ==> SearchRecord()## Search Completed !!!
+2013-Sep-10  19:09:17 ==> SearchRecord()## Search Started !!!
+2013-Sep-10  19:09:17 ==> SearchRecord()## Search Completed !!!
+2013-Sep-10  19:09:17 ==> SearchRecord()## Search Started !!!
+2013-Sep-10  19:09:17 ==> SearchRecord()## Search Completed !!!
+2013-Sep-10  19:10:40 ==> Loading Role List
+2013-Sep-10  19:10:40 ==> Role List Loaded
+2013-Sep-10  19:10:40 ==> Loading Doctor List
+2013-Sep-10  19:10:40 ==> Doctor List Loaded
+2013-Sep-10  19:10:40 ==> Loading Nurse List
+2013-Sep-10  19:10:40 ==> Nurse List Loaded
+2013-Sep-10  19:10:40 ==> Loading Role List
+2013-Sep-10  19:10:40 ==> Role List Loaded
+2013-Sep-10  19:10:40 ==> Loading AccountType List
+2013-Sep-10  19:10:40 ==> AccountType List Loaded
+2013-Sep-10  19:27:25 ==> Loading Role List
+2013-Sep-10  19:27:25 ==> Role List Loaded
+2013-Sep-10  19:27:25 ==> Loading Doctor List
+2013-Sep-10  19:27:25 ==> Doctor List Loaded
+2013-Sep-10  19:27:25 ==> Loading Nurse List
+2013-Sep-10  19:27:25 ==> Nurse List Loaded
+2013-Sep-10  19:27:30 ==> Loading Role List
+2013-Sep-10  19:27:31 ==> Role List Loaded
+2013-Sep-10  19:27:31 ==> Loading Doctor List
+2013-Sep-10  19:27:31 ==> Doctor List Loaded
+2013-Sep-10  19:27:31 ==> Loading Nurse List
+2013-Sep-10  19:27:31 ==> Nurse List Loaded
+2013-Sep-10  19:27:31 ==> Loading Role List
+2013-Sep-10  19:27:31 ==> Role List Loaded
+2013-Sep-10  19:27:31 ==> Loading AccountType List
+2013-Sep-10  19:27:31 ==> AccountType List Loaded
+2013-Sep-10  19:27:43 ==> Loading Role List
+2013-Sep-10  19:27:43 ==> Role List Loaded
+2013-Sep-10  19:27:43 ==> Loading Doctor List
+2013-Sep-10  19:27:43 ==> Doctor List Loaded
+2013-Sep-10  19:27:43 ==> Loading Nurse List
+2013-Sep-10  19:27:43 ==> Nurse List Loaded
+2013-Sep-10  19:47:18 ==> Loading Role List
+2013-Sep-10  19:47:18 ==> Role List Loaded
+2013-Sep-10  19:47:18 ==> Loading Doctor List
+2013-Sep-10  19:47:18 ==> Doctor List Loaded
+2013-Sep-10  19:47:18 ==> Loading Nurse List
+2013-Sep-10  19:47:18 ==> Nurse List Loaded
+2013-Sep-10  19:47:19 ==> Loading Role List
+2013-Sep-10  19:47:19 ==> Role List Loaded
+2013-Sep-10  19:47:19 ==> Loading Doctor List
+2013-Sep-10  19:47:19 ==> Doctor List Loaded
+2013-Sep-10  19:47:19 ==> Loading Nurse List
+2013-Sep-10  19:47:19 ==> Nurse List Loaded
+2013-Sep-10  19:47:36 ==> Loading Role List
+2013-Sep-10  19:47:36 ==> Role List Loaded
+2013-Sep-10  19:47:36 ==> Loading AccountType List
+2013-Sep-10  19:47:36 ==> AccountType List Loaded
+2013-Sep-10  19:47:36 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  19:47:38 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  19:49:23 ==> Loading Role List
+2013-Sep-10  19:49:23 ==> Role List Loaded
+2013-Sep-10  19:49:23 ==> Loading Doctor List
+2013-Sep-10  19:49:23 ==> Doctor List Loaded
+2013-Sep-10  19:49:23 ==> Loading Nurse List
+2013-Sep-10  19:49:23 ==> Nurse List Loaded
+2013-Sep-10  19:49:37 ==> LoginVerification()## Login process started
+2013-Sep-10  19:49:37 ==> GetVisistorIP()## Your IP address is : 192.168.173.52
+2013-Sep-10  19:49:37 ==> IsVistorLocal()## Visitor is local, IP=192.168.173.52
+2013-Sep-10  19:49:37 ==> LoginVerification()## Successfully Logged In by User:Ramesh Kumar Karn
+2013-Sep-10  19:49:37 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  20:04:55 ==> Loading Role List
+2013-Sep-10  20:04:55 ==> Role List Loaded
+2013-Sep-10  20:04:55 ==> Loading Doctor List
+2013-Sep-10  20:04:55 ==> Doctor List Loaded
+2013-Sep-10  20:04:55 ==> Loading Nurse List
+2013-Sep-10  20:04:55 ==> Nurse List Loaded
+2013-Sep-10  20:05:02 ==> Loading Role List
+2013-Sep-10  20:05:02 ==> Role List Loaded
+2013-Sep-10  20:05:02 ==> Loading Doctor List
+2013-Sep-10  20:05:02 ==> Doctor List Loaded
+2013-Sep-10  20:05:02 ==> Loading Nurse List
+2013-Sep-10  20:05:02 ==> Nurse List Loaded
+2013-Sep-10  20:05:02 ==> Loading Role List
+2013-Sep-10  20:05:02 ==> Role List Loaded
+2013-Sep-10  20:05:02 ==> Loading AccountType List
+2013-Sep-10  20:05:02 ==> AccountType List Loaded
+2013-Sep-10  20:05:33 ==> Loading Role List
+2013-Sep-10  20:05:33 ==> Role List Loaded
+2013-Sep-10  20:05:33 ==> Loading Doctor List
+2013-Sep-10  20:05:33 ==> Doctor List Loaded
+2013-Sep-10  20:05:33 ==> Loading Nurse List
+2013-Sep-10  20:05:33 ==> Nurse List Loaded
+2013-Sep-10  20:05:38 ==> Loading Role List
+2013-Sep-10  20:05:38 ==> Role List Loaded
+2013-Sep-10  20:05:38 ==> Loading Doctor List
+2013-Sep-10  20:05:38 ==> Doctor List Loaded
+2013-Sep-10  20:05:38 ==> Loading Nurse List
+2013-Sep-10  20:05:38 ==> Nurse List Loaded
+2013-Sep-10  20:05:38 ==> Loading Role List
+2013-Sep-10  20:05:38 ==> Role List Loaded
+2013-Sep-10  20:05:38 ==> Loading AccountType List
+2013-Sep-10  20:05:38 ==> AccountType List Loaded
+2013-Sep-10  20:05:39 ==> Loading Role List
+2013-Sep-10  20:05:39 ==> Role List Loaded
+2013-Sep-10  20:05:39 ==> Loading AccountType List
+2013-Sep-10  20:05:39 ==> AccountType List Loaded
+2013-Sep-10  20:05:39 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  20:05:40 ==> Loading Role List
+2013-Sep-10  20:05:40 ==> Role List Loaded
+2013-Sep-10  20:05:40 ==> Loading Doctor List
+2013-Sep-10  20:05:40 ==> Doctor List Loaded
+2013-Sep-10  20:05:40 ==> Loading Nurse List
+2013-Sep-10  20:05:40 ==> Nurse List Loaded
+2013-Sep-10  20:05:40 ==> Loading Role List
+2013-Sep-10  20:05:40 ==> Role List Loaded
+2013-Sep-10  20:05:40 ==> Loading AccountType List
+2013-Sep-10  20:05:40 ==> AccountType List Loaded
+2013-Sep-10  20:06:17 ==> Loading Role List
+2013-Sep-10  20:06:17 ==> Role List Loaded
+2013-Sep-10  20:06:17 ==> Loading Doctor List
+2013-Sep-10  20:06:17 ==> Doctor List Loaded
+2013-Sep-10  20:06:17 ==> Loading Nurse List
+2013-Sep-10  20:06:17 ==> Nurse List Loaded
+2013-Sep-10  20:06:17 ==> Loading Role List
+2013-Sep-10  20:06:17 ==> Role List Loaded
+2013-Sep-10  20:06:17 ==> Loading AccountType List
+2013-Sep-10  20:06:17 ==> AccountType List Loaded
+2013-Sep-10  20:06:17 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  20:06:18 ==> Loading Role List
+2013-Sep-10  20:06:18 ==> Role List Loaded
+2013-Sep-10  20:06:18 ==> Loading Doctor List
+2013-Sep-10  20:06:18 ==> Doctor List Loaded
+2013-Sep-10  20:06:18 ==> Loading Nurse List
+2013-Sep-10  20:06:18 ==> Nurse List Loaded
+2013-Sep-10  20:06:18 ==> Loading Role List
+2013-Sep-10  20:06:18 ==> Role List Loaded
+2013-Sep-10  20:06:18 ==> Loading AccountType List
+2013-Sep-10  20:06:18 ==> AccountType List Loaded
+2013-Sep-10  20:06:19 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  20:06:21 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  20:06:21 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  20:06:22 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  20:06:23 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  20:07:30 ==> Loading Role List
+2013-Sep-10  20:07:30 ==> Role List Loaded
+2013-Sep-10  20:07:30 ==> Loading Doctor List
+2013-Sep-10  20:07:30 ==> Doctor List Loaded
+2013-Sep-10  20:07:30 ==> Loading Nurse List
+2013-Sep-10  20:07:30 ==> Nurse List Loaded
+2013-Sep-10  20:07:30 ==> Loading Role List
+2013-Sep-10  20:07:30 ==> Role List Loaded
+2013-Sep-10  20:07:30 ==> Loading AccountType List
+2013-Sep-10  20:07:30 ==> AccountType List Loaded
+2013-Sep-10  20:07:30 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  20:07:32 ==> SearchRecord()## Search Started !!!
+2013-Sep-10  20:07:32 ==> SearchRecord()## Search Completed !!!
+2013-Sep-10  20:07:33 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  20:07:33 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  20:07:36 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  20:07:36 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  20:08:52 ==> Loading Role List
+2013-Sep-10  20:08:52 ==> Role List Loaded
+2013-Sep-10  20:08:52 ==> Loading Doctor List
+2013-Sep-10  20:08:52 ==> Doctor List Loaded
+2013-Sep-10  20:08:52 ==> Loading Nurse List
+2013-Sep-10  20:08:52 ==> Nurse List Loaded
+2013-Sep-10  20:11:57 ==> Loading Role List
+2013-Sep-10  20:11:57 ==> Role List Loaded
+2013-Sep-10  20:11:57 ==> Loading Doctor List
+2013-Sep-10  20:11:58 ==> Doctor List Loaded
+2013-Sep-10  20:11:58 ==> Loading Nurse List
+2013-Sep-10  20:11:58 ==> Nurse List Loaded
+2013-Sep-10  20:12:08 ==> Loading Role List
+2013-Sep-10  20:12:08 ==> Role List Loaded
+2013-Sep-10  20:12:08 ==> Loading Doctor List
+2013-Sep-10  20:12:08 ==> Doctor List Loaded
+2013-Sep-10  20:12:08 ==> Loading Nurse List
+2013-Sep-10  20:12:08 ==> Nurse List Loaded
+2013-Sep-10  20:14:03 ==> Loading Role List
+2013-Sep-10  20:14:03 ==> Role List Loaded
+2013-Sep-10  20:14:03 ==> Loading Doctor List
+2013-Sep-10  20:14:03 ==> Doctor List Loaded
+2013-Sep-10  20:14:03 ==> Loading Nurse List
+2013-Sep-10  20:14:03 ==> Nurse List Loaded
+2013-Sep-10  20:14:23 ==> Loading Role List
+2013-Sep-10  20:14:23 ==> Role List Loaded
+2013-Sep-10  20:14:23 ==> Loading Doctor List
+2013-Sep-10  20:14:23 ==> Doctor List Loaded
+2013-Sep-10  20:14:23 ==> Loading Nurse List
+2013-Sep-10  20:14:23 ==> Nurse List Loaded
+2013-Sep-10  20:14:58 ==> Loading Role List
+2013-Sep-10  20:14:58 ==> Role List Loaded
+2013-Sep-10  20:14:58 ==> Loading Doctor List
+2013-Sep-10  20:14:58 ==> Doctor List Loaded
+2013-Sep-10  20:14:58 ==> Loading Nurse List
+2013-Sep-10  20:14:58 ==> Nurse List Loaded
+2013-Sep-10  20:15:23 ==> Loading Role List
+2013-Sep-10  20:15:23 ==> Role List Loaded
+2013-Sep-10  20:15:23 ==> Loading Doctor List
+2013-Sep-10  20:15:23 ==> Doctor List Loaded
+2013-Sep-10  20:15:23 ==> Loading Nurse List
+2013-Sep-10  20:15:23 ==> Nurse List Loaded
+2013-Sep-10  20:17:41 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  20:17:43 ==> Loading Role List
+2013-Sep-10  20:17:43 ==> Role List Loaded
+2013-Sep-10  20:17:43 ==> Loading Doctor List
+2013-Sep-10  20:17:43 ==> Doctor List Loaded
+2013-Sep-10  20:17:43 ==> Loading Nurse List
+2013-Sep-10  20:17:44 ==> Nurse List Loaded
+2013-Sep-10  20:17:46 ==> Loading Role List
+2013-Sep-10  20:17:46 ==> Role List Loaded
+2013-Sep-10  20:17:46 ==> Loading Doctor List
+2013-Sep-10  20:17:46 ==> Doctor List Loaded
+2013-Sep-10  20:17:46 ==> Loading Nurse List
+2013-Sep-10  20:17:46 ==> Nurse List Loaded
+2013-Sep-10  20:17:51 ==> Loading Role List
+2013-Sep-10  20:17:51 ==> Role List Loaded
+2013-Sep-10  20:17:51 ==> Loading Doctor List
+2013-Sep-10  20:17:51 ==> Doctor List Loaded
+2013-Sep-10  20:17:51 ==> Loading Nurse List
+2013-Sep-10  20:17:51 ==> Nurse List Loaded
+2013-Sep-10  20:18:18 ==> Loading Role List
+2013-Sep-10  20:18:18 ==> Role List Loaded
+2013-Sep-10  20:18:18 ==> Loading Doctor List
+2013-Sep-10  20:18:18 ==> Doctor List Loaded
+2013-Sep-10  20:18:18 ==> Loading Nurse List
+2013-Sep-10  20:18:18 ==> Nurse List Loaded
+2013-Sep-10  20:18:29 ==> Loading Role List
+2013-Sep-10  20:18:29 ==> Role List Loaded
+2013-Sep-10  20:18:29 ==> Loading Doctor List
+2013-Sep-10  20:18:29 ==> Doctor List Loaded
+2013-Sep-10  20:18:29 ==> Loading Nurse List
+2013-Sep-10  20:18:29 ==> Nurse List Loaded
+2013-Sep-10  20:18:30 ==> Loading Role List
+2013-Sep-10  20:18:30 ==> Role List Loaded
+2013-Sep-10  20:18:30 ==> Loading Doctor List
+2013-Sep-10  20:18:31 ==> Doctor List Loaded
+2013-Sep-10  20:18:31 ==> Loading Nurse List
+2013-Sep-10  20:18:31 ==> Nurse List Loaded
+2013-Sep-10  20:18:31 ==> Loading Role List
+2013-Sep-10  20:18:31 ==> Role List Loaded
+2013-Sep-10  20:18:32 ==> Loading Doctor List
+2013-Sep-10  20:18:32 ==> Doctor List Loaded
+2013-Sep-10  20:18:32 ==> Loading Nurse List
+2013-Sep-10  20:18:32 ==> Nurse List Loaded
+2013-Sep-10  20:18:32 ==> Loading Role List
+2013-Sep-10  20:18:32 ==> Role List Loaded
+2013-Sep-10  20:18:32 ==> Loading Doctor List
+2013-Sep-10  20:18:32 ==> Doctor List Loaded
+2013-Sep-10  20:18:32 ==> Loading Nurse List
+2013-Sep-10  20:18:32 ==> Nurse List Loaded
+2013-Sep-10  20:18:35 ==> Loading Role List
+2013-Sep-10  20:18:36 ==> Role List Loaded
+2013-Sep-10  20:18:36 ==> Loading Doctor List
+2013-Sep-10  20:18:36 ==> Doctor List Loaded
+2013-Sep-10  20:18:36 ==> Loading Nurse List
+2013-Sep-10  20:18:36 ==> Nurse List Loaded
+2013-Sep-10  20:19:08 ==> Loading Role List
+2013-Sep-10  20:19:08 ==> Role List Loaded
+2013-Sep-10  20:19:08 ==> Loading Doctor List
+2013-Sep-10  20:19:08 ==> Doctor List Loaded
+2013-Sep-10  20:19:08 ==> Loading Nurse List
+2013-Sep-10  20:19:08 ==> Nurse List Loaded
+2013-Sep-10  20:19:25 ==> Loading Role List
+2013-Sep-10  20:19:25 ==> Role List Loaded
+2013-Sep-10  20:19:25 ==> Loading Doctor List
+2013-Sep-10  20:19:25 ==> Doctor List Loaded
+2013-Sep-10  20:19:25 ==> Loading Nurse List
+2013-Sep-10  20:19:25 ==> Nurse List Loaded
+2013-Sep-10  20:20:23 ==> Loading Role List
+2013-Sep-10  20:20:23 ==> Role List Loaded
+2013-Sep-10  20:20:23 ==> Loading Doctor List
+2013-Sep-10  20:20:23 ==> Doctor List Loaded
+2013-Sep-10  20:20:23 ==> Loading Nurse List
+2013-Sep-10  20:20:24 ==> Nurse List Loaded
+2013-Sep-10  20:20:30 ==> Loading Role List
+2013-Sep-10  20:20:30 ==> Role List Loaded
+2013-Sep-10  20:20:30 ==> Loading Doctor List
+2013-Sep-10  20:20:30 ==> Doctor List Loaded
+2013-Sep-10  20:20:30 ==> Loading Nurse List
+2013-Sep-10  20:20:30 ==> Nurse List Loaded
+2013-Sep-10  20:20:53 ==> Loading Role List
+2013-Sep-10  20:20:53 ==> Role List Loaded
+2013-Sep-10  20:20:53 ==> Loading Doctor List
+2013-Sep-10  20:20:53 ==> Doctor List Loaded
+2013-Sep-10  20:20:53 ==> Loading Nurse List
+2013-Sep-10  20:20:53 ==> Nurse List Loaded
+2013-Sep-10  20:20:54 ==> Loading Role List
+2013-Sep-10  20:20:54 ==> Role List Loaded
+2013-Sep-10  20:20:54 ==> Loading Doctor List
+2013-Sep-10  20:20:54 ==> Doctor List Loaded
+2013-Sep-10  20:20:54 ==> Loading Nurse List
+2013-Sep-10  20:20:54 ==> Nurse List Loaded
+2013-Sep-10  20:20:55 ==> Loading Role List
+2013-Sep-10  20:20:55 ==> Role List Loaded
+2013-Sep-10  20:20:55 ==> Loading Doctor List
+2013-Sep-10  20:20:55 ==> Doctor List Loaded
+2013-Sep-10  20:20:55 ==> Loading Nurse List
+2013-Sep-10  20:20:55 ==> Nurse List Loaded
+2013-Sep-10  20:20:55 ==> Loading Role List
+2013-Sep-10  20:20:55 ==> Role List Loaded
+2013-Sep-10  20:20:55 ==> Loading Doctor List
+2013-Sep-10  20:20:55 ==> Doctor List Loaded
+2013-Sep-10  20:20:55 ==> Loading Nurse List
+2013-Sep-10  20:20:55 ==> Nurse List Loaded
+2013-Sep-10  20:21:46 ==> Loading Role List
+2013-Sep-10  20:21:46 ==> Role List Loaded
+2013-Sep-10  20:21:46 ==> Loading Doctor List
+2013-Sep-10  20:21:46 ==> Doctor List Loaded
+2013-Sep-10  20:21:46 ==> Loading Nurse List
+2013-Sep-10  20:21:46 ==> Nurse List Loaded
+2013-Sep-10  20:21:49 ==> Loading Role List
+2013-Sep-10  20:21:49 ==> Role List Loaded
+2013-Sep-10  20:21:49 ==> Loading Doctor List
+2013-Sep-10  20:21:49 ==> Doctor List Loaded
+2013-Sep-10  20:21:49 ==> Loading Nurse List
+2013-Sep-10  20:21:49 ==> Nurse List Loaded
+2013-Sep-10  20:21:49 ==> Loading Role List
+2013-Sep-10  20:21:49 ==> Role List Loaded
+2013-Sep-10  20:21:50 ==> Loading Doctor List
+2013-Sep-10  20:21:50 ==> Doctor List Loaded
+2013-Sep-10  20:21:50 ==> Loading Nurse List
+2013-Sep-10  20:21:50 ==> Nurse List Loaded
+2013-Sep-10  20:21:50 ==> Loading Role List
+2013-Sep-10  20:21:50 ==> Role List Loaded
+2013-Sep-10  20:21:50 ==> Loading Doctor List
+2013-Sep-10  20:21:50 ==> Doctor List Loaded
+2013-Sep-10  20:21:50 ==> Loading Nurse List
+2013-Sep-10  20:21:50 ==> Nurse List Loaded
+2013-Sep-10  20:21:50 ==> Loading Role List
+2013-Sep-10  20:21:50 ==> Role List Loaded
+2013-Sep-10  20:21:50 ==> Loading Doctor List
+2013-Sep-10  20:21:50 ==> Doctor List Loaded
+2013-Sep-10  20:21:50 ==> Loading Nurse List
+2013-Sep-10  20:21:50 ==> Nurse List Loaded
+2013-Sep-10  20:21:50 ==> Loading Role List
+2013-Sep-10  20:21:50 ==> Role List Loaded
+2013-Sep-10  20:21:50 ==> Loading Doctor List
+2013-Sep-10  20:21:50 ==> Doctor List Loaded
+2013-Sep-10  20:21:50 ==> Loading Nurse List
+2013-Sep-10  20:21:50 ==> Nurse List Loaded
+2013-Sep-10  20:21:53 ==> Loading Role List
+2013-Sep-10  20:21:53 ==> Role List Loaded
+2013-Sep-10  20:21:53 ==> Loading Doctor List
+2013-Sep-10  20:21:53 ==> Doctor List Loaded
+2013-Sep-10  20:21:53 ==> Loading Nurse List
+2013-Sep-10  20:21:53 ==> Nurse List Loaded
+2013-Sep-10  20:22:27 ==> Loading Role List
+2013-Sep-10  20:22:27 ==> Role List Loaded
+2013-Sep-10  20:22:27 ==> Loading Doctor List
+2013-Sep-10  20:22:27 ==> Doctor List Loaded
+2013-Sep-10  20:22:27 ==> Loading Nurse List
+2013-Sep-10  20:22:27 ==> Nurse List Loaded
+2013-Sep-10  20:22:28 ==> Loading Role List
+2013-Sep-10  20:22:28 ==> Role List Loaded
+2013-Sep-10  20:22:28 ==> Loading Doctor List
+2013-Sep-10  20:22:29 ==> Doctor List Loaded
+2013-Sep-10  20:22:29 ==> Loading Nurse List
+2013-Sep-10  20:22:29 ==> Nurse List Loaded
+2013-Sep-10  20:22:29 ==> Loading Role List
+2013-Sep-10  20:22:29 ==> Role List Loaded
+2013-Sep-10  20:22:29 ==> Loading Doctor List
+2013-Sep-10  20:22:29 ==> Doctor List Loaded
+2013-Sep-10  20:22:29 ==> Loading Nurse List
+2013-Sep-10  20:22:29 ==> Nurse List Loaded
+2013-Sep-10  20:22:29 ==> Loading Role List
+2013-Sep-10  20:22:29 ==> Role List Loaded
+2013-Sep-10  20:22:29 ==> Loading Doctor List
+2013-Sep-10  20:22:29 ==> Doctor List Loaded
+2013-Sep-10  20:22:29 ==> Loading Nurse List
+2013-Sep-10  20:22:29 ==> Nurse List Loaded
+2013-Sep-10  20:22:29 ==> Loading Role List
+2013-Sep-10  20:22:29 ==> Role List Loaded
+2013-Sep-10  20:22:29 ==> Loading Doctor List
+2013-Sep-10  20:22:29 ==> Doctor List Loaded
+2013-Sep-10  20:22:29 ==> Loading Nurse List
+2013-Sep-10  20:22:29 ==> Nurse List Loaded
+2013-Sep-10  20:22:29 ==> Loading Role List
+2013-Sep-10  20:22:29 ==> Role List Loaded
+2013-Sep-10  20:22:29 ==> Loading Doctor List
+2013-Sep-10  20:22:29 ==> Doctor List Loaded
+2013-Sep-10  20:22:29 ==> Loading Nurse List
+2013-Sep-10  20:22:29 ==> Nurse List Loaded
+2013-Sep-10  20:22:29 ==> Loading Role List
+2013-Sep-10  20:22:30 ==> Role List Loaded
+2013-Sep-10  20:22:30 ==> Loading Doctor List
+2013-Sep-10  20:22:30 ==> Doctor List Loaded
+2013-Sep-10  20:22:30 ==> Loading Nurse List
+2013-Sep-10  20:22:30 ==> Nurse List Loaded
+2013-Sep-10  20:22:30 ==> Loading Role List
+2013-Sep-10  20:22:30 ==> Role List Loaded
+2013-Sep-10  20:22:30 ==> Loading Doctor List
+2013-Sep-10  20:22:30 ==> Doctor List Loaded
+2013-Sep-10  20:22:30 ==> Loading Nurse List
+2013-Sep-10  20:22:30 ==> Nurse List Loaded
+2013-Sep-10  20:22:37 ==> Loading Role List
+2013-Sep-10  20:22:37 ==> Role List Loaded
+2013-Sep-10  20:22:37 ==> Loading Doctor List
+2013-Sep-10  20:22:37 ==> Doctor List Loaded
+2013-Sep-10  20:22:37 ==> Loading Nurse List
+2013-Sep-10  20:22:37 ==> Nurse List Loaded
+2013-Sep-10  20:22:41 ==> Loading Role List
+2013-Sep-10  20:22:41 ==> Role List Loaded
+2013-Sep-10  20:22:41 ==> Loading Doctor List
+2013-Sep-10  20:22:41 ==> Doctor List Loaded
+2013-Sep-10  20:22:41 ==> Loading Nurse List
+2013-Sep-10  20:22:41 ==> Nurse List Loaded
+2013-Sep-10  20:23:31 ==> Loading Role List
+2013-Sep-10  20:23:31 ==> Role List Loaded
+2013-Sep-10  20:23:31 ==> Loading Doctor List
+2013-Sep-10  20:23:31 ==> Doctor List Loaded
+2013-Sep-10  20:23:31 ==> Loading Nurse List
+2013-Sep-10  20:23:31 ==> Nurse List Loaded
+2013-Sep-10  20:23:49 ==> Loading Role List
+2013-Sep-10  20:23:49 ==> Role List Loaded
+2013-Sep-10  20:23:49 ==> Loading Doctor List
+2013-Sep-10  20:23:49 ==> Doctor List Loaded
+2013-Sep-10  20:23:49 ==> Loading Nurse List
+2013-Sep-10  20:23:49 ==> Nurse List Loaded
+2013-Sep-10  20:25:20 ==> Loading Role List
+2013-Sep-10  20:25:20 ==> Role List Loaded
+2013-Sep-10  20:25:20 ==> Loading Doctor List
+2013-Sep-10  20:25:20 ==> Doctor List Loaded
+2013-Sep-10  20:25:21 ==> Loading Nurse List
+2013-Sep-10  20:25:21 ==> Nurse List Loaded
+2013-Sep-10  20:26:11 ==> Loading Role List
+2013-Sep-10  20:26:11 ==> Role List Loaded
+2013-Sep-10  20:26:11 ==> Loading Doctor List
+2013-Sep-10  20:26:11 ==> Doctor List Loaded
+2013-Sep-10  20:26:11 ==> Loading Nurse List
+2013-Sep-10  20:26:11 ==> Nurse List Loaded
+2013-Sep-10  20:26:12 ==> Loading Role List
+2013-Sep-10  20:26:12 ==> Role List Loaded
+2013-Sep-10  20:26:12 ==> Loading Doctor List
+2013-Sep-10  20:26:12 ==> Doctor List Loaded
+2013-Sep-10  20:26:12 ==> Loading Nurse List
+2013-Sep-10  20:26:12 ==> Nurse List Loaded
+2013-Sep-10  20:26:15 ==> Loading Role List
+2013-Sep-10  20:26:15 ==> Role List Loaded
+2013-Sep-10  20:26:15 ==> Loading Doctor List
+2013-Sep-10  20:26:15 ==> Doctor List Loaded
+2013-Sep-10  20:26:15 ==> Loading Nurse List
+2013-Sep-10  20:26:15 ==> Nurse List Loaded
+2013-Sep-10  20:27:01 ==> Loading Role List
+2013-Sep-10  20:27:01 ==> Role List Loaded
+2013-Sep-10  20:27:01 ==> Loading Doctor List
+2013-Sep-10  20:27:01 ==> Doctor List Loaded
+2013-Sep-10  20:27:01 ==> Loading Nurse List
+2013-Sep-10  20:27:01 ==> Nurse List Loaded
+2013-Sep-10  20:27:06 ==> Loading Role List
+2013-Sep-10  20:27:06 ==> Role List Loaded
+2013-Sep-10  20:27:06 ==> Loading Doctor List
+2013-Sep-10  20:27:06 ==> Doctor List Loaded
+2013-Sep-10  20:27:06 ==> Loading Nurse List
+2013-Sep-10  20:27:06 ==> Nurse List Loaded
+2013-Sep-10  20:27:28 ==> Loading Role List
+2013-Sep-10  20:27:28 ==> Role List Loaded
+2013-Sep-10  20:27:28 ==> Loading Doctor List
+2013-Sep-10  20:27:28 ==> Doctor List Loaded
+2013-Sep-10  20:27:28 ==> Loading Nurse List
+2013-Sep-10  20:27:28 ==> Nurse List Loaded
+2013-Sep-10  20:27:31 ==> Loading Role List
+2013-Sep-10  20:27:31 ==> Role List Loaded
+2013-Sep-10  20:27:31 ==> Loading Doctor List
+2013-Sep-10  20:27:31 ==> Doctor List Loaded
+2013-Sep-10  20:27:31 ==> Loading Nurse List
+2013-Sep-10  20:27:31 ==> Nurse List Loaded
+2013-Sep-10  20:28:45 ==> Loading Role List
+2013-Sep-10  20:28:45 ==> Role List Loaded
+2013-Sep-10  20:28:45 ==> Loading Doctor List
+2013-Sep-10  20:28:45 ==> Doctor List Loaded
+2013-Sep-10  20:28:45 ==> Loading Nurse List
+2013-Sep-10  20:28:45 ==> Nurse List Loaded
+2013-Sep-10  20:28:45 ==> Loading Role List
+2013-Sep-10  20:28:45 ==> Role List Loaded
+2013-Sep-10  20:28:45 ==> Loading AccountType List
+2013-Sep-10  20:28:45 ==> AccountType List Loaded
+2013-Sep-10  20:28:45 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  20:28:50 ==> SearchRecord()## Search Started !!!
+2013-Sep-10  20:28:50 ==> SearchRecord()## Search Completed !!!
+2013-Sep-10  20:28:53 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  20:28:53 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  20:28:54 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  20:28:54 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  20:29:20 ==> Loading Role List
+2013-Sep-10  20:29:20 ==> Role List Loaded
+2013-Sep-10  20:29:20 ==> Loading Doctor List
+2013-Sep-10  20:29:20 ==> Doctor List Loaded
+2013-Sep-10  20:29:21 ==> Loading Nurse List
+2013-Sep-10  20:29:21 ==> Nurse List Loaded
+2013-Sep-10  20:29:22 ==> Loading Role List
+2013-Sep-10  20:29:22 ==> Role List Loaded
+2013-Sep-10  20:29:22 ==> Loading Doctor List
+2013-Sep-10  20:29:22 ==> Doctor List Loaded
+2013-Sep-10  20:29:22 ==> Loading Nurse List
+2013-Sep-10  20:29:22 ==> Nurse List Loaded
+2013-Sep-10  20:30:05 ==> Loading Role List
+2013-Sep-10  20:30:05 ==> Role List Loaded
+2013-Sep-10  20:30:05 ==> Loading Doctor List
+2013-Sep-10  20:30:05 ==> Doctor List Loaded
+2013-Sep-10  20:30:05 ==> Loading Nurse List
+2013-Sep-10  20:30:05 ==> Nurse List Loaded
+2013-Sep-10  20:30:52 ==> Loading Role List
+2013-Sep-10  20:30:52 ==> Role List Loaded
+2013-Sep-10  20:30:52 ==> Loading Doctor List
+2013-Sep-10  20:30:52 ==> Doctor List Loaded
+2013-Sep-10  20:30:52 ==> Loading Nurse List
+2013-Sep-10  20:30:52 ==> Nurse List Loaded
+2013-Sep-10  20:31:17 ==> Loading Role List
+2013-Sep-10  20:31:17 ==> Role List Loaded
+2013-Sep-10  20:31:17 ==> Loading Doctor List
+2013-Sep-10  20:31:17 ==> Doctor List Loaded
+2013-Sep-10  20:31:17 ==> Loading Nurse List
+2013-Sep-10  20:31:17 ==> Nurse List Loaded
+2013-Sep-10  20:31:31 ==> Loading Role List
+2013-Sep-10  20:31:31 ==> Role List Loaded
+2013-Sep-10  20:31:31 ==> Loading Doctor List
+2013-Sep-10  20:31:31 ==> Doctor List Loaded
+2013-Sep-10  20:31:31 ==> Loading Nurse List
+2013-Sep-10  20:31:31 ==> Nurse List Loaded
+2013-Sep-10  20:31:34 ==> Loading Role List
+2013-Sep-10  20:31:34 ==> Role List Loaded
+2013-Sep-10  20:31:34 ==> Loading Doctor List
+2013-Sep-10  20:31:34 ==> Doctor List Loaded
+2013-Sep-10  20:31:34 ==> Loading Nurse List
+2013-Sep-10  20:31:34 ==> Nurse List Loaded
+2013-Sep-10  20:32:28 ==> Loading Role List
+2013-Sep-10  20:32:28 ==> Role List Loaded
+2013-Sep-10  20:32:28 ==> Loading Doctor List
+2013-Sep-10  20:32:28 ==> Doctor List Loaded
+2013-Sep-10  20:32:28 ==> Loading Nurse List
+2013-Sep-10  20:32:28 ==> Nurse List Loaded
+2013-Sep-10  20:32:46 ==> Loading Role List
+2013-Sep-10  20:32:46 ==> Role List Loaded
+2013-Sep-10  20:32:46 ==> Loading Doctor List
+2013-Sep-10  20:32:46 ==> Doctor List Loaded
+2013-Sep-10  20:32:46 ==> Loading Nurse List
+2013-Sep-10  20:32:46 ==> Nurse List Loaded
+2013-Sep-10  20:32:53 ==> Loading Role List
+2013-Sep-10  20:32:53 ==> Role List Loaded
+2013-Sep-10  20:32:53 ==> Loading Doctor List
+2013-Sep-10  20:32:53 ==> Doctor List Loaded
+2013-Sep-10  20:32:53 ==> Loading Nurse List
+2013-Sep-10  20:32:53 ==> Nurse List Loaded
+2013-Sep-10  20:33:11 ==> Loading Role List
+2013-Sep-10  20:33:11 ==> Role List Loaded
+2013-Sep-10  20:33:11 ==> Loading Doctor List
+2013-Sep-10  20:33:11 ==> Doctor List Loaded
+2013-Sep-10  20:33:11 ==> Loading Nurse List
+2013-Sep-10  20:33:11 ==> Nurse List Loaded
+2013-Sep-10  20:33:28 ==> Loading Role List
+2013-Sep-10  20:33:28 ==> Role List Loaded
+2013-Sep-10  20:33:28 ==> Loading Doctor List
+2013-Sep-10  20:33:28 ==> Doctor List Loaded
+2013-Sep-10  20:33:28 ==> Loading Nurse List
+2013-Sep-10  20:33:28 ==> Nurse List Loaded
+2013-Sep-10  20:34:39 ==> Loading Role List
+2013-Sep-10  20:34:39 ==> Role List Loaded
+2013-Sep-10  20:34:39 ==> Loading Doctor List
+2013-Sep-10  20:34:39 ==> Doctor List Loaded
+2013-Sep-10  20:34:39 ==> Loading Nurse List
+2013-Sep-10  20:34:39 ==> Nurse List Loaded
+2013-Sep-10  20:36:36 ==> Loading Role List
+2013-Sep-10  20:36:36 ==> Role List Loaded
+2013-Sep-10  20:36:36 ==> Loading Doctor List
+2013-Sep-10  20:36:36 ==> Doctor List Loaded
+2013-Sep-10  20:36:36 ==> Loading Nurse List
+2013-Sep-10  20:36:36 ==> Nurse List Loaded
+2013-Sep-10  20:37:48 ==> Loading Role List
+2013-Sep-10  20:37:48 ==> Role List Loaded
+2013-Sep-10  20:37:48 ==> Loading Doctor List
+2013-Sep-10  20:37:48 ==> Doctor List Loaded
+2013-Sep-10  20:37:48 ==> Loading Nurse List
+2013-Sep-10  20:37:48 ==> Nurse List Loaded
+2013-Sep-10  20:39:47 ==> Loading Role List
+2013-Sep-10  20:39:48 ==> Role List Loaded
+2013-Sep-10  20:39:48 ==> Loading Doctor List
+2013-Sep-10  20:39:48 ==> Doctor List Loaded
+2013-Sep-10  20:39:48 ==> Loading Nurse List
+2013-Sep-10  20:39:48 ==> Nurse List Loaded
+2013-Sep-10  20:39:56 ==> Loading Role List
+2013-Sep-10  20:39:56 ==> Role List Loaded
+2013-Sep-10  20:39:56 ==> Loading Doctor List
+2013-Sep-10  20:39:56 ==> Doctor List Loaded
+2013-Sep-10  20:39:56 ==> Loading Nurse List
+2013-Sep-10  20:39:56 ==> Nurse List Loaded
+2013-Sep-10  20:40:09 ==> Loading Role List
+2013-Sep-10  20:40:09 ==> Role List Loaded
+2013-Sep-10  20:40:09 ==> Loading Doctor List
+2013-Sep-10  20:40:09 ==> Doctor List Loaded
+2013-Sep-10  20:40:09 ==> Loading Nurse List
+2013-Sep-10  20:40:09 ==> Nurse List Loaded
+2013-Sep-10  20:42:11 ==> Loading Role List
+2013-Sep-10  20:42:11 ==> Role List Loaded
+2013-Sep-10  20:42:11 ==> Loading Doctor List
+2013-Sep-10  20:42:11 ==> Doctor List Loaded
+2013-Sep-10  20:42:11 ==> Loading Nurse List
+2013-Sep-10  20:42:11 ==> Nurse List Loaded
+2013-Sep-10  20:43:51 ==> Loading Role List
+2013-Sep-10  20:43:51 ==> Role List Loaded
+2013-Sep-10  20:43:51 ==> Loading Doctor List
+2013-Sep-10  20:43:51 ==> Doctor List Loaded
+2013-Sep-10  20:43:51 ==> Loading Nurse List
+2013-Sep-10  20:43:51 ==> Nurse List Loaded
+2013-Sep-10  20:45:37 ==> Loading Role List
+2013-Sep-10  20:45:37 ==> Role List Loaded
+2013-Sep-10  20:45:37 ==> Loading Doctor List
+2013-Sep-10  20:45:37 ==> Doctor List Loaded
+2013-Sep-10  20:45:37 ==> Loading Nurse List
+2013-Sep-10  20:45:37 ==> Nurse List Loaded
+2013-Sep-10  21:09:20 ==> Loading Role List
+2013-Sep-10  21:09:20 ==> Role List Loaded
+2013-Sep-10  21:09:20 ==> Loading Doctor List
+2013-Sep-10  21:09:20 ==> Doctor List Loaded
+2013-Sep-10  21:09:20 ==> Loading Nurse List
+2013-Sep-10  21:09:20 ==> Nurse List Loaded
+2013-Sep-10  21:09:20 ==> Loading Role List
+2013-Sep-10  21:09:20 ==> Role List Loaded
+2013-Sep-10  21:09:20 ==> Loading AccountType List
+2013-Sep-10  21:09:20 ==> AccountType List Loaded
+2013-Sep-10  21:09:21 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  21:09:23 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  21:09:23 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  21:09:24 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  21:09:24 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  21:09:35 ==> Loading Role List
+2013-Sep-10  21:09:35 ==> Role List Loaded
+2013-Sep-10  21:09:35 ==> Loading Doctor List
+2013-Sep-10  21:09:35 ==> Doctor List Loaded
+2013-Sep-10  21:09:35 ==> Loading Nurse List
+2013-Sep-10  21:09:35 ==> Nurse List Loaded
+2013-Sep-10  21:09:35 ==> Loading Role List
+2013-Sep-10  21:09:35 ==> Role List Loaded
+2013-Sep-10  21:09:35 ==> Loading AccountType List
+2013-Sep-10  21:09:35 ==> AccountType List Loaded
+2013-Sep-10  21:09:35 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  21:09:36 ==> Loading Role List
+2013-Sep-10  21:09:36 ==> Role List Loaded
+2013-Sep-10  21:09:36 ==> Loading Doctor List
+2013-Sep-10  21:09:36 ==> Doctor List Loaded
+2013-Sep-10  21:09:36 ==> Loading Nurse List
+2013-Sep-10  21:09:36 ==> Nurse List Loaded
+2013-Sep-10  21:10:09 ==> Loading Role List
+2013-Sep-10  21:10:09 ==> Role List Loaded
+2013-Sep-10  21:10:09 ==> Loading Doctor List
+2013-Sep-10  21:10:09 ==> Doctor List Loaded
+2013-Sep-10  21:10:09 ==> Loading Nurse List
+2013-Sep-10  21:10:09 ==> Nurse List Loaded
+2013-Sep-10  21:10:44 ==> Loading Role List
+2013-Sep-10  21:10:44 ==> Role List Loaded
+2013-Sep-10  21:10:44 ==> Loading Doctor List
+2013-Sep-10  21:10:44 ==> Doctor List Loaded
+2013-Sep-10  21:10:44 ==> Loading Nurse List
+2013-Sep-10  21:10:44 ==> Nurse List Loaded
+2013-Sep-10  21:11:01 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  21:11:01 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  21:11:05 ==> Loading Role List
+2013-Sep-10  21:11:05 ==> Role List Loaded
+2013-Sep-10  21:11:05 ==> Loading Doctor List
+2013-Sep-10  21:11:05 ==> Doctor List Loaded
+2013-Sep-10  21:11:05 ==> Loading Nurse List
+2013-Sep-10  21:11:05 ==> Nurse List Loaded
+2013-Sep-10  21:12:54 ==> Loading Role List
+2013-Sep-10  21:12:54 ==> Role List Loaded
+2013-Sep-10  21:12:54 ==> Loading Doctor List
+2013-Sep-10  21:12:54 ==> Doctor List Loaded
+2013-Sep-10  21:12:54 ==> Loading Nurse List
+2013-Sep-10  21:12:54 ==> Nurse List Loaded
+2013-Sep-10  21:12:55 ==> Loading Role List
+2013-Sep-10  21:12:55 ==> Role List Loaded
+2013-Sep-10  21:12:55 ==> Loading Doctor List
+2013-Sep-10  21:12:55 ==> Doctor List Loaded
+2013-Sep-10  21:12:55 ==> Loading Nurse List
+2013-Sep-10  21:12:55 ==> Nurse List Loaded
+2013-Sep-10  21:12:57 ==> Loading Role List
+2013-Sep-10  21:12:58 ==> Role List Loaded
+2013-Sep-10  21:12:58 ==> Loading Doctor List
+2013-Sep-10  21:12:58 ==> Doctor List Loaded
+2013-Sep-10  21:12:58 ==> Loading Nurse List
+2013-Sep-10  21:12:58 ==> Nurse List Loaded
+2013-Sep-10  21:14:13 ==> Loading Role List
+2013-Sep-10  21:14:13 ==> Role List Loaded
+2013-Sep-10  21:14:13 ==> Loading Doctor List
+2013-Sep-10  21:14:13 ==> Doctor List Loaded
+2013-Sep-10  21:14:13 ==> Loading Nurse List
+2013-Sep-10  21:14:13 ==> Nurse List Loaded
+2013-Sep-10  21:22:25 ==> Loading Role List
+2013-Sep-10  21:22:25 ==> Role List Loaded
+2013-Sep-10  21:22:25 ==> Loading Doctor List
+2013-Sep-10  21:22:25 ==> Doctor List Loaded
+2013-Sep-10  21:22:25 ==> Loading Nurse List
+2013-Sep-10  21:22:25 ==> Nurse List Loaded
+2013-Sep-10  21:22:25 ==> Loading Role List
+2013-Sep-10  21:22:25 ==> Role List Loaded
+2013-Sep-10  21:22:25 ==> Loading AccountType List
+2013-Sep-10  21:22:25 ==> AccountType List Loaded
+2013-Sep-10  21:22:26 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  21:22:29 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  21:22:29 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  21:22:30 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  21:22:30 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  21:23:38 ==> Loading Role List
+2013-Sep-10  21:23:38 ==> Role List Loaded
+2013-Sep-10  21:23:38 ==> Loading Doctor List
+2013-Sep-10  21:23:38 ==> Doctor List Loaded
+2013-Sep-10  21:23:38 ==> Loading Nurse List
+2013-Sep-10  21:23:38 ==> Nurse List Loaded
+2013-Sep-10  21:26:12 ==> Loading Role List
+2013-Sep-10  21:26:12 ==> Role List Loaded
+2013-Sep-10  21:26:12 ==> Loading Doctor List
+2013-Sep-10  21:26:12 ==> Doctor List Loaded
+2013-Sep-10  21:26:12 ==> Loading Nurse List
+2013-Sep-10  21:26:12 ==> Nurse List Loaded
+2013-Sep-10  21:26:12 ==> Loading Role List
+2013-Sep-10  21:26:12 ==> Role List Loaded
+2013-Sep-10  21:26:12 ==> Loading AccountType List
+2013-Sep-10  21:26:12 ==> AccountType List Loaded
+2013-Sep-10  21:26:12 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  21:26:14 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  21:26:14 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  21:26:15 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  21:26:15 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  21:26:51 ==> Loading Role List
+2013-Sep-10  21:26:51 ==> Role List Loaded
+2013-Sep-10  21:26:51 ==> Loading Doctor List
+2013-Sep-10  21:26:51 ==> Doctor List Loaded
+2013-Sep-10  21:26:51 ==> Loading Nurse List
+2013-Sep-10  21:26:51 ==> Nurse List Loaded
+2013-Sep-10  21:26:51 ==> Loading Role List
+2013-Sep-10  21:26:51 ==> Role List Loaded
+2013-Sep-10  21:26:51 ==> Loading AccountType List
+2013-Sep-10  21:26:51 ==> AccountType List Loaded
+2013-Sep-10  21:26:52 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  21:26:53 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  21:26:53 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  21:26:54 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  21:26:54 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  21:27:00 ==> Loading Role List
+2013-Sep-10  21:27:00 ==> Role List Loaded
+2013-Sep-10  21:27:00 ==> Loading Doctor List
+2013-Sep-10  21:27:00 ==> Doctor List Loaded
+2013-Sep-10  21:27:00 ==> Loading Nurse List
+2013-Sep-10  21:27:00 ==> Nurse List Loaded
+2013-Sep-10  21:28:19 ==> Loading Role List
+2013-Sep-10  21:28:19 ==> Role List Loaded
+2013-Sep-10  21:28:19 ==> Loading Doctor List
+2013-Sep-10  21:28:19 ==> Doctor List Loaded
+2013-Sep-10  21:28:19 ==> Loading Nurse List
+2013-Sep-10  21:28:19 ==> Nurse List Loaded
+2013-Sep-10  21:28:19 ==> Loading Role List
+2013-Sep-10  21:28:19 ==> Role List Loaded
+2013-Sep-10  21:28:19 ==> Loading AccountType List
+2013-Sep-10  21:28:19 ==> AccountType List Loaded
+2013-Sep-10  21:28:19 ==> LoadAllUser(), User List loaded Successfully
+2013-Sep-10  21:28:21 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  21:28:21 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  21:28:23 ==> GetUserDetail()## User Detail Loaded
+2013-Sep-10  21:28:23 ==> PermissionList()## PermissionList Loaded Successfully
+2013-Sep-10  21:28:36 ==> Loading Role List
+2013-Sep-10  21:28:36 ==> Role List Loaded
+2013-Sep-10  21:28:36 ==> Loading Doctor List
+2013-Sep-10  21:28:36 ==> Doctor List Loaded
+2013-Sep-10  21:28:36 ==> Loading Nurse List
+2013-Sep-10  21:28:36 ==> Nurse List Loaded
+2013-Sep-10  21:29:44 ==> Loading Role List
+2013-Sep-10  21:29:44 ==> Role List Loaded
+2013-Sep-10  21:29:44 ==> Loading Doctor List
+2013-Sep-10  21:29:44 ==> Doctor List Loaded
+2013-Sep-10  21:29:44 ==> Loading Nurse List
+2013-Sep-10  21:29:44 ==> Nurse List Loaded
+2013-Sep-10  21:31:40 ==> Loading Role List
+2013-Sep-10  21:31:40 ==> Role List Loaded
+2013-Sep-10  21:31:40 ==> Loading Doctor List
+2013-Sep-10  21:31:40 ==> Doctor List Loaded
+2013-Sep-10  21:31:40 ==> Loading Nurse List
+2013-Sep-10  21:31:40 ==> Nurse List Loaded
+2013-Sep-10  21:33:16 ==> Loading Role List
+2013-Sep-10  21:33:16 ==> Role List Loaded
+2013-Sep-10  21:33:16 ==> Loading Doctor List
+2013-Sep-10  21:33:16 ==> Doctor List Loaded
+2013-Sep-10  21:33:16 ==> Loading Nurse List
+2013-Sep-10  21:33:16 ==> Nurse List Loaded
+2013-Sep-10  21:33:40 ==> Loading Role List
+2013-Sep-10  21:33:40 ==> Role List Loaded
+2013-Sep-10  21:33:40 ==> Loading Doctor List
+2013-Sep-10  21:33:40 ==> Doctor List Loaded
+2013-Sep-10  21:33:40 ==> Loading Nurse List
+2013-Sep-10  21:33:40 ==> Nurse List Loaded
+2013-Sep-10  21:39:00 ==> Loading Role List
+2013-Sep-10  21:39:00 ==> Role List Loaded
+2013-Sep-10  21:39:00 ==> Loading Doctor List
+2013-Sep-10  21:39:00 ==> Doctor List Loaded
+2013-Sep-10  21:39:00 ==> Loading Nurse List
+2013-Sep-10  21:39:00 ==> Nurse List Loaded
+2013-Sep-10  21:40:13 ==> Loading Role List
+2013-Sep-10  21:40:13 ==> Role List Loaded
+2013-Sep-10  21:40:13 ==> Loading Doctor List
+2013-Sep-10  21:40:13 ==> Doctor List Loaded
+2013-Sep-10  21:40:13 ==> Loading Nurse List
+2013-Sep-10  21:40:13 ==> Nurse List Loaded
+2013-Sep-10  21:40:46 ==> Loading Role List
+2013-Sep-10  21:40:46 ==> Role List Loaded
+2013-Sep-10  21:40:46 ==> Loading Doctor List
+2013-Sep-10  21:40:46 ==> Doctor List Loaded
+2013-Sep-10  21:40:46 ==> Loading Nurse List
+2013-Sep-10  21:40:46 ==> Nurse List Loaded

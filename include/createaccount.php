@@ -1,16 +1,18 @@
 <div class="header_black">Add User</div>
 <div id="errorDisplay" class="errorMessage" style="display: none"></div>
 <div align="center" class="detailDispaly">
-    <form id="userDetailForm" method="POST" onsubmit="return RegisterUser()">
+    <form id="userDetailForm" method="POST" onsubmit="return valid.validateForm(this)?RegisterUser():false;">
         <div class="displaySection">
             <div id="inputForAll" >
                 <table style="width: 50%">
                     <tr>
                         <td width="20%" valign="top" >
-                            <label for="name">Name:</label>            </td>
+                            <label for="name">Name:</label>
+                            <label class="star"><strong>*</strong></label></td>
                         <td width="30%" valign="top">
                             <div align="left">
-                                <input type="text" name="name" id="name" maxlength="50" size="30" value="" tabindex="11"/>
+                                <input type="text" class="required" name="name" id="name" maxlength="50" size="30" value="" tabindex="11"/>
+                                <div class="validationError" id="nameError" style="display: none" />
                             </div></td>
                     </tr>
                     <tr>
@@ -18,7 +20,7 @@
                         <td width="20%"><label>Account Type</label></td>
                         <td width="30%">
                             <div>
-                                <select id="roleList" style="width: 65%" name="roleList" class="" onchange="loadPermissionList()">
+                                <select id="roleList" style="width: 65%" name="roleList" class="" onchange="loadPermissionList()" >
                                     <option selected="selected" value="0" tabindex="12" onchange="" >Select Role</option>
                                     <?php
                                     Logger::LogInformation("Loading Role List");
@@ -29,7 +31,8 @@
                                     Logger::LogInformation("Role List Loaded");
                                     ?>
                                 </select>
-                            </div>            
+                            </div>       
+                            <div id="roleListError" class="validationError" ></div>
                         </td>
                     </tr>
                     <tr>
@@ -44,43 +47,38 @@
                                 <input type="checkbox" name="reportData" id="reportData" style="width: 15%;"/>
                                 <label>Report Data</label>
                             </div>
+                            <div id="permissionDetailError" class="validationError" ></div>
                         </td>
                     </tr>
                     <tr>
-
                         <td width="20%"><label>Account Group: </label></td>
                         <td width="30%">
                             <div align="left">
                                     <!-- <input name="training" type="text" size="60"/>-->
                                 <select id="accountList" name="accountList" class="listmenu" tabindex="13" style="width: 65%">
                                     <option value="0" selected="selected">Select Account</option>
-                                    <?php
-//                                Logger::LogInformation("Loading AccountType List");
-//                                $accountList = $sql->GetAccountList();
-//                                foreach ($accountList as $account) {
-//                                    echo "<option value='" . $account[0] . "'>" . $account[1] . "</option>";
-//                                }
-//                                Logger::LogInformation("AccountType List Loaded");
-//                                
-                                    ?>
                                 </select>
-                            </div>            
+                            </div>       
+                            <div id="accountListError" class="validationError" ></div>
                         </td>
                     </tr>
                     <tr>
                         <td width="20%"><label>Account Creation Date: </label></td>
                         <td width="30%">
                             <div>
-                                <input type="date" value="<?php echo date('Y-m-d'); ?>"  name="creationDate" id="creationDate" style="width:65%" tabindex="14"/>
+                                <input type="date" class="date" value="<?php echo date('Y-m-d'); ?>"  name="creationDate" id="creationDate" style="width:65%" tabindex="14"/>
+                                (E.g. 2013-11-29)
+                                <div id="creationDateError" class="validationError" ></div>
                             </div>
                         </td> 
                     </tr>
                     <tr>
                         <td width="20%" valign="top">
-                            <label for="last_name">Street Address:</label>        </td>
+                            <label for="street">Street Address:</label>        </td>
                         <td width="30%" valign="top">
                             <div align="left">
                                 <input  type="text" id="street" name="street" maxlength="50" size="30" tabindex="15">
+                                <div id="streetError" class="validationError" style="display: none" ></div>
                             </div>
                         </td>
                     </tr>
@@ -90,7 +88,9 @@
                         <td valign="top" width="30%">
                             <div align="left">
                                 <input  type="text" name="city" id="city" maxlength="50" size="30" tabindex="16">
-                            </div></td>
+                            </div>
+                            <div id="cityError" class="validationError" style="display: none"></div>
+                        </td>
                     </tr>
                     <tr>
                         <td valign="top" width="20%">
@@ -98,14 +98,17 @@
                         <td valign="top" width="30%">
                             <div align="left">
                                 <input  type="text" id="state" name="state" maxlength="50" size="30" tabindex="17">
-                            </div></td>
+                            </div>
+                            <div id="stateError" class="validationError" style="display: none"></div>
+                        </td>
                     </tr>
                     <tr>
                         <td valign="top" width="20%">
                             <label for="telephone">Phone Number: </label>        </td>
                         <td valign="top" width="30%">
                             <div align="left">
-                                <input  type="text" id="phoneNumber" name="phoneNumber" maxlength="30" size="30" tabindex="18">
+                                <input  type="text" class="phone" id="phoneNumber" name="phoneNumber" maxlength="30" size="30" tabindex="18">
+                                <div id="phoneNumberError" class="validationError" style="display: none"></div>
                             </div></td>
                     </tr>
                     <tr>
@@ -113,7 +116,8 @@
                         <td width="20%"><label>Birth Date: </label></td>
                         <td width="30%">
                             <div>
-                                <input type="date" name="birthDate" id="birthDate" style="width: 65%" tabindex="19"/>			
+                                <input class="date" type="date" name="birthDate" id="birthDate" style="width: 65%" tabindex="19"/>(E.g. 2013-11-29)
+                                <div class="validationError" id="birthDateError" style="display: none" ></div>
                             </div>
                         </td> 
                     </tr>
@@ -138,6 +142,7 @@
                                 }
                                 ?>
                             </select>
+                            <div id="doctorListError" class="validationError" style="display: none"></div>
                         </td>
                     </tr>
                     <tr>
@@ -160,30 +165,36 @@
                                 }
                                 ?>
                             </select>
+                            <div id="nurseListError" class="validationError" style="display: none" ></div>
                         </td>
                     </tr>
                     <tr>
                         <td><label>Last Visit: </label></td>
                         <td colspan="2">
-                            <?php echo "<input name='lastVisit' id='lastVisit' type='date' value='" . date("Y-m-d") . "' tabindex='22'/>"; ?>
+                            <?php echo "<input class='date' name='lastVisit' id='lastVisit' type='date' value='" . date("Y-m-d") . "' tabindex='22'/>"; ?>
+                            (E.g. 2013-11-29)
+                            <div id="lastVisitError" class="validationError" style="display: none"></div>
                         </td>
                     </tr>
                     <tr>
                         <td ><label>Purpose of Visit: </label></td>
                         <td colspan="2" >
                             <input name="purposeOfVisit" id="purposeOfVisit" type="text" size="30" tabindex="23"/>
+                            <div id="purposeOfVisitError" class="validationError" style="display: none"></div>
                         </td>
                     </tr>
                     <tr>
                         <td ><label>Diagnosis given: </label></td>
                         <td colspan="2" >
                             <input name="diagnosis" id="diagnosis" type="text" size="30" tabindex="24"/>
+                            <div id="diagnosisError" class="validationError" style="display: none"></div>
                         </td>
                     </tr>
                     <tr>
                         <td ><label>Prescribed Medication: </label></td>
                         <td colspan="2" >
                             <input name="prescribedMedication" id="prscribedMedication" type="text" size="30" tabindex="25"/>
+                            <div id="prscribedMedicationError" class="validationError" style="display: none"></div>
                         </td>
                     </tr>
                 </table>
@@ -193,8 +204,8 @@
         <div id="buttons" class="displaySection">
             <table width="336">
                 <tr>
-                    <td width="90" align="center"><div style="width:100%">
-
+                    <td width="90" align="center">
+                        <div style="width:100%">
                             <div align="right">
                                 <button class="blue-button" name="reset" type="reset" >Reset</button>
                             </div>

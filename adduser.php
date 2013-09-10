@@ -17,7 +17,11 @@ if (!$sql->HasPermission($_SESSION['userid'], PermissionByID::$createUser))
             @import "css/screen.css";
         </style>
         <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+        <script src="js/jquery.validation.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/functions.js"></script>
+        <script>
+            var valid = new validate();
+        </script>
     </head>
     <body> 
         <div class="clear">&nbsp;</div>

@@ -119,13 +119,24 @@ label .loginLabel{
     background-color: #E5E5FF;
 }
 
+.validationError{
+    color: red;
+    font-size: 10px;
+    font-weight: Bold;
+}
 .legend{
     color: white;
     background-color: #666;
-    font-size: 15px;
+    font-size: 32px;
     padding: 5px 0px 5px 50px;
     font-weight: normal;
     display: block;
+}
+
+.star{
+    font-size: 34px;
+    font-size-adjust: inherit;
+    color: #ff3333;
 }
 /* search */
 .searchform { float:left; padding:0;}

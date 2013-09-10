@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-});
+    });
 
 function HideSearchDiv(){
     $('#searchRecord').hide();
@@ -45,13 +45,28 @@ function validateInputForm()
     var todayToDate = Date.parse(nowdate);
     var success=true;
     var x=$('#name').val();
-    if (x==null || x=="")
-    {
-        $('#name').attr("class", "error");
-        success = false;
-    }
-    else
-        $('#name').attr("class", "");
+    
+    var illegalChars = "!@#$%^&*()+=-[]\\\';,./{}|\":<>?0123456789";
+
+//    if (x==null || x=="")
+//    {
+//        $('#name').attr("class", "error");
+//        success = false;
+//    }	
+//    else
+        for (var i = 0; i < x.length; i++) 
+        {
+            if (illegalChars.indexOf(x.charAt(i)) != -1) 
+            {	
+                //$('#name').attr("class", "error");
+                $('#nameError').html("Name Should not contain number").show();
+                success = false;
+                break;
+            }
+//            else
+//                $('#name').attr("class", "");
+        }
+
     var x=$('#roleList').val();
     if (x==0)
     {
@@ -75,7 +90,22 @@ function validateInputForm()
         success = false;
     }
     
-    var x= Date.parse($('#creationDate').val());
+    var x= Date.parse($('#creationDate').val());	
+    if($('#creationDate').val() == "")
+    {
+        alert("Please enter the Creation Date..!!")
+        success = false;
+    }
+    if($('#creationDate').val().match(/^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/))
+    {
+		  
+    }
+    else
+    {
+        alert("Creation Date format is wrong")
+    }
+		
+	
     if (x==null || x > nowdatetime)
     {
         $('#creationDate').attr("class", "error");
@@ -85,6 +115,26 @@ function validateInputForm()
         $('#creationDate').attr("class", "");
     
     x=$('#birthDate').val();
+	
+	
+    if($('#birthDate').val() == "")
+    {
+        alert("Please enter the  Birth Date..!!")
+        success = false;
+    }
+    else{
+        if($('#birthDate').val().match(/^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/))
+        {
+		  
+        }
+        else
+        {
+            alert("Birth Date format is wrong")
+            success = false;
+        }
+    }
+		
+	
     
     if(x==null || x=='')
     {
@@ -120,13 +170,32 @@ function validateEditForm()
     var todayToDate = Date.parse(nowdate);
     var success=true;
     var x=$('#name_E').val();
+	
+	
+	
+    var illegalChars = "!@#$%^&*()+=-[]\\\';,./{}|\":<>?0123456789";
+ 
+    var illegalChars = "!@#$%^&*()+=-[]\\\';,./{}|\":<>?0123456789";
+
     if (x==null || x=="")
     {
         $('#name_E').attr("class", "error");
+        $('#name_EError').html("Name can not be empty").show() ;
         success = false;
-    }
+    }	
     else
-        $('#name_E').attr("class", "");
+        for (var i = 0; i < x.length; i++) 
+        {
+            if (illegalChars.indexOf(x.charAt(i)) != -1) 
+            {	
+                $('#name_E').attr("class", "error");
+                success = false;
+                break;
+            }
+            else
+                $('#name_E').attr("class", "");
+        }
+        
     var x=$('#roleList').val();
     if (x==0)
     {
@@ -148,9 +217,25 @@ function validateEditForm()
     {
         alert("Minimum one permission must be selected for LLA users");
         success = false;
-    }
+    }   
     
     var x= Date.parse($('#creationDate_E').val());
+
+
+    var x= Date.parse($('#creationDate').val());	
+    if($('#creationDate_E').val() == "")
+    {
+        alert("Please enter the Date..!!")
+    }
+    if($('#creationDate_E').val().match(/^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/))
+    {
+		 
+    }
+    else
+    {
+        alert("date format is wrong")
+    }
+
     if (x==null || x > nowdatetime)
     {
         $('#creationDate_E').attr("class", "error");
@@ -160,6 +245,24 @@ function validateEditForm()
         $('#creationDate_E').attr("class", "");
     
     x=$('#birthDate_E').val();
+	
+	
+    if($('#birthDate_E').val() == "")
+    {
+        alert("Please enter the  Birth Date..!!")
+        success = false;
+    }
+    else{
+        if($('#birthDate_E').val().match(/^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/))
+        {
+		  
+        }
+        else
+        {
+            alert("Birth Date format is wrong")
+            success = false;
+        }
+    }
     
     if(x==null || x=='')
     {
@@ -656,28 +759,28 @@ function ChangePassword(){
 
 function LoadAllUser(){
     var Data = "task=loadalluser";
-                $.ajax({
-                    url:'taskprocess.php',
-                    data:Data,
-                    type:'POST',
-                    dataType:'json',
-                    cache:false,
-                    success: function(output){
-                        if(output[0][0] !=0){
-                            oTable.fnClearTable();
+    $.ajax({
+        url:'taskprocess.php',
+        data:Data,
+        type:'POST',
+        dataType:'json',
+        cache:false,
+        success: function(output){
+            if(output[0][0] !=0){
+                oTable.fnClearTable();
                         
-                            for(var i =0; i < output.length;i++){
-                                oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
-                                    "<button type='button' class='green-button' onclick='ShowUserDetails("+output[i][0]+"); ShowPermissionList("+output[i][0]+")'>Show Details</button>",
-                                    "<button type='button' class='red-button' onclick='DeleteUser("+output[i][0]+");'>Delete User</button>"
-                                ]);
-                            }
-                        }
-                    },
-                    error:function(a,b,c){
-                        alert("Error is "+a+b+c);
-                    }
-                });
+                for(var i =0; i < output.length;i++){
+                    oTable.fnAddData([i+1,output[i][1],output[i][2],output[i][3],
+                        "<button type='button' class='green-button' onclick='ShowUserDetails("+output[i][0]+"); ShowPermissionList("+output[i][0]+")'>Show Details</button>",
+                        "<button type='button' class='red-button' onclick='DeleteUser("+output[i][0]+");'>Delete User</button>"
+                        ]);
+                }
+            }
+        },
+        error:function(a,b,c){
+            alert("Error is "+a+b+c);
+        }
+    });
 }
 
 
@@ -709,3 +812,15 @@ function DeleteUser(id){
     return false;
     
 }
+
+
+
+
+
+/////////for date input
+
+
+
+
+
+

@@ -6,7 +6,7 @@ include_once 'globalvariable.php';
 class SqlConnection {
 
     private $startLocalIP = "126.168.1.2";          //Local IP Range
-    private $endLocalIP = "192.0.1.150";
+    private $endLocalIP = "200.0.1.150";
     private $db_name = "hospital";                  //Database Information
     private $db_link;
     private $sql_username = "root";                 //SQL setting
