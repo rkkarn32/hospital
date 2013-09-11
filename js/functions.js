@@ -287,8 +287,8 @@ function EditUserDetails(id){
                 $('#roleList').val(output[3]);
                 if(output[3]==3)
                     $('#permissionDetail_E').show();
-                //loadPermissionList(3);
-                //$('#accountList').val(output[5]);
+                loadPermissionList();
+                $('#accountList').val(output[5]);
                 $('#creationDate_E').val(output[6]);
                 $('#streetAddress_E').val(output[7]);
                 $('#state_E').val(output[8]);
